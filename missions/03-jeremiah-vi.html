@@ -8,7 +8,17 @@
 </head>
 <body>
 <script src="../assets/js/shell.js"></script>
-<script>renderShell({base: "../", active: "m03"});</script>
+<script>renderShell({base: "../", active: "m03", subNav: [
+  {id: "m03-mission",        label: "Routine-Mission"},
+  {id: "m03-aftermath-i",   label: "Aftermath — Ankunft"},
+  {id: "m03-aftermath-ii",  label: "Aftermath — Dock"},
+  {id: "m03-aftermath-iii", label: "Aftermath — Station"},
+  {id: "m03-aftermath-iv",  label: "Aftermath — Boyd"},
+  {id: "m03-aftermath-v",   label: "Aftermath — Medbay"},
+  {id: "m03-aftermath-vi",  label: "Aftermath — Glimpse"},
+  {id: "m03-aftermath-vii", label: "Aftermath — Kammer"},
+  {id: "m03-aftermath-viii",label: "Aftermath — Abflug"},
+]});</script>
 
 <main id="main">
   <div id="page">
@@ -24,23 +34,19 @@
       </div>
     </header>
 
-    <div class="content">
-
-      <!-- ═══════════════════════════════════════════════════ -->
-      <!-- TEIL 1 — ROUTINE-MISSION (vor 07.11.2184)          -->
-      <!-- ═══════════════════════════════════════════════════ -->
-
-      <h1 id="m03-mission">Mission: Jeremiah VI</h1>
+    <!-- ═══ SECTION: Routine-Mission ═══ -->
+    <div class="page-section content" id="m03-mission">
+      <h1>Mission: Jeremiah VI</h1>
       <p><strong>System:</strong> 289 G. Hydrae | <strong>Target-Android:</strong> AX-62 „Boyd"<br>
       <strong>Black Veil Daten:</strong> Anpassung — <em>„Jede Begegnung steigert Effizienz."</em></p>
 
-      <h2 id="m03-ankunft">Ankunft (Vorlesetext)</h2>
+      <h2>Ankunft (Vorlesetext)</h2>
       <blockquote>Als euer Schiff aus dem Überlicht fällt, erscheint Jeremiah VI vor euch — eine graue, kantige Bergbaustation, die aussieht, als hätte sie bessere Tage gesehen. Die Navigationslichter funktionieren. Die Docks sind frei. Nichts ist beschädigt. Und doch wirkt alles… müde.</blockquote>
 
-      <h2 id="m03-situation">Die Situation</h2>
+      <h2>Die Situation</h2>
       <p>Jeremiah VI ist eine WY-Minenstation für Promethium-Förderung. Förderquote sinkt seit Jahren. Ersatzteile kommen verspätet. Die Führungsetage hat die Station längst abgeschrieben — sie läuft nur noch, weil es billiger ist als Abbauen. Die Crew weiß das. Man merkt es.</p>
 
-      <h2 id="m03-boyd">Boyd — Der Barkeeper</h2>
+      <h2>Boyd — Der Barkeeper</h2>
       <p>Boyd ist ruhig, höflich, effizient, immer zur Stelle. Er kennt jeden Namen, jedes Lieblingsgetränk, jede kleine Fehde auf der Station. Wenn Arbeiter zu viel trinken, schenkt er langsamer aus.</p>
       <ul>
         <li>Offiziell: Barkeeper</li>
@@ -48,27 +54,24 @@
       </ul>
       <p>Dass er ein Android ist, wissen die meisten. Aber niemand stört sich daran. Viele trauen ihm mehr als der Stationsleitung.</p>
 
-      <h2 id="m03-auftrag">Der Auftrag</h2>
+      <h2>Der Auftrag</h2>
       <blockquote><em>„Android Boyd ist für eine routinemäßige Rückholung vorgesehen. Ersatz wird gestellt. Keine weiteren Maßnahmen notwendig."</em></blockquote>
       <p>Aber auf Jeremiah VI ist nichts simpel: Teile der Crew sind abhängig von Boyd. Einige vermuten, WY wolle die Station schließen. Boyd selbst zeigt keinen Widerstand, stellt aber Fragen: <em>„Wird jemand meinen Platz übernehmen? Soll ich mich verabschieden? Ist das die Entscheidung der Stationsleitung… oder nicht?"</em></p>
 
-      <h2 id="m03-zwischenfaelle">Zwischenfälle</h2>
+      <h2>Zwischenfälle</h2>
       <ul>
         <li>Eine Schlägerei in der Bar</li>
         <li>Ein absichtlich verzögerter Frachttransfer</li>
         <li>Ein Stationsmitarbeiter, der Boyd „nur kurz sprechen" will</li>
       </ul>
 
-      <h2 id="m03-abschluss">Abschluss</h2>
+      <h2>Abschluss</h2>
       <blockquote>Egal wie die Spieler entscheiden: Boyd verlässt die Station ruhig. Als sich die Dockingklammern lösen, bleibt die Station unverändert zurück. Noch.</blockquote>
+    </div>
 
-      <hr>
-
-      <!-- ═══════════════════════════════════════════════════ -->
-      <!-- TEIL 2 — AFTERMATH (nach 24.01.2185)               -->
-      <!-- ═══════════════════════════════════════════════════ -->
-
-      <h1 id="m03-aftermath">Mission: Jeremiah VI — Aftermath</h1>
+    <!-- ═══ SECTION: Aftermath — Ankunft ═══ -->
+    <div class="page-section content" id="m03-aftermath-i">
+      <h1>Mission: Jeremiah VI — Aftermath</h1>
       <p><strong>System:</strong> 289 G. Hydrae | <strong>Target-Android:</strong> AX-62 „Boyd" (Hyperdyne 120-A-2)<br>
       <strong>Black Veil Daten:</strong> Nesttemperatur-Optimum — <em>„Jede Begegnung steigert Effizienz."</em><br>
       <strong>In-Fiction Zeitpunkt:</strong> ca. 26.01.2185 — zwei Tage nach dem gescheiterten WY-Commando-Einsatz</p>
@@ -80,7 +83,7 @@
         <p>Siehe Systeminfo &amp; Rapture Protocol für den vollen Hintergrund.</p>
       </div>
 
-      <h2 id="m03-akt1">AKT I — ANKUNFT</h2>
+      <h2>AKT I — ANKUNFT</h2>
       <p><em>„Niemand antwortet"</em></p>
 
       <blockquote>Der Raum um euch ist still, als euer Schiff aus dem Überlicht fällt.</blockquote>
@@ -96,8 +99,11 @@
         <div class="info-box-header">Easter Egg — Die andere Crew</div>
         <p>Das zivile Schiff gehörte der <strong>Rapture-Protocol-Crew</strong> (Daniels vorherige Gruppe). Beide Leichen wurden von den WY-Commandos vor ihrem eigenen Schiff erschossen, bevor die Commandos selbst fielen. Die Spieler dürfen Namen, Dogtags, persönliche Effekten einsehen — ein Gruß an die alte Runde. Loot: 1 Personal-PDP mit privaten Logs, 1 teilweise geladene Schrotflinte, 1 Medkit, 1 angebrochene Flasche Bourbon. <strong>+1 Stress</strong> beim Durchsuchen.</p>
       </div>
+    </div>
 
-      <h2 id="m03-akt2">AKT II — DAS DOCK</h2>
+    <!-- ═══ SECTION: Aftermath — Dock ═══ -->
+    <div class="page-section content" id="m03-aftermath-ii">
+      <h2>AKT II — DAS DOCK</h2>
       <p><em>„Das letzte Gefecht"</em></p>
 
       <p>Als sich die Schleuse öffnet, schlägt euch ein Geruch entgegen: kaltes Metall, verbranntes Plastik — und etwas Süßliches.</p>
@@ -124,8 +130,11 @@
         <div class="info-box-header">Spieler-Hook: Maelys „Mae" Harlan</div>
         <p>Auf einem Mission-Briefing-Tablet (bei Hale): <em>„Finanzierung: Helios Financial / Charter-Reihe HX-88xx."</em> Dieselbe Charter-Serie, unter der Maes <em>Argo's Debt</em> gehalten wird. Ihre Schuld und diese Operation laufen über dieselbe WY-Unterabteilung.</p>
       </div>
+    </div>
 
-      <h2 id="m03-akt3">AKT III — DIE STATION</h2>
+    <!-- ═══ SECTION: Aftermath — Station ═══ -->
+    <div class="page-section content" id="m03-aftermath-iii">
+      <h2>AKT III — DIE STATION</h2>
       <p><em>„Es lebt noch"</em></p>
 
       <p>Jeremiah VI hat Strom. Nicht überall — aber genug.</p>
@@ -151,8 +160,11 @@
         <div class="info-box-header">Panic vs. Stress — Wichtig</div>
         <p>In Akt III zeigt sich der Xenomorph <strong>nicht</strong>. Er jagt nicht. Er liegt verwundet im Reaktorschacht und heilt. Geräusche geben <strong>+1 Stress</strong>. <strong>Keine Panic Rolls.</strong> Das hier ist die Atmosphäre vor dem ersten Kontakt — nicht der Kontakt selbst.</p>
       </div>
+    </div>
 
-      <h2 id="m03-akt4">AKT IV — DIE BAR (BOYD)</h2>
+    <!-- ═══ SECTION: Aftermath — Boyd ═══ -->
+    <div class="page-section content" id="m03-aftermath-iv">
+      <h2>AKT IV — DIE BAR (BOYD)</h2>
       <p><em>„Ich habe euch erwartet"</em></p>
 
       <blockquote>Die Bar ist fast unversehrt. Stühle stehen ordentlich. Ein Glas liegt zerbrochen am Boden — <strong>gezielt</strong>, nicht chaotisch. Hinter dem Tresen steht <strong>Boyd</strong> und poliert ein Glas.<br><br>
@@ -181,8 +193,11 @@
       <blockquote><strong>Boyd:</strong> <em>„Die Menschen suchten nach Mustern. Das Wesen nicht. Es testete Reaktionen. Flucht. Verteidigung. Stillstand. Ich habe beobachtet. Ich habe archiviert. Ich bin bereit zu gehen, wenn ihr bereit seid, mich zu tragen."</em></blockquote>
       <p>Auf weitere Fragen — nüchtern, ohne Urteil — erzählt er vom Kult um Shift Leader Hurd, Dr. Chidubem als ersten Wirt, Amber Whittakers Widerstand, der Verteilung der Eier, und schließlich den Commandos. <strong>Sein Fazit:</strong></p>
       <blockquote><em>„Es jagt nicht aus Hunger. Es jagt aus Kontrolle. Jede Begegnung — es verändert sich. Es wird effizienter."</em></blockquote>
+    </div>
 
-      <h2 id="m03-akt5">AKT V — DIE MEDBAY (OPTIONAL)</h2>
+    <!-- ═══ SECTION: Aftermath — Medbay ═══ -->
+    <div class="page-section content" id="m03-aftermath-v">
+      <h2>AKT V — DIE MEDBAY (OPTIONAL)</h2>
       <p><em>„Der sechste Commando"</em></p>
 
       <p>Wenn die Spieler die Station erkunden oder Boyd nach „dem Sechsten" fragen, führt er sie persönlich:</p>
@@ -200,8 +215,11 @@
         <p><strong>Option B — Mitnehmen für WY:</strong> Kapsel in den Laderaum. Vibration durch Andocken oder Beschleunigung bringt die Inkubation zum Abschluss. Während des Flugs oder beim Andocken am Mutterschiff: <strong>Chestburster-Szene.</strong> 1 HP, schnell, tödlich. <strong>Panic Roll</strong> — erster echter Xeno-Kontakt. Nach dem Kampf: Bonus-Bounty von WY (Specimen-Beleg).</p>
         <p><strong>Option C — Brennen:</strong> Incinerator von den Commandos. Kapsel öffnen, Stecker ziehen, verbrennen. Moralisch sauber. Keine Belohnung. <strong>+2 Stress</strong> (ein Bewusstloser).</p>
       </div>
+    </div>
 
-      <h2 id="m03-akt6">AKT VI — DER GLIMPSE</h2>
+    <!-- ═══ SECTION: Aftermath — Glimpse ═══ -->
+    <div class="page-section content" id="m03-aftermath-vi">
+      <h2>AKT VI — DER GLIMPSE</h2>
       <p><em>„Er lässt euch gehen. Heute."</em></p>
 
       <p>Einmal während des Aufenthalts — SL-Timing, am besten auf dem Weg zurück zum Dock — passieren die Spieler ein großes Wartungs-Fenster, das in den Reaktorschacht blickt. Acht Meter tief, im Zwielicht zwischen den Rohren, sehen sie <strong>IHN</strong>.</p>
@@ -220,8 +238,11 @@
         <div class="info-box-header">Falls die Spieler ihn angreifen</div>
         <p>Xeno verwundet: Health 3/8, Speed reduziert. Er verliert wahrscheinlich — aber er hinterlässt Säure auf der tragenden Deckenstruktur: nach 3 Runden Hull-Breach-Risiko im Reaktorschacht, Dekompressions-Gefahr. Zwei <strong>Panic Rolls</strong>. <strong>SL-Warnung:</strong> Das ist <em>nicht</em> die empfohlene Route. Mission-Ziel ist der Android — nicht der Xeno. Wer hier kämpft, riskiert TPK für eine Belohnung, die Boyd ohnehin freiwillig gibt.</p>
       </div>
+    </div>
 
-      <h2 id="m03-akt7">AKT VII — DIE KAMMER</h2>
+    <!-- ═══ SECTION: Aftermath — Kammer ═══ -->
+    <div class="page-section content" id="m03-aftermath-vii">
+      <h2>AKT VII — DIE KAMMER</h2>
       <p><em>„Geht nicht hinunter"</em></p>
 
       <p>Die uralte Kammer mit den Eiern liegt zwei Ebenen unter dem Reaktor. <strong>Sie ist nicht das Ziel.</strong> Wenn die Spieler Boyd haben, ist die Mission erfüllt. Deshalb blockiert die Fiktion den Abstieg auf drei Ebenen:</p>
@@ -238,8 +259,11 @@
         <div class="info-box-header">SL-Eskalation: Wenn sie sprengen</div>
         <p>Detonationen wecken den Xeno. Ab diesem Moment ändert sich alles: Der Xeno trennt die Gruppe, blockiert Wege, greift aus der Dunkelheit an. Keine fairen Kämpfe. Kein Showdown. Er nutzt die Höhe, die Enge, den Lärm der Waffen. <strong>Selbst schwere Waffen wirken nur verzögernd.</strong> Die Station arbeitet gegen sie. Wenn sie fliehen, lässt Jeremiah VI sie gehen — <em>nicht aus Gnade, sondern weil Jäger ihre Beute manchmal ziehen lassen</em>. Wenn sie bleiben, wird die Station ihr Grab.</p>
       </div>
+    </div>
 
-      <h2 id="m03-akt8">AKT VIII — ABFLUG</h2>
+    <!-- ═══ SECTION: Aftermath — Abflug ═══ -->
+    <div class="page-section content" id="m03-aftermath-viii">
+      <h2>AKT VIII — ABFLUG</h2>
       <p><em>„Hinter euch, ein flackerndes Licht"</em></p>
 
       <blockquote>Als die Dockingklammern sich lösen, steht Boyd an einem Fenster und sieht Jeremiah VI in der Dunkelheit verschwinden. Er sagt nichts. Er wird nichts sagen, bis jemand ihn etwas fragt.<br><br>
@@ -247,7 +271,7 @@
 
       <p>Die Station sendet weiterhin nur ihre automatische Bake. Der Xenomorph lebt. Ein Facehugger-Ei fehlt (Vega). Vier sind unberührt. Das System bleibt als Pulver-Faß zurück — für eine spätere Mission, wenn die Kampagne es verlangt.</p>
 
-      <h2 id="m03-epilog">EPILOG — Boyds Log (später)</h2>
+      <h2>EPILOG — Boyds Log (später)</h2>
 
       <p>Später — irgendwo sicher, wenn sie Boyds Daten-Chip auslesen — erscheint eine letzte, versteckte Zeile:</p>
 
@@ -256,7 +280,7 @@
       <blockquote><em>Die Station ist nicht verloren.</em></blockquote>
       <blockquote><em>Sie wurde <strong>übernommen</strong>."</em></blockquote>
 
-      <h2 id="m03-belohnung">Belohnung</h2>
+      <h2>Belohnung</h2>
       <table>
         <thead><tr><th>Quelle</th><th>Credits</th><th>Bedingung</th></tr></thead>
         <tbody>
@@ -266,8 +290,8 @@
           <tr><td>Commando-Ausrüstung (Loot)</td><td>Variabel</td><td>WY wird erkennen, woher es stammt — Diskretions-Problem</td></tr>
         </tbody>
       </table>
-
     </div>
+
   </div>
 </main>
 </body>

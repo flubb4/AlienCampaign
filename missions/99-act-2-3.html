@@ -8,7 +8,9 @@
 </head>
 <body>
 <script src="../assets/js/shell.js"></script>
-<script>renderShell({base: "../", active: "m99"});</script>
+<script>renderShell({base: "../", active: "m99", subNav: [
+  {id: "m99-content", label: "Akt 2 & 3 — Mission"},
+]});</script>
 
 <main id="main">
   <div id="page">
@@ -22,17 +24,16 @@
       </div>
     </header>
 
-    <div class="content">
-
-      <h2 id="m99-overview">Akt 2 &amp; 3 — Mission</h2>
+    <!-- ═══ SECTION: Inhalt ═══ -->
+    <div class="page-section content" id="m99-content">
+      <h2>Akt 2 &amp; 3 — Mission</h2>
       <p>Weitere Details in eigenen Unterseiten: <em>Ablauf der Höhle, Akt 2, Akt 3, Alternative Enden, Encounter-Taktung, Wachstumsstufen der Matrix, Die letzten 10 Minuten</em>.</p>
-
       <div class="info-box warn">
         <div class="info-box-header">NPCs</div>
         <p>NPC-Details in der Lambda Aurigae NPCs-Datei. Loot in der Loot-Datei.</p>
       </div>
-
     </div>
+
   </div>
 </main>
 </body>

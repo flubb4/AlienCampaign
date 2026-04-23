@@ -8,7 +8,10 @@
 </head>
 <body>
 <script src="../assets/js/shell.js"></script>
-<script>renderShell({base: "../", active: "m06"});</script>
+<script>renderShell({base: "../", active: "m06", subNav: [
+  {id: "m06-akt1",  label: "Akt 1 — Ankunft"},
+  {id: "m06-akt23", label: "Akt 2 & 3 — Mission"},
+]});</script>
 
 <main id="main">
   <div id="page">
@@ -24,47 +27,49 @@
       </div>
     </header>
 
-    <div class="content">
-
-      <h2 id="m06-overview">Mission: Lambda Aurigae — Cinder Reach</h2>
+    <!-- ═══ SECTION: Akt 1 ═══ -->
+    <div class="page-section content" id="m06-akt1">
+      <h2>Mission: Lambda Aurigae — Cinder Reach</h2>
       <p><strong>Planet:</strong> KHEPRI-9 | <strong>Kolonie:</strong> Cinder Reach | <strong>Target-Android:</strong> AX-80<br>
       <strong>Black Veil Daten:</strong> Signal-Muster — <em>„Organische Kommunikation?"</em></p>
 
-      <h1 id="m06-akt1">Akt 1 — Ankunft + Station</h1>
+      <h1>Akt 1 — Ankunft + Station</h1>
 
-      <h2 id="m06-anflug">Anflug &amp; Landung</h2>
+      <h2>Anflug &amp; Landung</h2>
       <blockquote>Als euer Schiff in die Atmosphäre von KHEPRI-9 eintaucht, bricht der Horizont in einem flirrenden, kupferfarbenen Brand auf. Unter euch liegen zerfurchte Fjorde wie Wunden im Gestein. Cinder Reach — ein Ring aus Modulen, Laufstegen und Tanks, auf einer Klippe über schwarzem Wasser, das in dicken Nebeln verdampft.</blockquote>
 
-      <h2 id="m06-eindruck">Erster Eindruck</h2>
+      <h2>Erster Eindruck</h2>
       <p>Die Kolonie ist <strong>zu still</strong>. Nicht tot — aber gedämpft. Türen verriegelt, Außenlaufstege leer. Beim Aufsetzen trifft euch die Atmosphäre: metallischer Geschmack, feine Partikel. Ohne Filter: als würde man in Glasstaub atmen.</p>
       <p>Am Rand des Landing Pads: <code>„GEHT NICHT IN DIE FJORDE."</code></p>
 
-      <h2 id="m06-auftraggeber">Die Auftraggeber-Szene</h2>
+      <h2>Die Auftraggeber-Szene</h2>
       <blockquote>Empfang im Operations &amp; Comms Hub — nicht feierlich, sondern erschöpft. Die Stationsleitung erklärt: Es begann mit Werkzeug. Dann Ersatzteile. Dann Schutzanzüge. Schließlich Menschen. Suchtrupps kamen nie weiter als bis zu den Fjordwegen.</blockquote>
       <p>Dann kommt der Name: <strong>AX-80.</strong></p>
       <p>AX-80 kam von einer Forschungsmission zurück. Nach der Rückkehr wirkte er verändert: weniger Augenbewegungen, mehr Stille. Er beantwortete Fragen mit „Bestätigt" — manchmal erst nach mehreren Sekunden. Als man ihn an die Wartungsbucht lotsen wollte, reagierte er nicht. Dann, in einer Nacht ohne Sturmwarnung, stahl er ein Rover-Fahrzeug und verschwand.</p>
 
-      <h2 id="m06-briefing">Was die Spieler bekommen</h2>
+      <h2>Was die Spieler bekommen</h2>
       <p>Ein Bewegungs-Log des Rovers. Route: entlang eines Fjords, zu einer Zone nur als <strong>„Hohlraum / Höhlensystem — instabil"</strong> markiert.</p>
       <blockquote>WY als Funkkontakt: <em>„AX-80 ist Firmeneigentum. Rückführung hat Priorität. Wenn Proben existieren — sichern. Wenn nötig — neutralisieren."</em></blockquote>
 
-      <h2 id="m06-drama">Station-Drama</h2>
+      <h2>Station-Drama</h2>
       <ul>
         <li>Betten gemacht, als würde jemand zurückkommen</li>
         <li>Karten und Becher in der Kantine, als hätte jemand mitten im Satz aufgehört</li>
         <li>Im Medbay: gesperrter Behandlungsraum, leere Trage, getrocknete Kühlgel-Spuren</li>
         <li>Werkzeugkasten sorgfältig sortiert — für einen Zweck vorbereitet</li>
       </ul>
+    </div>
 
-      <h1 id="m06-akt23">Akt 2 &amp; 3 — Mission</h1>
+    <!-- ═══ SECTION: Akt 2 & 3 ═══ -->
+    <div class="page-section content" id="m06-akt23">
+      <h1>Akt 2 &amp; 3 — Mission</h1>
       <p>Weitere Details in eigenen Unterseiten: <em>Ablauf der Höhle, Akt 2, Akt 3, Alternative Enden, Encounter-Taktung, Wachstumsstufen der Matrix, Die letzten 10 Minuten</em>.</p>
-
       <div class="info-box warn">
         <div class="info-box-header">NPCs</div>
         <p>NPC-Details in der Lambda Aurigae NPCs-Datei. Loot in der Loot-Datei.</p>
       </div>
-
     </div>
+
   </div>
 </main>
 </body>

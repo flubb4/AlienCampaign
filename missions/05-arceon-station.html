@@ -8,7 +8,10 @@
 </head>
 <body>
 <script src="../assets/js/shell.js"></script>
-<script>renderShell({base: "../", active: "m05"});</script>
+<script>renderShell({base: "../", active: "m05", subNav: [
+  {id: "m05-mission",   label: "Mission"},
+  {id: "m05-encounter", label: "Eyemidge-Encounter"},
+]});</script>
 
 <main id="main">
   <div id="page">
@@ -23,40 +26,38 @@
       </div>
     </header>
 
-    <div class="content">
-
-      <h2 id="m05-overview">Mission: Arceon Station</h2>
+    <!-- ═══ SECTION: Mission ═══ -->
+    <div class="page-section content" id="m05-mission">
+      <h2>Mission: Arceon Station</h2>
       <p><strong>System:</strong> GL259 | <strong>Target-Android:</strong> AX-47<br>
       <strong>Black Veil Daten:</strong> Verhaltenssimulation — <em>„Nicht zufällig. Territorial."</em></p>
 
-      <h2 id="m05-ankunft">Ankunft (Vorlesetext)</h2>
+      <h2>Ankunft (Vorlesetext)</h2>
       <blockquote>Als euer Schiff aus dem Überlicht fällt, hängt Arceon Station reglos vor euch im Dunkel — ein kompakter Forschungsposten, an den Rumpf eines alten Frachters geschweißt. Die USCSS Peregrine liegt noch angedockt. Navigationslichter blinken im Takt. Kein Notsignal. Kein Funkverkehr. Helios hat euch gesagt, der Kontakt sei „vorübergehend unterbrochen". Von hier aus sieht das nicht vorübergehend aus. Das sieht aus wie eine Station, die aufgehört hat zu antworten — und nicht mehr vorhat, damit anzufangen.</blockquote>
       <p><em>Die Spieler können vor dem Andocken Scans durchführen: Lebenszeichen unklar, Atmosphäre intakt, keine Explosionsschäden. Alles normal. Nur die Funkstille nicht.</em></p>
 
-      <hr>
-
-      <h2 id="m05-beschreibung">Beschreibung</h2>
-
+      <h2>Beschreibung</h2>
       <div class="info-box danger">
         <div class="info-box-header">Kreatur in dieser Mission</div>
         <p>Das <strong>Eyemidge</strong> ist der Gegner dieser Mission. Eyemidge Kreaturenblatt separat verfügbar.</p>
       </div>
-
       <p>Die Spieler müssen Android AX-47 finden. Dieser befindet sich kaputt im Bio Lab.</p>
       <p>Auf dem Weg ins Biolab merken die Spieler, dass hier etwas nicht stimmt. Hier befindet sich niemand und im angedockten Schiff USCSS Peregrine ist auch niemand. Überall verteilt sind Kratzer und Blutspuren.</p>
+    </div>
 
-      <h2 id="m05-storage">Der Storage</h2>
+    <!-- ═══ SECTION: Eyemidge-Encounter ═══ -->
+    <div class="page-section content" id="m05-encounter">
+      <h1>Der Storage</h1>
       <p>Abgeschlossen von innen. Kann durch Heavy Machinery Roll aufgebrochen werden. Darin befindet sich ein Eyemidge — im Körper eines Mannes. Sein eines Auge sieht ganz komisch aus. Als die Spieler die Tür öffnen, steht er auf und schaut sie einfach an. Erst nach einer Weile versucht er zu sprechen — wiederholt, was jemand anderes gesagt hat.</p>
-
       <div class="info-box danger">
         <div class="info-box-header">Kampf-Trigger</div>
         <p>Merkt das Eyemidge, dass die Spieler misstrauisch werden, macht er einen Launch Attack.</p>
       </div>
 
-      <h2 id="m05-ablauf">Ablauf</h2>
+      <h1>Ablauf</h1>
       <p>Nach dem Kampf können die Spieler ohne weitere Probleme den Android mitnehmen.</p>
 
-      <h2 id="m05-raeume">Räume</h2>
+      <h1>Räume</h1>
       <ul>
         <li>Airlock</li>
         <li>Andockbereich</li>
@@ -65,8 +66,8 @@
         <li>Med Bay</li>
         <li>Storage (abgeschlossen) — Eyemidge hier!</li>
       </ul>
-
     </div>
+
   </div>
 </main>
 </body>

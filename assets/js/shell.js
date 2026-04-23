@@ -1,6 +1,7 @@
 /* Shell for every page in AlienCampaign.
    Renders topbar + sidebar from a single nav definition, with
-   the current page highlighted via `active`. */
+   the current page highlighted via `active`.
+   Optional `subNav` injects section-switcher entries under the active item. */
 
 const NAV = [
   { cat: "Kampagne", items: [
@@ -35,8 +36,9 @@ const NAV = [
 
 function renderShell(opts) {
   opts = opts || {};
-  const base = opts.base || "";            // "", "../", "../../"
-  const activeId = opts.active || "";      // matches item.id
+  const base = opts.base || "";
+  const activeId = opts.active || "";
+  const subNav = opts.subNav || [];
 
   // ---------- Topbar ----------
   const topbar = `
@@ -53,13 +55,21 @@ function renderShell(opts) {
 
   // ---------- Sidebar ----------
   let sidebarHtml = '';
-  NAV.forEach(section => {
-    sidebarHtml += `<div class="nav-cat">${section.cat}</div>`;
-    section.items.forEach(item => {
-      const cls = item.id === activeId ? 'nav-item active' : 'nav-item';
-      sidebarHtml += `<a class="${cls}" href="${base}${item.href}">${item.label}</a>`;
+  NAV.forEach(function(section) {
+    sidebarHtml += '<div class="nav-cat">' + section.cat + '</div>';
+    section.items.forEach(function(item) {
+      const isActive = item.id === activeId;
+      const cls = isActive ? 'nav-item active' : 'nav-item';
+      sidebarHtml += '<a class="' + cls + '" href="' + base + item.href + '">' + item.label + '</a>';
+      // Inject sub-section switcher under the active item
+      if (isActive && subNav.length > 0) {
+        subNav.forEach(function(sub) {
+          sidebarHtml += '<a class="sub-nav-item" data-section="' + sub.id + '" href="#" onclick="showSection(\'' + sub.id + '\'); return false;">' + sub.label + '</a>';
+        });
+      }
     });
   });
+
   const sidebar = `
     <aside id="sidebar">
       <nav class="nav-section">${sidebarHtml}</nav>
@@ -68,6 +78,26 @@ function renderShell(opts) {
   `;
 
   document.body.insertAdjacentHTML("afterbegin", topbar + sidebar);
+
+  // Show first section once DOM is ready
+  if (subNav.length > 0) {
+    document.addEventListener('DOMContentLoaded', function() {
+      showSection(subNav[0].id);
+    });
+  }
+}
+
+function showSection(id) {
+  document.querySelectorAll('.page-section').forEach(function(s) {
+    s.classList.remove('active');
+  });
+  const el = document.getElementById(id);
+  if (el) el.classList.add('active');
+  document.querySelectorAll('.sub-nav-item').forEach(function(n) {
+    n.classList.remove('active');
+  });
+  const navEl = document.querySelector('.sub-nav-item[data-section="' + id + '"]');
+  if (navEl) navEl.classList.add('active');
 }
 
 function toggleSidebar() {

@@ -8,7 +8,11 @@
 </head>
 <body>
 <script src="../assets/js/shell.js"></script>
-<script>renderShell({base: "../", active: "m02"});</script>
+<script>renderShell({base: "../", active: "m02", subNav: [
+  {id: "m02-mission",       label: "Mission"},
+  {id: "m02-turnier",       label: "Turnier"},
+  {id: "m02-konsequenzen",  label: "Konsequenzen & Lösungen"},
+]});</script>
 
 <main id="main">
   <div id="page">
@@ -23,53 +27,59 @@
       </div>
     </header>
 
-    <div class="content">
-
-      <h2 id="m02-overview">Mission: Theta Persei</h2>
+    <!-- ═══ SECTION: Mission ═══ -->
+    <div class="page-section content" id="m02-mission">
+      <h2>Mission: Theta Persei</h2>
       <p><strong>Ort:</strong> Theta Persei — „Prospect's Rest"<br>
       <strong>Schwierigkeitsgrad:</strong> Niedrig<br>
       <strong>Gefahr:</strong> Sozial, nicht physisch<br>
       <strong>Xenomorph-Risiko:</strong> Null (offiziell)</p>
 
-      <h2 id="m02-intro">Einleitung</h2>
+      <h2>Einleitung</h2>
       <blockquote>Der Staub von Theta Persei legt sich träge auf die Landebeine eures Schiffs. Keine Sirenen. Keine Notrufe. Nur Musik, Gelächter — und der Geruch von billigem Alkohol. Prospect's Rest lebt.</blockquote>
 
-      <h2 id="m02-ziel">Primärziel</h2>
+      <h2>Primärziel</h2>
       <p>Einen funktionierenden Arbeitsandroiden (AX-B7 „Benny") übernehmen und abtransportieren.</p>
 
-      <h2 id="m02-knackpunkt">Der Knackpunkt</h2>
+      <h2>Der Knackpunkt</h2>
       <p>Der Android wurde beim Würfelspiel verpfändet. Der Kolonierat gibt ihn nur heraus, wenn die Crew beim <strong>Würfel-Dürfel-Turnier</strong> gewinnt.</p>
       <blockquote><em>„Papier sagt vielleicht, er gehört euch. Aber hier unten gewinnt man Dinge anders."</em></blockquote>
+    </div>
 
-      <h2 id="m02-turnier">Würfel-Dürfel Turnier</h2>
+    <!-- ═══ SECTION: Turnier ═══ -->
+    <div class="page-section content" id="m02-turnier">
+      <h2>Würfel-Dürfel Turnier</h2>
       <ul>
         <li>3 Runden, jede Runde 1-gegen-1-Duell</li>
         <li>Gegner: Barkeeper, Minenboss, Pilot, Kolonierätin</li>
         <li>Wettbeträge steigen, Zuschauer kommentieren, Alkohol fließt</li>
       </ul>
 
-      <h2 id="m02-konsequenzen">Konsequenzen</h2>
+      <h2>Belohnung</h2>
+      <ul>
+        <li>Android AX-B7 + kleiner Kreditbonus</li>
+        <li>Guter Ruf bei Frontier-Kolonien</li>
+        <li>Optional: Einladung zu einem späteren, größeren Turnier</li>
+      </ul>
+    </div>
+
+    <!-- ═══ SECTION: Konsequenzen & Lösungen ═══ -->
+    <div class="page-section content" id="m02-konsequenzen">
+      <h2>Konsequenzen</h2>
       <ul>
         <li><strong>Sieg:</strong> Android wird offiziell übergeben</li>
         <li><strong>Knappes Verlieren:</strong> Zweite Chance — höherer Einsatz</li>
         <li><strong>Betrug:</strong> Sofortiger sozialer Konflikt (Hausverbot, Stress)</li>
       </ul>
 
-      <h2 id="m02-alternativen">Alternative Lösungen</h2>
+      <h2>Alternative Lösungen</h2>
       <ul>
         <li>Einen Champion ersetzen, der betrunken ist</li>
         <li>Nebendeal aushandeln (Reparaturen, Transport, Infos)</li>
         <li>Den Android frei kaufen (teurer als Marktwert)</li>
       </ul>
-
-      <h2 id="m02-belohnung">Belohnung</h2>
-      <ul>
-        <li>Android AX-B7 + kleiner Kreditbonus</li>
-        <li>Guter Ruf bei Frontier-Kolonien</li>
-        <li>Optional: Einladung zu einem späteren, größeren Turnier</li>
-      </ul>
-
     </div>
+
   </div>
 </main>
 </body>
