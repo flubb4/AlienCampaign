@@ -26,7 +26,7 @@ Visueller Stil: [`docs/design-system.md`](docs/design-system.md).
 
 | # | Mission | Datei | Status |
 |---|---------|-------|--------|
-| 01 | Routine Exchange | [`missions/01-routine-exchange.html`](missions/01-routine-exchange.html) | Platzhalter |
+| 01 | Routine Exchange | [`missions/01-routine-exchange.html`](missions/01-routine-exchange.html) | **migriert** |
 | 02 | Theta Persei | [`missions/02-theta-persei.html`](missions/02-theta-persei.html) | Platzhalter |
 | 03 | Jeremiah VI (inkl. Aftermath) | [`missions/03-jeremiah-vi.html`](missions/03-jeremiah-vi.html) | Platzhalter |
 | 04 | Atlas Station | [`missions/04-atlas-station.html`](missions/04-atlas-station.html) | Platzhalter |
