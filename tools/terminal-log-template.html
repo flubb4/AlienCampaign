@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Terminal-Log — TEMPLATE</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../assets/css/design-system.css">
+</head>
+<body>
+<script src="../assets/js/navigation.js"></script>
+<script>renderTopNav("../");</script>
+
+<div class="wrap">
+  <h1>Terminal-Log — Template</h1>
+  <p style="color: var(--dim); text-transform: uppercase; letter-spacing: 2px; font-size: 11px;">
+    Kopiervorlage für Weyland-Yutani-MU-TH-UR-6000-Logs
+  </p>
+
+  <div class="panel">
+    <strong>Verwendung:</strong> Diese Datei kopieren nach
+    <code>handouts/terminal-logs/&lt;name&gt;.html</code>, dann anpassen.
+    Stil-Regeln siehe <a href="../docs/design-system.md">design-system.md</a>.
+  </div>
+
+  <div class="t-head">
+╔══════════════════════════════════════════╗
+║  MU-TH-UR 6000 — SYSTEM LOG              ║
+║  NODE: &lt;NODE-ID&gt; / SECTION-&lt;N&gt;        ║
+╚══════════════════════════════════════════╝
+  </div>
+
+  <div class="t-entry">
+    <span class="t-ts">[2183.127/04:12]</span>
+    <span class="t-who">MURO_D</span> &gt; Frachtabgleich bestätigt.
+  </div>
+  <div class="t-entry t-warn">
+    <span class="t-ts">[2183.127/04:13]</span>
+    <span class="t-who">MU-TH-UR</span> &gt; LOSS-FLAG aktiv auf ZG-4471-M.
+  </div>
+  <div class="t-entry">
+    <span class="t-ts">[2183.127/04:15]</span>
+    <span class="t-who">SEC-8_OPS</span> &gt; Kontakt bestätigt. Containment-Protokoll
+    aktiv. <span class="redact">████████████████</span>
+  </div>
+  <div class="t-entry t-danger">
+    <span class="t-ts">[2183.127/04:22]</span>
+    <span class="t-who">MU-TH-UR</span> &gt; Verbindung verloren.
+  </div>
+
+  <div class="footer">
+    <span class="stripe">KLASSIFIZIERT — SECTION-8</span>
+  </div>
+</div>
+</body>
+</html>

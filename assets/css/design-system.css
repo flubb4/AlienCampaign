@@ -1,0 +1,249 @@
+/* =========================================================================
+   Weyland-Yutani Terminal — Design System
+   Shared styles for AlienCampaign. See docs/design-system.md for full spec.
+   ========================================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap');
+
+:root {
+  /* Primary — Terminal */
+  --bg:       #020a0f;
+  --panel:    #04111a;
+  --border:   #0a2535;
+  --accent:   #00e5ff;
+  --text:     #b8dde8;
+  --dim:      #3a6070;
+  --warn:     #ffcc00;
+  --danger:   #d66a5a;
+
+  /* Secondary — Imperial Ink (paper handouts) */
+  --im-ink:       #d8b26b;
+  --im-bright:    #ffcf7a;
+  --im-dim:       #8a6d3b;
+  --im-faint:     #4a3a20;
+  --im-green:     #7fb27a;
+  --im-red:       #d66a5a;
+  --im-warn:      #e2c94a;
+  --im-stripe:    #f2c325;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Share Tech Mono", monospace;
+  font-size: 13px;
+  letter-spacing: 1px;
+  line-height: 1.55;
+}
+
+/* ---------- Headlines / Phosphor-Glow ---------- */
+
+h1, h2, h3, h4 {
+  font-family: "Orbitron", sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--accent);
+  text-shadow: 0 0 16px rgba(0, 229, 255, 0.4);
+  margin: 1.4em 0 0.6em;
+}
+
+h1 { font-size: 22px; letter-spacing: 4px; }
+h2 { font-size: 16px; }
+h3 { font-size: 13px; color: var(--text); text-shadow: none; }
+h4 { font-size: 12px; color: var(--dim); text-shadow: none; }
+
+/* ---------- Links ---------- */
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--border);
+  transition: all 0.15s;
+}
+a:hover {
+  border-bottom-color: var(--accent);
+  text-shadow: 0 0 8px var(--accent);
+}
+
+/* ---------- Layout ---------- */
+
+.wrap {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 30px 24px 80px;
+}
+
+/* ---------- Top Navigation ---------- */
+
+.topnav {
+  background: var(--panel);
+  border-bottom: 1px solid var(--border);
+  padding: 12px 24px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.topnav .brand {
+  color: var(--accent);
+  font-family: "Orbitron", sans-serif;
+  font-weight: 900;
+  margin-right: 24px;
+}
+.topnav a {
+  color: var(--text);
+  border-bottom: none;
+}
+.topnav a:hover { color: var(--accent); }
+
+/* ---------- Panels / Cards ---------- */
+
+.panel {
+  background: rgba(0, 229, 255, 0.03);
+  border: 1px solid var(--border);
+  padding: 18px 22px;
+  margin: 16px 0;
+  border-radius: 0;
+}
+.panel.warn  { border-color: var(--warn);   background: rgba(255,204,0,0.04); }
+.panel.danger{ border-color: var(--danger); background: rgba(214,106,90,0.04); }
+
+/* ---------- Meta Block (top of each mission) ---------- */
+
+.meta-block {
+  border: 1px solid var(--border);
+  padding: 16px 20px;
+  margin: 20px 0 30px;
+  background: rgba(0, 229, 255, 0.02);
+}
+.meta-block dl { margin: 0; display: grid; grid-template-columns: 140px 1fr; gap: 4px 16px; }
+.meta-block dt { color: var(--dim); text-transform: uppercase; font-size: 10px; letter-spacing: 2px; }
+.meta-block dd { margin: 0; color: var(--text); }
+
+/* ---------- Terminal-Log-Block ---------- */
+
+.t-head {
+  color: var(--accent);
+  white-space: pre;
+  font-size: 12px;
+  margin: 20px 0 10px;
+  text-shadow: 0 0 8px rgba(0, 229, 255, 0.4);
+}
+.t-entry {
+  padding: 2px 0;
+  font-size: 12px;
+}
+.t-ts  { color: var(--dim); margin-right: 6px; }
+.t-who { color: var(--accent); font-weight: bold; margin-right: 2px; }
+.t-warn { color: var(--warn); }
+.t-danger { color: var(--danger); }
+
+/* ---------- Buttons ---------- */
+
+.btn {
+  display: inline-block;
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-family: "Share Tech Mono", monospace;
+  font-size: 10px;
+  padding: 7px 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.15s;
+  border-radius: 0;
+}
+.btn:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  text-shadow: 0 0 8px var(--accent);
+}
+
+/* ---------- Tables ---------- */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  font-size: 12px;
+}
+th, td {
+  text-align: left;
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--border);
+}
+th {
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 10px;
+  font-weight: normal;
+  border-bottom: 1px solid var(--accent);
+}
+tr:hover td { background: rgba(0, 229, 255, 0.02); }
+
+/* ---------- Redacted text ---------- */
+
+.redact {
+  background: var(--text);
+  color: var(--text);
+  user-select: none;
+  padding: 0 4px;
+}
+
+/* ---------- Classification stripe ---------- */
+
+.stripe {
+  display: inline-block;
+  background: var(--im-stripe);
+  color: #000;
+  padding: 2px 8px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+/* ---------- Footer ---------- */
+
+.footer {
+  margin-top: 80px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  color: var(--dim);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+/* ---------- Imperial-Ink mode (paper handouts) ---------- */
+
+.ink-mode {
+  background: #1a120a;
+  color: var(--im-ink);
+}
+.ink-mode h1, .ink-mode h2, .ink-mode h3 {
+  color: var(--im-bright);
+  text-shadow: none;
+  font-family: "Share Tech Mono", monospace;
+  letter-spacing: 2px;
+}
+.ink-mode a { color: var(--im-bright); border-bottom-color: var(--im-faint); }
+
+/* ---------- Print ---------- */
+
+@media print {
+  body { background: #fff; color: #000; }
+  h1, h2, h3 { color: #000; text-shadow: none; }
+  .topnav, .footer { display: none; }
+  a { color: #000; border-bottom: none; }
+}
