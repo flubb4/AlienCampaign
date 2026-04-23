@@ -2,78 +2,176 @@
 <html lang="de">
 <head>
 <meta charset="UTF-8">
-<title>Recall Authority — Campaign Hub</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RECALL AUTHORITY — Campaign Hub</title>
 <link rel="stylesheet" href="assets/css/design-system.css">
 </head>
 <body>
-<script src="assets/js/navigation.js"></script>
-<script>renderTopNav("");</script>
+<script src="assets/js/shell.js"></script>
+<script>renderShell({base: "", active: ""});</script>
 
-<div class="wrap">
+<main id="main">
+  <div id="page">
 
-  <h1>Recall Authority</h1>
-  <p style="color: var(--dim); text-transform: uppercase; letter-spacing: 2px; font-size: 11px;">
-    MU-TH-UR 6000 — Campaign Hub — Alien RPG (Free League)
-  </p>
+    <div class="welcome-header">
+      <div class="welcome-title">Weyland-Yutani // Recall Authority</div>
+      <div class="welcome-main">RECALL <span class="accent">AUTHORITY</span></div>
+      <div class="welcome-sub">Campaign Book — Alien RPG (Free League)</div>
+    </div>
 
-  <div class="panel">
-    <p>Zentrale Navigation für alle Kampagneninhalte. Missionen sind als eigenständige
-    HTML-Dateien unter <a href="missions/">missions/</a> abgelegt — jede ist für sich
-    lesbar und editierbar.</p>
+    <div class="terminal-line">MU/TH/UR 9000 online</div>
+    <div class="terminal-line">Session cache synchronisiert</div>
+    <div class="terminal-line">9 Missionen registriert — 1 Referenz migriert</div>
+
+    <div class="stat-grid">
+      <div class="stat-box"><div class="stat-val">9</div><div class="stat-label">Missionen</div></div>
+      <div class="stat-box"><div class="stat-val">4</div><div class="stat-label">PCs</div></div>
+      <div class="stat-box"><div class="stat-val">1</div><div class="stat-label">Referenz</div></div>
+      <div class="stat-box"><div class="stat-val">08</div><div class="stat-label">Platzhalter</div></div>
+    </div>
+
+    <div class="content">
+      <h2>Kampagne</h2>
+    </div>
+    <div class="quick-links">
+      <a class="ql-btn" href="campaign/overview.html">
+        <div class="ql-icon">▸</div>
+        <div class="ql-title">Overview</div>
+        <div class="ql-sub">Zusammenfassung</div>
+      </a>
+      <a class="ql-btn" href="campaign/timeline.html">
+        <div class="ql-icon">▸</div>
+        <div class="ql-title">Timeline</div>
+        <div class="ql-sub">Session-Chronik</div>
+      </a>
+      <a class="ql-btn" href="campaign/lore.html">
+        <div class="ql-icon">▸</div>
+        <div class="ql-title">Lore</div>
+        <div class="ql-sub">Welt &amp; Setting</div>
+      </a>
+      <a class="ql-btn" href="campaign/hook-register.html">
+        <div class="ql-icon">▸</div>
+        <div class="ql-title">Hook-Register</div>
+        <div class="ql-sub">Player-Hooks pro Mission</div>
+      </a>
+      <a class="ql-btn" href="missions/index.html">
+        <div class="ql-icon">▸</div>
+        <div class="ql-title">Missionen</div>
+        <div class="ql-sub">9 Einträge</div>
+      </a>
+      <a class="ql-btn" href="handouts/index.html">
+        <div class="ql-icon">▸</div>
+        <div class="ql-title">Handouts</div>
+        <div class="ql-sub">PDFs &amp; Fragmente</div>
+      </a>
+    </div>
+
+    <div class="content">
+      <h2>Charaktere</h2>
+    </div>
+    <div class="char-grid">
+      <a class="char-card" href="characters/pcs/mae.html">
+        <div class="char-name">Maelys Harlan</div>
+        <div class="char-alias">„MAE"</div>
+        <div class="char-role">CAPTAIN / PILOT</div>
+        <div class="char-player">Charter-Lease HX-8821</div>
+      </a>
+      <a class="char-card" href="characters/pcs/silas.html">
+        <div class="char-name">Silas</div>
+        <div class="char-alias">DVS-7741</div>
+        <div class="char-role">TBD</div>
+      </a>
+      <a class="char-card" href="characters/pcs/scott.html">
+        <div class="char-name">Scott Reynolds</div>
+        <div class="char-alias">EX-USCM</div>
+        <div class="char-role">NDA // BV-FRAGMENTE</div>
+      </a>
+      <a class="char-card" href="characters/pcs/isabella.html">
+        <div class="char-name">Isabella Cruz</div>
+        <div class="char-alias">PERSONALAKTE</div>
+        <div class="char-role">TBD</div>
+      </a>
+    </div>
+
+    <div class="content">
+      <h2>Missionen</h2>
+    </div>
+    <div class="mission-grid">
+      <a class="mission-card" href="missions/01-routine-exchange.html">
+        <div class="mission-num">01</div>
+        <div class="mission-info">
+          <div class="mission-name">Routine Exchange</div>
+          <div class="mission-sub">Platzhalter — nicht migriert</div>
+          <div class="mission-tags"><span class="tag">TBD</span></div>
+        </div>
+      </a>
+      <a class="mission-card" href="missions/02-theta-persei.html">
+        <div class="mission-num">02</div>
+        <div class="mission-info">
+          <div class="mission-name">Theta Persei</div>
+          <div class="mission-sub">Platzhalter</div>
+          <div class="mission-tags"><span class="tag">TBD</span></div>
+        </div>
+      </a>
+      <a class="mission-card" href="missions/03-jeremiah-vi.html">
+        <div class="mission-num">03</div>
+        <div class="mission-info">
+          <div class="mission-name">Jeremiah VI</div>
+          <div class="mission-sub">Platzhalter · inkl. Aftermath</div>
+          <div class="mission-tags"><span class="tag">TBD</span></div>
+        </div>
+      </a>
+      <a class="mission-card" href="missions/04-atlas-station.html">
+        <div class="mission-num">04</div>
+        <div class="mission-info">
+          <div class="mission-name">Atlas Station</div>
+          <div class="mission-sub">Platzhalter</div>
+          <div class="mission-tags"><span class="tag">TBD</span></div>
+        </div>
+      </a>
+      <a class="mission-card" href="missions/05-arceon-station.html">
+        <div class="mission-num">05</div>
+        <div class="mission-info">
+          <div class="mission-name">Arceon Station</div>
+          <div class="mission-sub">Platzhalter</div>
+          <div class="mission-tags"><span class="tag">TBD</span></div>
+        </div>
+      </a>
+      <a class="mission-card" href="missions/06-lambda-aurigae.html">
+        <div class="mission-num">06</div>
+        <div class="mission-info">
+          <div class="mission-name">Lambda Aurigae — Cinder Reach</div>
+          <div class="mission-sub">Platzhalter</div>
+          <div class="mission-tags"><span class="tag">TBD</span></div>
+        </div>
+      </a>
+      <a class="mission-card" href="missions/07-tiamat-iv.html">
+        <div class="mission-num">07</div>
+        <div class="mission-info">
+          <div class="mission-name">Tiamat IV</div>
+          <div class="mission-sub">Migrierte Referenz-Mission</div>
+          <div class="mission-tags"><span class="tag green">REFERENZ</span></div>
+        </div>
+      </a>
+      <a class="mission-card" href="missions/08-van-maanens-star.html">
+        <div class="mission-num">08</div>
+        <div class="mission-info">
+          <div class="mission-name">Van Maanen's Star</div>
+          <div class="mission-sub">Platzhalter</div>
+          <div class="mission-tags"><span class="tag">TBD</span></div>
+        </div>
+      </a>
+      <a class="mission-card hard" href="missions/99-act-2-3.html">
+        <div class="mission-num">99</div>
+        <div class="mission-info">
+          <div class="mission-name">Akt 2 &amp; 3 — Finale</div>
+          <div class="mission-sub">Platzhalter</div>
+          <div class="mission-tags"><span class="tag danger">FINALE</span></div>
+        </div>
+      </a>
+    </div>
+
   </div>
-
-  <h2>Kampagne</h2>
-  <ul>
-    <li><a href="campaign/overview.html">Overview</a> — Kurzfassung der Kampagne</li>
-    <li><a href="campaign/timeline.html">Timeline</a> — Session-Chronik</li>
-    <li><a href="campaign/lore.html">Lore</a> — Recall Authority, Welt, Setting</li>
-    <li><a href="campaign/hook-register.html">Hook-Register</a> — Player-Hooks pro Mission</li>
-  </ul>
-
-  <h2>Charaktere</h2>
-  <ul>
-    <li><a href="characters/pcs/mae.html">Maelys „Mae" Harlan</a></li>
-    <li><a href="characters/pcs/silas.html">Silas</a></li>
-    <li><a href="characters/pcs/scott.html">Scott Reynolds</a></li>
-    <li><a href="characters/pcs/isabella.html">Isabella Cruz</a></li>
-  </ul>
-
-  <h2>Missionen</h2>
-  <table>
-    <thead>
-      <tr><th>#</th><th>Mission</th><th>Status</th></tr>
-    </thead>
-    <tbody>
-      <tr><td>01</td><td><a href="missions/01-routine-exchange.html">Routine Exchange</a></td><td>Platzhalter</td></tr>
-      <tr><td>02</td><td><a href="missions/02-theta-persei.html">Theta Persei</a></td><td>Platzhalter</td></tr>
-      <tr><td>03</td><td><a href="missions/03-jeremiah-vi.html">Jeremiah VI</a></td><td>Platzhalter</td></tr>
-      <tr><td>04</td><td><a href="missions/04-atlas-station.html">Atlas Station</a></td><td>Platzhalter</td></tr>
-      <tr><td>05</td><td><a href="missions/05-arceon-station.html">Arceon Station</a></td><td>Platzhalter</td></tr>
-      <tr><td>06</td><td><a href="missions/06-lambda-aurigae.html">Lambda Aurigae — Cinder Reach</a></td><td>Platzhalter</td></tr>
-      <tr><td>07</td><td><a href="missions/07-tiamat-iv.html">Tiamat IV</a></td><td><span style="color: var(--accent);">Referenz</span></td></tr>
-      <tr><td>08</td><td><a href="missions/08-van-maanens-star.html">Van Maanen's Star</a></td><td>Platzhalter</td></tr>
-      <tr><td>99</td><td><a href="missions/99-act-2-3.html">Akt 2 &amp; 3 — Finale</a></td><td>Platzhalter</td></tr>
-    </tbody>
-  </table>
-
-  <h2>Handouts &amp; Tools</h2>
-  <ul>
-    <li><a href="handouts/">Handouts</a> — PDFs, Terminal-Logs, BlackVeil</li>
-    <li><a href="tools/starmap.html">Starmap</a></li>
-    <li><a href="tools/terminal-log-template.html">Terminal-Log Template</a></li>
-  </ul>
-
-  <h2>Dokumentation</h2>
-  <ul>
-    <li><a href="docs/structure.md">Repo-Struktur</a></li>
-    <li><a href="docs/claude-workflow.md">Claude-Workflow</a></li>
-    <li><a href="docs/design-system.md">Design-System</a></li>
-  </ul>
-
-  <div class="footer">
-    Weyland-Yutani Internal Use Only — Classification: Section-8 — Loss-Flag active
-  </div>
-</div>
+</main>
 </body>
 </html>

@@ -2,40 +2,50 @@
 <html lang="de">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Silas — PC Dossier</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="../../assets/css/design-system.css">
 </head>
 <body>
-<script src="../../assets/js/navigation.js"></script>
-<script>renderTopNav("../../");</script>
+<script src="../../assets/js/shell.js"></script>
+<script>renderShell({base: "../../", active: "silas"});</script>
 
-<div class="wrap">
-  <h1>Silas</h1>
-  <p style="color: var(--dim); text-transform: uppercase; letter-spacing: 2px; font-size: 11px;">
-    Link zu DVS-7741
-  </p>
+<main id="main">
+  <div id="page">
 
-  <div class="meta-block">
-    <dl>
-      <dt>Rolle</dt><dd><em>TODO</em></dd>
-      <dt>Agenda</dt><dd><em>TODO</em></dd>
-      <dt>Secret</dt><dd>Verbindung zu DVS-7741 — Details <em>TODO</em></dd>
-      <dt>Relationships</dt><dd><em>TODO</em></dd>
-    </dl>
+    <header class="page-header">
+      <div class="breadcrumb"><a href="../../index.html">Hub</a> › Charaktere › <span>Silas</span></div>
+      <h1 class="page-title">Silas</h1>
+      <div class="page-meta">
+        <span class="tag green">PC</span>
+        <span>Link zu DVS-7741</span>
+      </div>
+    </header>
+
+    <div class="content">
+
+      <h2>Rollenprofil</h2>
+      <table>
+        <tr><th>Rolle</th><td><em>TODO</em></td></tr>
+        <tr><th>Agenda</th><td><em>TODO</em></td></tr>
+        <tr><th>Secret</th><td>Verbindung zu DVS-7741 — Details <em>TODO</em></td></tr>
+        <tr><th>Relationships</th><td><em>TODO</em></td></tr>
+      </table>
+
+      <h2>Backstory</h2>
+      <p><em>TODO</em></p>
+
+      <h2>Story-Hooks</h2>
+      <ul>
+        <li><strong>DVS-7741</strong> — Kern-Hook, Details <em>TODO</em></li>
+        <li><em>TODO</em> weitere</li>
+      </ul>
+
+      <h2>Hook-Auftritte</h2>
+      <p>Siehe <a href="../../campaign/hook-register.html">Hook-Register</a>.</p>
+
+    </div>
   </div>
-
-  <h2>Backstory</h2>
-  <p><em>TODO</em></p>
-
-  <h2>Story-Hooks</h2>
-  <ul>
-    <li><strong>DVS-7741</strong> — Kern-Hook, Details <em>TODO</em></li>
-    <li><em>TODO</em> weitere</li>
-  </ul>
-
-  <h2>Hook-Auftritte</h2>
-  <p>Siehe <a href="../../campaign/hook-register.html">Hook-Register</a>.</p>
-</div>
+</main>
 </body>
 </html>

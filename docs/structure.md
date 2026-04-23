@@ -49,7 +49,7 @@ AlienCampaign/
 │   │   ├── design-system.css   gemeinsame Terminal-Styles
 │   │   └── print.css
 │   ├── js/
-│   │   └── navigation.js       Top-Nav-Einbinden
+│   │   └── shell.js            Topbar + Sidebar rendern (NAV-Definition hier)
 │   └── images/
 │       └── starmap.jpg
 │

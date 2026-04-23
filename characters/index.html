@@ -2,27 +2,55 @@
 <html lang="de">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Charaktere — Recall Authority</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="../assets/css/design-system.css">
 </head>
 <body>
-<script src="../assets/js/navigation.js"></script>
-<script>renderTopNav("../");</script>
+<script src="../assets/js/shell.js"></script>
+<script>renderShell({base: "../", active: ""});</script>
 
-<div class="wrap">
-  <h1>Charaktere</h1>
+<main id="main">
+  <div id="page">
 
-  <h2>PCs</h2>
-  <ul>
-    <li><a href="pcs/mae.html">Maelys „Mae" Harlan</a> — Captain, HX-8821</li>
-    <li><a href="pcs/silas.html">Silas</a> — DVS-7741</li>
-    <li><a href="pcs/scott.html">Scott Reynolds</a> — Ex-USCM, BV-Fragmente</li>
-    <li><a href="pcs/isabella.html">Isabella Cruz</a> — siehe Personalakte</li>
-  </ul>
+    <header class="page-header">
+      <div class="breadcrumb"><a href="../index.html">Hub</a> › <span>Charaktere</span></div>
+      <h1 class="page-title">Charaktere</h1>
+    </header>
 
-  <h2>NPCs</h2>
-  <p>Einzel-Dossiers liegen in <a href="npcs/"><code>npcs/</code></a>.</p>
-</div>
+    <div class="content">
+      <h2>PCs</h2>
+    </div>
+    <div class="char-grid">
+      <a class="char-card" href="pcs/mae.html">
+        <div class="char-name">Maelys Harlan</div>
+        <div class="char-alias">„MAE"</div>
+        <div class="char-role">CAPTAIN / PILOT</div>
+        <div class="char-player">Charter-Lease HX-8821</div>
+      </a>
+      <a class="char-card" href="pcs/silas.html">
+        <div class="char-name">Silas</div>
+        <div class="char-alias">DVS-7741</div>
+        <div class="char-role">TBD</div>
+      </a>
+      <a class="char-card" href="pcs/scott.html">
+        <div class="char-name">Scott Reynolds</div>
+        <div class="char-alias">EX-USCM</div>
+        <div class="char-role">NDA // BV-FRAGMENTE</div>
+      </a>
+      <a class="char-card" href="pcs/isabella.html">
+        <div class="char-name">Isabella Cruz</div>
+        <div class="char-alias">PERSONALAKTE</div>
+        <div class="char-role">TBD</div>
+      </a>
+    </div>
+
+    <div class="content">
+      <h2>NPCs</h2>
+      <p>Einzel-Dossiers liegen in <code>npcs/</code>.</p>
+    </div>
+
+  </div>
+</main>
 </body>
 </html>

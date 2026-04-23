@@ -2,24 +2,33 @@
 <html lang="de">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tools — Recall Authority</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="../assets/css/design-system.css">
 </head>
 <body>
-<script src="../assets/js/navigation.js"></script>
-<script>renderTopNav("../");</script>
+<script src="../assets/js/shell.js"></script>
+<script>renderShell({base: "../", active: ""});</script>
 
-<div class="wrap">
-  <h1>Tools</h1>
-  <p style="color: var(--dim); text-transform: uppercase; letter-spacing: 2px; font-size: 11px;">
-    GM-Werkzeuge und Vorlagen
-  </p>
+<main id="main">
+  <div id="page">
 
-  <ul>
-    <li><a href="starmap.html">Starmap</a> — interaktive Sternenkarte</li>
-    <li><a href="terminal-log-template.html">Terminal-Log Template</a> — Kopiervorlage für Handouts</li>
-  </ul>
-</div>
+    <header class="page-header">
+      <div class="breadcrumb"><a href="../index.html">Hub</a> › <span>Tools</span></div>
+      <h1 class="page-title">Tools</h1>
+      <div class="page-meta">
+        <span>GM-Werkzeuge und Vorlagen</span>
+      </div>
+    </header>
+
+    <div class="content">
+      <ul>
+        <li><a href="starmap.html">Starmap</a> — interaktive Sternenkarte</li>
+        <li><a href="terminal-log-template.html">Terminal-Log Template</a> — Kopiervorlage für Handouts</li>
+      </ul>
+    </div>
+
+  </div>
+</main>
 </body>
 </html>

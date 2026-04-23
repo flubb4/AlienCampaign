@@ -2,41 +2,105 @@
 <html lang="de">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Missionen — Recall Authority</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="../assets/css/design-system.css">
 </head>
 <body>
-<script src="../assets/js/navigation.js"></script>
-<script>renderTopNav("../");</script>
+<script src="../assets/js/shell.js"></script>
+<script>renderShell({base: "../", active: ""});</script>
 
-<div class="wrap">
-  <h1>Missionen</h1>
-  <p style="color: var(--dim); text-transform: uppercase; letter-spacing: 2px; font-size: 11px;">
-    Eine Datei pro Mission — selbstständig lesbar und editierbar
-  </p>
+<main id="main">
+  <div id="page">
 
-  <table>
-    <thead><tr><th>#</th><th>Mission</th><th>Orte</th><th>Status</th></tr></thead>
-    <tbody>
-      <tr><td>01</td><td><a href="01-routine-exchange.html">Routine Exchange</a></td><td><em>TBD</em></td><td>Platzhalter</td></tr>
-      <tr><td>02</td><td><a href="02-theta-persei.html">Theta Persei</a></td><td><em>TBD</em></td><td>Platzhalter</td></tr>
-      <tr><td>03</td><td><a href="03-jeremiah-vi.html">Jeremiah VI</a></td><td>Jeremiah VI + Aftermath</td><td>Platzhalter</td></tr>
-      <tr><td>04</td><td><a href="04-atlas-station.html">Atlas Station</a></td><td><em>TBD</em></td><td>Platzhalter</td></tr>
-      <tr><td>05</td><td><a href="05-arceon-station.html">Arceon Station</a></td><td><em>TBD</em></td><td>Platzhalter</td></tr>
-      <tr><td>06</td><td><a href="06-lambda-aurigae.html">Lambda Aurigae — Cinder Reach</a></td><td>Cinder Reach</td><td>Platzhalter</td></tr>
-      <tr><td>07</td><td><a href="07-tiamat-iv.html">Tiamat IV</a></td><td>Tiamat IV</td><td style="color: var(--accent);">Referenz (migriert)</td></tr>
-      <tr><td>08</td><td><a href="08-van-maanens-star.html">Van Maanen's Star</a></td><td>Van Maanen's Star</td><td>Platzhalter</td></tr>
-      <tr><td>99</td><td><a href="99-act-2-3.html">Akt 2 &amp; 3 — Finale</a></td><td><em>TBD</em></td><td>Platzhalter</td></tr>
-    </tbody>
-  </table>
+    <header class="page-header">
+      <div class="breadcrumb"><a href="../index.html">Hub</a> › <span>Missionen</span></div>
+      <h1 class="page-title">Missionen</h1>
+      <div class="page-meta">
+        <span>9 Einträge — 1 Referenz, 8 Platzhalter</span>
+      </div>
+    </header>
 
-  <div class="panel">
-    <strong>Neue Mission anlegen:</strong> <code>07-tiamat-iv.html</code> als Template
-    kopieren, Meta-Block ausfüllen, Inhalte einfügen. Danach in
-    <a href="../campaign/timeline.html">Timeline</a>, <a href="../campaign/hook-register.html">Hook-Register</a>
-    und <a href="../README.md">README</a> eintragen.
+    <div class="mission-grid">
+      <a class="mission-card" href="01-routine-exchange.html">
+        <div class="mission-num">01</div>
+        <div class="mission-info">
+          <div class="mission-name">Routine Exchange</div>
+          <div class="mission-sub">Platzhalter — noch nicht migriert</div>
+        </div>
+      </a>
+      <a class="mission-card" href="02-theta-persei.html">
+        <div class="mission-num">02</div>
+        <div class="mission-info">
+          <div class="mission-name">Theta Persei</div>
+          <div class="mission-sub">Platzhalter</div>
+        </div>
+      </a>
+      <a class="mission-card" href="03-jeremiah-vi.html">
+        <div class="mission-num">03</div>
+        <div class="mission-info">
+          <div class="mission-name">Jeremiah VI</div>
+          <div class="mission-sub">Platzhalter — inkl. Aftermath</div>
+        </div>
+      </a>
+      <a class="mission-card" href="04-atlas-station.html">
+        <div class="mission-num">04</div>
+        <div class="mission-info">
+          <div class="mission-name">Atlas Station</div>
+          <div class="mission-sub">Platzhalter — GJ2092-ATLAS</div>
+        </div>
+      </a>
+      <a class="mission-card" href="05-arceon-station.html">
+        <div class="mission-num">05</div>
+        <div class="mission-info">
+          <div class="mission-name">Arceon Station</div>
+          <div class="mission-sub">Platzhalter</div>
+        </div>
+      </a>
+      <a class="mission-card" href="06-lambda-aurigae.html">
+        <div class="mission-num">06</div>
+        <div class="mission-info">
+          <div class="mission-name">Lambda Aurigae — Cinder Reach</div>
+          <div class="mission-sub">Platzhalter</div>
+        </div>
+      </a>
+      <a class="mission-card" href="07-tiamat-iv.html">
+        <div class="mission-num">07</div>
+        <div class="mission-info">
+          <div class="mission-name">Tiamat IV</div>
+          <div class="mission-sub">Migrierte Referenz-Mission</div>
+          <div class="mission-tags"><span class="tag green">REFERENZ</span></div>
+        </div>
+      </a>
+      <a class="mission-card" href="08-van-maanens-star.html">
+        <div class="mission-num">08</div>
+        <div class="mission-info">
+          <div class="mission-name">Van Maanen's Star</div>
+          <div class="mission-sub">Platzhalter</div>
+        </div>
+      </a>
+      <a class="mission-card hard" href="99-act-2-3.html">
+        <div class="mission-num">99</div>
+        <div class="mission-info">
+          <div class="mission-name">Akt 2 &amp; 3 — Finale</div>
+          <div class="mission-sub">Platzhalter</div>
+          <div class="mission-tags"><span class="tag danger">FINALE</span></div>
+        </div>
+      </a>
+    </div>
+
+    <div class="content">
+      <div class="info-box">
+        <div class="info-box-header">NEUE MISSION ANLEGEN</div>
+        <p><code>07-tiamat-iv.html</code> als Template kopieren, Meta-Block ausfüllen,
+        Inhalte einfügen. Danach in
+        <a href="../campaign/timeline.html">Timeline</a>,
+        <a href="../campaign/hook-register.html">Hook-Register</a> und
+        <a href="../README.md">README</a> eintragen.</p>
+      </div>
+    </div>
+
   </div>
-</div>
+</main>
 </body>
 </html>

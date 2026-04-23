@@ -2,39 +2,49 @@
 <html lang="de">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Handouts — Recall Authority</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="../assets/css/design-system.css">
 </head>
 <body>
-<script src="../assets/js/navigation.js"></script>
-<script>renderTopNav("../");</script>
+<script src="../assets/js/shell.js"></script>
+<script>renderShell({base: "../", active: "handouts"});</script>
 
-<div class="wrap">
-  <h1>Handouts</h1>
-  <p style="color: var(--dim); text-transform: uppercase; letter-spacing: 2px; font-size: 11px;">
-    Spieler-Material — PDFs, Terminal-Logs, Fragmente
-  </p>
+<main id="main">
+  <div id="page">
 
-  <h2>Personalakten &amp; Agendas</h2>
-  <ul>
-    <li><a href="agenda-isabella-cruz.pdf">Agenda — Isabella Cruz (PDF)</a></li>
-    <li><a href="personalakte-isabela-cruz.pdf">Personalakte — Isabela Cruz (PDF)</a></li>
-  </ul>
+    <header class="page-header">
+      <div class="breadcrumb"><a href="../index.html">Hub</a> › <span>Handouts</span></div>
+      <h1 class="page-title">Handouts</h1>
+      <div class="page-meta">
+        <span>Spieler-Material — PDFs, Terminal-Logs, Fragmente</span>
+      </div>
+    </header>
 
-  <h2>Fragmente</h2>
-  <ul>
-    <li><a href="blackveil-datafragments.html">BlackVeil — Data Fragments</a></li>
-  </ul>
+    <div class="content">
 
-  <h2>Terminal-Logs</h2>
-  <p>Einzelne Log-Handouts liegen in <a href="terminal-logs/"><code>terminal-logs/</code></a>.</p>
+      <h2>Personalakten &amp; Agendas</h2>
+      <ul>
+        <li><a href="agenda-isabella-cruz.pdf">Agenda — Isabella Cruz</a> (PDF)</li>
+        <li><a href="personalakte-isabela-cruz.pdf">Personalakte — Isabela Cruz</a> (PDF)</li>
+      </ul>
 
-  <div class="panel">
-    <strong>Neues Handout anlegen:</strong> Terminal-Log-Template unter
-    <a href="../tools/terminal-log-template.html">tools/terminal-log-template.html</a>
-    kopieren, in <code>handouts/terminal-logs/</code> speichern.
+      <h2>Fragmente</h2>
+      <ul>
+        <li><a href="blackveil-datafragments.html">BlackVeil — Data Fragments</a></li>
+      </ul>
+
+      <h2>Terminal-Logs</h2>
+      <p>Einzelne Log-Handouts liegen in <code>terminal-logs/</code>.</p>
+
+      <div class="info-box">
+        <div class="info-box-header">NEUES HANDOUT ANLEGEN</div>
+        <p>Terminal-Log-Template unter <a href="../tools/terminal-log-template.html">tools/terminal-log-template.html</a>
+        kopieren und in <code>handouts/terminal-logs/</code> speichern.</p>
+      </div>
+
+    </div>
   </div>
-</div>
+</main>
 </body>
 </html>

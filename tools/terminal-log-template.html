@@ -2,54 +2,55 @@
 <html lang="de">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Terminal-Log — TEMPLATE</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="../assets/css/design-system.css">
 </head>
 <body>
-<script src="../assets/js/navigation.js"></script>
-<script>renderTopNav("../");</script>
+<script src="../assets/js/shell.js"></script>
+<script>renderShell({base: "../", active: "tlog-template"});</script>
 
-<div class="wrap">
-  <h1>Terminal-Log — Template</h1>
-  <p style="color: var(--dim); text-transform: uppercase; letter-spacing: 2px; font-size: 11px;">
-    Kopiervorlage für Weyland-Yutani-MU-TH-UR-6000-Logs
-  </p>
+<main id="main">
+  <div id="page">
 
-  <div class="panel">
-    <strong>Verwendung:</strong> Diese Datei kopieren nach
-    <code>handouts/terminal-logs/&lt;name&gt;.html</code>, dann anpassen.
-    Stil-Regeln siehe <a href="../docs/design-system.md">design-system.md</a>.
-  </div>
+    <header class="page-header">
+      <div class="breadcrumb"><a href="../index.html">Hub</a> › Tools › <span>Terminal-Log Template</span></div>
+      <h1 class="page-title">Terminal-Log — <em>Template</em></h1>
+      <div class="page-meta">
+        <span>Kopiervorlage für MU-TH-UR-Logs</span>
+      </div>
+    </header>
 
-  <div class="t-head">
-╔══════════════════════════════════════════╗
-║  MU-TH-UR 6000 — SYSTEM LOG              ║
+    <div class="content">
+
+      <div class="info-box">
+        <div class="info-box-header">VERWENDUNG</div>
+        <p>Diese Datei kopieren nach <code>handouts/terminal-logs/&lt;name&gt;.html</code>, dann anpassen.
+        Stil-Regeln siehe <a href="../docs/design-system.md">design-system.md</a>.</p>
+      </div>
+
+      <div class="log-section open">
+        <div class="log-section-header" onclick="this.parentElement.classList.toggle('open')">
+          <span>MU-TH-UR 9000 — SYSTEM LOG</span>
+          <span class="log-chevron">▸</span>
+        </div>
+        <div class="log-section-body">
+          <div class="t-block">
+            <div class="t-head">╔══════════════════════════════════════════╗
+║  MU-TH-UR 9000 — SYSTEM LOG              ║
 ║  NODE: &lt;NODE-ID&gt; / SECTION-&lt;N&gt;        ║
-╚══════════════════════════════════════════╝
-  </div>
+╚══════════════════════════════════════════╝</div>
+            <div class="t-entry"><span class="t-ts">[2183.127/04:12]</span> <span class="t-who">MURO_D</span> &gt; Frachtabgleich bestätigt.</div>
+            <div class="t-entry t-warn"><span class="t-ts">[2183.127/04:13]</span> <span class="t-who">MU-TH-UR</span> &gt; LOSS-FLAG aktiv auf ZG-4471-M.</div>
+            <div class="t-entry"><span class="t-ts">[2183.127/04:15]</span> <span class="t-who">SEC-8_OPS</span> &gt; Kontakt bestätigt. Containment aktiv.</div>
+            <div class="t-entry t-warn"><span class="t-ts">[2183.127/04:22]</span> <span class="t-who">MU-TH-UR</span> &gt; Verbindung verloren.</div>
+            <div class="t-foot">── END OF LOG ──  KLASSIFIZIERT — SECTION-8 ──</div>
+          </div>
+        </div>
+      </div>
 
-  <div class="t-entry">
-    <span class="t-ts">[2183.127/04:12]</span>
-    <span class="t-who">MURO_D</span> &gt; Frachtabgleich bestätigt.
+    </div>
   </div>
-  <div class="t-entry t-warn">
-    <span class="t-ts">[2183.127/04:13]</span>
-    <span class="t-who">MU-TH-UR</span> &gt; LOSS-FLAG aktiv auf ZG-4471-M.
-  </div>
-  <div class="t-entry">
-    <span class="t-ts">[2183.127/04:15]</span>
-    <span class="t-who">SEC-8_OPS</span> &gt; Kontakt bestätigt. Containment-Protokoll
-    aktiv. <span class="redact">████████████████</span>
-  </div>
-  <div class="t-entry t-danger">
-    <span class="t-ts">[2183.127/04:22]</span>
-    <span class="t-who">MU-TH-UR</span> &gt; Verbindung verloren.
-  </div>
-
-  <div class="footer">
-    <span class="stripe">KLASSIFIZIERT — SECTION-8</span>
-  </div>
-</div>
+</main>
 </body>
 </html>

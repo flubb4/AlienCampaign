@@ -2,40 +2,50 @@
 <html lang="de">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Isabella Cruz — PC Dossier</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="../../assets/css/design-system.css">
 </head>
 <body>
-<script src="../../assets/js/navigation.js"></script>
-<script>renderTopNav("../../");</script>
+<script src="../../assets/js/shell.js"></script>
+<script>renderShell({base: "../../", active: "isabella"});</script>
 
-<div class="wrap">
-  <h1>Isabella Cruz</h1>
-  <p style="color: var(--dim); text-transform: uppercase; letter-spacing: 2px; font-size: 11px;">
-    Siehe Personalakte-PDF
-  </p>
+<main id="main">
+  <div id="page">
 
-  <div class="meta-block">
-    <dl>
-      <dt>Rolle</dt><dd><em>TODO</em></dd>
-      <dt>Agenda</dt><dd>Siehe <a href="../../handouts/agenda-isabella-cruz.pdf">Agenda-PDF</a></dd>
-      <dt>Personalakte</dt><dd><a href="../../handouts/personalakte-isabela-cruz.pdf">Personalakte-PDF</a></dd>
-      <dt>Secret</dt><dd><em>TODO</em></dd>
-    </dl>
+    <header class="page-header">
+      <div class="breadcrumb"><a href="../../index.html">Hub</a> › Charaktere › <span>Isabella</span></div>
+      <h1 class="page-title">Isabella Cruz</h1>
+      <div class="page-meta">
+        <span class="tag green">PC</span>
+        <span>Siehe Personalakte-PDF</span>
+      </div>
+    </header>
+
+    <div class="content">
+
+      <h2>Rollenprofil</h2>
+      <table>
+        <tr><th>Rolle</th><td><em>TODO</em></td></tr>
+        <tr><th>Agenda</th><td><a href="../../handouts/agenda-isabella-cruz.pdf">Agenda-PDF</a></td></tr>
+        <tr><th>Personalakte</th><td><a href="../../handouts/personalakte-isabela-cruz.pdf">Personalakte-PDF</a></td></tr>
+        <tr><th>Secret</th><td><em>TODO</em></td></tr>
+      </table>
+
+      <h2>Backstory</h2>
+      <p><em>TODO</em> — Kerninhalte aus der Personalakte hier zusammenfassen (für schnelle Referenz
+      am Spieltisch, ohne PDF öffnen zu müssen).</p>
+
+      <h2>Story-Hooks</h2>
+      <ul>
+        <li><em>TODO</em> — aus Personalakte extrahieren</li>
+      </ul>
+
+      <h2>Hook-Auftritte</h2>
+      <p>Siehe <a href="../../campaign/hook-register.html">Hook-Register</a>.</p>
+
+    </div>
   </div>
-
-  <h2>Backstory</h2>
-  <p><em>TODO</em> — Kerninhalte aus der Personalakte hier zusammenfassen (für schnelle Referenz
-  am Spieltisch, ohne PDF öffnen zu müssen).</p>
-
-  <h2>Story-Hooks</h2>
-  <ul>
-    <li><em>TODO</em> — aus Personalakte extrahieren</li>
-  </ul>
-
-  <h2>Hook-Auftritte</h2>
-  <p>Siehe <a href="../../campaign/hook-register.html">Hook-Register</a>.</p>
-</div>
+</main>
 </body>
 </html>
