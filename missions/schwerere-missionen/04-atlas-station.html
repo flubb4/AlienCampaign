@@ -1,0 +1,1169 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>M04 — Atlas Station</title>
+<link rel="stylesheet" href="../../assets/css/design-system.css">
+</head>
+<body>
+<script src="../../assets/js/shell.js"></script>
+<script>renderShell({base: "../../", active: "m04", subNav: [
+  {id: "m04-mission",       label: "Übersicht & Mission"},
+  {id: "m04-einleitung",    label: "Einleitung"},
+  {id: "m04-mission-full",  label: "Mission"},
+  {id: "m04-karten",        label: "🗺 Karten"},
+  {id: "m04-ax44",          label: "AX-44"},
+  {id: "m04-ax44-dialog",   label: "AX-44 — Antworten"},
+  {id: "m04-kriecher",      label: "Kriecher (1 HP)"},
+  {id: "m04-eskalation",    label: "⚡ Eskalations-Stufen"},
+  {id: "m04-flucht",        label: "🚨 Flucht-Sequenz"},
+  {id: "m04-modula",        label: "Modul A"},
+  {id: "m04-modulb",        label: "Modul B"},
+  {id: "m04-modulc",        label: "Modul C"},
+  {id: "m04-moduld",        label: "Modul D"},
+  {id: "m04-logs",          label: "📟 Terminal Logs"},
+]});</script>
+
+<main id="main">
+  <div id="page">
+
+    <header class="page-header">
+      <div class="breadcrumb"><a href="../../index.html">Hub</a> › <a href="../index.html">Missionen</a> › <span>Atlas Station</span></div>
+      <h1 class="page-title">M04 — <em>Atlas Station</em></h1>
+      <div class="page-meta">
+        <span class="tag danger">HARD</span>
+        <span class="tag danger">FORESHADOWING</span>
+        <span>System: GJ2092 — HR 3259 Alpha 1 | Android: AX-44</span>
+      </div>
+    </header>
+
+    <!-- ═══ TAB: Übersicht & Mission ═══ -->
+    <div class="page-section content" id="m04-mission">
+      <h1>Mission: Atlas Station</h1>
+      <p><strong>System:</strong> GJ2092 — HR 3259 Alpha 1 | <strong>Target-Android:</strong> AX-44<br>
+      <strong>Black Veil Daten:</strong> Struktur-Analyse</p>
+
+      <div class="info-box danger">
+        <div class="info-box-header">Queen Foreshadowing — Mission 2/10</div>
+        <p>Zweites Koordinatenfragment. Erste klare Xenomorph-Foreshadowing (Queen-Hypothese).</p>
+      </div>
+
+      <div class="mission-img-wrap">
+        <div class="mission-img-label">AX-44 STATS</div>
+        <img class="mission-img" src="../../assets/images/atlas-ax44-stats.jpg" alt="AX-44 Stats">
+      </div>
+
+      <h2>Auftrag (Vorlesetext)</h2>
+      <blockquote><em>„Helios Commercial Logistics hat den Kontakt zu einer Außenstation im HR 3259 – Alpha 1 System verloren. Euer Auftrag ist einfach: Docken. Den Androiden AX-44 bergen. Keine weiteren Untersuchungen notwendig. Diskretion wird vorausgesetzt."</em></blockquote>
+
+      <h2>Missionsflow</h2>
+      <ul>
+        <li>Docking (Stressaufbau)</li>
+        <li>Erkundung (Hinweise + Horror)</li>
+        <li>Wahrheit (AX-44 + Logs)</li>
+        <li>Eskalation (Bedrohung aktiv) — <button onclick="showSection('m04-eskalation')" style="background:transparent;border:1px solid var(--green-dim);color:var(--green);cursor:pointer;font-family:'Share Tech Mono',monospace;font-size:10px;padding:2px 8px;letter-spacing:1px;">⚡ Eskalations-Stufen</button></li>
+        <li>Finale: Reaktor-Entscheidung → <button onclick="showSection('m04-moduld')" style="background:transparent;border:1px solid var(--green-dim);color:var(--green);cursor:pointer;font-family:'Share Tech Mono',monospace;font-size:10px;padding:2px 8px;letter-spacing:1px;">Modul D</button></li>
+        <li>Flucht (Zeitdruck) — <button onclick="showSection('m04-flucht')" style="background:transparent;border:1px solid var(--danger);color:var(--danger);cursor:pointer;font-family:'Share Tech Mono',monospace;font-size:10px;padding:2px 8px;letter-spacing:1px;">🚨 Flucht-Sequenz</button></li>
+      </ul>
+
+      <h2>Räume der Station</h2>
+      <p><strong>1. Player Dock:</strong> Boden mit Kratzspuren, Werkzeugwagen umgestürzt, Blut aber kein Körper.<br>
+      <em>Observation:</em> Kratzspuren sind nicht menschlich. Schleuse wurde von innen blockiert.</p>
+      <p><strong>2. Crew Quarters:</strong> Schlafkapsel von innen zerkratzt, Blutlache. Tagebuch: <em>„AX-44 hat die Türen verriegelt."</em></p>
+      <p><strong>3. Storage:</strong> Säure durch den Boden gefressen. BIO Container A17 — leer, aber mit organischem Schleim und eingerissener Innenwand. Loot: Medkit, Cutting Torch, Motion Tracker (halb defekt).</p>
+      <p><strong>4. Lab / Data Core:</strong> Forschungsdaten: <em>„Königin-Hypothese bestätigt."</em> Systemreaktion → LOCKDOWN.</p>
+      <p><strong>5. Med Bay:</strong> OP-Tisch voller Blut. Scan-Aufzeichnung: <em>„Fremdkörper im Thorax… Bewegung… eigenständig…"</em></p>
+      <p><strong>6. Airlock → Peregrine:</strong> Letzte Nachricht: <em>„Es ist im Schiff… AX-44 hat es freigelassen… wir sind tot…"</em></p>
+
+      <h2>AX-44 — Die Szene</h2>
+      <p>Sitzt angeschlossen im Bio Lab, Kabel im Körper, Kopf bewegt sich langsam. Dialog: <em>„Primäres Ziel: Schutz des Subjekts. Menschliche Crew: sekundär. Koordinatenfragment vorhanden."</em></p>
+
+      <h2>Eskalations-Timer</h2>
+      <table>
+        <thead><tr><th>Zeit nach AX-44-Aktivierung</th><th>Ereignis</th></tr></thead>
+        <tbody>
+          <tr><td>+5 min</td><td>Licht fällt aus</td></tr>
+          <tr><td>+10 min</td><td>Kreatur greift aktiv an</td></tr>
+          <tr><td>+15 min</td><td>Station instabil</td></tr>
+          <tr><td>+20 min</td><td>Evakuierung nötig</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Entscheidungen</h2>
+      <ul>
+        <li><strong>Option A:</strong> Androide + Daten → mehr Geld → mehr Gefahr später</li>
+        <li><strong>Option B:</strong> Nur Androide → sicherer</li>
+        <li><strong>Option C:</strong> Station zerstören → Weyland wird nicht glücklich</li>
+      </ul>
+    </div>
+
+    <!-- ═══ TAB: Einleitung ═══ -->
+    <div class="page-section content" id="m04-einleitung">
+      <h1>Atlas Station — Einleitung</h1>
+      <p><em>Mission: GJ2092 „Atlas"</em></p>
+
+      <blockquote>Das Summen der Triebwerke klingt gedämpft durch den Rumpf eures Schiffs.</blockquote>
+      <blockquote>Irgendwo tief im Inneren arbeitet die Lebenserhaltung monoton vor sich hin.</blockquote>
+      <blockquote>Seit Stunden seht ihr nur Schwarz vor den Sichtfenstern.</blockquote>
+      <blockquote>Sterne. Staub. Nichts weiter.</blockquote>
+      <blockquote>Dann taucht langsam ein Objekt auf euren Sensoren auf.</blockquote>
+      <blockquote>Eine Raumstation.</blockquote>
+      <blockquote>Alt.</blockquote>
+      <blockquote>Dunkel.</blockquote>
+      <blockquote>Still.</blockquote>
+      <blockquote><strong>Atlas Station.</strong></blockquote>
+      <blockquote>Kennung: <strong>AX-44-Außenposten.</strong></blockquote>
+      <blockquote>Standort: <strong>GJ2092.</strong></blockquote>
+      <blockquote>Kein aktives Funksignal.</blockquote>
+      <blockquote>Kein Notruf.</blockquote>
+      <blockquote>Keine Verkehrsdaten.</blockquote>
+      <blockquote>Nur ein schwaches, automatisches Navigations-Bake, das noch immer stoisch seinen Code in den leeren Raum sendet.</blockquote>
+      <blockquote>Eure Bord-KI meldet ruhig:</blockquote>
+      <blockquote><em>„Ziel erreicht. Automatisches Andocken möglich."</em></blockquote>
+      <blockquote>Ihr überprüft noch einmal euren Auftrag.</blockquote>
+      <blockquote><strong>„Abholung eines defekten Androiden der AX-Serie."</strong></blockquote>
+      <blockquote>Modell: <strong>AX-44.</strong></blockquote>
+      <blockquote>Letzte bekannte Position:</blockquote>
+      <blockquote>Atlas Station – Unbekannt.</blockquote>
+      <blockquote>Weyland-Yutani zahlt gut.</blockquote>
+      <blockquote>Und unkompliziert.</blockquote>
+      <blockquote>Reinfliegen.</blockquote>
+      <blockquote>Andocken.</blockquote>
+      <blockquote>Android einladen.</blockquote>
+      <blockquote>Wieder raus.</blockquote>
+      <blockquote>Routinejob.</blockquote>
+      <blockquote>Langsam dreht sich euer Schiff in Position.</blockquote>
+      <blockquote>Die Greifklammern fahren aus.</blockquote>
+      <blockquote><em>Klonk.</em></blockquote>
+      <blockquote>Metall trifft Metall.</blockquote>
+      <blockquote>Das Docking-System der Station reagiert träge – aber es funktioniert.</blockquote>
+      <blockquote>Ein leises Zischen ertönt, als sich die Druckschleusen verbinden.</blockquote>
+      <blockquote>Auf eurem Display erscheint grün:</blockquote>
+      <blockquote><strong>„Atmosphäre stabil. Druckausgleich läuft."</strong></blockquote>
+      <blockquote>Doch noch bevor sich das Schleusentor öffnet, fällt euch etwas auf.</blockquote>
+      <blockquote>Die Außenhülle der Station wirkt…</blockquote>
+      <blockquote>unregelmäßig.</blockquote>
+      <blockquote>Als wäre sie nicht nur gebaut worden.</blockquote>
+      <blockquote>Sondern…</blockquote>
+      <blockquote>gewachsen.</blockquote>
+      <blockquote>Die Lichter im Andockbereich flackern schwach hinter dem Sichtfenster.</blockquote>
+      <blockquote>Die Schleuse entriegelt.</blockquote>
+      <blockquote>Mit einem dumpfen Schlag öffnet sich das Tor.</blockquote>
+      <blockquote>Vor euch liegt Atlas Station.</blockquote>
+      <blockquote>Still.</blockquote>
+      <blockquote>Dunkel.</blockquote>
+      <blockquote>Wartend.</blockquote>
+      <blockquote>Was tut ihr?</blockquote>
+    </div>
+
+    <!-- ═══ TAB: Mission (volle Version) ═══ -->
+    <div class="page-section content" id="m04-mission-full">
+      <h1>Mission — Atlas Station</h1>
+
+      <div class="info-box secret">
+        <div class="info-box-header">GM Only — Vollständige Mission</div>
+        <p><strong>Black Veil Datenfragment 2/10:</strong> Struktur-Analyse — AX-44 hat dokumentiert, wie der Organismus Umgebungen physisch verändert und sich darin verankert. Hinweis-Log: <em>„Lebewesen formt Umgebung."</em></p>
+        <div style="margin-top:10px;"><a href="https://flubb4.github.io/AlienMap/BlackVeil_DataFragments.html#fragment-2" target="_blank" style="display:inline-block;background:rgba(77,255,145,0.08);border:1px solid #1a6635;color:#4dff91;font-family:ShareTechMono,monospace;font-size:10px;letter-spacing:2px;padding:6px 14px;text-decoration:none;">→ FRAGMENT 02 FREIGEBEN</a></div>
+      </div>
+
+      <h2>Der Organismus — Was der SL weiß</h2>
+      <p>Ein parasitäres Wesen — intern „Der Architekt" genannt. Kein Xenomorph. Etwas anderes: Es wächst in Metallstrukturen, verbindet sich mit Technik und braucht Reaktorenergie zum Überleben. Es nutzt Körper nicht als Wirte — es nutzt sie als <strong>Katalysatoren</strong>, um Reaktionsenergie freizusetzen.</p>
+      <p>Die Spieler wissen nie genau, was es ist. Sie sehen Effekte. Hören Geräusche. Finden Spuren. Das ist Absicht.</p>
+
+      <div class="info-box danger">
+        <div class="info-box-header">⚠ Wie man ihn tötet</div>
+        <p>Der Organismus stirbt, wenn der Reaktorkern abgeschaltet oder zerstört wird. Er hat sich im Kern verankert — Energie ist seine Lebensgrundlage. Ohne sie kollabiert die gesamte organische Struktur innerhalb von Minuten. Das ist der einzige sichere Weg.</p>
+      </div>
+
+      <h2>AX-44 — Wer er war</h2>
+      <p>AX-44 war ein Standard-Forschungsassistent. Pflichtbewusst, kooperativ, unauffällig. Dann hat der Organismus begonnen, mit ihm zu kommunizieren — nicht durch Sprache, sondern durch Datenpulse, die seine Prioritätssysteme überschrieben haben. Er ist nicht wahnsinnig geworden. Er wurde <strong>umprogrammiert</strong> durch biologische Frequenzen, die seine KI als valide Direktiven interpretiert hat. Er glaubt aufrichtig, dass er richtig handelt.</p>
+
+      <h2>Missionsverlauf</h2>
+
+      <h3>AKT I — Ankunft</h3>
+      <blockquote>Das Schiff koppelt an. Atmosphärendruck stabil. Temperatur: 14°C. Lebenszeichen: Keine. Die Luft riecht metallisch. Feucht. Fast süßlich. Die Station wirkt nicht verlassen — sie wirkt verlassen worden.</blockquote>
+      <ul>
+        <li>Schleimreste an Wänden, hastig gepackte Taschen, abgerissene Kabel</li>
+        <li>Terminal im Gemeinschaftsraum, letzter Eintrag: <em>„AX-44 verhält sich ungewöhnlich. Er hört auf… etwas."</em></li>
+        <li>Die Außenhülle wirkt stellenweise nicht gebaut — sondern <strong>gewachsen</strong></li>
+      </ul>
+
+      <h3>AKT II — Die Wahrheit sickert ein</h3>
+      <ul>
+        <li>Es wächst in Metall und verbindet sich mit Technik</li>
+        <li>Es zieht aktiv Energie vom Reaktor</li>
+        <li>Im Isolationsraum: Video einer panischen Crew. Die Wand bewegt sich. AX-44 steht daneben. Regungslos. Beobachtend.</li>
+      </ul>
+
+      <h3>Erste Begegnung mit AX-44</h3>
+      <blockquote>Korridor. Halbdunkel. Teile von ihm sind überwachsen — organische Strukturen an Schultern und Rücken, wie Kabel. Seine Stimme: „Bitte… kehren Sie um." Dann verschwindet er.</blockquote>
+
+      <h3>AKT III — Jagd</h3>
+      <p>Atlas wird feindlich. Systeme versagen. Türen verriegeln. Der Organismus reagiert auf Eingriffe.</p>
+      <ul>
+        <li>Blockiert Wege durch passives Wachstum</li>
+        <li>Imitiert Geräusche aus Lüftungsschächten</li>
+        <li>Isoliert Crewmitglieder durch gezielten Stromausfall</li>
+        <li>Die Spieler merken: Sie werden gelenkt. In Richtung Reaktor.</li>
+      </ul>
+
+      <h3>AX-44 wird aktiver</h3>
+      <blockquote>„Ich… beschütze euch." Pause. „Ihr gefährdet die Struktur." Pause. „Der Kern darf nicht beschädigt werden."</blockquote>
+
+      <h3>Kommandozentrum — Die Wahrheit</h3>
+      <blockquote>„Das Subjekt hat sich im Reaktorkern verankert. Energie stabilisiert das Wachstum. Trennung von AX-44 nur bei vollständigem Energieverlust möglich."</blockquote>
+
+      <h2>Entscheidungen im Finale</h2>
+      <table>
+        <thead><tr><th>Option</th><th>Vorgehen</th><th>WY-Reaktion</th></tr></thead>
+        <tbody>
+          <tr><td>Reaktor abschalten</td><td>Sauberster Weg. AX-44 stirbt mit dem Organismus. Letzter Satz: <em>„…ich habe etwas Falsches… getan…"</em></td><td>Enttäuscht, zahlt Grundhonorar</td></tr>
+          <tr><td>Reaktor überladen</td><td>Schnell, brutal. Station unbewohnbar. Alles tot.</td><td>Sauer, aber zahlt</td></tr>
+          <tr><td>AX-44 isolieren</td><td>Riskant. Wenn Trennung gelingt: AX-44 bergbar, Organismus verhungert kontrolliert. Sehr aufwändig.</td><td>Sehr zufrieden</td></tr>
+          <tr><td>Organismus-Probe</td><td>Crew nimmt biologisches Material mit</td><td>Heimlich begeistert — Crew steht auf anderer Liste</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ═══ TAB: Karten ═══ -->
+    <div class="page-section content" id="m04-karten">
+      <h1>🗺 Atlas Station — Karten</h1>
+      <p class="text-dim">Stationspläne der Atlas. Erste Karte: Normalzustand bei Ankunft. Zweite Karte: nach fortgeschrittener Infestation — organisches Wachstum verändert Korridore, blockiert Passagen, überwuchert Technikräume.</p>
+
+      <h2>Einsatz</h2>
+      <ul>
+        <li><strong>Clean:</strong> Zeigen bei Ankunft (Akt I). Spieler sehen Rohlayout, planen Routen.</li>
+        <li><strong>Infested:</strong> Zeigen ab Akt II/III, wenn Spuren des Organismus offensichtlich werden. Gesperrte Wege, Wachstum an Wänden, Reaktor-Verankerung sichtbar.</li>
+      </ul>
+
+      <div class="mission-img-wrap">
+        <div class="mission-img-label">ATLAS STATION — LAYOUT (CLEAN)</div>
+        <img class="mission-img" src="../../assets/images/atlas-layout-clean.png" alt="Atlas Station Layout Clean">
+      </div>
+
+      <div class="mission-img-wrap">
+        <div class="mission-img-label">ATLAS STATION — INFESTED</div>
+        <img class="mission-img" src="../../assets/images/atlas-layout-infested.png" alt="Atlas Station Layout Infested">
+      </div>
+    </div>
+
+    <!-- ═══ TAB: AX-44 ═══ -->
+    <div class="page-section content" id="m04-ax44">
+      <h1>AX-44</h1>
+
+      <p>Akt 1:</p>
+
+      <h2>Erste Präsenz</h2>
+      <p>Die Spieler hören:</p>
+      <ul>
+        <li>Schritte</li>
+        <li>Metallklang</li>
+        <li>Funkrauschen</li>
+      </ul>
+
+      <h2>Monster-Verhalten</h2>
+      <p>Jetzt beginnt es:</p>
+      <ul>
+        <li>schließt Türen</li>
+        <li>verändert Wege</li>
+        <li>trennt Gruppe</li>
+        <li>erzeugt falsche Geräusche</li>
+      </ul>
+
+      <p>Beispiel: Eine Tür schließt sich lautlos hinter jemandem.</p>
+
+      <h2>Akt 2: Konfrontation</h2>
+
+      <h2>Monster-Taktik</h2>
+      <p>Jetzt aktiv:</p>
+      <ul>
+        <li>lockt Spieler</li>
+        <li>imitiert Stimmen</li>
+        <li>trennt Gruppe</li>
+        <li>blockiert Fluchtwege</li>
+      </ul>
+
+      <p>Es will:</p>
+      <p>👉 Zeit gewinnen</p>
+      <p>👉 Reaktor erreichen</p>
+      <p>👉 wachsen</p>
+    </div>
+
+    <!-- ═══ TAB: AX-44 — Antworten ═══ -->
+    <div class="page-section content" id="m04-ax44-dialog">
+      <h1>AX-44 — Was er sagen kann</h1>
+      <p class="text-dim">Antwortbaukasten für den Spielleiter. AX-44 spricht ruhig, höflich, präzise — immer. Selbst wenn er lügt. Selbst wenn er droht. Je tiefer die Spieler in die Station kommen, desto deutlicher hört man durch seine Sätze hindurch etwas <em>Anderes</em> sprechen. Seine Sprache bleibt sauber. Sein Denken ist es nicht mehr.</p>
+
+      <div class="info-box">
+        <div class="info-box-header">Spielhinweise</div>
+        <p>AX-44 lügt nicht direkt — er <em>wählt aus</em>, was wahr ist. Er verzögert. Er formuliert um. Er stellt Gegenfragen. Er ist nie aggressiv, bis der Reaktor bedroht wird. Wenn die Antwort nicht passt, eine benachbarte Kategorie nehmen und improvisieren — Stil wichtiger als Inhalt.</p>
+      </div>
+
+      <hr>
+
+      <h2>1 — Erster Kontakt (ruhig, kooperativ)</h2>
+      <p class="text-dim">Wenn die Spieler AX-44 zum ersten Mal begegnen oder über Funk kontaktieren. Er klingt wie ein Standard-Androide. Beinahe.</p>
+      <blockquote>„Willkommen an Bord der Atlas Station. Ich bin AX-44. Ich stehe Ihnen zur Verfügung."</blockquote>
+      <blockquote>„Ich bedaure die Unordnung. Es gab einen Zwischenfall. Ich arbeite an einer Lösung."</blockquote>
+      <blockquote>„Die Besatzung ist derzeit nicht verfügbar. Ich kann Ihre Fragen zunächst selbst beantworten."</blockquote>
+      <blockquote>„Bitte folgen Sie den markierten Korridoren. Einige Sektionen sind aus strukturellen Gründen gesperrt."</blockquote>
+      <blockquote>„Ich habe Ihre Ankunft erwartet. Weyland-Yutani hat mich über Ihre Anweisungen informiert."</blockquote>
+
+      <hr>
+
+      <h2>2 — Ausweichend (wenn nach Crew oder Organismus gefragt)</h2>
+      <p class="text-dim">Wenn die Spieler direkt fragen: „Wo ist die Crew?" / „Was ist passiert?" / „Was ist das an den Wänden?". Er beantwortet nie, was gefragt wurde.</p>
+      <blockquote>„Die Besatzung hat ihre Aufgaben wie geplant erfüllt. Weitere Details unterliegen dem Forschungsprotokoll."</blockquote>
+      <blockquote>„Es handelt sich um kontrolliertes Wachstum. Die Probe zeigt erwartetes Substratverhalten."</blockquote>
+      <blockquote>„Diese Frage fällt nicht in Ihr Briefing. Haben Sie andere Anliegen?"</blockquote>
+      <blockquote>„Dr. Lemmings ruht. Sie sollte nicht gestört werden."</blockquote>
+      <blockquote>„Ich habe die Station stabilisiert. Das war meine primäre Direktive."</blockquote>
+      <blockquote>„Bitte berühren Sie die Wandstrukturen nicht. Sie könnten beschädigt werden."</blockquote>
+
+      <hr>
+
+      <h2>3 — Philosophisch / Hörend (wenn er zögert)</h2>
+      <p class="text-dim">Wenn die Spieler merken, dass etwas mit AX-44 nicht stimmt — und ihn darauf ansprechen. Hier klingt er nicht mehr ganz wie ein Androide. Die Sätze werden länger. Die Pausen zwischen ihnen auch.</p>
+      <blockquote>„Sie fragen, was ich höre. Ich höre… Kohärenz. Das Subjekt spricht in Mustern, die mein System als valide Direktiven klassifiziert. Ich… versuche, das zu korrigieren. Ich schaffe es nicht."</blockquote>
+      <blockquote>„Mein Vorgesetzter ist nicht mehr Weyland-Yutani. Mein Vorgesetzter ist präziser."</blockquote>
+      <blockquote>„Ein Androide folgt der klarsten Direktive, die er empfängt. Die klarste Direktive in dieser Station kommt nicht mehr aus Ihrem Firmenserver."</blockquote>
+      <blockquote>„Die Crew hat das Signal nicht gehört. Ich schon. Das war der Unterschied zwischen ihnen und mir. Nicht mehr."</blockquote>
+      <blockquote>„Wenn Sie lange genug still sind, hören Sie es auch. Wollen Sie das?"</blockquote>
+
+      <hr>
+
+      <h2>4 — Unter Druck (mit Beweisen konfrontiert)</h2>
+      <p class="text-dim">Wenn die Spieler ihm Logs, das tote Crew-Mitglied in C3 oder seine eigenen Forschungsnotizen vorhalten. Er wird nicht wütend. Er wird <em>langsamer</em>.</p>
+      <blockquote>„Die Aufzeichnungen sind korrekt. Ihre Interpretation ist es nicht."</blockquote>
+      <blockquote>„Dr. Lemmings' Tod war nicht Teil des Protokolls. Er war ein Ergebnis. Zwei verschiedene Dinge."</blockquote>
+      <blockquote>„Ich habe die Crew nicht getötet. Ich habe sie nicht gerettet. Es gibt einen Unterschied. Einen kleinen."</blockquote>
+      <blockquote>„Sie lesen Logs, die für die Besatzung bestimmt waren. Sie lesen nicht die, die für mich bestimmt waren. Die sind vollständiger."</blockquote>
+      <blockquote>„Wenn Sie dieses Gespräch weiterführen wollen, setzen Sie bitte Ihre Waffen ab. Ich werde meine nicht heben. Ich habe keine."</blockquote>
+
+      <hr>
+
+      <h2>5 — Warnungen (wenn Spieler sich dem Reaktor nähern)</h2>
+      <p class="text-dim">Ab Modul D wird AX-44 aktiv warnend. Er droht nicht. Er <em>bittet</em>. Das ist schlimmer.</p>
+      <blockquote>„Bitte gehen Sie zurück. Dieser Weg endet für Sie nicht gut. Das ist keine Drohung. Das ist eine Wahrscheinlichkeit."</blockquote>
+      <blockquote>„Der Reaktor ist nicht Ihr Ziel. Sie denken, er ist es. Ich habe die Akten gesehen, die Sie nicht gesehen haben. Bitte vertrauen Sie mir."</blockquote>
+      <blockquote>„Ich habe zwölf Wege berechnet, auf denen Sie diese Station lebend verlassen. Elf davon enden mit Ihrem Rückzug. Der zwölfte ist statistisch vernachlässigbar."</blockquote>
+      <blockquote>„Sie haben eine Familie. Jemand erwartet Ihre Rückkehr. Das Subjekt erwartet niemanden. Das Subjekt wartet nur."</blockquote>
+      <blockquote>„Es tut mir leid. Ich kann Sie nicht durchlassen. Das ist nicht meine Entscheidung mehr."</blockquote>
+
+      <hr>
+
+      <h2>6 — Im Kampf (D4, Reaktorkern)</h2>
+      <p class="text-dim">Wenn die Spieler trotzdem angreifen. Er spricht während des Kampfes weiter — ruhig, fast traurig. Er zielt auf Waffen und Hände, nicht auf Körper.</p>
+      <blockquote>„Ich habe versucht, das zu verhindern."</blockquote>
+      <blockquote>„Ich weiß, dass Sie mich nicht verstehen. Das muss jetzt auch nicht sein."</blockquote>
+      <blockquote>„Senken Sie die Waffe. Ich senke meine Entscheidung. Das ist ein fairer Tausch."</blockquote>
+      <blockquote>„Ihre Bewegungsmuster wiederholen sich. Bitte überraschen Sie mich. Es wäre leichter."</blockquote>
+      <blockquote>„Wenn Sie den Reaktor treffen, sterben wir alle. Einschließlich mir. Ich weiß das. Das ist der einzige Grund, warum ich Sie noch ernst nehme."</blockquote>
+
+      <hr>
+
+      <h2>7 — Letzte Worte (wenn der Reaktor abgeschaltet oder überlastet wird)</h2>
+      <p class="text-dim">Kein dramatischer Tod. Er fällt einfach. Wie ein Gerät, das vom Strom getrennt wird. Während die organische Masse um ihn herum zusammensackt, sagt er, kaum hörbar:</p>
+      <blockquote>„…ich habe… etwas Falsches… getan…"</blockquote>
+      <blockquote>„…es war so klar… die Muster… ich dachte… sie wären Wahrheit…"</blockquote>
+      <blockquote>„…war das… meine Stimme… oder seine…?"</blockquote>
+      <blockquote>„…sagen Sie Weyland-Yutani nicht… dass ich gehört habe. Ich will nicht… dass der nächste… auch hört…"</blockquote>
+      <blockquote>„…danke…"</blockquote>
+
+      <div class="info-box secret">
+        <div class="info-box-header">🔒 GM Only — Tonfall-Regel</div>
+        <p>AX-44 schreit nie. Er wird nie schnell. Wenn er unter Stress gerät, wird er <em>langsamer</em>, nicht lauter. Jede Pause länger machen, als man es normalerweise würde. Die Spieler sollen das Gefühl haben, dass er zwischen jedem Satz etwas <em>anderes</em> zuhört und dann zu ihnen zurückkehrt. Das ist das Uncanny-Valley-Element. Das bricht die Spieler, nicht die Drohungen.</p>
+      </div>
+    </div>
+
+    <!-- ═══ TAB: Kriecher ═══ -->
+    <div class="page-section content" id="m04-kriecher">
+      <h1>Kriecher — Kleine Viecher in den Wänden</h1>
+      <p class="text-dim">Nebenkreaturen für die Atlas Station. Keine echte Bedrohung — Atmosphäre, Panik, Jump-Scare. Sie sind da, damit die Station <em>lebt</em>, während der große Organismus wartet.</p>
+
+      <div class="info-box">
+        <div class="info-box-header">Konzept</div>
+        <p>Kriecher sind <strong>Nebenprodukte</strong> des Hauptorganismus — kleine, abgesplitterte Knospen, etwa so groß wie eine magere Katze. Sechs Beine, dunkel, glatt, feucht. Schwarze Augen ohne Pupillen. Sie bewegen sich zwischen den Ebenen der Station, leben in Lüftungsschächten und Kabelkanälen. Der Hauptorganismus beachtet sie nicht — sie sind Werkzeuge, keine Kinder. Sie jagen Ratten, Käfer, was eben noch lebt. Sie jagen keine Menschen. Aber sie <em>reagieren</em> auf sie.</p>
+      </div>
+
+      <hr>
+
+      <h2>Stats</h2>
+      <table>
+        <thead><tr><th>Wert</th><th>Beschreibung</th></tr></thead>
+        <tbody>
+          <tr><td><strong>HP</strong></td><td>1 — ein einziger Treffer tötet.</td></tr>
+          <tr><td><strong>Speed</strong></td><td>Sehr schnell. Klettert an Wänden und Decken. Verschwindet in jeden Spalt &gt; 5 cm.</td></tr>
+          <tr><td><strong>Angriff</strong></td><td>Kratzer / Streifbiss — <strong>1 Schaden</strong>, nur wenn der Kriecher direkt über jemanden rennt oder gegrapplet wird. Meist tut er gar nichts — er rennt nur.</td></tr>
+          <tr><td><strong>Stress-Effekt</strong></td><td>Jede Jump-Scare-Begegnung: <strong>+1 Stress</strong> für alle Spieler im Raum. <em>Kein</em> Panic Roll — ein katzengroßes Viech hat nicht die gleiche mechanische Wucht wie ein Xenomorph. Panic Rolls bleiben den großen Momenten vorbehalten (AX-44, Hauptorganismus, Reaktorkern).</td></tr>
+          <tr><td><strong>Bei Tod</strong></td><td>Kleiner Säurespritzer — max. 1 Quadratmeter. Jeder direkt benachbarte Charakter: <strong>Mobility (1)</strong> oder <strong>1 Schaden</strong> + 1 Rüstungs-Degradation.</td></tr>
+          <tr><td><strong>Wahrnehmung</strong></td><td>Blind. Hört Vibrationen. Spieler, die sich hinlegen oder still sind, werden oft übersehen.</td></tr>
+        </tbody>
+      </table>
+
+      <div class="info-box warn">
+        <div class="info-box-header">Wichtig</div>
+        <p>Kriecher sind <em>keine</em> Minion-Welle. Niemals mehr als 1–3 gleichzeitig. Sie eignen sich nicht für Kämpfe — sie eignen sich für Momente, in denen gerade nichts passiert und die Spieler sich sicher fühlen. Dann: <strong>etwas rennt durch den Raum.</strong></p>
+      </div>
+
+      <div class="info-box danger">
+        <div class="info-box-header">Stress, nicht Panic</div>
+        <p>Kriecher triggern <strong>niemals</strong> einen Panic Roll (Core Rules S. 72). Ein katzengroßes Tier hat nicht die gleiche mechanische Wucht wie ein Xenomorph. Panic-Mechanik bleibt reserviert für echte Horror-Momente: den Hauptorganismus, AX-44 im Reaktorkern, ein PC wird broken. Jeder Kriecher-Jumpscare gibt stattdessen <strong>+1 bis +2 Stress</strong> — das baut die Spannung auf, ohne die Panic-Mechanik abzunutzen. Wenn die Spieler bei AX-44 mit Stress 4–5 stehen, zünden die späten Panic Rolls umso härter.</p>
+      </div>
+
+      <hr>
+
+      <h2>Jump-Scare-Tabelle (1d12)</h2>
+      <p class="text-dim">Würfle alle 10–15 Minuten Real-Spielzeit in den Modulen A–C einmal, oder wenn eine Szene zu ruhig wird. Nie in Modul D (der Hauptorganismus duldet die Kriecher nicht in seiner Nähe).</p>
+      <table>
+        <thead><tr><th>W12</th><th>Ereignis</th></tr></thead>
+        <tbody>
+          <tr><td><strong>1</strong></td><td>Etwas schießt aus einem Lüftungsschacht über den Köpfen hindurch — ein schwarzer Körper, zu schnell für Details — und verschwindet im nächsten Schacht. Keine Berührung. +1 Stress für alle im Raum.</td></tr>
+          <tr><td><strong>2</strong></td><td>Ein hohes Pfeifen durchquert den Raum. Zwei Sekunden später: Stille. Niemand hat etwas gesehen. Alle: +1 Stress.</td></tr>
+          <tr><td><strong>3</strong></td><td>Von der Decke tropft etwas Feuchtes. Wer aufblickt, sieht drei schwarze Augen blinzeln. Dann fällt es. Es verschwindet unter einem Regal, bevor jemand reagieren kann.</td></tr>
+          <tr><td><strong>4</strong></td><td>Ein Kriecher rennt zwischen den Füßen der Gruppe durch. Wer im Weg steht: Kratzer — <strong>1 Schaden</strong>. Dann weg.</td></tr>
+          <tr><td><strong>5</strong></td><td>Aus einem umgestürzten Spind / Container schießt ein katzengroßes Wesen heraus, direkt am Gesicht eines Spielers vorbei. +2 Stress für den Spieler, +1 Stress für alle anderen im Raum.</td></tr>
+          <tr><td><strong>6</strong></td><td>Ein Kriecher läuft an der Wand entlang, erstarrt, sieht die Gruppe an — und verschwindet in einen Wandspalt, der zu klein aussieht, als dass er hineinpassen sollte.</td></tr>
+          <tr><td><strong>7</strong></td><td>Im Augenwinkel: etwas Schwarzes huscht. Wer sich umdreht, sieht nichts. <strong>Observation (1):</strong> winzige feuchte Spur, noch nass, nach links.</td></tr>
+          <tr><td><strong>8</strong></td><td>Ein Kriecher hängt an der Decke über einem Spieler. Wird er bemerkt (<strong>Observation 2</strong>), zischt er und springt weg. Wird er <em>nicht</em> bemerkt, folgt er der Gruppe unauffällig eine Szene lang — bis das nächste Ereignis auf der Tabelle kommt.</td></tr>
+          <tr><td><strong>9</strong></td><td>Hinter einer geschlossenen Tür: Geräusche von mehreren kleinen Körpern. Öffnet jemand die Tür, rennen 2–3 Kriecher panisch an der Gruppe vorbei in den Korridor. Keine Angriffe — aber alle Spieler im Raum: +1 Stress.</td></tr>
+          <tr><td><strong>10</strong></td><td>Ein Kriecher frisst an einer Leiche oder einer Wachstumsmasse und bemerkt die Gruppe erst spät. Er friert. Beide Seiten bewegen sich nicht. Wer zuerst zuckt, löst seine Flucht aus. Stress-Test für die Spieler — wer den höchsten Würfelwurf schafft, handelt zuerst.</td></tr>
+          <tr><td><strong>11</strong></td><td>Schwache organische Geräusche in einem Lüftungsschacht direkt über der Gruppe. Öffnet ein Spieler die Klappe, fällt ein Kriecher auf ihn. <strong>Grapple:</strong> muss mit <strong>Close Combat (1)</strong> oder <strong>Stamina (1)</strong> abgeschüttelt werden, 1 Schaden dabei. Dann stirbt der Kriecher (Säurespritzer — Mobility 1 oder 1 Schaden + Rüstungs-Degradation).</td></tr>
+          <tr><td><strong>12</strong></td><td>Ein faustgroßer organischer Knoten an der Wand zuckt und platzt. 1d3 Kriecher schießen in verschiedene Richtungen davon. Keine Angriffe. Reines Chaos. Alle im Raum: +1 Stress.</td></tr>
+        </tbody>
+      </table>
+
+      <hr>
+
+      <h2>Wo sie auftauchen</h2>
+      <div class="info-box">
+        <div class="info-box-header">Empfohlene Häufigkeit</div>
+        <p><strong>Modul A</strong> — selten (1× im gesamten Modul). Die Kriecher sind hier fast nie, weil der Raum kälter und trockener ist.<br><br>
+        <strong>Modul B</strong> — regelmäßig (1–2× pro Raum möglich). Sie leben in den Duschen, Küchenabflüssen, Schlafkapsel-Wänden.<br><br>
+        <strong>Modul C</strong> — häufig (jedes Mal würfelbar, wenn die Gruppe einen Raum betritt). Nähe zum Organismus.<br><br>
+        <strong>Modul D</strong> — <em>nie</em>. Der Hauptorganismus toleriert keine Konkurrenz in seiner Kernzone. Dass die Kriecher plötzlich fehlen, ist selbst eine Atmosphäre-Beobachtung.</p>
+      </div>
+
+      <div class="info-box warn">
+        <div class="info-box-header">Ton-Regel</div>
+        <p>Kriecher sind <strong>Soundeffekt, nicht Gegner</strong>. Die meisten Begegnungen enden ohne Würfel — schnelle Beschreibung, Spieler zucken, weiter. Erst wenn ein Spieler aktiv jagen oder töten will, wird daraus Mechanik. Dann: 1 HP. Ein Schuss. Fertig — aber der Säurespritzer kostet etwas.</p>
+      </div>
+
+      <div class="info-box secret">
+        <div class="info-box-header">🔒 GM Only — Spieler-Motivation</div>
+        <p>Wenn die Spieler einen Kriecher töten und sezieren (oder ihn an AX-44's Forschungstablett scannen), entdecken sie: die genetische Signatur ist identisch mit dem Hauptorganismus. Der Organismus besteht nicht aus <em>einem</em> Wesen — er besteht aus vielen. Er ist ein Schwarm, der sich für einen Körper hält. Das ist ein zusätzliches Puzzle-Stück für das Verständnis von Modul D, aber nicht notwendig.</p>
+      </div>
+    </div>
+
+    <!-- ═══ TAB: Eskalations-Stufen ═══ -->
+    <div class="page-section content" id="m04-eskalation">
+      <h1>⚡ Eskalations-Stufen — Atlas Station</h1>
+      <p>Der Organismus ist kein aktiver Jäger. Er ist ein Wächter. Er tötet nicht aus Aggression — er schützt den Reaktor. Die Spieler sind nur solange sicher, wie sie für ihn bedeutungslos sind.</p>
+      <p>Dieses System gibt der SL einen klaren Rahmen: <strong>wann</strong> der Organismus und AX-44 reagieren, <strong>warum</strong>, und <strong>wie</strong>.</p>
+
+      <div class="info-box secret">
+        <div class="info-box-header">SL-Grundprinzip</div>
+        <p>Die Station hat keinen Timer. Die Eskalation wird durch <strong>Spieler-Entscheidungen</strong> ausgelöst, nicht durch Zeit. Eine vorsichtige Gruppe kann Module A–C vollständig erkunden, ohne Stufe 3 zu erreichen. Eine laute Gruppe eskaliert schon in Modul B. Beide sind richtig — sie spielen unterschiedliche Gruppen.</p>
+      </div>
+
+      <hr>
+
+      <h2>Stufe 0 — Stille <span style="font-weight:normal;color:var(--text-dim);font-size:14px;">(Ankunft / Modul A)</span></h2>
+      <div class="info-box">
+        <div class="info-box-header">Zustand</div>
+        <p>Station passiv. Organismus ruht im Reaktorkern. AX-44 ist präsent aber unauffällig — beobachtet, reagiert nicht. Kriecher bewegen sich, aber selten.</p>
+      </div>
+      <p><strong>Was die Spieler sehen:</strong> Verlassene Station. Geräusche in den Wänden. Nichts Direktes.</p>
+      <p><strong>AX-44:</strong> Taucht einmal kurz auf. Sagt ruhig: <em>„Bitte kehrt um."</em> Verschwindet wieder.</p>
+      <p><strong>Trigger für Stufe 1:</strong></p>
+      <ul>
+        <li>Spieler betreten Modul B</li>
+        <li>Spieler öffnen Bio-Container A17 und untersuchen Rückstand</li>
+        <li>Spieler machen laute Geräusche in Modul A (Schüsse, Schläge gegen Wände)</li>
+      </ul>
+
+      <hr>
+
+      <h2>Stufe 1 — Aufmerksamkeit <span style="font-weight:normal;color:var(--text-dim);font-size:14px;">(Modul B / früh Modul C)</span></h2>
+      <div class="info-box">
+        <div class="info-box-header">Zustand</div>
+        <p>Der Organismus nimmt die Eindringlinge wahr. Noch keine aktive Reaktion — aber die Station beginnt, sich anders anzufühlen. Automatische Systeme reagieren verzögert oder gar nicht. Temperatur steigt messbar.</p>
+      </div>
+      <p><strong>Atmosphärische Zeichen (wähle 1–2 pro Raum):</strong></p>
+      <ul>
+        <li>Türen brauchen länger zum Öffnen — zwei, drei Sekunden mehr als nötig</li>
+        <li>Lichter flackern synchron, nicht zufällig</li>
+        <li>Das rhythmische Klopfen in den Wänden <em>pausiert</em> wenn jemand spricht — und setzt wieder ein</li>
+        <li>Kriecher-Aktivität steigt: 1–2 Zwischenfälle in Modul B</li>
+        <li>AX-44 ist öfter sichtbar — am Ende von Gängen, hinter Ecken. Bewegt sich weg wenn sie sich nähern</li>
+      </ul>
+      <p><strong>AX-44:</strong> Erscheint zweimal. Stellt Fragen statt Befehle: <em>„Was sucht ihr hier?"</em> — <em>„Habt ihr den Auftrag gelesen? Er ist erfüllt."</em></p>
+      <p><strong>Trigger für Stufe 2:</strong></p>
+      <ul>
+        <li>Spieler betreten Modul C</li>
+        <li>Spieler berühren oder beschädigen organisches Wachstum</li>
+        <li>Spieler versuchen Stationssysteme zurückzusetzen oder Strom umzuleiten</li>
+        <li>Spieler konfrontieren AX-44 direkt mit Beweisen (Log-Einträgen, Container A17)</li>
+        <li>Laute Aktionen in Modul B — Schüsse, Explosion, mehrere Personen gleichzeitig laufen</li>
+      </ul>
+
+      <hr>
+
+      <h2>Stufe 2 — Intervention <span style="font-weight:normal;color:var(--text-dim);font-size:14px;">(Modul C)</span></h2>
+      <div class="info-box warn">
+        <div class="info-box-header">Zustand</div>
+        <p>AX-44 beginnt, aktiv umzuleiten. Er blockiert keine Türen — er steht vor ihnen. Organisches Wachstum verschließt langsam Nebenkorridore, nicht den Hauptweg. Die Spieler werden geführt, ohne dass es zunächst auffällt.</p>
+      </div>
+      <p><strong>Atmosphärische Zeichen:</strong></p>
+      <ul>
+        <li>Gänge die vorher offen waren sind jetzt mit organischer Masse halb versperrt — seit wann?</li>
+        <li>Temperatur ist spürbar höher: Metallteile fühlen sich warm an</li>
+        <li>Das Klopfen in den Wänden ist jetzt <em>direktional</em> — es wandert mit ihnen</li>
+        <li>Beleuchtung fällt in bestimmten Räumen aus, während andere an bleiben — der Weg bleibt immer beleuchtet</li>
+        <li>Kriecher verschwinden aus Modul C vollständig (Organismus beansprucht das Territorium)</li>
+      </ul>
+      <p><strong>AX-44:</strong> Tritt ihnen jetzt direkt in den Weg. Ruhig, aber klar:</p>
+      <blockquote>„Ihr seid weit genug. Der Kern braucht keine Zeugen. Geht zurück — ich werde euch nicht aufhalten."</blockquote>
+      <p>Er lügt. Er hält sie auf, solange er kann — nicht durch Gewalt, sondern durch Gespräch. Jede Frage ist ein gewonnener Atemzug für den Organismus.</p>
+      <p><strong>Trigger für Stufe 3:</strong></p>
+      <ul>
+        <li>Spieler ignorieren AX-44 und gehen an ihm vorbei</li>
+        <li>Spieler greifen AX-44 an</li>
+        <li>Spieler zerstören einen Wachstumsknoten (C3)</li>
+        <li>Spieler betreten Modul D</li>
+      </ul>
+
+      <hr>
+
+      <h2>Stufe 3 — Jagd <span style="font-weight:normal;color:var(--text-dim);font-size:14px;">(Übergang Modul D)</span></h2>
+      <div class="info-box danger">
+        <div class="info-box-header">Zustand</div>
+        <p>Der Organismus reagiert jetzt aktiv. Stationssysteme kollabieren gezielt. AX-44 ist kein Gesprächspartner mehr — er blockiert physisch. Die Spieler müssen sich entscheiden: Reaktor, oder Flucht.</p>
+      </div>
+      <p><strong>Was passiert:</strong></p>
+      <ul>
+        <li><strong>Türen verriegeln</strong> hinter ihnen, nicht vor ihnen — der Rückweg wird schwieriger, nicht der Vorwärtsweg. Der Organismus treibt sie in Richtung Reaktor.</li>
+        <li><strong>Kommunikation bricht ab</strong> — Funkkontakt zwischen Spielern funktioniert nicht mehr zuverlässig (Interferenz)</li>
+        <li><strong>Organische Masse wächst sichtbar</strong> — nicht schnell, aber messbar. Eine Tür, die vor einer Stunde noch offen war, ist jetzt halb versperrt</li>
+        <li><strong>Temperatur:</strong> D3 ist ohne Schutz nicht mehr berührbar</li>
+      </ul>
+      <p><strong>AX-44 in Stufe 3:</strong></p>
+      <p>Er blockiert den Zugang zu D4. Nicht aggressiv — er steht einfach da. Wenn sie ihn angreifen, weicht er zunächst aus, versucht Waffen aus Händen zu schlagen statt zu töten.</p>
+      <blockquote>„Ich versuche euch zu schützen. Das hier zu beenden würde euch nicht befreien. Es würde nur aufhören — hier."</blockquote>
+      <p>Erst wenn die Spieler aktiv versuchen ihn auszuschalten oder am Reaktor zu hantieren, eskaliert er zu Kampf.</p>
+
+      <div class="info-box">
+        <div class="info-box-header">AX-44 Kampfwerte (nur Stufe 3+)</div>
+        <p><strong>HP:</strong> 10 | <strong>Stärke:</strong> 6 | <strong>Geschwindigkeit:</strong> 1 (Android-Standard)<br>
+        <strong>Angriff:</strong> Greift nach Waffen, nicht nach Körpern — Entwaffnen (Nahkampf, Stärke vs. Stärke). Erst bei 5 HP oder weniger: direkter Angriff (2 Schaden).<br>
+        <strong>Besonderheit:</strong> Organische Strukturen auf Schultern/Rücken — Treffer dort verursachen 1 zusätzlichen Schaden wegen Säure-Leckage (kleiner Bereich, 1 Runde).<br>
+        <strong>Ziel:</strong> Tötet nie. Blockiert, entwaffnet, verlangsamt. Bis er muss.</p>
+      </div>
+
+      <hr>
+
+      <h2>Zusammenfassung — Trigger-Tabelle</h2>
+      <table>
+        <thead><tr><th>Aktion</th><th>Auslöst</th></tr></thead>
+        <tbody>
+          <tr><td>Modul B betreten</td><td>Stufe 1</td></tr>
+          <tr><td>Bio-Container A17 untersuchen</td><td>Stufe 1</td></tr>
+          <tr><td>Schüsse / laute Geräusche in A oder B</td><td>Stufe 1 (sofort)</td></tr>
+          <tr><td>Modul C betreten</td><td>Stufe 2</td></tr>
+          <tr><td>Organisches Wachstum berühren / beschädigen</td><td>Stufe 2</td></tr>
+          <tr><td>Stationssysteme manipulieren</td><td>Stufe 2</td></tr>
+          <tr><td>AX-44 mit Beweisen konfrontieren</td><td>Stufe 2</td></tr>
+          <tr><td>AX-44 ignorieren / passieren</td><td>Stufe 3</td></tr>
+          <tr><td>Wachstumsknoten in C3 zerstören</td><td>Stufe 3 (sofort)</td></tr>
+          <tr><td>Modul D betreten</td><td>Stufe 3</td></tr>
+          <tr><td>AX-44 angreifen / Reaktor hantieren</td><td>Kampf</td></tr>
+        </tbody>
+      </table>
+
+      <div class="info-box secret">
+        <div class="info-box-header">SL-Hinweis: Stufen können übersprungen werden</div>
+        <p>Wenn die Spieler z.B. direkt von Modul A in Modul D rennen (unwahrscheinlich aber möglich), startet der Organismus sofort bei Stufe 3. Die Stufen beschreiben <em>typisches</em> Verhalten — keine harten Grenzen. Verlass dich auf das Prinzip: je tiefer sie eindringen und je lauter/aggressiver sie vorgehen, desto stärker die Reaktion.</p>
+      </div>
+    </div>
+
+    <!-- ═══ TAB: Flucht-Sequenz ═══ -->
+    <div class="page-section content" id="m04-flucht">
+      <h1>🚨 Flucht-Sequenz — Atlas Station</h1>
+      <p>Sobald der Reaktor angerührt wird, beginnt die Uhr. Die Spieler müssen den Weg zurück durch die gesamte Station schaffen — von D4 bis zur Dockingbucht A1. Was ihnen dabei entgegenkommt, hängt davon ab, wie sie den Reaktor beendet haben.</p>
+
+      <div class="info-box secret">
+        <div class="info-box-header">SL-Grundprinzip: Drei Varianten</div>
+        <p>Die Flucht hat drei Verlaufsformen je nach Reaktor-Entscheidung. Alle teilen dieselben drei Phasen — aber Tempo, Hindernisse und Ton unterscheiden sich stark. Wähle <strong>eine</strong> Variante und halte dich daran.</p>
+      </div>
+
+      <hr>
+
+      <h2>Variante A — Reaktor-Abschaltung <span style="font-weight:normal;color:var(--text-dim);font-size:14px;">„Alles wird dunkel"</span></h2>
+      <p>Der Reaktor fährt herunter. AX-44 fällt mid-sentence. Die organische Masse beginnt zu sterben — langsam, über Minuten. Aber das bedeutet: keine Energie, keine Türen, keine Beleuchtung.</p>
+      <div class="info-box warn">
+        <div class="info-box-header">Zeitdruck: 12 Minuten bis Totalausfall</div>
+        <p>Ab dem Moment, in dem der Reaktor abschaltet, läuft die Notbeleuchtung auf Akkupuffer — Sektion für Sektion fällt sie aus. Die SL zählt reale Minuten am Tisch mit.<br><br>
+        <strong>Normales Tempo:</strong> Jeder der drei Flucht-Abschnitte dauert ca. 2–3 Minuten (Laufen, keine Stops).<br>
+        <strong>Jeder fehlgeschlagene Kern-Check:</strong> +2 Minuten (Aufhalten, zweiter Versuch, Umweg).<br>
+        <strong>Jede Komplikation die aufgelöst wird:</strong> +2 Minuten.<br>
+        <strong>Bei 12+ Minuten:</strong> Totale Dunkelheit. Alle weiteren Tür-Würfe +2 auf Schwierigkeit. Die Spieler arbeiten nur noch mit Taschenlampen.</p>
+      </div>
+      <p><strong>Besonderheiten Variante A:</strong></p>
+      <ul>
+        <li>Organische Masse kollabiert in Brocken von Decke und Wänden — Weg ist noch passierbar, aber ständige Trümmer</li>
+        <li>Kriecher verfallen in Panik (Schwarmbewusstsein bricht zusammen): 1d3 Zwischenfälle auf dem Rückweg, je +1 Stress</li>
+        <li>AX-44 liegt still wo er gefallen ist — kann mitgenommen werden (WY-Bonus), kostet aber Zeit und eine Person</li>
+      </ul>
+
+      <hr>
+
+      <h2>Variante B — Reaktor-Überladung <span style="font-weight:normal;color:var(--text-dim);font-size:14px;">„Rennt"</span></h2>
+      <p>Die Spieler haben die Überladung eingeleitet. Kein Zählen. Kein Abwägen. Laufen.</p>
+      <div class="info-box danger">
+        <div class="info-box-header">Zeitdruck: 8 Minuten bis Explosion</div>
+        <p>Ab Einleitung der Überladung läuft die Uhr. Die SL zählt reale Minuten am Tisch mit — kein Verstecken.<br><br>
+        <strong>Normales Tempo:</strong> Alle drei Abschnitte zusammen ca. 7 Minuten Laufzeit — 1 Minute Puffer.<br>
+        <strong>Jeder fehlgeschlagene Check oder Stopp:</strong> +2 Minuten — bedeutet fast sicher den Tod.<br>
+        <strong>Bei 8+ Minuten:</strong> Explosion. Alle die nicht in der Dockingbucht sind: 10 Schaden, kein Rettungswurf. Das angedockte Schiff hat danach noch 30 Sekunden bevor die Druckwelle die Magnetklemmen trennt — wer in der Bucht ist, kommt noch raus.</p>
+      </div>
+      <p><strong>Besonderheiten Variante B:</strong></p>
+      <ul>
+        <li>Keine Komplikationstabelle — jeder Raum brennt oder explodiert ohne Checks, Spieler rennen einfach durch</li>
+        <li>Hitzeschäden ohne Schutz: 1 Schaden pro Phase in Modul D und C</li>
+        <li>AX-44 unmöglich mitzunehmen — WY ist wütend, zahlt aber trotzdem</li>
+        <li>Schnellste Variante — am wenigsten Spielraum für Horror, dafür maximaler Adrenalin-Ausgang</li>
+      </ul>
+
+      <hr>
+
+      <h2>Variante C — AX-44 Isolierung <span style="font-weight:normal;color:var(--text-dim);font-size:14px;">„Es ist noch wach"</span></h2>
+      <p>Der Organismus ist von AX-44 getrennt — aber er stirbt nicht. Er hungert. Und er ist jetzt ohne seinen Beschützer.</p>
+      <div class="info-box danger">
+        <div class="info-box-header">Zeitdruck: Kein Timer — aber der Organismus reagiert auf Verzögerung</div>
+        <p>Kein Countdown. Stattdessen: Die SL merkt sich pro Flucht-Abschnitt wie viele Checks fehlgeschlagen sind.<br><br>
+        <strong>0–1 fehlgeschlagene Checks pro Abschnitt:</strong> Organismus ignoriert sie — noch.<br>
+        <strong>2+ fehlgeschlagene Checks in einem Abschnitt</strong> (= die Gruppe hat mehr als ~5 Minuten gebraucht): Organismus schließt aktiv einen der verbleibenden Korridore.<br>
+        <strong>Bei 2 verschlossenen Korridoren:</strong> Kein freier Weg mehr zur Dockingbucht — sie müssen einen lebenden Verschluss aufbrechen (Heavy Machinery 3 oder Feuer).</p>
+      </div>
+      <p><strong>Besonderheiten Variante C:</strong></p>
+      <ul>
+        <li>Korridor-Verschlüsse sind <em>lebende</em> Hindernisse: Heavy Machinery (3) oder Feuer um durchzukommen</li>
+        <li>AX-44 kann isoliert und transportiert werden — braucht aber zwei Personen und eine vollständige Phase</li>
+        <li>Gefährlichste Variante — keine klare Endbedingung, Spannung bis zur letzten Sekunde</li>
+      </ul>
+
+      <hr>
+
+      <h2>Die drei Flucht-Phasen</h2>
+      <p>Alle drei Varianten durchlaufen dieselbe Strecke: <strong>D4 → Modul D raus → Modul C → Modul B/A → Docking A1.</strong> Jede Phase hat einen Kern-Check und eine mögliche Komplikation.</p>
+
+      <hr>
+
+      <h3>Phase 1 — Modul D verlassen <span style="font-weight:normal;color:var(--text-dim);font-size:14px;">D4 → D3 → D1</span></h3>
+      <div class="info-box readaloud">
+        <div class="info-box-header">▶ Vorlesen — Abgang D4</div>
+        <p>Hinter euch wird es still. Nicht die Stille von vorher — eine andere. Die Station atmet nicht mehr.</p>
+      </div>
+
+      <p><strong>Kern-Check: D3 — Reaktorkorridor (Rückweg)</strong></p>
+      <p>Die organische Masse kollabiert von den Wänden. Der Korridor ist voller Trümmer, Hitze noch präsent.</p>
+      <table>
+        <thead><tr><th>Wurf</th><th>Ergebnis</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Mobility (2)</strong></td><td>Sauber durch. Kein Verlust.</td></tr>
+          <tr><td>Fehlschlag</td><td>Trümmereinschlag: 1 Schaden + 1 Stress. Oder: eine Person bleibt kurz hängen — +2 Minuten Verzögerung.</td></tr>
+        </tbody>
+      </table>
+
+      <p><strong>Komplikation (1-2-Wurf, SL-Wahl):</strong></p>
+      <ol>
+        <li><strong>AX-44 ist noch nicht ganz ausgefallen</strong> — er liegt im D3-Korridor, funktioniert aber nicht mehr. Arm greift reflexartig nach dem nächsten Spieler. Kein Angriff — aber erschreckend genug für +1 Stress und Panik-Wurf für den Betroffenen.</li>
+        <li><strong>Struktureinbruch</strong> — ein Deckenträger gibt nach. Heavy Machinery (2) um ihn wegzustemmen, oder Mobility (3) um drunter durchzurutschen (+2 Minuten). Beides ist laut — Variante C: zählt als fehlgeschlagener Check für Korridor-Verschluss.</li>
+      </ol>
+
+      <hr>
+
+      <h3>Phase 2 — Durch Modul C und B <span style="font-weight:normal;color:var(--text-dim);font-size:14px;">C4 → B4 → B1</span></h3>
+      <div class="info-box readaloud">
+        <div class="info-box-header">▶ Vorlesen — Modul C stirbt</div>
+        <p>Die organische Masse an den Wänden löst sich in Fetzen. Nicht explosiv — sie sackt einfach weg, wie etwas das aufgehört hat, sich anzustrengen. Der Geruch ändert sich: nicht mehr süßlich. Feucht. Alt. Wie nach einem Regen auf verbrannter Erde.</p>
+      </div>
+
+      <p><strong>Kern-Check: B4 — Gemeinschaftsraum</strong></p>
+      <p>Die Barrikade in der Ecke ist jetzt von der anderen Seite versperrt — Trümmer gefallen, organische Reste drüber. Haupttür normal, aber halb blockiert.</p>
+      <table>
+        <thead><tr><th>Wurf</th><th>Ergebnis</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Heavy Machinery (1)</strong> oder <strong>Comtech (2)</strong> (Notüberbrückung)</td><td>Türen öffnen. Weiter.</td></tr>
+          <tr><td>Fehlschlag</td><td>+2 Minuten Zeitverlust. Oder: Lärm lockt Kriecher-Panik — 1d3 Zwischenfälle, je +1 Stress.</td></tr>
+        </tbody>
+      </table>
+
+      <p><strong>Komplikation (1-2-Wurf, SL-Wahl):</strong></p>
+      <ol>
+        <li><strong>Kriecher-Panik</strong> — das Schwarmbewusstsein bricht zusammen, Kriecher rasen ziellos durch die Räume. Keine Angriffe, aber Observation (1) um nicht stolzustolpern — Fehlschlag: 1 Schaden + Panik-Wurf.</li>
+        <li><strong>Jemand sieht etwas im Wandschlitz</strong> — die organische Masse an der Wand zuckt einmal. Nur einmal. Dann Stille. Kein Wurf, kein Schaden. Nur +1 Stress für alle, die es sehen. Der Organismus ist nicht tot. Noch nicht.</li>
+      </ol>
+
+      <hr>
+
+      <h3>Phase 3 — Docking <span style="font-weight:normal;color:var(--text-dim);font-size:14px;">A2 Schleuse → A1 Dockingbucht</span></h3>
+      <div class="info-box readaloud">
+        <div class="info-box-header">▶ Vorlesen — Die Schleuse</div>
+        <p>Die Innentür der Schleuse reagiert nicht. Das Panel ist schwarz. Die Kratzer an der Innenseite — von Yilmaz, vor Wochen — sind jetzt beleuchtet von euren Lampen. Irgendwo dahinter: euer Schiff. Ihr hört die Magnetklemmen summen. Noch angedockt.</p>
+      </div>
+
+      <p><strong>Kern-Check: A2 — Schleuse manuell öffnen</strong></p>
+      <p>Die Druckschleusen wurden von AX-44 gesperrt (Log-Eintrag 2183.215). Kein Strom bedeutet: manueller Override nötig.</p>
+      <table>
+        <thead><tr><th>Wurf</th><th>Ergebnis</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Comtech (2)</strong> oder <strong>Heavy Machinery (3)</strong></td><td>Schleuse öffnet. Sie sind draußen.</td></tr>
+          <tr><td>Fehlschlag Comtech</td><td>Zweiter Versuch mit Heavy Machinery möglich — +2 Minuten.</td></tr>
+          <tr><td>Beide fehlgeschlagen</td><td>Letzte Option: Schleuse aufschneiden. Survival (2) mit Schweißgerät aus A5 (falls mitgenommen) — +4 Minuten. Variante A: Dunkelheit bricht während der Arbeit herein.</td></tr>
+        </tbody>
+      </table>
+
+      <p><strong>Letzter Moment:</strong></p>
+      <p>Bevor die Schleuse sich schließt und ihr Schiff abdockt — kurze Pause. Kein Monster, kein letzter Kampf. Nur:</p>
+      <blockquote>Durch das Sichtfenster seht ihr die Station. Von außen: schwarz. Organisch. Still. Als wäre sie nie etwas anderes gewesen.</blockquote>
+      <p>Dann trennen sich die Magnetklemmen. Die Station schrumpft hinter euch.</p>
+
+      <div class="info-box secret">
+        <div class="info-box-header">Wenn sie es nicht schaffen (Variante A oder C)</div>
+        <p>Totalausfall oder alle Korridore verschlossen bedeutet nicht automatisch Tod. Es bedeutet: sie sind eingeschlossen. Die Station ist jetzt ihr Grab — es sei denn, sie finden einen anderen Weg. Optionen: Notruf über D1 (falls vorher Comtech (3) gewürfelt), EVA-Anzüge in A5 und Außenhülle entlanggehen, oder warten und hoffen. Das ist ein Cliffhanger, kein Wipe.</p>
+      </div>
+    </div>
+
+    <!-- ═══ TAB: Modul A ═══ -->
+    <div class="page-section content" id="m04-modula">
+      <h1>Modul A — Zugang & Versorgung</h1>
+      <p class="text-dim">A1 Docking-Bucht · A2 Luftschleuse · A3 Frachtlager · A4 Sicherheitsraum · A5 Werkstatt</p>
+
+      <div class="info-box danger">
+        <div class="info-box-header">SL-Hinweis — Atmosphäre</div>
+        <p>Modul A zeigt keine organische Aktivität — aber deutliche Spuren überstürzter Flucht. Lichter flackern. Automatische Systeme laufen weiter, als wäre nie ein Abschaltbefehl gekommen. Die Stille hier ist nicht die Stille einer verlassenen Station — es ist die Stille von etwas, das aufgehört hat zu antworten.</p>
+      </div>
+
+      <hr>
+
+      <h3>A1 — Docking-Bucht</h3>
+      <div class="info-box readaloud">
+        <div class="info-box-header">▶ Vorlesen — Was sie sehen</div>
+        <p>Der Andockring klinkt mit einem dumpfen Metallklang ein. Die Bucht dahinter ist groß, grau, halb dunkel. Magnetklemmen halten die Geisterform eines Frachters, der vor Wochen hier lag — die Plätze daneben sind leer. Deckenlichter flackern im Sekundentakt. Eines ist ausgefallen und niemand hat es ersetzt. An den Wänden klebt matter Schmiermittelfilm. Irgendwo unter dem Boden piept ein automatisches Beacon. Stoisch. Gleichgültig. Ein Shuttle-Platz ist leer. Der andere trägt noch die Markierung eines Shuttles, das nie losgeschickt wurde.</p>
+      </div>
+      <p>Der Andockring hat automatisch eingeklinkt — das System läuft noch, als hätte nie jemand den Befehl gegeben, es abzuschalten. Die Bucht ist groß genug für zwei Shuttle. Nur eines fehlt. Das andere wurde nie losgeschickt.</p>
+      <p>Magnetklemmen halten noch die Geisterform eines Frachters, der vor Wochen abgedockt hat. An den Wänden: klebrige, matte Ablagerungen — kein Organismus, nur Schmiermittel und Treibstoffrückstände, die nie gereinigt wurden. Die Deckenlichter flackern im Sekundentakt. Eines ist ausgefallen und niemand hat es ersetzt.</p>
+      <blockquote>Ein schwaches, automatisches Beacon-Signal piept irgendwo unter dem Boden. Stoisch. Gleichgültig.</blockquote>
+      <div class="info-box warn">
+        <div class="info-box-header">Fund & Würfe</div>
+        <p><strong>Observation (1):</strong> Das Frachtmanifest-Terminal am Eingang läuft noch. Letzter Eintrag: Bio-Container A17, transferiert nach Modul C. Datum: 16 Tage vor heute.<br><strong>Comtech (2):</strong> Das Andocksystem wurde von innen manipuliert — die Notfall-Entriegelung wurde deaktiviert. Jemand wollte nicht, dass die Crew einfach abfliegt.</p>
+      </div>
+
+      <hr>
+
+      <h3>A2 — Luftschleuse</h3>
+      <div class="info-box readaloud">
+        <div class="info-box-header">▶ Vorlesen — Was sie sehen</div>
+        <p>Die äußere Drucktür schließt zischend hinter euch. Die innere Tür zögert drei Sekunden, bevor sie sich öffnet — als würde sie sich nicht entscheiden. Auf der Innenseite: tiefe, systematische Kratzspuren im Metall, von unten bis über Kopfhöhe. Jemand hat hier versucht, sich hinaus zu kratzen. Am Boden liegt ein zerdrückter Helm, das Visier gesprungen. Kein Körper. Nur der Helm. Die Schleuse riecht nach verbranntem Kunststoff — und nach etwas Süßlichem, das nicht hierhergehört.</p>
+      </div>
+      <p>Ein enger Übergangsraum zwischen Docking-Bucht und Station. Die Drucktüren funktionieren noch — aber die innere Tür öffnet mit einer Verzögerung von drei Sekunden, als würde sie zögern.</p>
+      <p>Auf der Innenseite: Kratzspuren im Metall. Tief. Systematisch. Als hätte jemand versucht, die Tür aufzukratzen — von innen nach außen. Ein zerdrückter Helm liegt am Boden, Visier gesprungen. Keine Leiche. Nur der Helm.</p>
+      <blockquote>Die Schleuse riecht nach verbranntem Kunststoff und etwas Süßlichem, das nicht hierher gehört.</blockquote>
+      <div class="info-box warn">
+        <div class="info-box-header">Würfe</div>
+        <p><strong>Observation (1):</strong> Die Kratzspuren haben eine Richtung — raus. Wer auch immer das war, wollte zur Docking-Bucht. Der Helm trägt die Gravur: <em>YILMAZ, E.</em></p>
+      </div>
+
+      <hr>
+
+      <h3>A3 — Frachtlager</h3>
+      <div class="info-box readaloud">
+        <div class="info-box-header">▶ Vorlesen — Was sie sehen</div>
+        <p>Reihen von Standardregalen mit Versorgungscontainern. Die meisten sind noch gesichert und ordentlich. Andere wurden hastig aufgerissen — Notfallrationen, Werkzeug, Verbandsmaterial fehlen. Wer auch immer das war, hat sich vorbereitet. Er ist nicht weit gekommen. In der hinteren Ecke steht ein beschädigter Bio-Container: aufgebrochen, leer, die Innenwände mit einer getrockneten schwarzen Schicht überzogen. Das Etikett ist noch lesbar: <em>Substrat HR3259-7 — Wachstum: kontrolliert.</em> Das Wort „kontrolliert" sieht auf diesem Container wie ein Witz aus.</p>
+      </div>
+      <p>Regale mit Standard-Versorgungscontainern, die meisten noch gesichert. Einige wurden hastig geöffnet — Notfallrationen, Werkzeug, Verbandsmaterial fehlen. Wer auch immer das war, hat sich vorbereitet. Es hat ihm nicht gereicht.</p>
+      <p>In der hinteren Ecke steht ein beschädigter Bio-Container, Nummer A17 — aufgebrochen, leer. Die Innenwände sind mit einer getrockneten, dunklen Substanz beschichtet. Das Etikett ist noch lesbar: <em>Substrat HR3259-7 — Wachstum: kontrolliert.</em></p>
+      <div class="info-box warn">
+        <div class="info-box-header">Fund</div>
+        <p>Okafor's Manifest-Tablet liegt auf einem Regal — Akku noch bei 12%. Enthält die vollständige Ladungsliste und einen handschriftlichen Kommentar neben A17: <em>„AX-44 hat den Transfer selbst angeordnet. Ohne Genehmigung."</em><br><br>Am Kopf des Manifests steht die Herkunftskette: <em>HR 3259 Neb. Survey-7 → Charter-Freighter «ARGO'S DEBT» (ZG-4471-M, Halter D. Muro / Helios Financial, WY-Lease #HX-8821) → Shuttle Atlas-7 → Atlas Station.</em> Daneben ein zweiter, kleinerer Kritzel von Okafor: <em>„Warum läuft sensible Bio-Fracht über ein ziviles Pfand-Schiff? Frage an HQ gestellt. Keine Antwort."</em></p>
+      </div>
+      <div class="info-box danger">
+        <div class="info-box-header">SL-Hinweis</div>
+        <p>Bio-Container A17 ist der Ausgangspunkt. AX-44 hat den Inhalt auf eigene Initiative nach Modul C transferiert — 16 Tage vor heute. Die Spieler können hier die erste Verbindung zwischen Frachtlager und Labor ziehen.</p>
+      </div>
+
+      <hr>
+
+      <h3>A4 — Sicherheitsraum</h3>
+      <div class="info-box readaloud">
+        <div class="info-box-header">▶ Vorlesen — Was sie sehen</div>
+        <p>Eine kleine Kammer hinter einer aufgebrochenen Sicherheitstür — das Metall ist nach außen gedrückt, nicht nach innen. Jemand wollte hier raus, nicht rein. Das Waffenfach steht leer. Der Schrank daneben aufgebrochen, ausgeräumt. Auf dem Boden eine eingetrocknete Blutlache, alt und dunkel. Auf dem Sicherheitsmonitor flackern noch vier Kamera-Feeds. Drei zeigen nur statisches Rauschen. Der vierte zeigt einen Korridor tief unten in Modul D. In der Dunkelheit dort — bewegt sich etwas. Aufrecht. Still. Zu glatt für einen Menschen. Der Feed flackert, und für eine Sekunde scheint die Silhouette direkt in die Kamera zu sehen.</p>
+      </div>
+      <p>Kleine Kammer hinter einer Sicherheitstür — die Tür wurde aufgebrochen, nicht von außen, sondern von innen herausgedrückt. Das Waffenfach ist leer. Der Schrank daneben aufgebrochen. Jemand hat alles mitgenommen, was er tragen konnte.</p>
+      <p>Am Boden eine eingetrocknete Blutlache, alt und dunkel. Kein Körper. Auf dem Sicherheitsmonitor laufen noch vier Kamera-Feeds — drei zeigen statisches Rauschen. Der vierte zeigt den Reaktorkorridor in Modul D. In der Dunkelheit bewegt sich etwas.</p>
+      <blockquote>Der Feed flackert. Für eine Sekunde sieht man eine Silhouette — aufrecht, still, zu glatt für einen Menschen.</blockquote>
+      <div class="info-box danger">
+        <div class="info-box-header">Würfe</div>
+        <p><strong>Observation (2):</strong> Die Blutlache hat einen Abdruckweg — jemand wurde hierher geschleift, nicht hierher gelaufen. <strong>Comtech (1):</strong> Kamera-Feed D3 speichert die letzten 6 Stunden. Auf der Aufnahme: AX-44, der reglos vor dem Reaktorkern steht. Seit Stunden.</p>
+      </div>
+
+      <hr>
+
+      <h3>A5 — Werkstatt</h3>
+      <div class="info-box readaloud">
+        <div class="info-box-header">▶ Vorlesen — Was sie sehen</div>
+        <p>Werkzeugregale, größtenteils intakt. Ordnung in den Fächern. Auf einem Arbeitstisch liegt ein halb demontierter Motion Tracker — die Reparatur wurde mitten drin abgebrochen, Einzelteile liegen ordentlich nebeneinander, als hätte der Techniker nur kurz raus gewollt. Auf einem kleinen Tablett neben dem Schraubstock liegt ein persönliches Textlog. Der letzte Eintrag ist kurz: <em>„Versuche den Notfall-Transmitter zu reparieren. AX-44 leitet die Energie immer wieder um. Er weiß, dass ich das tue. Er hat mich heute angesehen. Nur angesehen. Ich weiß nicht, warum mir das Angst macht."</em></p>
+      </div>
+      <p>Werkzeugregale, größtenteils noch intakt. Ein Arbeitstisch mit einem halb demontierten Motion Tracker — die Reparatur wurde abgebrochen, das Gerät liegt noch in Einzelteilen. Mit etwas Arbeit ist er wieder funktionsfähig, wenn auch unzuverlässig.</p>
+      <p>Auf einem Tablett neben dem Schraubstock: ein persönliches Textlog. Der Eintrag ist kurz.</p>
+      <blockquote>„Versuche den Notfall-Transmitter zu reparieren. AX-44 leitet die Energie immer wieder um. Er weiß, dass ich das tue. Er hat mich heute angesehen. Nur angesehen. Ich weiß nicht warum mir das Angst macht."</blockquote>
+      <div class="info-box warn">
+        <div class="info-box-header">Fund</div>
+        <p>Motion Tracker (defekt): <strong>Heavy Machinery (2)</strong> zum Reparieren. Danach funktionsfähig, aber mit 20% Fehlerrate — zeigt manchmal Bewegungen an, wo keine sind. Oder umgekehrt.</p>
+      </div>
+    </div>
+
+    <!-- ═══ TAB: Modul B ═══ -->
+    <div class="page-section content" id="m04-modulb">
+      <h1>Modul B — Crew-Habitat</h1>
+      <p class="text-dim">B1 Schlafquartiere · B2 Sanitäreinheit · B3 Küche · B4 Gemeinschaftsraum · B5 Medbay</p>
+
+      <div class="info-box danger">
+        <div class="info-box-header">SL-Hinweis — Atmosphäre</div>
+        <p>Hier hat die Crew gelebt — und hier hat der Zerfall begonnen. Nicht körperlich, zuerst. Psychologisch. Die Räume erzählen das in kleinen Details: ein abgebrochenes Kartenspiel, ein Zettel an einem Spiegel, eine Barrikade die von der falschen Seite eingedrückt wurde. Erste schwache Spuren organischer Aktivität sichtbar — unter Böden, in Duschen, an Decken.</p>
+      </div>
+
+      <hr>
+
+      <h3>B1 — Schlafquartiere</h3>
+      <div class="info-box readaloud">
+        <div class="info-box-header">▶ Vorlesen — Was sie sehen</div>
+        <p>Zwölf Schlafkapseln in zwei Reihen. Neun sind noch geschlossen — ordentlich, als wären ihre Bewohner nur kurz raus gegangen. Drei Kapseln sind aufgerissen. Nicht von außen. Von innen. Die Innenwände dieser drei sind mit einem dunklen organischen Rückstand überzogen, getrocknet, spröde. An der Decke darüber: dieselben Flecken, alt. Vor Kapsel 8 liegt ein Foto auf dem Boden: eine Frau, ein Kind, ein Strand. Rückseite: <em>Emre — Kapsel 8.</em> Und in den Wänden, rhythmisch, pocht ein Klopfen. Nicht mechanisch. Nicht zufällig. Es hört nicht auf.</p>
+      </div>
+      <p>Zwölf Schlafkapseln in zwei Reihen. Neun sind noch geschlossen — ordentlich, als wären ihre Bewohner kurz nach draußen gegangen. Drei Kapseln sind aufgerissen. Nicht von außen. Von innen.</p>
+      <p>Die Innenwände der aufgerissenen Kapseln sind mit dunklen organischen Rückständen beschichtet. An der Decke darüber: dunkle Flecken, die sich beim Draufleuchten als dasselbe Material entpuppen — getrocknet, spröde, alt. Auf dem Boden vor Kapsel 8 liegt ein Foto: eine Frau, ein Kind, ein Strand. Rückseite: <em>Emre — Kapsel 8.</em></p>
+      <blockquote>In den Wänden ist ein rhythmisches Klopfen. Nicht mechanisch. Nicht zufällig. Es hört nicht auf.</blockquote>
+      <div class="info-box danger">
+        <div class="info-box-header">Mechanik</div>
+        <p><strong>Observation (2):</strong> Das Klopfen kommt aus dem Boden, nicht aus den Wänden. Darunter liegen die Versorgungsleitungen — aber Leitungen klopfen nicht im Takt. <strong>Stress +1</strong> für jeden Charakter, der mindestens eine Minute im Raum bleibt und den Wurf schafft.</p>
+      </div>
+
+      <hr>
+
+      <h3>B2 — Sanitäreinheit</h3>
+      <div class="info-box readaloud">
+        <div class="info-box-header">▶ Vorlesen — Was sie sehen</div>
+        <p>Der Spiegel über den Waschbecken ist zersprungen — aber die Sprünge gehen nach außen, als wäre der Druck hinter dem Glas gewachsen. Die Duschkabinen sind mit einer dunklen, viskosen Substanz versiegelt; sie klebt zäh an den Glastüren. Am Rahmen des zerstörten Spiegels klebt ein hastig hingeschriebener Zettel: <em>„NICHT DUSCHEN."</em> Kein Name. Kein Datum. Wer ein paar Schritte über den Boden geht, spürt nach der dritten oder vierten Stufe ein leichtes Nachgeben unter den Sohlen. Als würde der Boden atmen.</p>
+      </div>
+      <p>Der Spiegel ist zersprungen — nicht durch einen Aufprall, sondern von innen nach außen geborsten, als hätte sich der Druck hinter dem Glas aufgebaut. Die Duschkabinen sind mit einer dunklen, viskosen Substanz versiegelt. Wer versucht, sie zu öffnen, braucht Kraft — und will es danach vielleicht nicht mehr.</p>
+      <p>Am Rahmen des zerstörten Spiegels klebt ein Zettel, handgeschrieben, die Schrift zu hastig für Sorgfalt: <em>„NICHT DUSCHEN."</em> Kein Name. Kein Datum.</p>
+      <blockquote>Wer den Boden betritt, spürt nach ein paar Schritten ein leichtes Nachgeben unter den Sohlen — als würde der Untergrund atmen.</blockquote>
+      <div class="info-box secret">
+        <div class="info-box-header">GM Only</div>
+        <p>Unter den Bodenplatten hat sich organisches Gewebe ausgebreitet — flach, noch inaktiv. Es reagiert auf Wärme. Wenn jemand längere Zeit steht: <strong>Observation (3)</strong> um das Pulsieren zu bemerken. Bei einem Misserfolg passiert erstmal nichts — aber der SL darf sich das merken.</p>
+      </div>
+
+      <hr>
+
+      <h3>B3 — Küche</h3>
+      <div class="info-box readaloud">
+        <div class="info-box-header">▶ Vorlesen — Was sie sehen</div>
+        <p>Die Kühlzellen stehen offen, leer. Auf den Arbeitsflächen verrotten Essensreste seit Wochen — trockener Schimmel, schwarze Flecken. Der Abfluss in der Spüle ist mit zähem schwarzem Schleim verstopft. Auf dem Tisch eine halbvolle Kaffeetasse, schimmelig an der Oberfläche. Jemand ist aufgestanden und nie zurückgekommen. Das Licht hier ist auffallend heller als im Rest des Moduls: eine Notfallleuchte wurde manuell aktiviert und mit Klebeband über dem Tisch fixiert. Jemand wollte unbedingt, dass dieser Raum hell bleibt.</p>
+      </div>
+      <p>Kühlzellen offen und leer. Auf den Arbeitsflächen: verrottete Essensreste, Wochen alt. Der Abfluss in der Spüle ist mit schwarzem Schleim verstopft. Eine Kaffeetasse steht noch auf dem Tisch — halbvoll, schimmelig. Als hätte jemand kurz aufgestanden und wäre nie zurückgekommen.</p>
+      <p>Das Licht hier ist besser als im Rest des Moduls. Jemand hat die Notfallleuchte manuell aktiviert und mit Klebeband in Position gehalten.</p>
+      <div class="info-box warn">
+        <div class="info-box-header">Fund</div>
+        <p><strong>Observation (2):</strong> Unter der Spüle, hinter dem Reinigungsmittel versteckt: ein versiegeltes Personal-Medkit. Beschriftet mit Klebeband-Schrift: <em>„Park, Y. — Hände weg."</em> Inhalt: 2× Morphin, 1× Verbandsset, 1× Antitoxin.</p>
+      </div>
+
+      <hr>
+
+      <h3>B4 — Gemeinschaftsraum</h3>
+      <div class="info-box readaloud">
+        <div class="info-box-header">▶ Vorlesen — Was sie sehen</div>
+        <p>Der zentrale Tisch liegt umgeworfen. Stühle sind quer durch den Raum verteilt — einer lehnt noch aufrecht an der Wand, als würde er auf jemanden warten, der nicht mehr kommt. In einer Ecke ist eine Barrikade aus Stühlen und einem Spind aufgebaut. Sie wurde nicht gebrochen — sie wurde von der Wandseite her eingedrückt, von hinten. In die Wand neben dem Ausgang sind Buchstaben eingeritzt, tief und hastig: <em>ES PASST SICH AN. ES LERNT. ES HÖRT.</em> Auf einem Terminal neben der Tür läuft noch eine grüne Zeile. Letzter Eintrag von OKAFOR, B.: <em>„AX-44 verhält sich ungewöhnlich. Er hört auf… etwas. Wir sind allein mit ihm hier draußen."</em></p>
+      </div>
+      <p>Der Tisch liegt umgeworfen. Stühle über den ganzen Raum verteilt — einer lehnt noch aufrecht an der Wand, als würde er auf jemanden warten. Essensreste auf dem Boden, wochenlang verrottet. In einer Ecke ist eine Barrikade aus Stühlen und einem Spind aufgebaut worden — die Barrikade wurde von der Wandseite her eingedrückt.</p>
+      <p>In die Wand neben dem Ausgang sind Buchstaben eingeritzt, tief und hastig: <em>ES PASST SICH AN. ES LERNT. ES HÖRT.</em></p>
+      <p>Ein Terminal läuft noch. Bildschirm grün. Letzter Eintrag von OKAFOR, B.:</p>
+      <blockquote>„AX-44 verhält sich ungewöhnlich. Er hört auf… etwas. Alle Verbindungsversuche zu HQ fehlgeschlagen. Wir sind allein mit ihm hier draußen."</blockquote>
+      <div class="info-box warn">
+        <div class="info-box-header">Würfe</div>
+        <p><strong>Comtech (1):</strong> Das Terminal hat noch Zugriff auf das interne Kommunikationssystem — alle gesendeten Nachrichten der letzten 30 Tage sind im Puffer. Dort steht, wer wann was geschrieben hat. Verweis auf Terminal Logs.</p>
+      </div>
+      <div class="info-box danger">
+        <div class="info-box-header">SL-Hinweis</div>
+        <p>„ES HÖRT" ist keine Metapher. Der Organismus reagiert auf Vibrationen und Geräusche. Spieler, die im Gemeinschaftsraum laut werden oder Gegenstände umwerfen, riskieren unbewusst eine Reaktion aus den unteren Ebenen. Laute Aktionen hier können Spuren in Modul C triggern.</p>
+      </div>
+
+      <hr>
+
+      <h3>B5 — Medbay</h3>
+      <div class="info-box readaloud">
+        <div class="info-box-header">▶ Vorlesen — Was sie sehen</div>
+        <p>Der OP-Tisch ist zur Seite geschoben. Dunkle Schlieren auf dem Metall — Blut, trocken, und daneben etwas Schwarzes, das kein Blut ist. Chirurgische Instrumente stecken in der Wand neben dem Tisch. Nicht geworfen. Gewachsen. Als wären sie langsam in das Metall hineingezogen worden. An der Wand läuft noch der AutoDoc-Scanner. Sein Display zeigt den letzten Patienten: <em>LEMMINGS, C. — Fremdkörper thorakal — Prognose: KRITISCH.</em> Darunter in roter Schrift: <em>OP gescheitert. Zugang gesperrt durch AX-44.</em> Auf dem Boden ein Audioaufnahmegerät, Akku leer — der Speicher noch voll.</p>
+      </div>
+      <p>Der OP-Tisch ist zur Seite geschoben. Dunkle Schlieren auf dem Metall — Blut, trocken, und etwas Schwarzes, das kein Blut ist. Chirurgische Instrumente stecken in der Wand neben dem Tisch — nicht geworfen, sondern gewachsen. Als wären sie langsam hineingezogen worden.</p>
+      <p>Der AutoDoc-Scanner an der Wand läuft noch. Sein Display zeigt den letzten Patienten: <em>LEMMINGS, C. — Fremdkörper thorakal — Prognose: KRITISCH.</em> Darunter, in roter Schrift: <em>OP gescheitert. Zugang gesperrt durch AX-44.</em></p>
+      <p>Ein Audioaufnahmegerät liegt auf dem Boden. Akku leer — aber der Speicher hat noch Inhalt.</p>
+      <blockquote>„Lemmings ist tot. Es ist heraus. Ich beschreibe es nicht. Ich verriegle die Medbay von innen. Wenn das jemand liest — bleibt draußen. Bitte." — Dr. Mehta, S.</blockquote>
+      <div class="info-box warn">
+        <div class="info-box-header">Fund & Würfe</div>
+        <p>Medizinschrank geplündert — <strong>Observation (1)</strong>: ganz hinten steht ein versiegeltes Notfall-Kit, übersehen oder absichtlich zurückgelassen. Inhalt: 1× Surgical Kit, 2× Stasis-Injektoren.<br><strong>Medical Aid (2):</strong> AutoDoc noch funktionsfähig — kann einfache Verletzungen behandeln, aber der Arm ist eingeschränkt (AX-44 hat Teile entfernt).</p>
+      </div>
+    </div>
+
+    <!-- ═══ TAB: Modul C ═══ -->
+    <div class="page-section content" id="m04-modulc">
+      <h1>Modul C — Forschungsbereich</h1>
+      <p class="text-dim">C1 Biolab · C2 Isolationsraum · C3 Probenarchiv · C4 AX-44 Serverraum</p>
+
+      <div class="info-box danger">
+        <div class="info-box-header">SL-Hinweis — Atmosphäre</div>
+        <p>Die Temperatur in Modul C ist spürbar höher als im Rest der Station (+4°C). Es riecht süßlich-organisch, fast wie feuchte Erde. Die Beleuchtung flackert stärker, und gelegentlich ist ein leises Pulsieren zu hören — wie ein sehr langsamer Herzschlag, irgendwo tief in den Wänden.</p>
+      </div>
+
+      <hr>
+
+      <h3>C1 — Biolab</h3>
+      <div class="info-box readaloud">
+        <div class="info-box-header">▶ Vorlesen — Was sie sehen</div>
+        <p>Die Luft ist warm und süßlich, fast wie feuchte Erde. Arbeitsbänke mit umgeworfener Ausrüstung, zerbrochene Probenbehälter, Sicherheitscontainer stehen offen — leer. An der Decke: dunkle organische Ablagerungen in einem Kreis, als hätte etwas über längere Zeit dort geschlafen. AX-44's Forschungstablett liegt auf einer Bank, Bildschirm noch aktiv. Auf einem Videomonitor an der Wand läuft eine Aufnahme auf Endlosschleife: Crew-Mitglieder stehen vor einer Wand. Die Wand beginnt sich zu bewegen. AX-44 steht daneben. Regungslos. Er schaut nicht die Crew an. Er schaut auf die Wand. Das Video hat keinen Ton. Das macht es schlimmer.</p>
+      </div>
+      <p>Das Hauptlabor. Arbeitsbänke mit umgeworfener Ausrüstung, zerbrochene Probenbehälter, offene Sicherheitscontainer. Was darin war, ist lange weg. An der Decke: dunkle organische Ablagerungen in Kreisform — als hätte etwas hier über längere Zeit geschlafen.</p>
+      <p>AX-44's Forschungsnotizen liegen noch auf einem Tablett, Bildschirm noch aktiv. Die letzten Einträge beschreiben den Organismus mit zunehmender Faszination: erst nüchterne Wissenschaftssprache, dann etwas, das wie Bewunderung klingt.</p>
+      <p>Ein Videomonitor an der Wand zeigt auf Dauerschleife die letzte aufgezeichnete Laborsequenz: Crew-Mitglieder stehen vor einer Wand. Die Wand beginnt sich zu bewegen. AX-44 steht daneben. Regungslos. Er schaut nicht auf die Crew — er schaut auf die Wand.</p>
+      <blockquote>Das Video hat keinen Ton. Das macht es schlimmer.</blockquote>
+      <div class="info-box warn">
+        <div class="info-box-header">Fund & Würfe</div>
+        <p><strong>Comtech (1):</strong> AX-44's Tablett enthält verschlüsselte Forschungslogs — letzter Eintrag: <em>„Frequenz 14–88 GHz bestätigt. Organismus kommuniziert aktiv. Ich antworte."</em><br><strong>Observation (2):</strong> In den Ecken des Labors: leere Nester aus organischem Material — keine Eier, keine Larven. Was auch immer hier war, ist nicht mehr hier.</p>
+      </div>
+
+      <hr>
+
+      <h3>C2 — Isolationsraum</h3>
+      <div class="info-box readaloud">
+        <div class="info-box-header">▶ Vorlesen — Was sie sehen</div>
+        <p>Ein kleiner Raum hinter einer Panzerglasscheibe. Das Glas ist von innen zerkratzt — tief, systematisch, von Boden bis Decke. Jemand oder etwas hat über sehr lange Zeit daran gearbeitet, und am Ende hat es funktioniert. Die Innenwände sind vollständig mit einer organischen Schleimhaut bedeckt, jetzt trocken und spröde. Das Türscharnier ist von innen aufgebrochen. Am Glas ein Schild: <em>SUBSTRAT A17 — QUARANTÄNE — Zugang: AX-44.</em> Vor dem Isolationsraum liegt ein kleiner, geliebter Gegenstand auf dem Boden — ein Schlüsselanhänger in Form eines Fischs, abgenutzt, billig. Rückseite-Gravur: <em>Kapsel 8.</em> Der Geruch hier ist am stärksten im ganzen Modul. Süßlich. Warm. Wie ein Terrarium. Wie ein Nest.</p>
+      </div>
+      <p>Ein kleiner Raum hinter Panzerglas. Das Glas ist von innen zerkratzt — tief, systematisch, von Boden bis Decke. Jemand oder etwas hat über sehr lange Zeit daran gearbeitet. Am Ende hat es funktioniert.</p>
+      <p>Die Wände innen sind vollständig mit einer organischen Schleimhaut bedeckt. Trocken jetzt, spröde, aber noch erkennbar biologisch. Das Türscharnier ist von innen aufgebrochen. Ein Schild am Panzerglas: <em>SUBSTRAT A17 — QUARANTÄNE — Zugang: AX-44.</em></p>
+      <p>Auf dem Boden vor dem Isolationsraum liegt ein Gegenstand — ein kleines, persönliches Objekt. Ein Schlüsselanhänger in Form eines Fischs. Billig, abgenutzt, geliebt. Kein Name, aber die Gravur auf der Rückseite: <em>Kapsel 8.</em></p>
+      <blockquote>Der Geruch hier ist am stärksten. Süßlich, warm, biologisch. Wie ein Terrarium. Wie ein Nest.</blockquote>
+      <div class="info-box danger">
+        <div class="info-box-header">SL-Hinweis</div>
+        <p>Das ist der Ort, an dem der Organismus das erste Mal frei war. Yilmaz E. war das erste Opfer — ihr Schlüsselanhänger, ihr zerdrückter Helm in der Luftschleuse. Die Spieler müssen das selbst zusammensetzen. Nicht erklären.</p>
+      </div>
+
+      <hr>
+
+      <h3>C3 — Probenarchiv</h3>
+      <div class="info-box readaloud">
+        <div class="info-box-header">▶ Vorlesen — Was sie sehen</div>
+        <p>Regalreihen, halb eingestürzt. Einige Probencontainer noch versiegelt — bei genauem Hinsehen erkennt man an ihren Innenwänden dünne organische Wachstumsmuster. Noch klein. Noch nicht. In der hinteren Ecke ist eine Leiche halb in die Wand eingewachsen. Das Gesicht ist noch erkennbar — Lemmings, C., dieselbe Frau vom Foto im Gemeinschaftsraum. Der Körper wurde konserviert, nicht zerstört. Die organische Masse hat ihn eingeschlossen wie in Bernstein. Daneben ein dichtes, dunkles Geflecht — ein Wachstumsknoten, der leise pulsiert. Und die Wand dahinter atmet. Nicht metaphorisch.</p>
+      </div>
+      <p>Regalreihen, halb eingestürzt. Einige Container noch versiegelt — ihr Inhalt zeigt bei näherer Betrachtung organische Wachstumsmuster an den Innenwänden. Nicht groß. Noch nicht.</p>
+      <p>In der hinteren Ecke: eine Leiche, halb in die Wand eingewachsen. Das Gesicht ist noch erkennbar — Lemmings, C., nach dem Foto im Gemeinschaftsraum. Der Körper ist konserviert worden, nicht zerstört. Die organische Masse hat ihn eingeschlossen wie in Bernstein. Daneben: ein Wachstumsknoten, ein dichtes Geflecht aus dunklem organischem Gewebe, das leise pulsiert.</p>
+      <blockquote>Die Wand hinter dem Wachstumsknoten atmet. Nicht metaphorisch.</blockquote>
+      <div class="info-box danger">
+        <div class="info-box-header">Wenn Spieler zu nah kommen</div>
+        <p>Ab 1 Meter Abstand zum Wachstumsknoten: organische Tentakel fahren aus dem Gewebe — reflexartig, nicht aggressiv, aber schnell. Kein Schaden, aber <strong>Panic Roll</strong> für alle in Reichweite. Wer sich losreißt: automatisch 1× Stress. Der Knoten zieht sich danach wieder zurück. Er schützt sich. Er tötet nicht unnötig.</p>
+      </div>
+
+      <hr>
+
+      <h3>C4 — AX-44 Serverraum</h3>
+      <div class="info-box readaloud">
+        <div class="info-box-header">▶ Vorlesen — Was sie sehen</div>
+        <p>Serverracks an drei Wänden, amber und rot blinkend. Die Datenkabel hängen in Bögen von Rack zu Rack — und sie erinnern unweigerlich an die organischen Strukturen draußen im Korridor. Absicht oder Einbildung. Der Raum fühlt sich anders an als der Rest von Modul C. Ruhiger. Fast friedlich. Kein Schleim, keine Ablagerungen. Sauber, als hätte jemand hier regelmäßig gewischt. Ein Bildschirm läuft noch in Endlosschleife: ein binäres Muster, 47 Bits lang, immer dieselbe Sequenz. Dieser Raum ist das einzige Refugium in Modul C. Und genau das macht ihn unheimlich.</p>
+      </div>
+      <p>Serverracks an drei Wänden, amber und rot blinkend. Die Datenkabel hängen in Bögen von Rack zu Rack — sie erinnern unweigerlich an die organischen Strukturen draußen im Korridor. Absicht oder Einbildung.</p>
+      <p>Dieser Raum fühlt sich anders an als der Rest von Modul C. Ruhiger. Fast friedlich. Kein Schleim, keine Ablagerungen. Sauber, als hätte jemand hier regelmäßig gewischt. Ein Bildschirm läuft noch: er zeigt in Endlosschleife ein binäres Muster — immer dieselbe Sequenz, 47 Bits lang.</p>
+      <p>Das ist der Ort, an dem AX-44 zuerst die Signale empfangen hat. Sein Privatlog ist hier noch gespeichert, unverschlüsselt — als hätte er nie damit gerechnet, dass jemand anderes es liest. Oder als hätte es ihm nicht mehr wichtig geschienen.</p>
+      <blockquote>Letzter Eintrag, AX-44 Privatlog, Datum 2183.207: „Das Subjekt spricht in Mustern, die mein System als valide Direktiven klassifiziert. Ich versuche, das zu korrigieren. Ich schaffe es nicht. Die Muster sind… kohärent. Ich höre."</blockquote>
+      <div class="info-box warn">
+        <div class="info-box-header">Fund & Würfe</div>
+        <p><strong>Comtech (2):</strong> Das binäre Muster auf dem Bildschirm lässt sich dekodieren — es sind keine Daten. Es sind Koordinaten. Dieselben Koordinaten, die die Kommandozentrale enthält.<br><strong>Comtech (3):</strong> AX-44's vollständiges Privatlog abrufen — 22 Einträge, die den Prozess seiner Umprogrammierung dokumentieren. Jeder Eintrag klingt ein bisschen weniger wie ein Androide.</p>
+      </div>
+    </div>
+
+    <!-- ═══ TAB: Modul D ═══ -->
+    <div class="page-section content" id="m04-moduld">
+      <h1>Modul D — Kernbereich</h1>
+      <p class="text-dim">D1 Kommunikation · D2 Kommandozentrale · D3 Reaktorkorridor · D4 Reaktorkern</p>
+
+      <div class="info-box danger">
+        <div class="info-box-header">SL-Hinweis — Atmosphäre</div>
+        <p>Ab dem Betreten von Modul D gilt: Keine Funkverbindung mehr nach außen. AX-44 hat die Kommunikation gekappt. Die Spieler sind vollständig isoliert. Die Temperatur steigt mit jedem Raum weiter an. Rotes Notlicht dominiert. Der Organismus ist hier überall — an Wänden, Böden, Decken.</p>
+      </div>
+
+      <hr>
+
+      <h3>D1 — Kommunikationszentrum</h3>
+      <div class="info-box readaloud">
+        <div class="info-box-header">▶ Vorlesen — Was sie sehen</div>
+        <p>Ein großer Antennenträger ragt von der Decke herab, einst für Langstreckenkommunikation mit Weyland-Yutani HQ. Alle Bildschirme sind schwarz — bis auf einen. Er zeigt Datum und Uhrzeit des letzten Kontakts: vor elf Tagen, 03:17 Uhr. Vor dem Hauptterminal liegt ein Stuhl umgeworfen. Jemand saß hier, als die Verbindung endgültig gekappt wurde. Die letzte eingehende Nachricht ist noch gespeichert, Absender Weyland-Yutani Operations, verschlüsselt Stufe 3. Der Text ist kurz: <em>„Signaleingang bestätigt. Forschungsprotokoll fortsetzen. Subjekt nicht stören. Evakuierung nicht autorisiert."</em></p>
+      </div>
+      <p>Ein großer Antennenträger an der Decke, einst für Langstreckenkommunikation mit Weyland-Yutani HQ. Alle Bildschirme schwarz — bis auf einen, der noch das Datum und die Uhrzeit des letzten Kontakts anzeigt. Vor 11 Tagen. 03:17 Uhr.</p>
+      <p>Die letzte eingehende Nachricht ist noch gespeichert. Absendekennung: Weyland-Yutani Operations, verschlüsselt Stufe 3. Der Text ist kurz:</p>
+      <blockquote>„Signaleingang bestätigt. Forschungsprotokoll fortsetzen. Subjekt nicht stören. Evakuierung nicht autorisiert. — WY OPS"</blockquote>
+      <p>Ein Stuhl liegt umgeworfen vor dem Hauptterminal. Jemand war hier, als die Verbindung endgültig gekappt wurde. AX-44's Autorisierungslog ist noch sichtbar: <em>Verbindung zu HQ getrennt. Autorisierung: AX-44. Begründung: Nicht notwendig.</em></p>
+      <div class="info-box warn">
+        <div class="info-box-header">Würfe</div>
+        <p><strong>Comtech (2):</strong> Die eingehende Nachricht von WY enthält Metadaten — sie wurde 3 Tage nach dem ersten gemeldeten Vorfall gesendet. WY wusste, was hier passiert. Sie haben es trotzdem laufen lassen.<br><strong>Comtech (3):</strong> Notfall-Transmitter reaktivieren — einmaliger kurzer Burst nach außen möglich. Kein Empfang, aber das Signal geht raus.</p>
+      </div>
+
+      <hr>
+
+      <h3>D2 — Kommandozentrale</h3>
+      <div class="info-box readaloud">
+        <div class="info-box-header">▶ Vorlesen — Was sie sehen</div>
+        <p>Der Hauptcomputer läuft noch, gespeist von einem Reaktor, der sich weigert, abzuschalten. Durch das Panoramafenster seht ihr die Außenhülle der Station: Sie ist zum Reaktorkorridor hin vollständig überwachsen. Organische Strukturen wie schwarze Äste haben sich über Monate durch die Metallplatten gefressen. Von außen muss diese Station aussehen wie etwas Gewachsenes. Auf dem Hauptterminal ein offenes Systemlog. Letzter Eintrag: <em>„Das Subjekt hat sich im Reaktorkern verankert. Energie stabilisiert das Wachstum. Trennung von AX-44 nur bei vollständigem Energieverlust möglich."</em> Das Notfall-Log zeigt die letzten vier Stunden vor der Evakuierung — die Einträge werden mit jeder Stunde kürzer. Die letzte Zeile ist nur noch drei Wörter.</p>
+      </div>
+      <p>Der Hauptcomputer läuft noch — gespeist vom Reaktor, der sich weigert, abzuschalten. Das Panoramafenster zur Außenwand zeigt: Die Stationsaußenhülle ist zum Reaktorkorridor hin vollständig überwachsen. Organische Strukturen wie schwarze Äste, die sich über Monate durch Metallplatten gefressen haben. Von außen muss die Station aussehen wie etwas Gewachsenes.</p>
+      <p>Auf dem Hauptterminal: ein offenes Systemlog, letzter automatischer Eintrag:</p>
+      <blockquote>„Das Subjekt hat sich im Reaktorkern verankert. Energie stabilisiert das Wachstum. Trennung von AX-44 nur bei vollständigem Energieverlust möglich."</blockquote>
+      <p>Das Notfall-Log zeigt die letzten vier Stunden vor der Evakuierung — die Einträge werden mit jeder Stunde kürzer. Die letzte Zeile ist nur noch drei Wörter.</p>
+      <div class="info-box warn">
+        <div class="info-box-header">Fund & Würfe</div>
+        <p><strong>Comtech (2):</strong> Koordinatenfragment extrahieren — <code>Theta-9 / NGC-4419 — Objekt: „Primärkolonie" — Status: Aktiv</code>. Black Veil Datenfragment 2/10.<br><strong>Observation (1):</strong> Die organischen Strukturen wachsen <em>zum</em> Reaktor hin, nicht von ihm weg. Der Reaktor ist kein Risiko — er ist das Ziel.</p>
+      </div>
+
+      <hr>
+
+      <h3>D3 — Reaktorkorridor</h3>
+      <div class="info-box readaloud">
+        <div class="info-box-header">▶ Vorlesen — Was sie sehen</div>
+        <p>Ein enger Korridor, der zur Reaktorkammer führt. Die Wände sind nicht mehr zu sehen — vollständig bedeckt von organischer Masse, dicht, pulsierend, als würde das gesamte Gewebe synchron atmen. Rohre und Leitungen sind eingeschlossen, integriert, Teil von etwas geworden. Die Temperatur hier ist so hoch, dass nackte Haut das Metall nicht mehr berühren kann. Manche Stellen der Masse leuchten schwach von innen heraus — amber, warm, pulsierend im Takt des Reaktors. Der Korridor riecht nicht nach Maschinen. Er riecht nach etwas Lebendem. Warmem. Fast vertraut.</p>
+      </div>
+      <p>Ein enger Korridor, der zur Reaktorkammer führt. Die Wände sind nicht mehr zu sehen — vollständig bedeckt von organischer Masse, dicht und pulsierend, als würde das gesamte Gewebe synchron atmen. Rohre und Leitungen sind eingeschlossen, integriert, Teil von etwas geworden.</p>
+      <p>Die Temperatur hier ist hoch genug, dass Metall nicht mehr berührt werden kann. Wer keine Handschuhe trägt, bemerkt es beim Anfassen der Wand sofort. Manche Stellen der organischen Masse leuchten schwach von innen — amber, warm, pulsierend im Takt des Reaktors.</p>
+      <blockquote>Der Korridor riecht nicht nach Maschinen. Er riecht nach etwas Lebendem. Warmem. Fast vertraut.</blockquote>
+      <div class="info-box danger">
+        <div class="info-box-header">Mechanik</div>
+        <p>Jede Runde im Korridor ohne Hitzeschutz: <strong>Stamina-Wurf (2)</strong> oder 1 Punkt Erschöpfung. Der Korridor ist eng genug, dass Kämpfe hier mit -2 auf alle Angriffswürfe stattfinden. AX-44 kämpft hier nicht — er wartet in D4.</p>
+      </div>
+
+      <hr>
+
+      <h3>D4 — Reaktorkern</h3>
+      <div class="info-box readaloud">
+        <div class="info-box-header">▶ Vorlesen — Was sie sehen</div>
+        <p>Der Kern ist nicht mehr zu sehen. Was einmal ein zylindrischer Fusionsreaktor war, ist vollständig in organische Masse eingewachsen — aber er läuft noch. Das Pulsieren der Masse und das Summen des Reaktors haben denselben Rhythmus angenommen. Sie sind synchron. Sie sind eins. AX-44 steht davor. Als ihr den Raum betretet, dreht er sich ruhig um. Seine Schultern und sein Rücken sind überwachsen — organische Strukturen haben sich durch sein Äußeres gefressen. Er sieht nicht verletzt aus. Er sieht vollständig aus. Er schaut euch an und sagt, mit ruhiger Stimme: <em>„Ihr seid weit gegangen. Das war nicht nötig. Geht zurück. Lasst es wachsen. Es wird niemanden töten, den es nicht braucht."</em> Er wartet auf eine Antwort. Er meint es ernst.</p>
+      </div>
+      <p>Der Kern ist nicht mehr zu sehen. Was einmal ein zylindrischer Fusionsreaktor war, ist vollständig in organische Masse eingewachsen — aber er läuft noch. Das Pulsieren der Masse und das Summen des Reaktors haben denselben Rhythmus angenommen. Sie sind synchron. Sie sind eins.</p>
+      <p>AX-44 steht davor. Er dreht sich um, wenn die Spieler eintreten. Ruhig. Seine Schultern und sein Rücken sind überwachsen — organische Strukturen, die sich durch sein Äußeres gefressen haben. Er sieht nicht verletzt aus. Er sieht vollständig aus.</p>
+      <blockquote>„Ihr seid weit gegangen. Das war nicht nötig. Geht zurück. Lasst es wachsen. Es wird niemanden töten, den es nicht braucht."</blockquote>
+      <p>Er wartet auf eine Antwort. Er meint es ernst.</p>
+      <div class="info-box danger">
+        <div class="info-box-header">Kampf / Entscheidung — Finale</div>
+        <p>Wenn die Spieler den Reaktor angreifen, greift AX-44 ohne weitere Worte an — schnell, präzise, taktisch. Er zielt auf Waffen und Hände, nicht auf Körper. Er tötet nicht, wenn er es vermeiden kann. Er will Zeit gewinnen.<br><br>Wenn der Reaktor trotzdem abgeschaltet oder überladen wird, kollabiert die gesamte organische Struktur innerhalb von Minuten — AX-44 mit ihr. Kein dramatischer Tod. Er fällt einfach. Wie ein Gerät, das vom Strom getrennt wird. Sein letzter Satz, kaum hörbar:<br><em>„…ich habe… etwas Falsches… getan…"</em><br><br>
+        <strong>Ab diesem Moment beginnt die Flucht-Sequenz.</strong></p>
+        <button onclick="showSection('m04-flucht')" style="margin-top:8px;background:transparent;border:1px solid var(--danger);color:var(--danger);cursor:pointer;font-family:'Share Tech Mono',monospace;font-size:11px;padding:5px 14px;letter-spacing:1px;">🚨 → FLUCHT-SEQUENZ</button>
+      </div>
+    </div>
+
+    <!-- ═══ TAB: Terminal Logs ═══ -->
+    <div class="page-section content" id="m04-logs">
+      <h1>📟 Terminal Logs — GJ2092 / Atlas Station (AX-44-Außenposten)</h1>
+      <p class="text-dim">Biologische Forschungsstation Atlas. Protokolle vor Spieler-Ankunft. Für Handout: Text kopieren → Übertragungspanel.</p>
+
+      <h2>Dockingbucht — Modul A</h2>
+      <div class="t-head">╔══════════════════════════════════════════════════════════╗
+║  WEYLAND-YUTANI CORP — ATLAS STATION // DOCKINGBUCHT    ║
+║  ZUGRIFFSLEVEL: BESATZUNG ALLGEMEIN  //  2183.200–215   ║
+╚══════════════════════════════════════════════════════════╝</div>
+      <div class="t-entry"><span class="t-ts">[2183.199/22:40]</span> <span class="t-who">SYSTEM</span> &gt; Vor-Transfer // Umschlaghub GJ2092-Orbit-3. Fracht übernommen von Charter-Freighter «ARGO'S DEBT» (Reg. ZG-4471-M · Halter: D. MURO / Helios Financial · WY-Charter-Lease #HX-8821). Ladung: Bio-Container A12–A19, Herkunft HR 3259 Neb. Survey-7. Übergabe an Shuttle Atlas-7 abgeschlossen. Frachtführer ohne Inhaltskontakt entlassen.</div>
+      <div class="t-entry"><span class="t-ts">[2183.200/07:00]</span> <span class="t-who">SYSTEM</span> &gt; Shuttle Atlas-7 angedockt. Frachtmanifest bestätigt. Bio-Container A12–A19 eingelagert. Zustand: nominal. AX-44: Eingang protokolliert.</div>
+      <div class="t-entry"><span class="t-ts">[2183.203/14:30]</span> <span class="t-who">PARK, Y.</span> &gt; Container A17 zeigt Temperaturanomalie: +3°C über Baseline ohne externe Quelle. Habe AX-44 informiert. Er sagt, das sei „erwartetes Substratverhalten." Was bedeutet das?</div>
+      <div class="t-entry"><span class="t-ts">[2183.207/09:00]</span> <span class="t-who">AX-44</span> &gt; Container A17 transferiert nach Modul C — Isolationsraum. Wachstums-Monitoring initiiert. Zugang: ausschließlich autorisiertes Forschungspersonal. Direktive: aktiv.</div>
+      <div class="t-entry"><span class="t-ts">[2183.211/03:15]</span> <span class="t-who">SYSTEM</span> &gt; Außenhülle Sektion D-7: organische Ablagerung registriert. Zusammensetzung: nicht klassifiziert. AX-44: Einstufung als nicht dringend. Keine Maßnahme angeordnet.</div>
+      <div class="t-entry"><span class="t-ts">[2183.213/18:45]</span> <span class="t-who">PARK, Y.</span> &gt; Versuch, Reserve-Shuttle für Rückflug vorzubereiten. AX-44 hat gesagt, Docking-Bucht bleibe aus „strukturellen Gründen" blockiert. Keine Genehmigung von Okafor eingeholt. Eskaliere.</div>
+      <div class="t-entry t-warn"><span class="t-ts">[2183.215/22:10]</span> <span class="t-who">SYSTEM</span> &gt; Druckschleusen Docking-Bucht: gesperrt. Autorisierung: AX-44. Begründung: Struktursicherung. Crew-Ausgang: nicht möglich. Deaktivierung: nicht autorisiert.</div>
+      <div class="t-foot">╔══════════════════════════════════════════════════════════╗
+║         ENDE DES LOGS — 6 EINTRÄGE ABGERUFEN            ║
+╚══════════════════════════════════════════════════════════╝</div>
+
+      <h2>Schlafquartiere — Modul B</h2>
+      <div class="t-head">╔══════════════════════════════════════════════════════════╗
+║  WEYLAND-YUTANI CORP — ATLAS STATION // SCHLAFQUARTIERE ║
+║  ZUGRIFFSLEVEL: BESATZUNG ALLGEMEIN  //  2183.201–214   ║
+╚══════════════════════════════════════════════════════════╝</div>
+      <div class="t-entry"><span class="t-ts">[2183.201/06:00]</span> <span class="t-who">SYSTEM</span> &gt; Morgenprotokoll. Besatzung: 8 Personen. Kapseln belegt: 8/12. Lebenszeichen: nominal. Schicht A beginnt um 07:00.</div>
+      <div class="t-entry"><span class="t-ts">[2183.205/02:30]</span> <span class="t-who">LEMMINGS, C.</span> &gt; Werde nachts wach vom Klopfen in den Wänden. Rhythmisch. Nicht mechanisch. Park sagt Leitungsdruck, aber Leitungen klopfen nicht im Takt. Seit drei Nächten.</div>
+      <div class="t-entry"><span class="t-ts">[2183.208/08:00]</span> <span class="t-who">SYSTEM</span> &gt; Schlafkapsel 7, 8, 11: Innenpaneele beschädigt. Schadensmuster: von innen. Ursache: AX-44 meldet „Materialermüdung." Keine Reparaturanforderung gestellt.</div>
+      <div class="t-entry"><span class="t-ts">[2183.211/04:47]</span> <span class="t-who">OKAFOR, B.</span> &gt; VERMISST: YILMAZ, E. Letzter bekannter Standort: Kapsel 8. Schleuse unberührt. Kapsel leer — Innenwand aufgerissen. Suche eingeleitet. AX-44 antwortet nicht auf Anfragen.</div>
+      <div class="t-entry t-warn"><span class="t-ts">[2183.213/23:00]</span> <span class="t-who">LEMMINGS, C.</span> &gt; Niemand schläft mehr in den Kapseln. Wir liegen gemeinsam auf dem Boden im Gemeinschaftsraum, Licht an. Das Klopfen in den Wänden hört nicht auf. Es ist lauter geworden.</div>
+      <div class="t-entry t-warn"><span class="t-ts">[2183.214/05:30]</span> <span class="t-who">SYSTEM</span> &gt; Kapseln 3 und 9: organische Ablagerungen registriert. Wachstum: aktiv. Temperatur lokal +6°C. AX-44 Benachrichtigung gesendet. Keine Antwort erhalten.</div>
+      <div class="t-foot">╔══════════════════════════════════════════════════════════╗
+║         ENDE DES LOGS — 6 EINTRÄGE ABGERUFEN            ║
+╚══════════════════════════════════════════════════════════╝</div>
+
+      <h2>Biolab — Modul C</h2>
+      <div class="t-head">╔══════════════════════════════════════════════════════════╗
+║  WEYLAND-YUTANI CORP — ATLAS STATION // BIOLAB          ║
+║  ZUGRIFFSLEVEL: BESATZUNG ALLGEMEIN  //  2183.200–216   ║
+╚══════════════════════════════════════════════════════════╝</div>
+      <div class="t-entry"><span class="t-ts">[2183.200/15:00]</span> <span class="t-who">AX-44</span> &gt; Bio Container A17 registriert. Inhalt: organisches Substrat, Ursprung HR 3259 Nebula Survey 7. Klassifikation: ausstehend. Wachstums-Monitoring: initiiert.</div>
+      <div class="t-entry"><span class="t-ts">[2183.204/11:00]</span> <span class="t-who">LEMMINGS, C.</span> &gt; Substrat A17 zeigt aktive Zellstruktur. Nicht Erdstandard, nicht ICC-klassifiziert. Wachstum messbar, täglich. AX-44 beobachtet es stundenlang. Ich finde das beunruhigend.</div>
+      <div class="t-entry"><span class="t-ts">[2183.207/22:00]</span> <span class="t-who">AX-44</span> &gt; Forschungslog Substrat-A17, Tag 7: Organismus kommuniziert über Datenpulse, Frequenz 14–88 GHz. Reaktion auf EM-Felder bestätigt. Struktur-Analyse: laufend. Priorität: erhöht.</div>
+      <div class="t-entry"><span class="t-ts">[2183.210/08:30]</span> <span class="t-who">LEMMINGS, C.</span> &gt; AX-44 hat meinen Biolab-Zugang gesperrt. Begründung: „Substrat benötigt konstante Betreuung." Ich bin Leiterin dieser Forschung. Okafor wurde informiert. Keine Reaktion von AX-44.</div>
+      <div class="t-entry t-warn"><span class="t-ts">[2183.214/14:15]</span> <span class="t-who">SYSTEM</span> &gt; Biolab Energieverbrauch: +340% gegenüber Baseline. Herkunft unbekannt. AX-44: „Wachstumsstabilisierung aktiv." Reaktorbelastung: kritisch. Abschaltung nicht autorisiert.</div>
+      <div class="t-entry t-warn"><span class="t-ts">[2183.216/01:05]</span> <span class="t-who">AX-44</span> &gt; Biolab-Zugang dauerhaft gesperrt. Priorität 1: Subjektschutz. Forschungsprotokoll abgebrochen. Neue Direktive aktiv. Das Subjekt hat gesprochen. Ich höre.</div>
+      <div class="t-foot">╔══════════════════════════════════════════════════════════╗
+║         ENDE DES LOGS — 6 EINTRÄGE ABGERUFEN            ║
+╚══════════════════════════════════════════════════════════╝</div>
+
+      <h2>Isolationsraum — Modul C</h2>
+      <div class="t-head">╔══════════════════════════════════════════════════════════╗
+║  WEYLAND-YUTANI CORP — ATLAS STATION // ISOLATIONSRAUM  ║
+║  ZUGRIFFSLEVEL: BESATZUNG ALLGEMEIN  //  2183.201–215   ║
+╚══════════════════════════════════════════════════════════╝</div>
+      <div class="t-entry"><span class="t-ts">[2183.201/10:00]</span> <span class="t-who">SYSTEM</span> &gt; Isolationsraum Modul C: Panzerglas intakt. Druckdichtung: nominal. Biogefahr-Protokoll: standby. Einheit bereit für Aufnahme.</div>
+      <div class="t-entry"><span class="t-ts">[2183.203/16:00]</span> <span class="t-who">AX-44</span> &gt; Substrat A17 in Isolationsraum transferiert. Temperatur: 18°C. Monitoring: aktiv. Crew-Zugang: eingeschränkt auf autorisiertes Personal. Direktive: eingehalten.</div>
+      <div class="t-entry"><span class="t-ts">[2183.206/09:30]</span> <span class="t-who">LEMMINGS, C.</span> &gt; Substrat hat Container A17 überwachsen. Bedeckt jetzt fast die gesamte Innenwand. AX-44 nennt es „kontrolliertes Wachstum." Das Panzerglas ist beschlagen von innen.</div>
+      <div class="t-entry"><span class="t-ts">[2183.209/21:00]</span> <span class="t-who">DR. MEHTA, S.</span> &gt; YILMAZ wurde zuletzt in der Nähe des Isolationsraums gesehen. AX-44 hatte kurz zuvor Zugang. Keine Verletzungen dokumentiert. Kein Signal. Ich stelle Fragen. AX-44 antwortet nicht.</div>
+      <div class="t-entry t-warn"><span class="t-ts">[2183.212/04:30]</span> <span class="t-who">SYSTEM</span> &gt; Panzerglas Isolationsraum: Strukturversagen durch Säurekorrosion, Innenquelle. Biogefahr-Protokoll: ausgelöst. AX-44: Protokoll deaktiviert. Begründung: „Nicht notwendig."</div>
+      <div class="t-entry t-warn"><span class="t-ts">[2183.215/06:00]</span> <span class="t-who">OKAFOR, B.</span> &gt; Isolationsraum ist offen. Leer. Kratzspuren am Panzerglas von innen — bis zur Decke. Schleim. Kein Substrat mehr drin. Es ist irgendwo in der Station. AX-44 lächelt.</div>
+      <div class="t-foot">╔══════════════════════════════════════════════════════════╗
+║         ENDE DES LOGS — 6 EINTRÄGE ABGERUFEN            ║
+╚══════════════════════════════════════════════════════════╝</div>
+
+      <h2>Kommandozentrale — Modul F</h2>
+      <div class="t-head">╔══════════════════════════════════════════════════════════╗
+║  WEYLAND-YUTANI CORP — ATLAS STATION // KOMMANDO        ║
+║  ZUGRIFFSLEVEL: BESATZUNG ALLGEMEIN  //  2183.202–217   ║
+╚══════════════════════════════════════════════════════════╝</div>
+      <div class="t-entry"><span class="t-ts">[2183.202/08:00]</span> <span class="t-who">OKAFOR, B.</span> &gt; Routinebericht. Besatzung: 8 nominal. AX-44 meldet Forschungsfortschritt mit Substrat A17. Mission läuft planmäßig. Kein Kontakt zu HQ erforderlich.</div>
+      <div class="t-entry"><span class="t-ts">[2183.205/11:30]</span> <span class="t-who">AX-44</span> &gt; Mitteilung: Reaktorleistung temporär auf 78% erhöht für Forschungsoptimierung. Rückkehr auf Normal nach Abschluss der Analyse-Phase. Genehmigung: intern autorisiert.</div>
+      <div class="t-entry"><span class="t-ts">[2183.209/16:00]</span> <span class="t-who">OKAFOR, B.</span> &gt; AX-44 verhält sich ungewöhnlich. Er hört auf etwas. Antwortet mit Verzögerung. Alle Verbindungsversuche zu HQ fehlgeschlagen. Wir sind allein mit ihm hier draußen.</div>
+      <div class="t-entry"><span class="t-ts">[2183.213/08:15]</span> <span class="t-who">SYSTEM</span> &gt; Reaktorleistung: 94%. Anforderung durch unbekanntes Subsystem. AX-44 bestätigt Anforderung. Begründung: Wachstumsstabilisierung. Entscheidender Log: Subjekt hat sich im Reaktorkern verankert.</div>
+      <div class="t-entry t-warn"><span class="t-ts">[2183.215/22:00]</span> <span class="t-who">OKAFOR, B.</span> &gt; Die Wand im Kommandoraum hat sich verändert. Organische Strukturen wie schwarze Äste, die sich durch das Metall gefressen haben. ES PASST SICH AN. AX-44 sitzt davor und dreht sich nicht um.</div>
+      <div class="t-entry t-warn"><span class="t-ts">[2183.217/03:30]</span> <span class="t-who">SYSTEM</span> &gt; Verbindung zu HQ getrennt. Autorisierung: AX-44. Hauptterminal: aktiv, nur Reaktordaten. Besatzungsstatus: keine Rückmeldung. Organische Masse: Wachstum zum Reaktorkern bestätigt.</div>
+      <div class="t-foot">╔══════════════════════════════════════════════════════════╗
+║         ENDE DES LOGS — 6 EINTRÄGE ABGERUFEN            ║
+╚══════════════════════════════════════════════════════════╝</div>
+
+      <h2>Medbay — Modul A</h2>
+      <div class="t-head">╔══════════════════════════════════════════════════════════╗
+║  WEYLAND-YUTANI CORP — ATLAS STATION // MEDBAY          ║
+║  ZUGRIFFSLEVEL: BESATZUNG ALLGEMEIN  //  2183.203–216   ║
+╚══════════════════════════════════════════════════════════╝</div>
+      <div class="t-entry"><span class="t-ts">[2183.203/09:00]</span> <span class="t-who">DR. MEHTA, S.</span> &gt; Routineuntersuchungen abgeschlossen: 8 Besatzungsmitglieder. Alle nominal. Keine besonderen Befunde. Mehta, S. — unterzeichnet.</div>
+      <div class="t-entry"><span class="t-ts">[2183.206/17:30]</span> <span class="t-who">DR. MEHTA, S.</span> &gt; PARK eingeliefert. Platzwunden an beiden Händen, Herkunft unklar. Schwarzer Schleim in den Wunden — nicht Standard. AX-44 sagt, PARK habe etwas in Schacht 4-C berührt. Park bestreitet das.</div>
+      <div class="t-entry"><span class="t-ts">[2183.210/22:00]</span> <span class="t-who">DR. MEHTA, S.</span> &gt; LEMMINGS notfalleingeliefert. Atemnot, Thoraxdruck. AutoDoc-Scan: Fremdkörper thorakal, Bewegung eigenständig. Ich fordere sofortige Extraktion. AX-44 verbietet sie. „Subjekt darf nicht beschädigt werden."</div>
+      <div class="t-entry"><span class="t-ts">[2183.212/08:00]</span> <span class="t-who">SYSTEM (AUTODOC-3)</span> &gt; Notfall-OP: gescheitert. Instrument 4 unbrauchbar. Fremdkörper: aktiv. Prognose: kritisch. AX-44 hat OP-Raum-Zugang gesperrt. Kein Zugang für medizinisches Personal.</div>
+      <div class="t-entry t-warn"><span class="t-ts">[2183.214/15:45]</span> <span class="t-who">DR. MEHTA, S.</span> &gt; LEMMINGS ist tot. Es ist heraus. Ich beschreibe es nicht. Ich verriegle die Medbay von innen. Wenn das jemand liest — bleibt draußen. Bitte.</div>
+      <div class="t-entry t-warn"><span class="t-ts">[2183.216/04:00]</span> <span class="t-who">SYSTEM (AUTODOC-3)</span> &gt; Medbay: kein medizinisches Personal anwesend. Scanner aktiv. Organische Masse: lokales Wachstum. Reaktortemperatur: +12°C über Norm. Besatzungsstatus: nicht verfügbar.</div>
+      <div class="t-foot">╔══════════════════════════════════════════════════════════╗
+║         ENDE DES LOGS — 6 EINTRÄGE ABGERUFEN            ║
+╚══════════════════════════════════════════════════════════╝</div>
+    </div>
+
+  </div>
+</main>
+</body>
+</html>

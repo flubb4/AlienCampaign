@@ -26,12 +26,12 @@ Visueller Stil: [`docs/design-system.md`](docs/design-system.md).
 
 | # | Mission | Datei | Status |
 |---|---------|-------|--------|
-| 01 | Routine Exchange | [`missions/01-routine-exchange.html`](missions/01-routine-exchange.html) | **migriert** |
-| 02 | Theta Persei | [`missions/02-theta-persei.html`](missions/02-theta-persei.html) | **migriert** |
-| 03 | Jeremiah VI (inkl. Aftermath) | [`missions/03-jeremiah-vi.html`](missions/03-jeremiah-vi.html) | **migriert** |
-| 04 | Atlas Station | [`missions/04-atlas-station.html`](missions/04-atlas-station.html) | **migriert** |
-| 05 | Arceon Station | [`missions/05-arceon-station.html`](missions/05-arceon-station.html) | **migriert** |
-| 06 | Lambda Aurigae — Cinder Reach | [`missions/06-lambda-aurigae.html`](missions/06-lambda-aurigae.html) | **migriert** |
+| 01 | 40 Eridani | [`missions/easy-missionen/01-routine-exchange.html`](missions/easy-missionen/01-routine-exchange.html) | **migriert** |
+| 02 | Theta Persei | [`missions/easy-missionen/02-theta-persei.html`](missions/easy-missionen/02-theta-persei.html) | **migriert** |
+| 03 | Jeremiah VI (inkl. Aftermath) | [`missions/schwerere-missionen/03-jeremiah-vi.html`](missions/schwerere-missionen/03-jeremiah-vi.html) | **migriert** |
+| 04 | Atlas Station | [`missions/schwerere-missionen/04-atlas-station.html`](missions/schwerere-missionen/04-atlas-station.html) | **migriert** |
+| 05 | Arceon Station | [`missions/schwerere-missionen/05-arceon-station.html`](missions/schwerere-missionen/05-arceon-station.html) | **migriert** |
+| 06 | Lambda Aurigae — Cinder Reach | [`missions/schwerere-missionen/06-lambda-aurigae.html`](missions/schwerere-missionen/06-lambda-aurigae.html) | **migriert** |
 | 07 | Tiamat IV | [`missions/07-tiamat-iv.html`](missions/07-tiamat-iv.html) | **Referenz-Mission** (migriert) |
 | 08 | Van Maanen's Star | [`missions/08-van-maanens-star.html`](missions/08-van-maanens-star.html) | **migriert** |
 | 99 | Akt 2 & 3 (Finale) | [`missions/99-act-2-3.html`](missions/99-act-2-3.html) | **migriert** |

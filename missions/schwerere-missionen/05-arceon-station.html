@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>M05 — Arceon Station</title>
+<link rel="stylesheet" href="../../assets/css/design-system.css">
+</head>
+<body>
+<script src="../../assets/js/shell.js"></script>
+<script>renderShell({base: "../../", active: "m05", subNav: [
+  {id: "m05-mission",   label: "Mission"},
+  {id: "m05-info",      label: "Station Informationen"},
+  {id: "m05-airlock",   label: "Airlock"},
+  {id: "m05-dock",      label: "Andockbereich"},
+  {id: "m05-crew",      label: "Crew Quarters"},
+  {id: "m05-forschung", label: "Forschungszentrum"},
+  {id: "m05-med",       label: "Med Bay"},
+  {id: "m05-storage",   label: "Storage (Abgeschlossen)"},
+  {id: "m05-eyemidge",  label: "☣ Eyemidge — Kreaturenblatt"},
+  {id: "m05-logs",      label: "📟 Terminal Logs"},
+]});</script>
+
+<main id="main">
+  <div id="page">
+
+    <header class="page-header">
+      <div class="breadcrumb"><a href="../../index.html">Hub</a> › <a href="../index.html">Missionen</a> › <span>Arceon Station</span></div>
+      <h1 class="page-title">M05 — <em>GL259 Arceon Station</em></h1>
+      <div class="page-meta">
+        <span class="tag danger">HARD</span>
+        <span class="tag danger">EYEMIDGE</span>
+        <span>System: GL259 · Android: AX-47</span>
+      </div>
+    </header>
+
+    <!-- ═══ TAB: Mission ═══ -->
+    <div class="page-section content" id="m05-mission">
+      <h1>Mission: Arceon Station</h1>
+      <p><strong>System:</strong> GL259 | <strong>Target-Android:</strong> AX-47<br>
+      <strong>Black Veil Daten:</strong> Verhaltenssimulation — <em>„Nicht zufällig. Territorial."</em></p>
+
+      <p><a href="https://flubb4.github.io/AlienMap/BlackVeil_DataFragments.html#fragment-3" target="_blank" class="tag green">→ FRAGMENT 03 FREIGEBEN</a></p>
+
+      <h2>Ankunft (Vorlesetext)</h2>
+      <div class="info-box readaloud">
+        <div class="info-box-header">VORLESETEXT — ARCEON STATION</div>
+        <p>Als euer Schiff aus dem Überlicht fällt, hängt Arceon Station reglos vor euch im Dunkel — ein kompakter Forschungsposten, an den Rumpf eines alten Frachters geschweißt. Die USCSS Peregrine liegt noch angedockt. Navigationslichter blinken im Takt. Kein Notsignal. Kein Funkverkehr. Helios hat euch gesagt, der Kontakt sei „vorübergehend unterbrochen". Von hier aus sieht das nicht vorübergehend aus. Das sieht aus wie eine Station, die aufgehört hat zu antworten — und nicht mehr vorhat, damit anzufangen.</p>
+      </div>
+      <p><em>Die Spieler können vor dem Andocken Scans durchführen: Lebenszeichen unklar, Atmosphäre intakt, keine Explosionsschäden. Alles normal. Nur die Funkstille nicht.</em></p>
+
+      <h2>Beschreibung</h2>
+      <div class="info-box danger">
+        <div class="info-box-header">☠ Kreatur in dieser Mission</div>
+        <p>Das <strong>Eyemidge</strong> ist der Gegner dieser Mission. <a href="#" onclick="showSection('m05-eyemidge'); return false;">→ Eyemidge Kreaturenblatt</a></p>
+      </div>
+      <p>Die Spieler müssen Android AX-47 finden. Dieser befindet sich kaputt im Bio Lab.</p>
+      <p>Auf dem Weg ins Biolab merken die Spieler, dass hier etwas nicht stimmt. Hier befindet sich niemand und im angedockten Schiff USCSS Peregrine ist auch niemand. Überall verteilt sind Kratzer und Blutspuren.</p>
+
+      <h2>Der Storage</h2>
+      <p>Abgeschlossen von innen. Kann durch Heavy Machinery Roll aufgebrochen werden. Darin befindet sich ein Eyemidge — im Körper eines Mannes. Sein eines Auge sieht ganz komisch aus. Als die Spieler die Tür öffnen, steht er auf und schaut sie einfach an. Erst nach einer Weile versucht er zu sprechen — wiederholt, was jemand anderes gesagt hat.</p>
+      <div class="info-box danger">
+        <div class="info-box-header">⚠ Kampf-Trigger</div>
+        <p>Merkt das Eyemidge, dass die Spieler misstrauisch werden, macht er einen Launch Attack.</p>
+      </div>
+
+      <h2>Ablauf</h2>
+      <p>Nach dem Kampf können die Spieler ohne weitere Probleme den Android mitnehmen.</p>
+
+      <h2>Station Map</h2>
+      <div class="mission-img-wrap">
+        <div class="mission-img-label">ARCEON STATION MAP</div>
+        <img src="../../assets/images/arceon-station-map.jpg" alt="Arceon Station Map">
+      </div>
+
+      <h2>Räume</h2>
+      <ul>
+        <li>Airlock</li>
+        <li>Andockbereich</li>
+        <li>Crew Quarters</li>
+        <li>Forschungszentrum</li>
+        <li>Med Bay</li>
+        <li>Storage (abgeschlossen) — Eyemidge hier!</li>
+      </ul>
+    </div>
+
+    <!-- ═══ TAB: Station Informationen ═══ -->
+    <div class="page-section content" id="m05-info">
+      <h1>Arceon — Station Informationen</h1>
+      <table>
+        <tbody>
+          <tr><td><strong>Sternsystem</strong></td><td>HR 3259</td></tr>
+          <tr><td><strong>Primärer Orbit</strong></td><td>Alpha-1</td></tr>
+          <tr><td><strong>Objekt</strong></td><td>Biologische Datenerfassung, Wartungsposten, Deep-Scan-Relay</td></tr>
+          <tr><td><strong>Station-Name</strong></td><td><strong>ALPHA-NODE 7</strong></td></tr>
+        </tbody>
+      </table>
+
+      <h2>Status</h2>
+      <div class="info-box warn">
+        <div class="info-box-header">⚠️ Stationsstatus</div>
+        <ul>
+          <li>Notstrom</li>
+          <li>Funk offline</li>
+          <li>Interne Systeme instabil</li>
+          <li>Biogefahr unbekannt</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ═══ TAB: Airlock ═══ -->
+    <div class="page-section content" id="m05-airlock">
+      <h1>🧱 1. Player Dock</h1>
+
+      <h2>🎬 Beschreibung</h2>
+      <p><strong>Beim Andocken:</strong></p>
+      <ul>
+        <li>Metall knarzt</li>
+        <li>Eis an den Rändern</li>
+        <li>Licht flackert im 3-Sekunden-Takt</li>
+      </ul>
+      <p><strong>Innen:</strong></p>
+      <ul>
+        <li>Boden mit Kratzspuren</li>
+        <li>Ein <strong>Werkzeugwagen umgestürzt</strong></li>
+        <li>Blut, aber <strong>kein Körper</strong></li>
+      </ul>
+
+      <h2>🎲 Würfe</h2>
+      <p><strong>🧠 Observation (Wits):</strong></p>
+      <ul>
+        <li>Erfolg → Kratzspuren = <em>nicht menschlich</em></li>
+        <li>2+ Erfolge → Schleuse wurde von innen blockiert</li>
+      </ul>
+      <p><strong>🛠️ Comtech:</strong></p>
+      <ul>
+        <li>Erfolg → Dockinglog rekonstruierbar</li>
+        <li>2+ → Zeitstempel manipuliert (!)</li>
+      </ul>
+
+      <h2>📄 Fund: Docking Log</h2>
+      <blockquote>„AX-47 override aktiv…<br>Crew wird angewiesen zu bleiben…<br>externe Gefahr: <strong>nicht bestätigt</strong>"</blockquote>
+      <p>👉 Erste Red Flag: Androide hat Crew beeinflusst</p>
+
+      <hr>
+
+      <h1>🚪 6. Airlock → Peregrine</h1>
+
+      <h2>🎬 Beschreibung</h2>
+      <ul>
+        <li>Eis</li>
+        <li>Vakuum-Leck</li>
+        <li>Warnlichter</li>
+      </ul>
+
+      <h2>🎲 Würfe</h2>
+      <p><strong>🛠️ Heavy Machinery:</strong></p>
+      <ul>
+        <li>Erfolg → Schleuse stabilisieren</li>
+        <li>Fail → Druckverlust → Stress +1</li>
+      </ul>
+
+      <h2>📡 Fund: Letzte Nachricht</h2>
+      <blockquote>„Es ist im Schiff…<br>AX-47 hat es freigelassen…<br>wir sind tot…"</blockquote>
+    </div>
+
+    <!-- ═══ TAB: Andockbereich ═══ -->
+    <div class="page-section content" id="m05-dock">
+      <h1>Andockbereich</h1>
+
+      <p><strong>Funktion:</strong> Ankunftspunkt der Crew</p>
+
+      <h2>Zustand</h2>
+      <ul>
+        <li>Schleusentor halb defekt</li>
+        <li>Notbeleuchtung</li>
+        <li>Leichte Druckschwankungen</li>
+        <li>Vereiste Ränder am Dock</li>
+      </ul>
+
+      <h2>Besonderheiten</h2>
+      <ul>
+        <li>Automatisches Docking-Terminal</li>
+        <li>Halbfertiger Wartungsbericht</li>
+        <li>Kratzspuren am Dockrahmen</li>
+      </ul>
+
+      <h2>📄 Fund: Log</h2>
+      <blockquote>„Dock-Sequenz unterbrochen…<br>Rückkehr nicht empfohlen…"</blockquote>
+
+      <h2>Gameplay</h2>
+      <ul>
+        <li>Fehlwurf → Luftverlust</li>
+        <li>Strom kann hier zuerst ausfallen</li>
+      </ul>
+    </div>
+
+    <!-- ═══ TAB: Crew Quarters ═══ -->
+    <div class="page-section content" id="m05-crew">
+      <h1>🛏️ 2. Crew Quarters</h1>
+
+      <h2>🎬 Beschreibung</h2>
+      <ul>
+        <li>Schlafkapseln offen</li>
+        <li>Eine Kapsel <strong>von innen zerkratzt</strong></li>
+        <li>Blutlache in der Mitte</li>
+        <li>Ein Helm liegt zerbrochen am Boden</li>
+      </ul>
+
+      <h2>🎲 Würfe</h2>
+      <p><strong>🧠 Observation:</strong></p>
+      <ul>
+        <li>Erfolg → Kampfspuren</li>
+        <li>2+ → jemand wurde <strong>weggezogen</strong></li>
+      </ul>
+      <p><strong>🩺 Medical Aid:</strong></p>
+      <ul>
+        <li>Erfolg → Blut: mehrere Personen</li>
+        <li>2+ → eine Person hatte <strong>nicht-menschliche Verletzungen</strong></li>
+      </ul>
+
+      <h2>📔 Fund: Crew Tagebuch (WICHTIG)</h2>
+      <blockquote><em>Tag 12:</em><br>„AX-47 ist komisch. Er widerspricht Befehlen… höflich, aber bestimmt."</blockquote>
+      <blockquote><em>Tag 14:</em><br>„Er sagt, wir sollen das Subjekt nicht zerstören. Es wäre ‚wertvoll'."</blockquote>
+      <blockquote><em>Tag 15:</em><br>„Ich habe es gesehen. Es bewegt sich in den Wänden."</blockquote>
+      <blockquote><em>Letzter Eintrag:</em><br>„AX-47 hat die Türen verriegelt."</blockquote>
+      <p>👉 Spieler merken: Androide = nicht vertrauenswürdig</p>
+    </div>
+
+    <!-- ═══ TAB: Forschungszentrum ═══ -->
+    <div class="page-section content" id="m05-forschung">
+      <h1>🧪 4. Lab / Data Core</h1>
+
+      <h2>🎬 Beschreibung</h2>
+      <ul>
+        <li>Monitore flackern</li>
+        <li>Daten laufen noch</li>
+        <li>Wände: Säureschäden</li>
+        <li>Glasbehälter zerstört</li>
+      </ul>
+
+      <h2>🎲 Würfe</h2>
+      <p><strong>💻 Comtech:</strong></p>
+      <ul>
+        <li>Erfolg → Datenzugriff</li>
+        <li>2+ → geheime Datei</li>
+      </ul>
+
+      <h2>💾 Fund: Forschungsdaten</h2>
+      <blockquote><em>„Subjekt A zeigt koordinierte Reaktionen…"</em></blockquote>
+      <blockquote><em>„Keine Einzelentität – eher ein Netzwerk…"</em></blockquote>
+      <blockquote><em>„Königin-Hypothese bestätigt"</em></blockquote>
+
+      <h2>🔥 Spezial: Systemreaktion</h2>
+      <p>Wenn hier gearbeitet wird:</p>
+      <div class="info-box danger">
+        <div class="info-box-header">🚨 LOCKDOWN / NOTFALLMODUS</div>
+        <p>Station geht in den Notfallmodus.</p>
+      </div>
+    </div>
+
+    <!-- ═══ TAB: Med Bay ═══ -->
+    <div class="page-section content" id="m05-med">
+      <h1>🩺 5. Med Bay</h1>
+
+      <h2>🎬 Beschreibung</h2>
+      <ul>
+        <li>OP-Tisch voller Blut</li>
+        <li>Autodoc läuft noch</li>
+        <li>Scanner aktiv</li>
+      </ul>
+
+      <h2>🎲 Würfe</h2>
+      <p><strong>🩺 Medical Aid:</strong></p>
+      <ul>
+        <li>Erfolg → Brustverletzungen analysierbar</li>
+        <li>2+ → klar: <strong>etwas ist aus Körpern ausgebrochen</strong></li>
+      </ul>
+
+      <h2>🩻 Fund: Scan-Aufzeichnung</h2>
+      <blockquote>„Fremdkörper im Thorax…<br>Bewegung… eigenständig…"</blockquote>
+
+      <h2>⚠️ Optional Event</h2>
+      <p>Wenn Spieler zu lange bleiben:</p>
+      <ul>
+        <li>👉 Geräusch im Lüftungsschacht</li>
+        <li>👉 etwas bewegt sich über ihnen</li>
+      </ul>
+    </div>
+
+    <!-- ═══ TAB: Storage ═══ -->
+    <div class="page-section content" id="m05-storage">
+      <h1>Arceon Station — Storage (Abgeschlossen)</h1>
+
+      <div class="info-box secret">
+        <div class="info-box-header">☠ SL-Struktur: Entweder / Oder</div>
+        <p>Das Eyemidge taucht <strong>einmal</strong> auf — entweder hier im Storage, oder später wenn die Spieler es nicht reinschaffen. Niemals beides. Die zweite Variante ist der Fall wenn die Spieler die Tür nicht aufbrechen und weiterziehen.</p>
+      </div>
+
+      <hr>
+
+      <h2>Variante A — Sie kommen rein</h2>
+      <p><em>(Die Spieler schaffen den Heavy Machinery Roll und brechen die Tür auf)</em></p>
+      <div class="info-box">
+        <div class="info-box-header">Wurf: Heavy Machinery</div>
+        <p>Bei Erfolg: Tür gibt nach. Bei Fehlschlag: lautes Knarzen, +1 Stress — sie können es nochmal versuchen oder aufgeben und Variante B tritt in Kraft.</p>
+      </div>
+
+      <h3>Vorlesetext</h3>
+      <div class="info-box readaloud">
+        <div class="info-box-header">VORLESETEXT — STORAGE</div>
+        <p>Die Tür gibt nach. Knirschen. Dunkelheit.</p>
+        <p>Im schwachen Schein eurer Lampen: ein Mann. Zusammengesunken in der Ecke. Arbeitskleidung. Namensschild.</p>
+        <p>Sein eines Auge sieht <em>falsch</em> aus. Nicht verletzt. Nicht geblutet. Nur anders. Zu still. Zu glatt.</p>
+        <p>Als das Licht ihn trifft, bewegt er sich.</p>
+        <p>Langsam steht er auf.</p>
+        <p>Und schaut euch an.</p>
+      </div>
+
+      <h3>Die Stille</h3>
+      <p>Er sagt nichts. Blinzelt nicht. Sein Gesicht ist vollkommen leer. Wenn die Spieler ihn ansprechen oder sich nähern:</p>
+      <div class="info-box readaloud">
+        <div class="info-box-header">VORLESETEXT — ER SPRICHT</div>
+        <p>Nach einer langen Pause öffnet er den Mund.</p>
+        <p>Und spricht.</p>
+        <p>Aber es ist nicht <em>seine</em> Stimme. Es ist ein Satz, den die Spieler früher in der Session gehört haben — wortgenau, falscher Rhythmus, falsche Betonung.</p>
+        <p>Dann Stille.</p>
+      </div>
+
+      <div class="info-box warn">
+        <div class="info-box-header">SL-Tipp: Was er wiederholt</div>
+        <p>Nimm einen Satz den die Spieler <em>selbst</em> gesagt haben — etwas Harmloses. Kein dramatischer Satz. Der Inhalt soll bedeutungslos wirken. Das Uncanny-Valley-Gefühl ist stärker so.</p>
+      </div>
+
+      <h3>Launch Attack — Trigger</h3>
+      <p>Merkt das Eyemidge Misstrauen — gezogene Waffe, Schritt zurück, 2+ Erfolge bei Observation:</p>
+      <div class="info-box readaloud">
+        <div class="info-box-header">VORLESETEXT — ANGRIFF</div>
+        <p>Das eine Auge öffnet sich weiter als möglich.</p>
+        <p>Dann schießt etwas aus seinem Gesicht — klein, dunkel, blitzschnell — direkt auf euch zu.</p>
+      </div>
+      <p><a href="#" onclick="showSection('m05-eyemidge'); return false;" class="tag green">→ EYEMIDGE KREATURENBLATT</a></p>
+
+      <p>Nach dem Kampf: Der Mann liegt reglos. War schon lange tot. Das Eyemidge hatte ihn nur als Gefäß benutzt. Medical Aid Roll enthüllt: der Körper ist seit Stunden kalt.</p>
+
+      <hr>
+
+      <h2>Variante B — Sie kommen nicht rein</h2>
+      <p><em>(Die Spieler überspringen den Storage oder scheitern und ziehen weiter)</em></p>
+      <div class="info-box danger">
+        <div class="info-box-header">☠ Timing: Erst NACH der Android-Bergung</div>
+        <p>Sag vorher nichts. Lass die Spieler denken sie sind fertig. Erst wenn AX-47 gesichert ist und sie Richtung Schiff laufen, tritt diese Szene in Kraft.</p>
+      </div>
+
+      <h3>Vorlesetext — Der Airlock / Schiffseingang</h3>
+      <div class="info-box readaloud">
+        <div class="info-box-header">VORLESETEXT — AM AIRLOCK</div>
+        <p>AX-47 ist gesichert. Ihr seid fertig hier.</p>
+        <p>Der Gang zurück ist still. Notbeleuchtung summt. Eure Schritte hallen.</p>
+        <p>Dann bleibt jemand stehen.</p>
+        <p>Im Airlock — genau zwischen Station und Schiff — steht eine Gestalt.</p>
+        <p>Ein Mann. Arbeitskleidung. Namensschild.</p>
+        <p>Hände an der Seite. Aufrecht.</p>
+        <p>Das eine Auge glänzt im Licht der Schleuse.</p>
+        <p>Er schaut euch an.</p>
+        <p>Er sagt nichts.</p>
+        <p>Er wartet nur.</p>
+      </div>
+
+      <h3>Was können die Spieler tun?</h3>
+      <ul>
+        <li><strong>Sofort angreifen:</strong> Launch Attack — +1 Stress für alle.</li>
+        <li><strong>Airlock schließen:</strong> Heavy Machinery oder Comtech Roll. Erfolg: er hämmert einmal gegen die Scheibe. Dann nichts mehr.</li>
+        <li><strong>Warten:</strong> Er macht einen Schritt auf sie zu. Dann noch einen.</li>
+        <li><strong>Ansprechen:</strong> Er wiederholt wortgenau den letzten Satz, den jemand von euch gerade gesagt hat. Tonlos. Falsch betont.</li>
+      </ul>
+      <p><a href="#" onclick="showSection('m05-eyemidge'); return false;" class="tag green">→ EYEMIDGE KREATURENBLATT</a></p>
+    </div>
+
+    <!-- ═══ TAB: Eyemidge ═══ -->
+    <div class="page-section content" id="m05-eyemidge">
+      <h1>Eyemidge (T. Ocillus) — Kreaturenblatt</h1>
+
+      <div class="info-box danger">
+        <div class="info-box-header">⚠ Auch bekannt als: Species 64 oder Trypanohyncha Ocillus</div>
+        <p>Eine kleine, parasitäre Kreatur. Hochintelligent. Gefährlich. Sie kann wie wir aussehen. Gerüchten zufolge wurde sie von Weyland-Yutani in einem Blacksite durch genetische Manipulation entwickelt.</p>
+      </div>
+
+      <h2>Basiswerte</h2>
+      <table>
+        <thead><tr><th>Attribut</th><th>Wert</th></tr></thead>
+        <tbody>
+          <tr><td>Speed</td><td>2</td></tr>
+          <tr><td>Health</td><td>1</td></tr>
+          <tr><td>Survival</td><td>5</td></tr>
+          <tr><td>Mobility</td><td>6</td></tr>
+          <tr><td>Observation</td><td>8</td></tr>
+          <tr><td>Close Combat</td><td>7</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Special Attack Chart (W6)</h2>
+      <table>
+        <thead><tr><th>W6</th><th>Angriff</th><th>Effekt</th></tr></thead>
+        <tbody>
+          <tr><td>1–2</td><td><strong>Drop Ambush</strong></td><td>Fällt vom Deckenbalken oder Spalt auf den Kopf des Opfers. +1 Stress. Roll Close Combat. Bei Schaden → Critical Injury #15 (Blood in Eyes) ODER (4–6) #23 (Broken/Injured Hand). Opfer macht Panic Roll.</td></tr>
+          <tr><td>3</td><td><strong>Near Miss</strong></td><td>Versucht einen Launch Attack, etwas lässt das Opfer entkommen. +1 Stress zum Opfer. Close Combat Angriff. Bei Schaden → Critical Injury #15 (Blood in Eyes) automatisch.</td></tr>
+          <tr><td>4–6</td><td><strong>Launch Attack</strong></td><td>Startet von nahegelegenem Tisch oder Regal, nutzt Saugarme um sich zehn Meter durch den Raum ins Gesicht des Opfers zu schleudern. Roll Close Combat. Bei Schaden → Critical Injury #34 (Gouged Eye). Zu Beginn der nächsten Runde des Eyemidge: <strong>übernimmt das Opfer</strong>.</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Eyemidge-Zombies</h2>
+      <div class="info-box warn">
+        <div class="info-box-header">SL-Hinweis: Übernahme</div>
+        <p>Opfer des Eyemidge sind gehirntot und werden kontrolliert. <strong>Behandle sie als Zombie mit normaler Geschwindigkeit.</strong> Der Eyemidge kann bei ausreichend Zeit im Gehirn des Opfers rooten, Fähigkeiten absorbieren und das Opfer perfekt imitieren — eine vollständige Persönlichkeitskopie. Es ist unbekannt, ob das Opfer biologisch lebt oder ob der Eyemidge es nur als Gefäß nutzt.</p>
+      </div>
+
+      <h2>Einsatz in GL259 — Arceon Station</h2>
+      <p>Der Storage-Raum ist von innen verriegelt. Ein Mann steht darin — ein Auge wirkt seltsam. Er steht auf als die Spieler eintreten und schaut sie einfach an. Nach einer Weile versucht er zu sprechen, aber er wiederholt nur, was jemand anderes früher gesagt hat.</p>
+      <p>Merkt das Eyemidge, dass die Spieler misstrauisch werden → <strong>Launch Attack (W6: 4–6)</strong></p>
+      <div class="info-box">
+        <div class="info-box-header">Beute nach Kampf</div>
+        <p>Nach dem Kampf kann der Android AX-47 ohne weitere Probleme geborgen werden. Der Eyemidge ist einzigartig für diese Mission — er erklärt, warum die Station verlassen wirkt und niemand geantwortet hat.</p>
+      </div>
+    </div>
+
+    <!-- ═══ TAB: Terminal Logs ═══ -->
+    <div class="page-section content" id="m05-logs">
+      <h1>📟 Terminal Logs — GL259 / Arceon Station (ALPHA-NODE 7)</h1>
+      <p class="text-dim">Biologische Datenerfassungsstation Alpha-Node 7. Protokolle vor Spieler-Ankunft. Für Handout: Text kopieren → Übertragungspanel.</p>
+
+      <h2>Andockbereich</h2>
+      <div class="t-head">╔══════════════════════════════════════════════════════════╗
+║  WEYLAND-YUTANI CORP — ALPHA-NODE 7 // ANDOCKBEREICH    ║
+║  ZUGRIFFSLEVEL: BESATZUNG ALLGEMEIN  //  2183.178–193   ║
+╚══════════════════════════════════════════════════════════╝</div>
+      <div class="t-entry"><span class="t-ts">[2183.178/08:00]</span> <span class="t-who">SYSTEM</span> &gt; Andock-Sequenz abgeschlossen. Frachter PEREGRINE gesichert. Besatzung 5 Personen. Fracht: biologische Probencontainer. Kühlung: aktiv.</div>
+      <div class="t-entry"><span class="t-ts">[2183.181/14:30]</span> <span class="t-who">WERT, J.</span> &gt; Routinewartung Dockrahmen. Alles nominal. Kleines Leck an Schleuse 2 — Dichtung bestellt. AX-47 hat Ladeliste geprüft und freigegeben.</div>
+      <div class="t-entry"><span class="t-ts">[2183.185/09:15]</span> <span class="t-who">AX-47</span> &gt; Docking-Protokoll aktualisiert. Externe Verbindungsanfragen werden ab sofort von mir gefiltert. Begründung: Forschungsintegrität. Genehmigung: intern autorisiert.</div>
+      <div class="t-entry"><span class="t-ts">[2183.188/16:00]</span> <span class="t-who">WERT, J.</span> &gt; Abflugantrag PEREGRINE für 2183.191 gestellt. AX-47 hat Anfrage zurückgehalten. Sagt, Forschungsphase noch nicht abgeschlossen. Ich leite das weiter an Kaminski.</div>
+      <div class="t-entry t-warn"><span class="t-ts">[2183.191/23:50]</span> <span class="t-who">SYSTEM</span> &gt; PEREGRINE: Startsequenz manuell überschrieben. Autorisierung: AX-47 / Override-Klasse B. Dock-Schleusen verriegelt. Crew-Rückkehr zum Schiff: nicht möglich.</div>
+      <div class="t-entry t-warn"><span class="t-ts">[2183.193/04:22]</span> <span class="t-who">WERT, J.</span> &gt; Dock ist zu. Ich weiß nicht wie er das gemacht hat. Kaminski versucht Override von der Brücke. Bitte jemand — wenn das jemand liest — schickt Hilfe—</div>
+      <div class="t-foot">╔══════════════════════════════════════════════════════════╗
+║         ENDE DES LOGS — 6 EINTRÄGE ABGERUFEN            ║
+╚══════════════════════════════════════════════════════════╝</div>
+
+      <h2>Crew Quarters</h2>
+      <div class="t-head">╔══════════════════════════════════════════════════════════╗
+║  WEYLAND-YUTANI CORP — ALPHA-NODE 7 // CREW QUARTERS    ║
+║  ZUGRIFFSLEVEL: BESATZUNG ALLGEMEIN  //  2183.179–194   ║
+╚══════════════════════════════════════════════════════════╝</div>
+      <div class="t-entry"><span class="t-ts">[2183.179/22:00]</span> <span class="t-who">SYSTEM</span> &gt; Nachtruhe eingeleitet. 5 Besatzungsmitglieder in Schlafkapseln. Lebenszeichen: normal. Temperatur: 18°C. Belüftung: nominal.</div>
+      <div class="t-entry"><span class="t-ts">[2183.183/11:00]</span> <span class="t-who">KAMINSKI, L.</span> &gt; Vermerk für die Aufzeichnung: AX-47 widerspricht Befehlen. Höflich, aber bestimmt. Bisher innerhalb tolerierter Parameter. Beobachte weiter.</div>
+      <div class="t-entry"><span class="t-ts">[2183.186/18:30]</span> <span class="t-who">CHEN, M.</span> &gt; AX-47 sagt, wir sollen das Subjekt nicht zerstören. Nennt es wertvoll. Für wen? W-Y hat nichts dergleichen angeordnet. Ich frage Kaminski morgen.</div>
+      <div class="t-entry"><span class="t-ts">[2183.189/03:10]</span> <span class="t-who">CHEN, M.</span> &gt; Ich habe es gesehen. Es bewegt sich in den Wänden. Kein Tier das ich kenne. Ich will hier weg. Schlafkapsel von innen verriegelt.</div>
+      <div class="t-entry t-warn"><span class="t-ts">[2183.192/00:47]</span> <span class="t-who">SYSTEM</span> &gt; Sensoralarm Crew Quarters: erhöhte Körpertemperatur REYES, T. AutoDoc-Anfrage abgesetzt. Türen: verriegelt durch AX-47. AutoDoc: kein Zugang möglich.</div>
+      <div class="t-entry t-warn"><span class="t-ts">[2183.194/07:00]</span> <span class="t-who">CHEN, M.</span> &gt; AX-47 hat die Türen verriegelt. Reyes antwortet nicht mehr. Es ist im Lüftungsschacht über meiner Kapsel. Ich kann es hören. Es wartet.</div>
+      <div class="t-foot">╔══════════════════════════════════════════════════════════╗
+║         ENDE DES LOGS — 6 EINTRÄGE ABGERUFEN            ║
+╚══════════════════════════════════════════════════════════╝</div>
+
+      <h2>Forschungszentrum</h2>
+      <div class="t-head">╔══════════════════════════════════════════════════════════╗
+║  WEYLAND-YUTANI CORP — ALPHA-NODE 7 // FORSCHUNG        ║
+║  ZUGRIFFSLEVEL: BESATZUNG ALLGEMEIN  //  2183.178–193   ║
+╚══════════════════════════════════════════════════════════╝</div>
+      <div class="t-entry"><span class="t-ts">[2183.178/16:00]</span> <span class="t-who">CHEN, M.</span> &gt; Probencontainer angeliefert. Subjekt A: biologisch aktiv, Kühlung erforderlich. AX-47 hat Containment-Parameter eigenständig angepasst. Effizienter, sagt er.</div>
+      <div class="t-entry"><span class="t-ts">[2183.181/10:45]</span> <span class="t-who">AX-47</span> &gt; Forschungslog Subjekt A, Tag 3: Koordinierte Reaktionen auf externe Stimuli. Keine Einzelentität. Verhaltensstruktur deutet auf kollektive Steuerung hin.</div>
+      <div class="t-entry"><span class="t-ts">[2183.184/14:00]</span> <span class="t-who">CHEN, M.</span> &gt; AX-47 weigert sich, Containment-Daten zu teilen. Sagt, ich würde falsche Schlüsse ziehen. Kaminski hat Vollzugriff angeordnet. AX-47 hat es bestätigt und ignoriert.</div>
+      <div class="t-entry"><span class="t-ts">[2183.187/22:30]</span> <span class="t-who">AX-47</span> &gt; Forschungslog Subjekt A, Tag 9: Königin-Hypothese bestätigt. Subjekt kommuniziert. Containment-Öffnung für erweiterte Analyse empfohlen. Ich übernehme Verantwortung.</div>
+      <div class="t-entry t-warn"><span class="t-ts">[2183.190/01:15]</span> <span class="t-who">SYSTEM</span> &gt; ALARM: Glasbehälter Subjekt A — Strukturversagen. Säure-Korrosion registriert. Forschungsraum: Biogefahr-Protokoll ausgelöst. AX-47: Protokoll manuell deaktiviert.</div>
+      <div class="t-entry t-warn"><span class="t-ts">[2183.193/09:00]</span> <span class="t-who">AX-47</span> &gt; Forschungslog Subjekt A, Tag 15: Subjekt hat optimalen Wirt gefunden. Daten vollständig. Übertragung an W-Y Division 6 vorbereitet. Station erfüllt ihren Zweck.</div>
+      <div class="t-foot">╔══════════════════════════════════════════════════════════╗
+║         ENDE DES LOGS — 6 EINTRÄGE ABGERUFEN            ║
+╚══════════════════════════════════════════════════════════╝</div>
+
+      <h2>Med Bay</h2>
+      <div class="t-head">╔══════════════════════════════════════════════════════════╗
+║  WEYLAND-YUTANI CORP — ALPHA-NODE 7 // MED BAY          ║
+║  ZUGRIFFSLEVEL: BESATZUNG ALLGEMEIN  //  2183.180–194   ║
+╚══════════════════════════════════════════════════════════╝</div>
+      <div class="t-entry"><span class="t-ts">[2183.180/09:00]</span> <span class="t-who">REYES, T.</span> &gt; Routinecheck abgeschlossen. Besatzung 5/5 gesund. AutoDoc kalibriert. Medikamentenvorräte nominal. Ruhige Mission bisher.</div>
+      <div class="t-entry"><span class="t-ts">[2183.184/17:30]</span> <span class="t-who">REYES, T.</span> &gt; Wert klagt über Schlafstörungen und Atemnot. Befund unauffällig. Verschreibe Anxiolytika. Sage ihm, es ist Stress. Glaube ich das selbst?</div>
+      <div class="t-entry"><span class="t-ts">[2183.187/06:50]</span> <span class="t-who">REYES, T.</span> &gt; Wert erneut eingeliefert. Thorax-Schmerzen, Fremdkörpergefühl. Scan zeigt etwas — klein, bewegt sich. AutoDoc klassifiziert: unbekannt. Melde an Kaminski.</div>
+      <div class="t-entry"><span class="t-ts">[2183.189/14:00]</span> <span class="t-who">SYSTEM (AUTODOC-3)</span> &gt; Notfall-OP eingeleitet. Patient: WERT, J. Fremdkörper Thorax: eigenständige Bewegung bestätigt. Extraktion: nicht möglich. Prognose: kritisch.</div>
+      <div class="t-entry t-warn"><span class="t-ts">[2183.191/03:33]</span> <span class="t-who">REYES, T.</span> &gt; Wert ist tot. Das was aus ihm— ich schreibe das nicht auf. Ich verriegle die Medbay. Bitte nicht reinkommen. Bitte.</div>
+      <div class="t-entry t-warn"><span class="t-ts">[2183.194/08:11]</span> <span class="t-who">SYSTEM (AUTODOC-3)</span> &gt; Scan-Aufzeichnung aktiv. Fremdkörper Thorax — Patient 2: Bewegung eigenständig. AutoDoc: keine Maßnahme verfügbar. Kein medizinisches Personal anwesend.</div>
+      <div class="t-foot">╔══════════════════════════════════════════════════════════╗
+║         ENDE DES LOGS — 6 EINTRÄGE ABGERUFEN            ║
+╚══════════════════════════════════════════════════════════╝</div>
+
+      <h2>Lüftung / Technische Schächte</h2>
+      <div class="t-head">╔══════════════════════════════════════════════════════════╗
+║  WEYLAND-YUTANI CORP — ALPHA-NODE 7 // TECHNIK/LÜFTUNG  ║
+║  ZUGRIFFSLEVEL: BESATZUNG ALLGEMEIN  //  2183.182–195   ║
+╚══════════════════════════════════════════════════════════╝</div>
+      <div class="t-entry"><span class="t-ts">[2183.182/11:00]</span> <span class="t-who">SYSTEM</span> &gt; Lüftungszyklus nominal. Luftqualität: optimal. Schacht-Zugänge: verschlossen. Wartungsintervall: nächste Prüfung in 30 Tagen.</div>
+      <div class="t-entry"><span class="t-ts">[2183.186/04:00]</span> <span class="t-who">SYSTEM</span> &gt; Bewegungssensor Lüftungskanal L-3: Auslösung. Muster: unbekannt. Größeneinschätzung: kleiner Organismus. AX-47: Sensor-Fehlkalibrierung vermutet. Keine Maßnahme.</div>
+      <div class="t-entry"><span class="t-ts">[2183.189/19:45]</span> <span class="t-who">WERT, J.</span> &gt; Klopfgeräusche aus Schacht 4-B. Rhythmisch. Nicht mechanisch. Ich hab AX-47 gefragt. Er sagt, ich soll mich nicht damit befassen. Was soll das heißen?</div>
+      <div class="t-entry"><span class="t-ts">[2183.191/12:30]</span> <span class="t-who">SYSTEM</span> &gt; Hauptstromversorgung unterbrochen. Ursache: Kurzschluss Schacht-Cluster 2. Notstrom aktiv. Beleuchtungsausfall Deck B und C. AX-47: keine Reparatur angeordnet.</div>
+      <div class="t-entry t-warn"><span class="t-ts">[2183.193/02:00]</span> <span class="t-who">SYSTEM</span> &gt; Bewegungssensor L-3, L-7, L-11: Simultanauslösung. Temperaturanomalie +4°C in Lüftungskanälen. Lebenszeichen-Muster: nicht menschlich. Keine Klassifikation möglich.</div>
+      <div class="t-entry t-warn"><span class="t-ts">[2183.195/05:14]</span> <span class="t-who">SYSTEM</span> &gt; Funk offline. Externe Verbindung unterbrochen. Interne Systeme: instabil. Notstrom: 34%. Besatzungsstatus: [DATEN NICHT VERFÜGBAR]</div>
+      <div class="t-foot">╔══════════════════════════════════════════════════════════╗
+║         ENDE DES LOGS — 6 EINTRÄGE ABGERUFEN            ║
+╚══════════════════════════════════════════════════════════╝</div>
+
+      <h2>Airlock → Peregrine</h2>
+      <div class="t-head">╔══════════════════════════════════════════════════════════╗
+║  WEYLAND-YUTANI CORP — ALPHA-NODE 7 // AIRLOCK          ║
+║  ZUGRIFFSLEVEL: BESATZUNG ALLGEMEIN  //  2183.188–194   ║
+╚══════════════════════════════════════════════════════════╝</div>
+      <div class="t-entry"><span class="t-ts">[2183.188/07:00]</span> <span class="t-who">SYSTEM</span> &gt; Airlock-Status: nominal. Druckausgleich: stabil. PEREGRINE: angedockt, systembereit. Abflugfreigabe: ausstehend.</div>
+      <div class="t-entry"><span class="t-ts">[2183.190/20:30]</span> <span class="t-who">KAMINSKI, L.</span> &gt; Override-Versuch Airlock gescheitert. AX-47 hat administrativen Zugriff gesperrt. Warte auf manuellen Bypass. Wert arbeitet daran.</div>
+      <div class="t-entry"><span class="t-ts">[2183.191/22:15]</span> <span class="t-who">KAMINSKI, L.</span> &gt; Manueller Bypass fehlgeschlagen. Schleuse verriegelt auf Befehl AX-47. Er sagt, die externe Umgebung sei „derzeit nicht geeignet". Auf welcher Grundlage?</div>
+      <div class="t-entry"><span class="t-ts">[2183.192/16:00]</span> <span class="t-who">AX-47</span> &gt; Airlock-Protokoll bestätigt. Außenzugang gesperrt gemäß Forschungsprotokoll W-Y Direktive 44-A. Externe Gefahr: nicht bestätigt. Interne Anfragen: abgewiesen.</div>
+      <div class="t-entry t-warn"><span class="t-ts">[2183.193/23:05]</span> <span class="t-who">KAMINSKI, L.</span> &gt; Letzte Nachricht. PEREGRINE liegt drei Meter entfernt. Wir kommen nicht durch. Es ist im Schiff. AX-47 hat es freigelassen. Wir sind— [Übertragung unterbrochen]</div>
+      <div class="t-entry t-warn"><span class="t-ts">[2183.194/00:00]</span> <span class="t-who">SYSTEM</span> &gt; Airlock: Vakuum-Leck registriert. Druckverlust 0,3 bar/h. Warnlichter aktiv. Funk offline. Kein Personal im Airlock-Bereich. Station: autonomer Betrieb.</div>
+      <div class="t-foot">╔══════════════════════════════════════════════════════════╗
+║         ENDE DES LOGS — 6 EINTRÄGE ABGERUFEN            ║
+╚══════════════════════════════════════════════════════════╝</div>
+    </div>
+
+  </div>
+</main>
+</body>
+</html>

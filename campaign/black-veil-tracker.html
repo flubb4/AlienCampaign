@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Project Black Veil — Tracker</title>
+<link rel="stylesheet" href="../assets/css/design-system.css">
+</head>
+<body>
+<script src="../assets/js/shell.js"></script>
+<script>renderShell({base: "../", active: "bv-tracker"});</script>
+
+<main id="main">
+  <div id="page">
+
+    <header class="page-header">
+      <div class="breadcrumb"><a href="../index.html">Hub</a> › <span>Black Veil Tracker</span></div>
+      <h1 class="page-title">🧬 Project Black Veil — Datenfragment-Tracker</h1>
+      <div class="page-meta">
+        <span class="tag danger">GM ONLY</span>
+        <span>Kampagnen-Fortschritt · 10 Fragmente</span>
+      </div>
+    </header>
+
+    <div class="content">
+
+      <div class="info-box secret">
+        <div class="info-box-header">GM Only — Kampagnen-Fortschritt</div>
+        <p>Markiere hier welche Datenfragmente die Gruppe gesichert hat. Änderungen werden automatisch im Browser gespeichert (localStorage).</p>
+      </div>
+
+      <p>Klicke auf den Status jedes Fragments um es zu ändern.</p>
+
+      <div id="bv-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:20px 0;">
+        <p style="color:var(--text-dim);font-family:ShareTechMono,monospace;font-size:11px;">Lade Tracker...</p>
+      </div>
+
+      <h2>Endziel</h2>
+      <div class="info-box danger">
+        <div class="info-box-header">HD 40307 — Subobjekt C</div>
+        <p>Ein alter Forschungskomplex auf einem verlassenen Mond. Wenn alle 10 Fragmente zusammengeführt werden, zeigen sie die Koordinaten des Primärhabitats der Queen.</p>
+      </div>
+
+    </div>
+
+  </div>
+</main>
+
+<script>
+// ═══════════ Black Veil Tracker Logic ═══════════
+(function() {
+  var fragments = [
+    { id: 'bv1',  num: 1,  mission: "Sutter's World",              android: 'AX-31',        data: 'Biologische Rückstände',  hint: '„Organismus extrem widerstandsfähig."' },
+    { id: 'bv2',  num: 2,  mission: 'Atlas Station (GJ2092)',      android: 'AX-44',        data: 'Struktur-Analyse',         hint: '„Lebewesen formt Umgebung."' },
+    { id: 'bv3',  num: 3,  mission: 'Arceon Station (GL259)',      android: 'AX-47',        data: 'Verhaltenssimulation',     hint: '„Nicht zufällig. Territorial."' },
+    { id: 'bv4',  num: 4,  mission: 'Jeremiah VI (289 G. Hydrae)', android: 'AX-62 Boyd',   data: 'Anpassung',                hint: '„Jede Begegnung steigert Effizienz."' },
+    { id: 'bv5',  num: 5,  mission: "Van Maanen's Star",           android: 'AX-17 „Erik"', data: 'Vakuum-Resistenz',         hint: '„Kurzzeitüberleben im Vakuum."' },
+    { id: 'bv6',  num: 6,  mission: 'Lambda Aurigae (Cinder Reach)', android: 'AX-80',      data: 'Signal-Muster',            hint: '„Organische Kommunikation?"' },
+    { id: 'bv7',  num: 7,  mission: '???? (Mission 7)',            android: 'AX-92',        data: 'Reproduktionszyklen',      hint: '„Zentraler Ursprungspunkt."' },
+    { id: 'bv8',  num: 8,  mission: '???? (Mission 8)',            android: 'AX-101',       data: 'Navigationsdaten',         hint: '„Mehrere Schiffe fliehen."' },
+    { id: 'bv9',  num: 9,  mission: '???? (Mission 9)',            android: 'AX-117',       data: 'Populationsverlust',       hint: '„Systematische Dezimierung."' },
+    { id: 'bv10', num: 10, mission: 'Blacksite Theta (Finale)',    android: 'AX-133',       data: 'Gesamt-Korrelation',       hint: '„Primärhabitat identifiziert."' },
+  ];
+
+  var statusOpts = [
+    { val: 'unknown', label: '— Unbekannt',      color: 'var(--border-bright)' },
+    { val: 'secured', label: '✓ Crew gesichert', color: 'var(--green)' },
+    { val: 'wy',      label: '⚠ WY hat es',      color: 'var(--amber)' },
+    { val: 'lost',    label: '✕ Verloren',       color: 'var(--red)' },
+  ];
+
+  function getState() {
+    try { return JSON.parse(localStorage.getItem('bv_tracker') || '{}'); } catch(e) { return {}; }
+  }
+  function setState(s) {
+    try { localStorage.setItem('bv_tracker', JSON.stringify(s)); } catch(e) {}
+  }
+
+  function render() {
+    var grid = document.getElementById('bv-grid');
+    if (!grid) return;
+    var state = getState();
+    grid.innerHTML = fragments.map(function(f) {
+      var status = state[f.id] || 'unknown';
+      var opt = statusOpts.find(function(o) { return o.val === status; }) || statusOpts[0];
+      var selOpts = statusOpts.map(function(o) {
+        return '<option value="' + o.val + '"' + (o.val === status ? ' selected' : '') + '>' + o.label + '</option>';
+      }).join('');
+      return '<div style="background:var(--bg3);border:1px solid ' + opt.color + ';border-left:3px solid ' + opt.color + ';padding:12px;">' +
+        '<div style="font-family:ShareTechMono,monospace;font-size:10px;color:var(--amber);letter-spacing:2px;margin-bottom:4px;">FRAGMENT ' + f.num + '/10</div>' +
+        '<div style="font-size:15px;font-weight:700;color:var(--text-bright);margin-bottom:2px;">' + f.mission + '</div>' +
+        '<div style="font-family:ShareTechMono,monospace;font-size:11px;color:var(--green);margin-bottom:3px;">' + f.android + '</div>' +
+        '<div style="font-size:13px;color:var(--text);margin-bottom:3px;">' + f.data + '</div>' +
+        '<div style="font-size:12px;color:var(--text-dim);font-style:italic;margin-bottom:8px;">' + f.hint + '</div>' +
+        '<select onchange="window.setBV(\'' + f.id + '\', this.value)" style="background:var(--bg2);border:1px solid var(--border);color:var(--text);font-family:ShareTechMono,monospace;font-size:10px;padding:3px 6px;width:100%;">' + selOpts + '</select>' +
+        '</div>';
+    }).join('');
+  }
+
+  window.setBV = function(id, val) {
+    var s = getState(); s[id] = val; setState(s); render();
+  };
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', render);
+  } else {
+    render();
+  }
+})();
+</script>
+</body>
+</html>

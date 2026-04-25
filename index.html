@@ -8,61 +8,58 @@
 </head>
 <body>
 <script src="assets/js/shell.js"></script>
-<script>renderShell({base: "", active: ""});</script>
+<script>renderShell({base: "", active: "dashboard"});</script>
 
 <main id="main">
   <div id="page">
 
     <div class="welcome-header">
-      <div class="welcome-title">Weyland-Yutani // Recall Authority</div>
-      <div class="welcome-main">RECALL <span class="accent">AUTHORITY</span></div>
-      <div class="welcome-sub">Campaign Book — Alien RPG (Free League)</div>
+      <div class="welcome-title">Alien RPG — Kampagnenbuch</div>
+      <div class="welcome-main">RECALL<br><span class="accent">AUTHORITY</span></div>
+      <div class="welcome-sub">Helios Commercial Logistics // Outer Rim Operations // 2183</div>
     </div>
-
-    <div class="terminal-line">MU/TH/UR 9000 online</div>
-    <div class="terminal-line">Session cache synchronisiert</div>
-    <div class="terminal-line">9 Missionen registriert — 1 Referenz migriert</div>
 
     <div class="stat-grid">
+      <div class="stat-box"><div class="stat-val">6</div><div class="stat-label">Spieler</div></div>
       <div class="stat-box"><div class="stat-val">9</div><div class="stat-label">Missionen</div></div>
-      <div class="stat-box"><div class="stat-val">4</div><div class="stat-label">PCs</div></div>
-      <div class="stat-box"><div class="stat-val">1</div><div class="stat-label">Referenz</div></div>
-      <div class="stat-box"><div class="stat-val">08</div><div class="stat-label">Platzhalter</div></div>
+      <div class="stat-box"><div class="stat-val">5</div><div class="stat-label">Kampagnenphasen</div></div>
+      <div class="stat-box"><div class="stat-val">10</div><div class="stat-label">Android-Targets</div></div>
     </div>
 
-    <div class="content">
-      <h2>Kampagne</h2>
+    <div style="margin:24px 0 16px">
+      <div class="terminal-line">SYSTEM: MU/TH/UR 9000 initialisiert</div>
+      <div class="terminal-line">STATUS: Kampagnendaten geladen — Projekt BLACK VEIL aktiv</div>
+      <div class="terminal-line">WARNUNG: Xenomorph-Datenlage vertraulich — NUR SPIELLEITER</div>
     </div>
+
+    <div style="font-family:'Libre Baskerville',serif; font-size:15px; color:var(--text); line-height:1.75; margin-bottom:24px;">
+      <p>Ihr befindet euch im Jahr <strong>2183</strong>. Der Rand der bekannten Systeme ist kein Ort für große Träume – sondern für Arbeit.
+      Die Crew der <strong>CM90-S Corvus</strong> arbeitet für <em>Helios Commercial Logistics</em>, einen unauffälligen Logistikdienstleister,
+      der tiefer in das Weyland-Yutani-Netzwerk verwoben ist, als irgendjemand ahnt.</p>
+      <p>Ihr Auftrag klingt simpel: <strong>Defekte Androiden austauschen und zurückbringen.</strong> Was dahinter steckt, ändert alles.</p>
+    </div>
+
+    <div style="font-family:'Share Tech Mono',monospace; font-size:10px; color:var(--amber); letter-spacing:2px; text-transform:uppercase; margin-bottom:12px;">— Schnellzugriff —</div>
     <div class="quick-links">
       <a class="ql-btn" href="campaign/overview.html">
-        <div class="ql-icon">▸</div>
-        <div class="ql-title">Overview</div>
-        <div class="ql-sub">Zusammenfassung</div>
+        <div class="ql-icon">🎯</div>
+        <div class="ql-title">Story-Überblick</div>
+        <div class="ql-sub">Der rote Faden</div>
       </a>
-      <a class="ql-btn" href="campaign/timeline.html">
-        <div class="ql-icon">▸</div>
-        <div class="ql-title">Timeline</div>
-        <div class="ql-sub">Session-Chronik</div>
+      <a class="ql-btn" href="campaign/black-veil-tracker.html">
+        <div class="ql-icon">🧬</div>
+        <div class="ql-title">Project Black Veil</div>
+        <div class="ql-sub">Das große Geheimnis</div>
       </a>
-      <a class="ql-btn" href="campaign/lore.html">
-        <div class="ql-icon">▸</div>
-        <div class="ql-title">Lore</div>
-        <div class="ql-sub">Welt &amp; Setting</div>
+      <a class="ql-btn" href="world/anchorpoint.html">
+        <div class="ql-icon">🛰️</div>
+        <div class="ql-title">Anchorpoint</div>
+        <div class="ql-sub">Startpunkt der Kampagne</div>
       </a>
-      <a class="ql-btn" href="campaign/hook-register.html">
-        <div class="ql-icon">▸</div>
-        <div class="ql-title">Hook-Register</div>
-        <div class="ql-sub">Player-Hooks pro Mission</div>
-      </a>
-      <a class="ql-btn" href="missions/index.html">
-        <div class="ql-icon">▸</div>
-        <div class="ql-title">Missionen</div>
-        <div class="ql-sub">9 Einträge</div>
-      </a>
-      <a class="ql-btn" href="handouts/index.html">
-        <div class="ql-icon">▸</div>
-        <div class="ql-title">Handouts</div>
-        <div class="ql-sub">PDFs &amp; Fragmente</div>
+      <a class="ql-btn" href="ship/corvus.html">
+        <div class="ql-icon">🚀</div>
+        <div class="ql-title">CM90-S Corvus</div>
+        <div class="ql-sub">Das Schiff der Crew</div>
       </a>
     </div>
 
@@ -70,26 +67,41 @@
       <h2>Charaktere</h2>
     </div>
     <div class="char-grid">
+      <a class="char-card" href="characters/pcs/julian.html">
+        <div class="char-name">Julian</div>
+        <div class="char-alias">FIPSI</div>
+        <div class="char-role">CORPORATE AGENT</div>
+        <div class="char-player">Weyland-Yutani</div>
+      </a>
+      <a class="char-card" href="characters/pcs/gustav.html">
+        <div class="char-name">Gustav Gustavson</div>
+        <div class="char-alias">GERALD</div>
+        <div class="char-role">PILOT</div>
+        <div class="char-player">Ex-Leutnant, fahnenflüchtig</div>
+      </a>
       <a class="char-card" href="characters/pcs/mae.html">
-        <div class="char-name">Maelys Harlan</div>
-        <div class="char-alias">„MAE"</div>
-        <div class="char-role">CAPTAIN / PILOT</div>
-        <div class="char-player">Charter-Lease HX-8821</div>
+        <div class="char-name">Maelys „Mae" Harlan</div>
+        <div class="char-alias">MIRIAM</div>
+        <div class="char-role">OFFICER</div>
+        <div class="char-player">Argo's Debt · 150k $ Schuld bei Muro</div>
       </a>
       <a class="char-card" href="characters/pcs/silas.html">
-        <div class="char-name">Silas</div>
-        <div class="char-alias">DVS-7741</div>
-        <div class="char-role">TBD</div>
+        <div class="char-name">Silas Ward</div>
+        <div class="char-alias">JULIUS · DVS-7741</div>
+        <div class="char-role">ANDROID ROUGHNECK</div>
+        <div class="char-player">David VII (2161)</div>
       </a>
       <a class="char-card" href="characters/pcs/scott.html">
         <div class="char-name">Scott Reynolds</div>
-        <div class="char-alias">EX-USCM</div>
-        <div class="char-role">NDA // BV-FRAGMENTE</div>
+        <div class="char-alias">NIKO · a.k.a. TRAVIS C. CARTERN</div>
+        <div class="char-role">MARINE COMMANDER</div>
+        <div class="char-player">Ex-USCM · Deckname · BV-Fragmente</div>
       </a>
       <a class="char-card" href="characters/pcs/isabella.html">
-        <div class="char-name">Isabella Cruz</div>
-        <div class="char-alias">PERSONALAKTE</div>
-        <div class="char-role">TBD</div>
+        <div class="char-name">Isabela Cruz</div>
+        <div class="char-alias">WY-CFD-47207-63A</div>
+        <div class="char-role">FIELD MEDIC</div>
+        <div class="char-player">Nueva Esperanza · Capitán Carbón 🦜</div>
       </a>
     </div>
 
@@ -97,15 +109,15 @@
       <h2>Missionen</h2>
     </div>
     <div class="mission-grid">
-      <a class="mission-card" href="missions/01-routine-exchange.html">
+      <a class="mission-card" href="missions/easy-missionen/01-routine-exchange.html">
         <div class="mission-num">01</div>
         <div class="mission-info">
-          <div class="mission-name">Routine Exchange</div>
+          <div class="mission-name">40 Eridani</div>
           <div class="mission-sub">Platzhalter — nicht migriert</div>
           <div class="mission-tags"><span class="tag">TBD</span></div>
         </div>
       </a>
-      <a class="mission-card" href="missions/02-theta-persei.html">
+      <a class="mission-card" href="missions/easy-missionen/02-theta-persei.html">
         <div class="mission-num">02</div>
         <div class="mission-info">
           <div class="mission-name">Theta Persei</div>
@@ -113,7 +125,7 @@
           <div class="mission-tags"><span class="tag">TBD</span></div>
         </div>
       </a>
-      <a class="mission-card" href="missions/03-jeremiah-vi.html">
+      <a class="mission-card" href="missions/schwerere-missionen/03-jeremiah-vi.html">
         <div class="mission-num">03</div>
         <div class="mission-info">
           <div class="mission-name">Jeremiah VI</div>
@@ -121,7 +133,7 @@
           <div class="mission-tags"><span class="tag">TBD</span></div>
         </div>
       </a>
-      <a class="mission-card" href="missions/04-atlas-station.html">
+      <a class="mission-card" href="missions/schwerere-missionen/04-atlas-station.html">
         <div class="mission-num">04</div>
         <div class="mission-info">
           <div class="mission-name">Atlas Station</div>
@@ -129,7 +141,7 @@
           <div class="mission-tags"><span class="tag">TBD</span></div>
         </div>
       </a>
-      <a class="mission-card" href="missions/05-arceon-station.html">
+      <a class="mission-card" href="missions/schwerere-missionen/05-arceon-station.html">
         <div class="mission-num">05</div>
         <div class="mission-info">
           <div class="mission-name">Arceon Station</div>
@@ -137,7 +149,7 @@
           <div class="mission-tags"><span class="tag">TBD</span></div>
         </div>
       </a>
-      <a class="mission-card" href="missions/06-lambda-aurigae.html">
+      <a class="mission-card" href="missions/schwerere-missionen/06-lambda-aurigae.html">
         <div class="mission-num">06</div>
         <div class="mission-info">
           <div class="mission-name">Lambda Aurigae — Cinder Reach</div>
@@ -145,7 +157,7 @@
           <div class="mission-tags"><span class="tag">TBD</span></div>
         </div>
       </a>
-      <a class="mission-card" href="missions/07-tiamat-iv.html">
+      <a class="mission-card" href="missions/schwerere-missionen/07-tiamat-iv.html">
         <div class="mission-num">07</div>
         <div class="mission-info">
           <div class="mission-name">Tiamat IV</div>
@@ -153,7 +165,7 @@
           <div class="mission-tags"><span class="tag green">REFERENZ</span></div>
         </div>
       </a>
-      <a class="mission-card" href="missions/08-van-maanens-star.html">
+      <a class="mission-card" href="missions/schwerere-missionen/08-van-maanens-star.html">
         <div class="mission-num">08</div>
         <div class="mission-info">
           <div class="mission-name">Van Maanen's Star</div>

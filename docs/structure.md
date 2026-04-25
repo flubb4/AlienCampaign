@@ -24,12 +24,15 @@ AlienCampaign/
 │   └── npcs/             wichtige NPCs (nach Bedarf)
 │
 ├── missions/             eine HTML pro Mission, selbstständig lesbar
-│   ├── 01-routine-exchange.html
-│   ├── 02-theta-persei.html
-│   ├── 03-jeremiah-vi.html
-│   ├── 04-atlas-station.html
-│   ├── 05-arceon-station.html
-│   ├── 06-lambda-aurigae.html
+│   ├── index.html
+│   ├── easy-missionen/
+│   │   ├── 01-routine-exchange.html
+│   │   └── 02-theta-persei.html
+│   ├── schwerere-missionen/
+│   │   ├── 03-jeremiah-vi.html
+│   │   ├── 04-atlas-station.html
+│   │   ├── 05-arceon-station.html
+│   │   └── 06-lambda-aurigae.html
 │   ├── 07-tiamat-iv.html       ← Referenz-Migration
 │   ├── 08-van-maanens-star.html
 │   └── 99-act-2-3.html

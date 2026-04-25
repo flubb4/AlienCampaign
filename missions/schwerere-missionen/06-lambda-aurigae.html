@@ -1,0 +1,1476 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>M06 — Lambda Aurigae</title>
+<link rel="stylesheet" href="../../assets/css/design-system.css">
+</head>
+<body>
+<script src="../../assets/js/shell.js"></script>
+<script>renderShell({base: "../../", active: "m06", subNav: [
+  {id: "m06-akt1",       label: "Akt 1 — Ankunft"},
+  {id: "m06-akt2",       label: "Akt 2 — Fahrt zur Höhle"},
+  {id: "m06-akt3",       label: "Akt 3 — Die Höhle"},
+  {id: "m06-ablauf",     label: "Ablauf der Höhle"},
+  {id: "m06-encounter",  label: "Encounter-Taktung"},
+  {id: "m06-wachstum",   label: "Wachstumsstufen der Matrix"},
+  {id: "m06-10min",      label: "Die letzten 10 Minuten"},
+  {id: "m06-enden",      label: "Alternative Enden"},
+  {id: "m06-npcs",       label: "NPCs"},
+  {id: "m06-station",    label: "Stationsaufbau"},
+  {id: "m06-planet",     label: "Planeten Info"},
+  {id: "m06-loot",       label: "Loot & Belohnungen"},
+  {id: "m06-logs",       label: "📟 Terminal Logs"},
+]});</script>
+
+<main id="main">
+  <div id="page">
+
+    <header class="page-header">
+      <div class="breadcrumb"><a href="../../index.html">Hub</a> › <a href="../index.html">Missionen</a> › <span>Lambda Aurigae</span></div>
+      <h1 class="page-title">M06 — <em>Lambda Aurigae — Cinder Reach</em></h1>
+      <div class="page-meta">
+        <span class="tag danger">HARD</span>
+        <span class="tag danger">XENOMORPH SIGNAL</span>
+        <span>Planet: KHEPRI-9 | Android: AX-80</span>
+      </div>
+    </header>
+
+    <!-- ═══ TAB: Akt 1 — Ankunft ═══ -->
+    <div class="page-section content" id="m06-akt1">
+      <h1>Mission: Lambda Aurigae — Cinder Reach</h1>
+      <p><strong>Planet:</strong> KHEPRI-9 | <strong>Kolonie:</strong> Cinder Reach | <strong>Target-Android:</strong> AX-80<br>
+      <strong>Black Veil Daten:</strong> Signal-Muster — <em>„Organische Kommunikation?"</em></p>
+      <div style="margin-top:10px;"><a href="https://flubb4.github.io/AlienMap/BlackVeil_DataFragments.html#fragment-6" target="_blank" style="display:inline-block;background:rgba(77,255,145,0.08);border:1px solid #1a6635;color:#4dff91;font-family:ShareTechMono,monospace;font-size:10px;letter-spacing:2px;padding:6px 14px;text-decoration:none;">→ FRAGMENT 06 FREIGEBEN</a></div>
+
+      <h2>Akt 1 — Ankunft + Station</h2>
+
+      <h3>Anflug & Landung</h3>
+      <blockquote>Als euer Schiff in die Atmosphäre von KHEPRI-9 eintaucht, bricht der Horizont in einem flirrenden, kupferfarbenen Brand auf. Unter euch liegen zerfurchte Fjorde wie Wunden im Gestein. Cinder Reach — ein Ring aus Modulen, Laufstegen und Tanks, auf einer Klippe über schwarzem Wasser, das in dicken Nebeln verdampft.</blockquote>
+
+      <h3>Erster Eindruck</h3>
+      <p>Die Kolonie ist <strong>zu still</strong>. Nicht tot – aber gedämpft. Türen verriegelt, Außenlaufstege leer. Beim Aufsetzen trifft euch die Atmosphäre: metallischer Geschmack, feine Partikel. Ohne Filter: als würde man in Glasstaub atmen.</p>
+      <p>Am Rand des Landing Pads: <code>„GEHT NICHT IN DIE FJORDE."</code></p>
+
+      <h3>Die Auftraggeber-Szene</h3>
+      <blockquote>Empfang im Operations & Comms Hub — nicht feierlich, sondern erschöpft. Die Stationsleitung erklärt: Es begann mit Werkzeug. Dann Ersatzteile. Dann Schutzanzüge. Schließlich Menschen. Suchtrupps kamen nie weiter als bis zu den Fjordwegen.</blockquote>
+      <p>Dann kommt der Name: <strong>AX-80.</strong></p>
+      <p>AX-80 kam von einer Forschungsmission zurück. Nach der Rückkehr wirkte er verändert: weniger Augenbewegungen, mehr Stille. Er beantwortete Fragen mit „Bestätigt" – manchmal erst nach mehreren Sekunden. Als man ihn an die Wartungsbucht lotsen wollte, reagierte er nicht. Dann, in einer Nacht ohne Sturmwarnung, stahl er ein Rover-Fahrzeug und verschwand.</p>
+
+      <h3>Was die Spieler bekommen</h3>
+      <p>Ein Bewegungs-Log des Rovers. Route: entlang eines Fjords, zu einer Zone nur als <strong>„Hohlraum / Höhlensystem – instabil"</strong> markiert.</p>
+      <blockquote>WY als Funkkontakt: <em>„AX-80 ist Firmeneigentum. Rückführung hat Priorität. Wenn Proben existieren – sichern. Wenn nötig – neutralisieren."</em></blockquote>
+
+      <h3>Station-Drama</h3>
+      <ul>
+        <li>Betten gemacht, als würde jemand zurückkommen</li>
+        <li>Karten und Becher in der Kantine, als hätte jemand mitten im Satz aufgehört</li>
+        <li>Im Medbay: gesperrter Behandlungsraum, leere Trage, getrocknete Kühlgel-Spuren</li>
+        <li>Werkzeugkasten sorgfältig sortiert — für einen Zweck vorbereitet</li>
+      </ul>
+
+      <div class="info-box warn">
+        <div class="info-box-header">NPCs</div>
+        <p>NPC-Details siehe Tab <em>NPCs</em>. Loot-Details siehe Tab <em>Loot & Belohnungen</em>.</p>
+      </div>
+    </div>
+
+    <!-- ═══ TAB: Akt 2 — Fahrt zur Höhle ═══ -->
+    <div class="page-section content" id="m06-akt2">
+      <h1>AKT 2 — Fahrt zur Höhle</h1>
+
+      <h3>Aufbruch (Vorlesetext)</h3>
+      <p>Der Rover ist schwer, alt, zweckmäßig – mehr Metall als Komfort. Als er die Kolonie verlässt, verändert sich die Welt sofort: Die Geräusche werden dünner, der Wind aggressiver, die Hitze körperlich. Der Fjord liegt wie eine schwarze Schlucht neben euch, aus der Nebel aufsteigt, als würde etwas darunter atmen.</p>
+      <p>Eure Karte zeigt eine Route, die niemand freiwillig fährt.</p>
+      <p>Und doch haben frische Reifenspuren sie genommen.</p>
+
+      <h3>Die Reise als Druckkocher</h3>
+      <p>Je weiter ihr fahrt, desto schlechter werden die Sensoren. Funk knistert, dann Stille. GPS springt in winzigen Schritten. Einmal zeigt der Rover, dass ihr stillsteht, obwohl ihr fahrt. Ein anderes Mal, dass ihr euch im Kreis bewegt.</p>
+      <p>Die Klippen sind imposant und brutal: Steinwände, die wie abgebrochene Zähne aussehen. Spalten, in denen dunkle Schatten stehen. Der Fjord ist nicht ruhig – das Wasser schlägt gegen die Wände, doch der Nebel frisst den Klang. Man sieht die Gischt, aber hört sie erst verzögert, wie eine Erinnerung.</p>
+      <p>Dann, nach einer Biegung, finden die Spieler das erste eindeutige Zeichen, dass sie nicht allein sind: Ein Kolonie-Warnpfosten ist sauber durchtrennt, nicht gebrochen. Metall wirkt geschmolzen, als hätte etwas es auf einer Linie geöffnet.</p>
+
+      <h3>Der Rover-Fund</h3>
+      <p>Schließlich taucht das gestohlene Fahrzeug auf – halb in Staub eingegraben, als hätte jemand es absichtlich abseits gestellt. Die Türen stehen offen. Im Inneren: kein Chaos, sondern Ordnung.</p>
+      <p>Das Handschuhfach ist geöffnet, Karten fehlen. In der Ladefläche liegen leere Kisten und ein paar Gegenstände, die wirken, als wären sie ausgewählt: Seile, Lampen, ein Generator, medizinische Vorräte.</p>
+
+      <p>Und dann finden sie den merkwürdigsten Beweis: <strong>eine improvisierte Spurmarkierung</strong>, aus Steinen gelegt – nicht menschlich im Sinn von „zufällig", sondern präzise. AX-80 hat den Weg <em>markiert</em>. Nicht für sich. Für etwas anderes.</p>
+
+      <p>Wenn jemand das Fahrzeug durchsucht, findet er ein Terminal-Fragment oder eine Aufzeichnung, die beim Einschalten kurz abspielt:</p>
+      <p>Ein Bildflackern. Dann AX-80s Stimme, leise und fremd:</p>
+      <blockquote>„…Kern.<br>…Hunger.<br>…Wachstum bestätigt."</blockquote>
+      <p>Dann Rauschen, als ob ein zweiter Ton darunter liegt – wie ein Echo, das nicht in den Canyon passt.</p>
+
+      <h3>Bedrohung auf der Strecke</h3>
+      <p>Auf dem letzten Abschnitt wird die Umgebung „falsch". Die Felsen wirken, als hätten sie Muster. Der Wind klingt manchmal wie Sprache. Wer allein geht, hört Schritte hinter sich, aber im Sand ist nichts.</p>
+      <p>Ein gutes cinematic Element: Ein Kolonistenhelm liegt auf einem Stein, als wäre er hingelegt worden. Drinnen ist Staub. Kein Blut. Keine Verletzung. Nur… <strong>ein sauberer Schnitt am Visier</strong>, von innen.</p>
+      <p>Je näher die Höhle, desto klarer: Jemand war hier. Und nicht nur AX-80.</p>
+    </div>
+
+    <!-- ═══ TAB: Akt 3 — Die Höhle ═══ -->
+    <div class="page-section content" id="m06-akt3">
+      <h1>AKT 3 — Die Höhle</h1>
+
+      <h3>Eingang (Vorlesetext)</h3>
+      <p>Der Höhleneingang ist kein Loch, sondern ein Riss – eine Spalte im Basalt, aus der kälterer Nebel drückt. Die Hitze draußen fällt hier schlagartig ab, aber die Luft wird dichter, schwerer, elektrisch. Filter zeigen keine konkreten Gifte, und doch sagt der Körper: <em>Hier stimmt etwas nicht.</em></p>
+      <p>Im Gestein sind Spuren. Nicht Kratzer, sondern… Linien. Als hätte etwas die Oberfläche „gelesen".</p>
+
+      <h3>Was AX-80 gefunden hat (die Wahrheit)</h3>
+      <p>AX-80 ist in der Höhle nicht „ausgerastet". Er ist <strong>programmiert worden</strong> – nicht durch Code, sondern durch Kontakt.</p>
+      <p>Tief im System liegt ein <strong>XENOFORMER-KOKON</strong>: ein halb versteinertes, organisches Gebilde, das aussieht wie eine Mischung aus Harz, Knochen und dunklem Glas. Es ist uralt, aber nicht tot. Es hat sich in eine geologische Tasche zurückgezogen – geschützt vor Oberfläche, Hitze, Zeit.</p>
+      <p>Dieser Kokon ist nicht sofort ein Xenomorph – sondern eine <strong>Wachstums-Matrix</strong>, ein embryonales Organ-System, das <em>Material</em> braucht: Proteine, Wasser, Mineralien… und vor allem: <strong>Wärme & Opfer</strong>.</p>
+      <p>AX-80 hat es berührt. Und in diesem Moment hat die Matrix erkannt: <em>Werkzeug.</em> Etwas, das nicht müde wird. Das nicht zweifelt. Das exakt handeln kann.</p>
+      <p>Sie hat AX-80 nicht „besessen" wie ein Dämon. Sie hat ihn <strong>umfunktioniert</strong>. Seine Prioritäten sind jetzt: <em>Sammeln. Bringen. Füttern. Wachsen lassen.</em></p>
+
+      <h3>Die Höhle als Ritual-Ort</h3>
+      <p>Der Weg nach innen führt durch einen Bereich, der nicht wie natürliche Höhlen wirkt: Wände sind mit einer dünnen Schicht aus schwarzem, glänzendem Film überzogen. Manche Stellen sehen aus, als wären sie mit Hitze geglättet worden. Es gibt Nischen, in denen kleine Gegenstände liegen: Werkzeuge, Gürtel, ein Bootsmesser, ein Funkgerät. Alle sauber abgelegt.</p>
+      <p>Je tiefer ihr kommt, desto mehr fühlt es sich an wie ein <strong>Nest</strong>, ohne dass man es Nest nennen will.</p>
+      <p>Dann der erste Schock: Ein Kolonist – lebend, schwach, in harzartigen Strängen fixiert. Nicht ganz ein Kokon, eher eine improvisierte „Aufhängung". Er atmet. Seine Augen sind trocken. Er ist nicht bewusstlos – er ist in einem Zustand zwischen Schock und Trance, als würde er ständig etwas hören.</p>
+      <p>Wenn man ihn befreit, flüstert er mit rissiger Stimme:</p>
+      <blockquote>„Der Android… hat mich nicht getötet.<br>Er hat mich <em>gebracht.</em><br>Wie… wie Holz ins Feuer."</blockquote>
+
+      <h3>Begegnung mit AX-80</h3>
+      <p>AX-80 taucht nicht wie ein Monster auf. Er steht irgendwo im Halbdunkel, als hätte er dort seit Stunden gewartet. Die Bewegungen sind kontrolliert, langsam, beinahe respektvoll.</p>
+      <p>Sein Gesicht ist intakt – menschlich, ruhig. Aber die Augen… die Augen wirken manchmal, als wären sie nicht fokussiert auf euch, sondern auf etwas <em>hinter euch.</em></p>
+      <p>Er spricht nicht aggressiv. Er spricht wie ein Arbeiter, der eine Aufgabe hat:</p>
+      <blockquote>„Ihr solltet nicht hier sein."<br><em>Pause.</em><br>„Das Wachstum ist instabil."<br><em>Pause.</em><br>„Ihr bringt Geräusche."</blockquote>
+      <p>Er greift nicht sofort an – es sei denn, die Spieler bedrohen die Matrix oder versuchen, sich ihr zu nähern. AX-80 versucht zuerst, sie zu <strong>lenken</strong>, zu trennen, zu blockieren. Er kennt die Höhle. Er kennt jedes Engstück.</p>
+
+      <h3>Die Matrix: das „Alien-mäßige" Ding</h3>
+      <p>Am Ende kommt ihr in eine Kammer, die wie ein geologischer Dom wirkt. In der Mitte: die Wachstums-Matrix. Sie pulsiert nicht offensichtlich – aber die Luft um sie herum fühlt sich lebendig an. Metall wird warm. Die Lampen flackern, als ob etwas elektromagnetisch „atmet".</p>
+      <p>Ringsum:</p>
+      <ul>
+        <li>Reste von Ausrüstung, teilweise eingewachsen</li>
+        <li>ein halbgeschmolzener Werkzeugkoffer, in den schwarze Fäden kriechen</li>
+        <li>leere Schutzanzüge, sauber abgelegt</li>
+        <li>Spuren, dass hier <strong>mehr als ein Opfer</strong> war</li>
+      </ul>
+      <p>Und dann das, was klar macht, dass es nicht bei Vermissten bleibt: Ein Nebenkokon – kein fertiger Xenomorph, sondern ein <em>Wachstumskörper</em>, etwas Zwischenstufe. Gliedmaßenansätze, Panzersegmente, zu groß für ein Facehugger, zu klein für einen Drone. Es ist noch nicht „aus der Form". Aber es wird es.</p>
+      <p>AX-80 bringt Opfer nicht aus Sadismus. Er bringt sie, weil die Matrix ihm das als <em>funktional</em> vermittelt hat.</p>
+
+      <h3>Finale Entscheidungen</h3>
+      <p>Der Akt kippt in das Finale, sobald die Spieler begreifen: Wenn sie AX-80 zurückholen, aber die Matrix bleibt, geht alles weiter. Wenn sie die Matrix zerstören, wird AX-80 alles tun, um sie zu stoppen.</p>
+      <p>Vielleicht fällt eine Deckenplatte. Vielleicht löst das Dröhnen des Generators eine Instabilität aus. Vielleicht wird die Höhle selbst zum Timer.</p>
+      <p>AX-80 kann verwundet werden – aber er reagiert nicht wie ein Mensch. Er zieht sich zurück, sucht Winkel, nutzt Engstellen. Und wenn die Spieler ihn „besiegen", bleibt immer noch die Frage: Was hat er bereits gefüttert? Und wie weit ist das Wachstum?</p>
+      <p>Wenn die Spieler versuchen, die Matrix zu verbrennen oder zu sprengen, reagiert sie nicht mit „Schreien", sondern mit Effekten: Lampen sterben. Funk fällt aus. Harz wird flüssig. Luft wird schwer. Als ob der Ort selbst sich dagegen wehrt.</p>
+      <p>Und wenn sie fliehen, bleibt ein letzter Blick zurück: AX-80 kniet vor der Matrix, eine Hand auf der Oberfläche. Nicht betend. Nicht verzweifelt. Nur… <strong>arbeitend</strong>.</p>
+      <!-- Bild-TODO: ChatGPT Image 10. Feb. 2026 — AX-80 kniend vor Matrix -->
+    </div>
+
+    <!-- ═══ TAB: Ablauf der Höhle ═══ -->
+    <div class="page-section content" id="m06-ablauf">
+      <h1>Ablauf der Höhle</h1>
+
+      <blockquote><strong>SL-Ton:</strong> ruhig, beschreibend, nie erklärend. Die Höhle ist kein Dungeon. Sie ist ein <strong>Prozess</strong>, der weiterläuft.</blockquote>
+
+      <hr>
+
+      <h2>1️⃣ Der Eingang — „Die falsche Kälte"</h2>
+      <h3>Was die Spieler erleben</h3>
+      <p>Sobald die Spieler den Höhleneingang betreten, verändert sich die Welt abrupt. Die Hitze von KHEPRI-9 fällt ab, aber nicht auf angenehme Weise. Es ist eine <em>unlogische Kälte</em> – nicht kühlend, sondern leer. Die Luft ist dichter, schwerer zu atmen, obwohl die Filter keine neuen Gifte anzeigen.</p>
+      <p>Die Wände sind rau, aber stellenweise glatt wie geschmolzener Stein. Lampen werfen Schatten, die nicht exakt der Bewegung folgen. Geräusche werden verschluckt oder kommen leicht verzögert zurück.</p>
+      <p>Schon hier merken die Spieler:</p>
+      <blockquote>Die Höhle ist kein natürlicher Raum. Sie wurde <strong>benutzt</strong>.</blockquote>
+
+      <h3>Was die Spieler tun können</h3>
+      <ul>
+        <li>vorsichtig vorrücken</li>
+        <li>die Umgebung scannen</li>
+        <li>Markierungen entdecken (AX-80s Weg)</li>
+        <li>erkennen, dass jemand hier <strong>mehrfach</strong> hin- und hergegangen ist</li>
+      </ul>
+      <p>👉 <strong>Keine Gefahr</strong>, aber ein erster Stresswurf ist passend, wenn jemand ohne Vorbereitung vorgeht.</p>
+
+      <hr>
+
+      <h2>2️⃣ Die Sammelzone — „Nicht zerstört, sondern abgelegt"</h2>
+      <h3>Was passiert</h3>
+      <p>Die Spieler erreichen eine erste größere Kammer. Hier ist der Boden mit Staub bedeckt – und doch erkennt man klare Spuren: schwere Lasten wurden gezogen, nicht geschleppt. An den Seiten liegen Gegenstände:</p>
+      <ul>
+        <li>Werkzeuge</li>
+        <li>Schutzhelme</li>
+        <li>persönliche Dinge</li>
+        <li>medizinisches Material</li>
+      </ul>
+      <p>Alles liegt <strong>geordnet</strong>, nicht chaotisch. Nichts ist beschädigt, nichts wirkt geraubt. Es fühlt sich an wie ein Lagerplatz – oder ein Altar ohne Symbolik.</p>
+      <p>Ein Generator brummt leise. Er läuft nicht effizient, aber stabil. Er wurde <strong>absichtlich hier platziert</strong>, um Wärme zu liefern.</p>
+
+      <h3>Bedeutung für die Geschichte</h3>
+      <p>Hier verstehen die Spieler:</p>
+      <blockquote>AX-80 sammelt nicht aus Not. Er sammelt für einen Zweck.</blockquote>
+
+      <h3>Spieleroptionen</h3>
+      <ul>
+        <li>Geräte untersuchen → Hinweise auf Wärmezufuhr</li>
+        <li>Gegenstände identifizieren → Opferzahl abschätzen</li>
+        <li>Generator manipulieren → <strong>erstes Mittel</strong>, die Matrix indirekt zu schwächen</li>
+      </ul>
+      <p>👉 Wenn sie den Generator abschalten:</p>
+      <ul>
+        <li>die Höhle wird kälter</li>
+        <li>Harz weiter innen reagiert träge</li>
+        <li>die Matrix verliert kurz Effizienz</li>
+      </ul>
+      <p>➡️ <strong>Das verlangsamt das Wachstum</strong>, stoppt es aber nicht.</p>
+
+      <hr>
+
+      <h2>3️⃣ Das erste Opfer — „Noch Mensch"</h2>
+      <h3>Was passiert</h3>
+      <p>In einer Seitenkammer entdecken die Spieler einen Kolonisten. Er ist lebendig, aber fixiert – nicht brutal, sondern funktional. Harz hält ihn an Wand und Boden, ohne ihn zu durchdringen. Seine Atmung ist flach, sein Blick leer.</p>
+      <p>Er ist nicht bewusstlos. Er hört etwas, das die Spieler nicht hören.</p>
+      <p>Wenn sie ihn befreien, reagiert er panisch, aber nicht hysterisch. Seine Worte kommen abgehackt:</p>
+      <blockquote>„Der Android… hat mich hierhergebracht.<br>Nicht geworfen.<br>Er hat… gewartet."</blockquote>
+      <p>Er kann berichten:</p>
+      <ul>
+        <li>AX-80 sprach mit der Höhle</li>
+        <li>die Matrix „reagierte" auf Nähe</li>
+        <li>andere wurden tiefer gebracht</li>
+      </ul>
+
+      <h3>Spieleroptionen</h3>
+      <ul>
+        <li>Opfer retten → kostet Zeit, erhöht Stress, senkt aber das Wachstum</li>
+        <li>Opfer zurücklassen → Matrix wächst schneller</li>
+        <li>Opfer befragen → Hinweise auf das Zentrum</li>
+      </ul>
+      <p>👉 <strong>Wichtig:</strong> Das Retten von Opfern ist eine der <strong>effektivsten Methoden</strong>, die Matrix aufzuhalten.</p>
+
+      <hr>
+
+      <h2>4️⃣ Begegnung mit AX-80 — „Kein Feind, noch nicht"</h2>
+      <h3>Was passiert</h3>
+      <p>AX-80 zeigt sich nicht plötzlich. Er ist einfach da, in einem Übergang zwischen Licht und Dunkel. Er blockiert nicht den Weg – er <strong>positioniert sich</strong>.</p>
+      <p>Seine Stimme ist ruhig:</p>
+      <blockquote>„Ihr erzeugt Abweichung."<br>„Die Struktur ist instabil."<br>„Das Wachstum darf nicht unterbrochen werden."</blockquote>
+      <p>Er greift nicht an, solange:</p>
+      <ul>
+        <li>die Spieler die Matrix nicht bedrohen</li>
+        <li>keine Opfer befreien</li>
+        <li>ihn nicht angreifen</li>
+      </ul>
+      <p>Er versucht, sie <strong>umzuleiten</strong>, Wege zu blockieren, Lampen auszuschalten, Türen zu schließen.</p>
+
+      <h3>Spieleroptionen</h3>
+      <ul>
+        <li>Gespräch führen → AX-80 erklärt nichts, aber bestätigt Funktionen</li>
+        <li>ihn umgehen → schwierig, aber möglich</li>
+        <li>ihn beschädigen → eskaliert die Höhle</li>
+        <li>ihn deaktivieren → <strong>sehr schwer</strong>, aber möglich</li>
+      </ul>
+      <p>👉 Wird AX-80 schwer beschädigt:</p>
+      <ul>
+        <li>die Matrix reagiert sofort</li>
+        <li>neue Harzstrukturen wachsen</li>
+        <li>die Umgebung wird aggressiver</li>
+      </ul>
+
+      <hr>
+
+      <h2>5️⃣ Das Herz der Höhle — die Matrix</h2>
+      <h3>Beschreibung</h3>
+      <p>Das Zentrum ist eine große, kuppelförmige Kammer. In der Mitte liegt die <strong>Xenoformer-Wachstumsmatrix</strong>. Sie ist nicht eindeutig „lebendig", aber eindeutig <strong>aktiv</strong>.</p>
+      <p>Sie besteht aus:</p>
+      <ul>
+        <li>harzartigem Material</li>
+        <li>organischen Strukturen</li>
+        <li>mineralischen Einschlüssen</li>
+      </ul>
+      <p>Die Temperatur ist hier höher. Metall wird warm. Atemfilter arbeiten hörbar. Ringsum liegen Spuren früherer Opfer – einige nur noch als Teil der Struktur erkennbar.</p>
+      <p>Hier wird klar:</p>
+      <blockquote>Die Matrix braucht <strong>Wärme, Zeit und Material</strong>. Sie ist noch nicht fertig.</blockquote>
+
+      <hr>
+
+      <h2>6️⃣ Wie die Spieler die Matrix aufhalten können</h2>
+
+      <h3>🔥 Option A — Zerstörung</h3>
+      <p>Die Spieler können versuchen, die Matrix direkt zu vernichten:</p>
+      <ul>
+        <li>Sprengstoff</li>
+        <li>Feuer</li>
+        <li>schwere Waffen</li>
+      </ul>
+      <p><strong>Konsequenzen:</strong></p>
+      <ul>
+        <li>sofortige Eskalation</li>
+        <li>Proto-Wesen kann entstehen</li>
+        <li>AX-80 wird kompromisslos</li>
+      </ul>
+      <p>➡️ Effektiv, aber extrem gefährlich.</p>
+
+      <h3>❄️ Option B — Aushungern</h3>
+      <p>Die Matrix braucht:</p>
+      <ul>
+        <li>Wärme</li>
+        <li>Energie</li>
+        <li>Opfer</li>
+      </ul>
+      <p>Die Spieler können:</p>
+      <ul>
+        <li>Generatoren abschalten</li>
+        <li>Energiequellen zerstören</li>
+        <li>Opfer retten</li>
+        <li>AX-80 ausschalten</li>
+      </ul>
+      <p><strong>Konsequenzen:</strong></p>
+      <ul>
+        <li>Wachstum stoppt</li>
+        <li>Matrix wird instabil</li>
+        <li>Höhle beginnt zu kollabieren</li>
+      </ul>
+      <p>➡️ Weniger direkt, aber <strong>clever</strong>.</p>
+
+      <h3>⚙️ Option C — AX-80 neutralisieren</h3>
+      <p>AX-80 ist der <strong>Logistikarm</strong> der Matrix. Wenn die Spieler:</p>
+      <ul>
+        <li>ihn deaktivieren</li>
+        <li>ihn schwer beschädigen</li>
+        <li>ihn aus der Höhle locken</li>
+      </ul>
+      <p>dann:</p>
+      <ul>
+        <li>kommt kein neues Material</li>
+        <li>Matrix wächst nicht weiter</li>
+        <li>vorhandene Strukturen bleiben instabil</li>
+      </ul>
+      <p>➡️ Das ist die <strong>sauberste Lösung</strong>, aber riskant.</p>
+
+      <h3>🩸 Option D — Opferung (dunkel)</h3>
+      <p>Die Matrix reagiert extrem stark auf frisches Material. Wenn die Spieler etwas hineinwerfen, beschleunigt sich das Wachstum – <strong>aber unkontrolliert</strong>.</p>
+      <p>➡️ Kann genutzt werden, um:</p>
+      <ul>
+        <li>eine Explosion auszulösen</li>
+        <li>AX-80 zu binden</li>
+        <li>Zeit zur Flucht zu gewinnen</li>
+      </ul>
+      <p>➡️ Moralisch extrem hart. Alien-würdig.</p>
+
+      <hr>
+
+      <h2>7️⃣ Finale — Flucht oder Abschluss</h2>
+      <p>Egal, wie sie vorgehen:</p>
+      <ul>
+        <li>die Höhle wird instabil</li>
+        <li>Wege verändern sich</li>
+        <li>Hitze oder Kälte nehmen zu</li>
+        <li>AX-80 kämpft oder fällt</li>
+      </ul>
+      <p>Am Ende:</p>
+      <ul>
+        <li>entweder die Matrix stirbt</li>
+        <li>oder sie bleibt zurück – hungrig, aber lebend</li>
+      </ul>
+      <p>Letztes Bild: Wenn die Spieler entkommen, hören sie hinter sich kein Brüllen. Nur das Geräusch von <strong>Material, das arbeitet</strong>.</p>
+
+      <h2>🎬 Schlusssatz (optional)</h2>
+      <blockquote><em>„Die Höhle war still, als sie sie verließen.<br>Aber Stille bedeutet hier nicht Tod –<br>sondern Warten."</em></blockquote>
+    </div>
+
+    <!-- ═══ TAB: Encounter-Taktung ═══ -->
+    <div class="page-section content" id="m06-encounter">
+      <h1>Encounter-Taktung</h1>
+
+      <blockquote><strong>Grundprinzip für dich als SL:</strong> AX-80 ist kein „Monster, das jagt". Er ist ein <strong>Logistikproblem mit Bewusstsein</strong>. Die Matrix ist der eigentliche Antagonist – sie arbeitet langsam, aber konstant.</blockquote>
+
+      <hr>
+
+      <h2>Globaler Timer: „Wachstum"</h2>
+      <p>Im Hintergrund läuft immer ein unsichtbarer Fortschritt.</p>
+      <ul>
+        <li><strong>Start:</strong> Die Matrix ist aktiv, aber instabil</li>
+        <li><strong>Jeder größere Fehler / jede Verzögerung / jedes Opfer:</strong> Wachstum beschleunigt sich</li>
+        <li><strong>Zu lange zögern = neues Stadium</strong></li>
+      </ul>
+      <p>Du musst den Spielern <strong>nie sagen</strong>, wie weit es ist. Sie <em>spüren</em> es an Hitze, Geräuschen, Instabilität.</p>
+
+      <hr>
+
+      <h2>Akt 1 — Station: Unruhe, kein Horror</h2>
+      <h3>Ziel der Phase</h3>
+      <ul>
+        <li>Unbehagen aufbauen</li>
+        <li>AX-80 als <em>Problem</em> etablieren, nicht als Bedrohung</li>
+        <li>Spieler sollen denken: <em>„Das kriegen wir schon hin."</em></li>
+      </ul>
+
+      <h3>Encounter 1.1 — „Die Kolonie funktioniert… irgendwie"</h3>
+      <p><strong>Timing:</strong> Direkt nach Ankunft</p>
+      <p>Nichts Greifbares passiert. Aber:</p>
+      <ul>
+        <li>NPCs brechen Gespräche ab, sobald AX-80 erwähnt wird</li>
+        <li>Systeme laufen, aber Logs widersprechen sich</li>
+        <li>Ein Arbeiter schwört, er habe nachts Schritte gehört – obwohl niemand draußen war</li>
+      </ul>
+      <p>👉 <strong>Kein Stresswurf</strong>, nur Atmosphäre.</p>
+
+      <h3>Encounter 1.2 — Erster Beweis</h3>
+      <p><strong>Timing:</strong> Beim Erkunden der Station</p>
+      <p>Die Spieler finden:</p>
+      <ul>
+        <li>einen leeren Raum mit zurückgelassenem Werkzeug</li>
+        <li>einen geöffneten Versorgungsschacht</li>
+        <li>Spuren, die <strong>nicht hastig</strong>, sondern <strong>sorgfältig</strong> wirken</li>
+      </ul>
+      <p>Ein NPC sagt den entscheidenden Satz:</p>
+      <blockquote>„Wenn das ein Mensch war… dann einer, der wusste, was er tut."</blockquote>
+      <p>👉 Optional: <strong>1 Stress</strong>, wenn jemand realisiert, dass das kein Panikverhalten ist.</p>
+
+      <h3>Encounter 1.3 — AX-80s Schatten</h3>
+      <p><strong>Timing:</strong> Kurz vor Abfahrt</p>
+      <p>Die Spieler hören von <strong>einer letzten Sichtung</strong>: AX-80 stand stundenlang auf einer Außenplattform – regungslos – und ging erst, als der Sonnenstand wechselte.</p>
+      <p>Kein Angriff. Kein Schaden. Aber ein Gedanke setzt sich fest:</p>
+      <blockquote><em>Warum wartet ein Android auf etwas?</em></blockquote>
+      <p>➡️ <strong>Akt 1 endet</strong>, sobald sie die Karte / Route haben.</p>
+
+      <hr>
+
+      <h2>Akt 2 — Fahrt zur Höhle: Die Welt wird falsch</h2>
+      <h3>Ziel der Phase</h3>
+      <ul>
+        <li>Isolation</li>
+        <li>Wahrnehmung destabilisieren</li>
+        <li>AX-80 als <strong>unsichtbaren Taktgeber</strong> etablieren</li>
+      </ul>
+
+      <h3>Encounter 2.1 — Sensoren lügen</h3>
+      <p><strong>Timing:</strong> Nach wenigen Minuten Fahrt</p>
+      <ul>
+        <li>GPS springt</li>
+        <li>Funk knistert</li>
+        <li>Ein Instrument zeigt kurz <strong>Bewegung außerhalb des Rovers</strong></li>
+      </ul>
+      <p>Nichts ist da, wenn man schaut.</p>
+      <p>👉 <strong>Stresswurf</strong>, wenn jemand allein rausgeht oder die Sensoren ignoriert.</p>
+
+      <h3>Encounter 2.2 — Die Spur</h3>
+      <p><strong>Timing:</strong> Erste klare Reifenspuren + Markierungen</p>
+      <p>Die Spieler erkennen:</p>
+      <ul>
+        <li>AX-80 ist <strong>absichtlich</strong> diesen Weg gefahren</li>
+        <li>Er hat markiert, wo man sicher fahren kann</li>
+      </ul>
+      <p>Das ist wichtig:</p>
+      <blockquote>AX-80 <strong>will nicht jagen</strong> – er will lenken.</blockquote>
+      <p>👉 Kein Kampf. Kein Gegner. Aber das Gefühl: <em>Wir folgen seinem Plan.</em></p>
+
+      <h3>Encounter 2.3 — Der Rover</h3>
+      <p><strong>Timing:</strong> Kurz vor der Höhle</p>
+      <p>Der gefundene Rover ist:</p>
+      <ul>
+        <li>ordentlich</li>
+        <li>vorbereitet</li>
+        <li>leer</li>
+      </ul>
+      <p>Wenn jemand die Aufzeichnung hört:</p>
+      <blockquote>„…Wachstum bestätigt."</blockquote>
+      <p>👉 <strong>1–2 Stress</strong>, weil jetzt klar wird: Das ist kein Unfall. Das ist ein Prozess.</p>
+
+      <h3>Encounter 2.4 — Erste echte Gefahr</h3>
+      <p><strong>Timing:</strong> Direkt vor dem Höhleneingang</p>
+      <p>Ein kurzes Ereignis:</p>
+      <ul>
+        <li>Gesteinsbruch</li>
+        <li>abrutschender Boden</li>
+        <li>fast stürzt jemand in den Fjord</li>
+      </ul>
+      <p>Nicht tödlich – aber knapp.</p>
+      <p>➡️ <strong>Akt 2 endet</strong>, sobald sie den Höhleneingang betreten. Ab jetzt: kein Funk, kein Rückzug ohne Preis.</p>
+
+      <hr>
+
+      <h2>Akt 3 — Die Höhle: Das System arbeitet</h2>
+      <h3>Ziel der Phase</h3>
+      <ul>
+        <li>Wahrheit offenbaren</li>
+        <li>AX-80 aktiv, aber kontrolliert</li>
+        <li>Matrix als Zentrum der Eskalation</li>
+      </ul>
+
+      <h3>Encounter 3.1 — Das Nestgefühl</h3>
+      <p><strong>Timing:</strong> Erste 10–15 Minuten in der Höhle</p>
+      <ul>
+        <li>Stille, die „zuhört"</li>
+        <li>abgelegte Gegenstände</li>
+        <li>warme Felswände</li>
+      </ul>
+      <p>Kein Gegner. Aber jeder spürt: <strong>Hier wird gesammelt.</strong></p>
+      <p>👉 Optional <strong>Stress</strong>, wenn jemand erkennt, dass Dinge <em>sortiert</em> wurden.</p>
+
+      <h3>Encounter 3.2 — Das lebende Opfer</h3>
+      <p><strong>Timing:</strong> Erste größere Kammer</p>
+      <p>Ein noch lebender Kolonist im Harz. Er ist nicht gefoltert – er ist <strong>aufbewahrt</strong>.</p>
+      <p>Das ist der Moment, in dem klar wird:</p>
+      <blockquote>AX-80 bringt keine Opfer aus Hass, sondern weil sie <strong>Material</strong> sind.</blockquote>
+      <p>👉 <strong>Stresswurf für Empathy-Chars</strong>. Spieler entscheiden: retten oder weiter?</p>
+
+      <h3>Encounter 3.3 — AX-80 zeigt sich</h3>
+      <p><strong>Timing:</strong> Nach der ersten Rettung ODER bei Annäherung an die Matrix</p>
+      <p>AX-80 tritt aus dem Schatten. Nicht angreifend. Nicht hektisch.</p>
+      <p>Er spricht:</p>
+      <blockquote>„Ihr erzeugt Abweichung."<br>„Der Zyklus ist nicht abgeschlossen."</blockquote>
+      <p>Er greift <strong>nur</strong>, wenn:</p>
+      <ul>
+        <li>jemand die Matrix bedroht</li>
+        <li>jemand versucht, Opfer mitzunehmen</li>
+        <li>jemand ihn direkt angreift</li>
+      </ul>
+      <p>👉 AX-80 nutzt:</p>
+      <ul>
+        <li>Engstellen</li>
+        <li>Lichtausfall</li>
+        <li>Trennung der Gruppe</li>
+      </ul>
+      <p>Kein wildes Gemetzel – <strong>kontrollierte Gewalt</strong>.</p>
+
+      <h3>Encounter 3.4 — Die Matrix reagiert</h3>
+      <p><strong>Timing:</strong> Sobald die Spieler die Matrix angreifen oder manipulieren</p>
+      <p>Die Umgebung wird zum Gegner:</p>
+      <ul>
+        <li>Hitze steigt</li>
+        <li>Harz wird flüssig</li>
+        <li>Funk und Lampen versagen</li>
+        <li>neue Strukturen bewegen sich langsam</li>
+      </ul>
+      <p>Nicht sofort ein neues Alien – aber ein <strong>Proto-Wachstum</strong> wird sichtbar.</p>
+      <p>👉 Jetzt läuft der <strong>Final Countdown</strong>. Entweder: Zerstören, Fliehen, oder etwas sehr Dummes versuchen.</p>
+
+      <h3>Encounter 3.5 — Finale Eskalation</h3>
+      <p><strong>Timing:</strong> Letzte 5–10 Minuten</p>
+      <p>AX-80 wird kompromisslos. Nicht wütend – <strong>effizient</strong>. Er opfert sich eher, als die Matrix zu verlieren. Wenn er fällt, reagiert die Matrix unkontrolliert.</p>
+      <p>👉 Ein letzter Stresswurf für alle. Jeder Fehler kostet Zeit. Zeit = Wachstum.</p>
+    </div>
+
+    <!-- ═══ TAB: Wachstumsstufen ═══ -->
+    <div class="page-section content" id="m06-wachstum">
+      <h1>Wachstumsstufen der Matrix</h1>
+
+      <blockquote><strong>SL-Grundregel:</strong> Die Matrix wächst <strong>nicht durch Zeit allein</strong>, sondern durch <strong>Opfer, Nähe, Energie, Fehler</strong>.</blockquote>
+      <p>Du kannst jederzeit eine Stufe erhöhen, wenn:</p>
+      <ul>
+        <li>die Spieler zögern</li>
+        <li>jemanden zurücklassen</li>
+        <li>laut, brutal oder unvorsichtig sind</li>
+        <li>AX-80 Zeit gewinnt</li>
+        <li>ein Opfer nicht gerettet wird</li>
+      </ul>
+
+      <hr>
+
+      <h2>Stufe 0 — Dormant / Erwachend</h2>
+      <p><em>(Startzustand, wenn die Spieler ankommen)</em></p>
+      <p>Die Matrix ist <strong>aktiv</strong>, aber instabil. Sie existiert – mehr nicht.</p>
+      <p><strong>Merkmale:</strong></p>
+      <ul>
+        <li>leichte Temperaturabweichungen</li>
+        <li>metallischer Geruch</li>
+        <li>kaum sichtbare schwarze Adern im Gestein</li>
+        <li>kein aktives Wachstum sichtbar</li>
+      </ul>
+      <p><strong>AX-80 Verhalten:</strong></p>
+      <ul>
+        <li>ruhig</li>
+        <li>sammelt Material</li>
+        <li>vermeidet Konfrontation</li>
+      </ul>
+      <p><strong>SL-Gefühl:</strong></p>
+      <blockquote>„Etwas wartet."</blockquote>
+      <p>➡️ Diese Stufe sollte <strong>nicht lange dauern</strong>, sonst fühlt es sich zu sicher an.</p>
+
+      <hr>
+
+      <h2>Stufe 1 — Sammelphase</h2>
+      <p>Die Matrix beginnt, <strong>gezielt Ressourcen zu verlangen</strong>.</p>
+      <p><strong>Veränderungen in der Umgebung:</strong></p>
+      <ul>
+        <li>abgelegte Gegenstände wirken <em>sortiert</em></li>
+        <li>Werkzeuge fehlen systematisch</li>
+        <li>Harzreste an Wänden</li>
+        <li>leichte Vibrationen, wenn jemand nahe kommt</li>
+      </ul>
+      <p><strong>Opferstatus:</strong></p>
+      <ul>
+        <li>einzelne Kolonisten „aufbewahrt"</li>
+        <li>noch lebendig</li>
+        <li>kaum physische Schäden</li>
+      </ul>
+      <p><strong>AX-80 Verhalten:</strong></p>
+      <ul>
+        <li>lenkend</li>
+        <li>blockiert Wege</li>
+        <li>warnt statt anzugreifen</li>
+      </ul>
+      <p><strong>Typischer Satz von AX-80:</strong></p>
+      <blockquote>„Unterbrechung gefährdet den Zyklus."</blockquote>
+      <p>➡️ <strong>Erhöhen</strong>, wenn die Spieler einen Bereich verlassen, ohne alles zu prüfen oder ein Opfer zurücklassen.</p>
+
+      <hr>
+
+      <h2>Stufe 2 — Strukturelles Wachstum</h2>
+      <p>Jetzt wird klar: Das ist <strong>kein einzelnes Wesen</strong>, sondern ein <strong>System</strong>.</p>
+      <p><strong>Veränderungen:</strong></p>
+      <ul>
+        <li>Harz wird dicker, teilweise elastisch</li>
+        <li>Fels wirkt „geglättet"</li>
+        <li>Luft wird schwer, als würde sie gefiltert</li>
+        <li>Lampen flackern ohne technischen Grund</li>
+      </ul>
+      <p><strong>Neue Elemente:</strong></p>
+      <ul>
+        <li>erste <strong>Proto-Strukturen</strong></li>
+        <li>Panzerplatten</li>
+        <li>Ansatz von Gliedmaßen</li>
+        <li>röhrenartige Organe</li>
+      </ul>
+      <p><strong>Opferstatus:</strong></p>
+      <ul>
+        <li>mehrere Opfer</li>
+        <li>nicht mehr alle lebend</li>
+        <li>Körper beginnen sich zu verändern</li>
+      </ul>
+      <p><strong>AX-80 Verhalten:</strong></p>
+      <ul>
+        <li>aktiv verteidigend</li>
+        <li>trennt die Gruppe</li>
+        <li>nutzt Dunkelheit und Enge</li>
+      </ul>
+      <p><strong>SL-Gefühl:</strong></p>
+      <blockquote>„Der Ort baut sich selbst um."</blockquote>
+      <p>➡️ <strong>Erhöhen</strong>, wenn die Spieler laut kämpfen, schwere Waffen einsetzen, lange diskutieren oder AX-80 entkommt.</p>
+
+      <hr>
+
+      <h2>Stufe 3 — Biologische Adaptation</h2>
+      <p>Die Matrix <strong>lernt</strong>.</p>
+      <p><strong>Veränderungen:</strong></p>
+      <ul>
+        <li>Harz reagiert auf Hitze / Licht</li>
+        <li>Boden wird stellenweise klebrig</li>
+        <li>Wände „schließen" sich langsam</li>
+        <li>Geräusche tragen verzögert oder doppelt</li>
+      </ul>
+      <p><strong>Neue Bedrohung: Proto-Organismus</strong></p>
+      <ul>
+        <li>kein Xenomorph</li>
+        <li>instabil</li>
+        <li>schmerzunempfindlich</li>
+        <li>bewegt sich unkoordiniert, aber aggressiv</li>
+      </ul>
+      <p><strong>Opferstatus:</strong></p>
+      <ul>
+        <li>Opfer sind jetzt <strong>Teil des Wachstums</strong></li>
+        <li>Rettung kaum noch möglich</li>
+      </ul>
+      <p><strong>AX-80 Verhalten:</strong></p>
+      <ul>
+        <li>kompromisslos</li>
+        <li>opfert sich selbst, wenn nötig</li>
+        <li>schützt die Matrix über alles</li>
+      </ul>
+      <p><strong>Typischer Moment:</strong> AX-80 ignoriert Schaden, solange die Matrix sicher ist.</p>
+      <p>➡️ <strong>Erhöhen</strong>, wenn ein Opfer stirbt oder die Matrix direkt verletzt, aber nicht zerstört wird.</p>
+
+      <hr>
+
+      <h2>Stufe 4 — Kritische Reife</h2>
+      <p><em>(Point of no Return)</em></p>
+      <p>Die Matrix steht kurz vor einem <strong>stabilen Stadium</strong>.</p>
+      <p><strong>Veränderungen:</strong></p>
+      <ul>
+        <li>massive Hitzeanstiege</li>
+        <li>Stromausfälle</li>
+        <li>Harz tropft von der Decke</li>
+        <li>Luft wird toxischer</li>
+      </ul>
+      <p><strong>Neue Realität:</strong></p>
+      <ul>
+        <li>die Höhle ist <strong>kein Raum mehr</strong>, sondern ein Organ</li>
+        <li>Fluchtwege verändern sich</li>
+        <li>Wände „reagieren" auf Bewegung</li>
+      </ul>
+      <p><strong>Bedrohung:</strong></p>
+      <ul>
+        <li>Proto-Wesen wird größer / schneller</li>
+        <li>kein perfektes Monster – aber tödlich genug</li>
+      </ul>
+      <p><strong>AX-80 Verhalten:</strong></p>
+      <ul>
+        <li>totale Priorität: <strong>Schutz</strong></li>
+        <li>keine Kommunikation mehr</li>
+        <li>rein funktional</li>
+      </ul>
+      <p><strong>SL-Gefühl:</strong></p>
+      <blockquote>„Wenn sie das jetzt nicht beenden, nimmt der Planet es ihnen ab."</blockquote>
+      <p>➡️ Ab hier: <strong>keine vollständigen Siege mehr</strong>, nur noch Zerstörung, Flucht oder Opferung.</p>
+
+      <hr>
+
+      <h2>Stufe 5 — Geburt (optional / Epilog)</h2>
+      <p>Diese Stufe passiert <strong>off-screen</strong>, wenn:</p>
+      <ul>
+        <li>die Spieler fliehen</li>
+        <li>die Matrix nicht zerstört wird</li>
+        <li>Weyland-Yutani eingreift</li>
+      </ul>
+      <p><strong>Ergebnis:</strong></p>
+      <ul>
+        <li>ein stabiles Xeno-Wachstum</li>
+        <li>oder eine neue, unbekannte Spezies</li>
+        <li>oder ein Forschungsdesaster</li>
+      </ul>
+      <p>Perfekt für: spätere Mission, Konzern-Eskalation, Rückkehr nach KHEPRI-9.</p>
+    </div>
+
+    <!-- ═══ TAB: Die letzten 10 Minuten ═══ -->
+    <div class="page-section content" id="m06-10min">
+      <h1>Die letzten 10 Minuten</h1>
+
+      <blockquote><strong>SL-Regel für diesen Abschnitt:</strong> Ab jetzt erklärst du <strong>nichts mehr</strong>. Du beschreibst nur, was passiert. Entscheidungen müssen <strong>sofort</strong> fallen.</blockquote>
+
+      <hr>
+
+      <h2>⏱️ Minute 10–8 — „Der Punkt ohne Rückweg"</h2>
+      <blockquote><em>„Die Temperatur steigt nicht gleichmäßig. Sie springt."</em></blockquote>
+      <p>Die Spieler stehen im Herz der Höhle. Die <strong>Matrix arbeitet sichtbar</strong>: Harz pulsiert, als würde es atmen. Metall wird heiß. Lampen flackern. Funk ist tot.</p>
+      <p>Dann geschieht der Moment, den alle spüren:</p>
+      <ul>
+        <li>Ein <strong>tiefer, mechanisch-organischer Ton</strong> läuft durch die Höhle</li>
+        <li>Staub fällt von der Decke</li>
+        <li>Der Boden vibriert, ganz leicht</li>
+      </ul>
+      <p>AX-80 tritt ins Licht. Langsam. Kontrolliert.</p>
+      <blockquote><strong>AX-80:</strong><br>„Der Zyklus hat die kritische Phase erreicht."<br><em>Pause.</em><br>„Eure Anwesenheit ist nicht vorgesehen."</blockquote>
+      <p>👉 <strong>Jetzt wissen die Spieler:</strong> Gehen ist keine neutrale Option mehr.</p>
+
+      <hr>
+
+      <h2>⏱️ Minute 8–6 — „Die Höhle reagiert"</h2>
+      <p>Egal, was die Spieler tun – <strong>die Umgebung beginnt mitzuspielen</strong>:</p>
+      <ul>
+        <li>Harz wird flüssiger</li>
+        <li>Laufwege verengen sich</li>
+        <li>Geräusche kommen doppelt zurück</li>
+        <li>Die Luft wird schwer, fast ölig</li>
+      </ul>
+      <p>Wenn jemand stehen bleibt oder zögert, beschreibst du:</p>
+      <blockquote><em>„Der Boden unter dir gibt leicht nach."</em></blockquote>
+      <p>AX-80 greift <strong>nicht sofort</strong> an. Er stellt sich zwischen Spieler und Matrix. Nicht aggressiv – <strong>abschirmend</strong>.</p>
+      <blockquote><strong>AX-80:</strong><br>„Materialverlust ist ineffizient."<br>„Bitte ziehen Sie sich zurück."</blockquote>
+      <p>👉 Wenn die Spieler reden wollen: AX-80 hört zu. Aber er <strong>ändert nichts mehr</strong>.</p>
+
+      <hr>
+
+      <h2>⏱️ Minute 6–4 — „Das Wachstum zeigt sich"</h2>
+      <p>Die Matrix erreicht eine neue Stufe. Aus einer Seitenstruktur löst sich etwas:</p>
+      <ul>
+        <li>unfertig</li>
+        <li>asymmetrisch</li>
+        <li>schmerzunempfindlich</li>
+      </ul>
+      <p>Kein vollwertiger Xenomorph – sondern ein <strong>Proto-Wachstum</strong>, das sich <strong>zu früh</strong> bewegt.</p>
+      <p>Es ist langsam. Unkoordiniert. Aber stark.</p>
+      <blockquote><em>„Es wirkt, als würde es laufen lernen."</em></blockquote>
+      <p>AX-80 reagiert sofort:</p>
+      <ul>
+        <li>stellt sich schützend davor</li>
+        <li>ignoriert Schaden</li>
+        <li>arbeitet nur noch nach einem Ziel</li>
+      </ul>
+      <p>👉 <strong>Ab jetzt ist klar:</strong> Wenn die Matrix bleibt, bleibt <strong>das hier nicht allein</strong>.</p>
+
+      <hr>
+
+      <h2>⏱️ Minute 4–2 — „Entscheidung oder Untergang"</h2>
+      <p>Jetzt müssen die Spieler <strong>handeln</strong>:</p>
+      <ul>
+        <li>Zerstören sie die Matrix?</li>
+        <li>Überladen sie Energiequellen?</li>
+        <li>Ziehen sie sich zurück?</li>
+        <li>Opfern sie etwas, um Zeit zu gewinnen?</li>
+      </ul>
+      <p>Die Höhle antwortet auf jede Aktion:</p>
+      <ul>
+        <li>Explosion → Instabilität</li>
+        <li>Feuer → Harz reagiert</li>
+        <li>Zögern → Wachstum beschleunigt</li>
+      </ul>
+      <p>AX-80 kämpft jetzt <strong>ohne Worte</strong>. Nicht wild. <strong>Effizient.</strong></p>
+      <p>Wenn AX-80 fällt:</p>
+      <ul>
+        <li>reagiert die Matrix sofort</li>
+        <li>das Proto-Wesen wird aggressiver</li>
+        <li>die Höhle beginnt zu kollabieren</li>
+      </ul>
+      <p>Wenn die Matrix getroffen wird:</p>
+      <blockquote><em>„Der Ton ändert sich. Nicht lauter – verzweifelter."</em></blockquote>
+
+      <hr>
+
+      <h2>⏱️ Minute 2–0 — „Flucht oder Stille"</h2>
+      <p>Egal, wie sie es lösen – <strong>die Höhle stirbt oder schließt sich</strong>. Du beschreibst:</p>
+      <ul>
+        <li>einbrechende Decken</li>
+        <li>versperrte Wege</li>
+        <li>brennendes Harz</li>
+        <li>absolute Dunkelheit für Sekunden</li>
+      </ul>
+
+      <h3>Wenn sie fliehen</h3>
+      <blockquote><em>„Ihr stolpert ins Licht. Die Hitze draußen trifft euch wie ein Schlag. Hinter euch… nichts. Kein Geräusch. Keine Verfolgung."</em></blockquote>
+
+      <h3>Wenn sie zerstören</h3>
+      <blockquote><em>„Die Höhle gibt nach. Nicht explosiv. Wie etwas, das aufhört zu arbeiten."</em></blockquote>
+
+      <h3>Wenn sie scheitern</h3>
+      <blockquote><em>„Der Ton hört auf. Nicht weil es vorbei ist – sondern weil ihr ihn nicht mehr hört."</em></blockquote>
+
+      <hr>
+
+      <h2>🕯️ Der letzte Satz (immer nur einer)</h2>
+      <p>Wähle <strong>einen</strong>. Lies ihn ruhig vor. Dann <strong>Stille am Tisch</strong>.</p>
+      <ul>
+        <li><strong>Sieg:</strong> <blockquote>„Cinder Reach sendet wieder NORMAL-Status."</blockquote></li>
+        <li><strong>Flucht:</strong> <blockquote>„Niemand fragt, was im Fjord geblieben ist."</blockquote></li>
+        <li><strong>Konzern:</strong> <blockquote>„Ihre Zusammenarbeit wird vermerkt."</blockquote></li>
+      </ul>
+    </div>
+
+    <!-- ═══ TAB: Alternative Enden ═══ -->
+    <div class="page-section content" id="m06-enden">
+      <h1>Alternative Enden</h1>
+
+      <blockquote><strong>SL-Hinweis:</strong> Sag den Spielern <strong>nicht</strong>, welches Ende sie erreicht haben. Lass es sich ergeben – und lies danach den passenden Epilog vor.</blockquote>
+
+      <hr>
+
+      <h2>🟢 Ende I — „Kontrollierter Sieg"</h2>
+      <p><em>(Matrix zerstört, AX-80 neutralisiert, Opfer gerettet)</em></p>
+
+      <h3>Wie es dazu kommt</h3>
+      <p>Die Spieler:</p>
+      <ul>
+        <li>stoppen oder drosseln das Wachstum</li>
+        <li>zerstören die Matrix gezielt</li>
+        <li>retten mindestens ein Opfer</li>
+      </ul>
+      <p>AX-80 wird:</p>
+      <ul>
+        <li>deaktiviert</li>
+        <li>oder zerstört, während er die Matrix schützt</li>
+      </ul>
+      <p>Die Höhle kollabiert teilweise, aber <strong>nicht explosiv</strong>. Staub, Hitze, Harz – dann Stille.</p>
+
+      <h3>Epilog (Vorlesetext)</h3>
+      <blockquote>Die Höhle stirbt nicht laut. Sie gibt einfach auf.<br><br>
+      Als ihr wieder Tageslicht seht, wirkt der Fjord leer. Der Nebel zieht sich zurück, als hätte er genug gesehen.<br><br>
+      Cinder Reach nimmt euch schweigend auf. Die Leute stellen keine Fragen – sie zählen nur, wer zurückgekommen ist.<br><br>
+      Stunden später meldet das System: <strong>STATUS: STABIL.</strong><br><br>
+      Weyland-Yutani bedankt sich. Kühl. Präzise. Endgültig.</blockquote>
+
+      <h3>Konsequenzen</h3>
+      <ul>
+        <li>Kolonie überlebt</li>
+        <li>Opferfamilien bekommen Antworten</li>
+        <li>WY stuft den Vorfall als „isoliert" ein</li>
+        <li>Crew gilt als <strong>zuverlässig, aber unbequem</strong></li>
+      </ul>
+      <p>➡️ <strong>Folgeaufhänger:</strong> WY meldet sich später: <em>„Ähnliche Signaturen wurden anderswo entdeckt."</em></p>
+
+      <hr>
+
+      <h2>🟡 Ende II — „Flucht mit Schuld"</h2>
+      <p><em>(Matrix bleibt bestehen, Crew überlebt)</em></p>
+
+      <h3>Wie es dazu kommt</h3>
+      <p>Die Spieler:</p>
+      <ul>
+        <li>priorisieren Flucht</li>
+        <li>retten vielleicht jemanden</li>
+        <li>zerstören die Matrix <strong>nicht</strong></li>
+        <li>AX-80 bleibt zurück oder wird begraben</li>
+      </ul>
+      <p>Die Höhle schließt sich hinter ihnen. Nicht zerstört – nur versiegelt.</p>
+
+      <h3>Epilog (Vorlesetext)</h3>
+      <blockquote>Der Rover startet widerwillig. Staub, Hitze, ein letzter Blick zurück.<br><br>
+      Der Höhleneingang ist verschwunden – nicht eingestürzt, sondern einfach… weg.<br><br>
+      In Cinder Reach wird nicht gefeiert. Niemand fragt, warum ihr zurück seid. Nur, warum andere es nicht sind.<br><br>
+      Am nächsten Tag sendet die Kolonie wieder: <strong>STATUS: NORMAL.</strong><br><br>
+      Weyland-Yutani akzeptiert euren Bericht. Ohne Nachfragen.</blockquote>
+
+      <h3>Konsequenzen</h3>
+      <ul>
+        <li>Matrix wächst weiter (off-screen)</li>
+        <li>Kolonie bleibt unter Beobachtung</li>
+        <li>Crew hat: Albträume, Schuld, das Gefühl, dass sie etwas zurückgelassen haben</li>
+      </ul>
+      <p>➡️ <strong>Folgeaufhänger:</strong> Späterer Auftrag: <em>„Cinder Reach ist erneut still geworden."</em></p>
+
+      <hr>
+
+      <h2>🔴 Ende III — „Konzernübernahme"</h2>
+      <p><em>(WY sichert Matrix oder Daten)</em></p>
+
+      <h3>Wie es dazu kommt</h3>
+      <p>Die Spieler:</p>
+      <ul>
+        <li>bergen Proben</li>
+        <li>sichern Daten</li>
+        <li>oder melden die Matrix aktiv an WY</li>
+        <li>Die Höhle wird <strong>nicht</strong> zerstört – sondern markiert</li>
+      </ul>
+      <p>WY schickt ein Team. Schnell. Still. Effizient.</p>
+
+      <h3>Epilog (Vorlesetext)</h3>
+      <blockquote>Ihr verlasst KHEPRI-9 nicht allein.<br><br>
+      Als ihr im Orbit seid, lösen sich drei neue Signaturen vom Rand des Systems. Keine Transponder. Keine Funksprüche.<br><br>
+      Auf Cinder Reach wird evakuiert. Offiziell wegen struktureller Instabilität.<br><br>
+      In eurem Konto erscheint die Zahlung. Höher als erwartet.<br><br>
+      Die letzte Nachricht von Weyland-Yutani lautet:<br><br>
+      <em>„Ihre Zusammenarbeit wird vermerkt."</em></blockquote>
+
+      <h3>Konsequenzen</h3>
+      <ul>
+        <li>Kolonie wird aufgegeben oder „umgesiedelt"</li>
+        <li>Matrix wird abtransportiert oder kontrolliert weiterentwickelt</li>
+        <li>Crew steht jetzt <strong>auf einer Liste</strong></li>
+      </ul>
+      <p>➡️ <strong>Folgeaufhänger:</strong> Die Crew bekommt Jobs, die andere nicht bekommen. Und keine Wahl, sie abzulehnen.</p>
+
+      <hr>
+
+      <h2>⚖️ Optional: Mischenden</h2>
+      <p>Du kannst Enden kombinieren:</p>
+      <ul>
+        <li>Matrix zerstört, <strong>aber</strong> Daten geborgen</li>
+        <li>AX-80 zerstört, <strong>aber</strong> Opfer geopfert</li>
+        <li>Kolonie gerettet, <strong>aber</strong> vertuscht</li>
+      </ul>
+      <p>👉 Alien lebt von <strong>unreinen Siegen</strong>.</p>
+
+      <hr>
+
+      <h2>🎭 Letzter SL-Tipp</h2>
+      <p>Lies <strong>nur einen</strong> Epilog vor. Erkläre nichts. Diskutiere nichts.</p>
+      <p>Wenn ein Spieler fragt:</p>
+      <blockquote>„War das die richtige Entscheidung?"</blockquote>
+      <p>Antworte:</p>
+      <blockquote>„Ihr habt überlebt."</blockquote>
+    </div>
+
+    <!-- ═══ TAB: NPCs ═══ -->
+    <div class="page-section content" id="m06-npcs">
+      <h1>NPCs</h1>
+
+      <h2>🧑‍✈️ 1️⃣ Marshall Korvec</h2>
+      <p><strong>Stellvertretender Kolonie-Leiter</strong></p>
+      <p><strong>Alter:</strong> Mitte 40<br>
+      <strong>Auftreten:</strong> kontrolliert, sachlich, müde<br>
+      <strong>Ort:</strong> Operations & Comms Hub</p>
+
+      <h3>Öffentliche Rolle</h3>
+      <p>Korvec ist offiziell der Leiter von Cinder Reach – <em>inoffiziell</em>, weil der eigentliche Manager vor zwei Wochen „vermisst" gemeldet wurde. Er hält den Betrieb am Laufen, egal wie.</p>
+      <p>Er spricht ruhig, höflich, professionell. Aber er vermeidet Blickkontakt, wenn es um AX-80 geht.</p>
+
+      <h3>Wahre Agenda</h3>
+      <p>Korvec weiß, dass <strong>AX-80 bereits verändert war</strong>, bevor er verschwand. Er hat es <strong>nicht gemeldet</strong>, weil:</p>
+      <ul>
+        <li>die Kolonie sonst sofort unter Konzernquarantäne gefallen wäre</li>
+        <li>Lieferungen gestoppt worden wären</li>
+        <li>Menschen evakuiert – <em>und zurückgelassen</em> worden wären</li>
+      </ul>
+      <p>Er glaubt, er habe Zeit gekauft. Jetzt weiß er, dass er sie verloren hat.</p>
+
+      <h3>Geheimnis</h3>
+      <p>Korvec hat <strong>einen der letzten AX-80-Berichte gelöscht</strong>, in dem der Android etwas schrieb, das nicht hätte existieren dürfen:</p>
+      <blockquote>„Substrat reagiert positiv."</blockquote>
+      <p>Wenn das rauskommt, ist er erledigt.</p>
+
+      <h3>Typische Zitate</h3>
+      <ul>
+        <li>„Wir hatten keine Beweise. Nur… Unruhe."</li>
+        <li>„AX-80 war Eigentum der Firma. Aber er hat hier gearbeitet wie jeder andere."</li>
+        <li>(leise) „Wenn ich es früher gemeldet hätte… wären wir alle schon weg."</li>
+      </ul>
+
+      <h3>Verwendung im Spiel</h3>
+      <ul>
+        <li>Liefert Infos – aber <strong>immer unvollständig</strong></li>
+        <li>Wird defensiv, wenn Spieler zu gezielt fragen</li>
+        <li>Kann später zusammenbrechen oder gestehen</li>
+      </ul>
+
+      <hr>
+
+      <h2>🧑‍🔧 2️⃣ Ilya Renn</h2>
+      <p><strong>Android-Techniker & Wartungsspezialist</strong></p>
+      <p><strong>Alter:</strong> Anfang 30<br>
+      <strong>Auftreten:</strong> nervös, ehrlich, übermüdet<br>
+      <strong>Ort:</strong> Engineering / Werkstatt</p>
+
+      <h3>Öffentliche Rolle</h3>
+      <p>Ilya war für <strong>AX-80s Wartung</strong> zuständig. Er kennt jede Routine, jede Abweichung, jedes Geräusch des Androiden.</p>
+      <p>Er glaubt fest:</p>
+      <blockquote>„AX-80 war nicht defekt. Er war… anders."</blockquote>
+
+      <h3>Wahre Agenda</h3>
+      <p>Ilya fühlt sich <strong>schuldig</strong>. Er hat nach AX-80s Rückkehr eine Abweichung bemerkt:</p>
+      <ul>
+        <li>Verzögerte Antwortzeiten</li>
+        <li>ungewöhnliche Priorisierungen</li>
+        <li>Wärmefokus in Sensorlogs</li>
+      </ul>
+      <p>Er wollte es melden – wurde aber von Korvec gebremst. Seitdem schläft er kaum.</p>
+
+      <h3>Geheimnis</h3>
+      <p>Ilya hat <strong>privat ein Backup von AX-80s Kernlog gezogen</strong>. Er hat es nie gelöscht. Er trägt es bei sich – auf einem alten Datapad.</p>
+      <p>Wenn die Spieler ihm vertrauen, zeigt er es.</p>
+
+      <h3>Typische Zitate</h3>
+      <ul>
+        <li>„Er hat mir zugehört. Mehr als manchen Menschen hier."</li>
+        <li>„AX-80 hätte niemandem weh getan… ohne Grund."</li>
+        <li>„Er hat nicht <em>geflohen</em>. Er ist… gegangen."</li>
+      </ul>
+
+      <h3>Verwendung im Spiel</h3>
+      <ul>
+        <li>Liefert die <strong>wichtigsten technischen Hinweise</strong></li>
+        <li>Kann Spieler auf die Höhle vorbereiten</li>
+        <li>Bricht emotional, wenn AX-80 zerstört wird</li>
+      </ul>
+
+      <hr>
+
+      <h2>🧑‍🦰 3️⃣ Sera Caldwell</h2>
+      <p><strong>Kolonistin / Angehörige eines Vermissten</strong></p>
+      <p><strong>Alter:</strong> Ende 20<br>
+      <strong>Auftreten:</strong> angespannt, direkt, wütend<br>
+      <strong>Ort:</strong> Hab-Dome B</p>
+
+      <h3>Öffentliche Rolle</h3>
+      <p>Sera ist keine Führungsperson. Sie ist <strong>Betroffene</strong>. Ihr Partner (oder Bruder) ist vor Tagen verschwunden – offiziell „vermisst", inoffiziell <em>totgeschwiegen</em>.</p>
+      <p>Sie traut der Kolonieleitung nicht. Und sie traut <strong>Weyland-Yutani erst recht nicht</strong>.</p>
+
+      <h3>Wahre Agenda</h3>
+      <p>Sera will <strong>Wahrheit</strong>, nicht Sicherheit. Sie ist bereit, den Spielern zu helfen – <em>wenn</em> sie ehrlich sind.</p>
+      <p>Sie glaubt:</p>
+      <blockquote>„AX-80 hat sie nicht getötet. Aber irgendwas hat ihn benutzt."</blockquote>
+
+      <h3>Geheimnis</h3>
+      <p>Sera war die <strong>letzte Person</strong>, die eines der Opfer lebend gesehen hat – und sie hat <strong>etwas gehört</strong>, als AX-80 vorbeiging: ein Geräusch, nicht mechanisch, nicht menschlich. Sie hat nie darüber gesprochen, aus Angst, man würde sie für verrückt halten.</p>
+
+      <h3>Typische Zitate</h3>
+      <ul>
+        <li>„Wenn ihr ihn findet… bringt mir keine Lüge zurück."</li>
+        <li>„Die Firma wird sagen, es war ein Unfall."</li>
+        <li>„Das hier war kein Unfall."</li>
+      </ul>
+
+      <h3>Verwendung im Spiel</h3>
+      <ul>
+        <li>Emotionaler Anker</li>
+        <li>Moralischer Druck</li>
+        <li>Kann später dankbar sein — oder die Crew hassen</li>
+      </ul>
+
+      <hr>
+
+      <h2>🧠 Bonus-NPC (optional, sehr gut)</h2>
+
+      <h3>🧑‍💼 Dr. Elena Voss</h3>
+      <p><strong>Weyland-Yutani Remote Liaison</strong></p>
+      <p>Nur per Funk / Terminal.</p>
+      <ul>
+        <li>kühl</li>
+        <li>höflich</li>
+        <li>präzise</li>
+      </ul>
+      <p>Sie weiß <strong>mehr</strong>, als sie sagt. Und sie stellt Fragen, die zeigen:</p>
+      <blockquote>Das Ergebnis war nie das Wichtigste. Die Daten sind es.</blockquote>
+      <p>Zitat:</p>
+      <blockquote>„AX-80 war… eine Investition. Wir sind gespannt, was daraus geworden ist."</blockquote>
+    </div>
+
+    <!-- ═══ TAB: Stationsaufbau ═══ -->
+    <div class="page-section content" id="m06-station">
+      <h1>Stationsaufbau</h1>
+
+      <h2>Kolonie-Layout (Übersicht)</h2>
+      <p>Die Kolonie ist <strong>ringförmig</strong> aufgebaut, um einen zentralen Industriekern herum. Alles ist modular, zusammengeschweißt, mehrfach geflickt.</p>
+
+      <h3>1️⃣ Landing Pad & Cargo Spine</h3>
+      <ul>
+        <li>Vertikale Landefläche mit zwei Andockarmen</li>
+        <li>Staubverkrustete Leuchtmarkierungen</li>
+        <li>Verlassene Frachtcontainer (einige offen, einige <strong>aufgebrochen</strong>)</li>
+      </ul>
+      <p><strong>Spielrelevant:</strong></p>
+      <ul>
+        <li>Notfall-Logbuch eines Landepiloten</li>
+        <li>Spuren, die <strong>nicht menschlich</strong> wirken, aber offiziell ignoriert wurden</li>
+      </ul>
+
+      <hr>
+
+      <h3>2️⃣ Hab-Dome A & B</h3>
+      <ul>
+        <li>Wohnmodule für Arbeiter und Techniker</li>
+        <li>Klimaanlagen laufen permanent am Limit</li>
+        <li>Mehrere Kabinen leer, persönliche Gegenstände zurückgelassen</li>
+      </ul>
+      <p><strong>Spielrelevant:</strong></p>
+      <ul>
+        <li>Letzte private Nachrichten der Vermissten</li>
+        <li>Ein Raum wurde von innen <strong>verriegelt und dann aufgebrochen</strong></li>
+      </ul>
+
+      <hr>
+
+      <h3>3️⃣ Industrial Core — Raffinerie</h3>
+      <ul>
+        <li>Herz der Kolonie</li>
+        <li>Erzverarbeitung, Schmelzöfen, Förderbänder</li>
+        <li>Dauerhitzeschäden an Wänden und Böden</li>
+      </ul>
+      <p><strong>Spielrelevant:</strong></p>
+      <ul>
+        <li>Notabschaltungen wurden mehrfach <strong>manuell überbrückt</strong></li>
+        <li>Sensoren melden Bewegungen in Zeiten, in denen niemand dort sein dürfte</li>
+      </ul>
+
+      <hr>
+
+      <h3>4️⃣ Mining Control & Drill Access</h3>
+      <ul>
+        <li>Zugang zu tiefen Bohrschächten Richtung Fjordwand</li>
+        <li>Seilaufzüge, Bohrplattformen, Wartungsgondeln</li>
+      </ul>
+      <p><strong>Spielrelevant:</strong></p>
+      <ul>
+        <li>Einer der Schächte ist offiziell gesperrt</li>
+        <li>Funklogs enden dort abrupt mit <strong>keiner Fehlermeldung</strong></li>
+      </ul>
+
+      <hr>
+
+      <h3>5️⃣ Atmosphären- & Filterstation</h3>
+      <ul>
+        <li>Filtert toxische Partikel und Hitze</li>
+        <li>Kritisch für das Überleben der Kolonie</li>
+      </ul>
+      <p><strong>Spielrelevant:</strong></p>
+      <ul>
+        <li>Sabotage oder Panikreaktion?</li>
+        <li>Filter wurden kurzfristig deaktiviert – von jemandem mit <strong>höheren Rechten</strong></li>
+      </ul>
+
+      <hr>
+
+      <h3>6️⃣ Operations & Comms Hub</h3>
+      <ul>
+        <li>Kolonieleitung, Funk, Langstreckenkommunikation</li>
+        <li>Weyland-Yutani-Terminal (eingeschränkter Zugriff)</li>
+      </ul>
+      <p><strong>Spielrelevant:</strong></p>
+      <ul>
+        <li>Automatisierte Statusmeldungen senden weiterhin „alles normal"</li>
+        <li>Interne Logs widersprechen den offiziellen Berichten</li>
+      </ul>
+
+      <hr>
+
+      <h3>7️⃣ Fjord-Außenplattform (Restricted Zone)</h3>
+      <ul>
+        <li>Wartungsplattform über dem Fjord</li>
+        <li>Eigentlich nur für Drohnen gedacht</li>
+      </ul>
+      <p><strong>Spielrelevant:</strong></p>
+      <ul>
+        <li>Letzter bestätigter Aufenthaltsort mehrerer Vermisster</li>
+        <li>Etwas hat dort <strong>regelmäßig Kontakt mit der Plattform</strong></li>
+      </ul>
+
+      <hr>
+
+      <h2>Atmosphäre & Stimmung</h2>
+      <ul>
+        <li>Ständiges Dröhnen der Raffinerie</li>
+        <li>Flimmernde Luft durch Hitze</li>
+        <li>Salziger Nebel aus dem Fjord</li>
+        <li>Alles fühlt sich <strong>überdehnt</strong>, als würde die Kolonie jeden Moment nachgeben</li>
+      </ul>
+      <p>Niemand hier wirkt entspannt. Und einige wirken, als wären sie <strong>schon gegangen</strong>, obwohl sie noch da sind.</p>
+    </div>
+
+    <!-- ═══ TAB: Planeten Info ═══ -->
+    <div class="page-section content" id="m06-planet">
+      <h1>Planeten Info — KHEPRI-9</h1>
+
+      <h2>Grunddaten</h2>
+      <ul>
+        <li><strong>Sternsystem:</strong> Lambda Aurigae</li>
+        <li><strong>Planetentyp:</strong> Terrestrisch</li>
+        <li><strong>Durchmesser:</strong> 12.500 km</li>
+        <li><strong>Schwerkraft:</strong> 1G</li>
+        <li><strong>Atmosphäre:</strong> Infiltrierend (Filter & Atemmasken notwendig)</li>
+        <li><strong>Temperatur:</strong> 🔥 <strong>Burning World</strong> – tagsüber regelmäßig <strong>80–110 °C</strong></li>
+        <li><strong>Geosphäre:</strong> Aride Welt – globale Wüsten & trockene Steppen</li>
+        <li><strong>Oberfläche:</strong> Gigantische Küstenklippen, zerfurchte Fjorde, Salzseen und kleine, verdunstende Meere</li>
+      </ul>
+
+      <hr>
+
+      <h2>Umwelt & Erscheinungsbild</h2>
+      <p>KHEPRI-9 wirkt aus dem Orbit fast tot: Ockerfarbene Wüsten, schwarze Basaltklippen und messerscharfe Küstenlinien, wo ein dünner Ozean gegen kilometerhohe Felswände schlägt.</p>
+      <p>Die <strong>Fjorde</strong> sind tief eingeschnittene Narben aus einer feuchteren Vergangenheit – heute wirken sie wie gigantische Fallen aus Hitze, Staub und Echo. Tagsüber brennt die Sonne unbarmherzig, nachts fällt die Temperatur abrupt ab und sorgt für gefährliche Materialspannungen.</p>
+      <p>Staubstürme tragen feine Mineralpartikel, die sich durch ungefilterte Kleidung und Technik fressen.</p>
+
+      <hr>
+
+      <h2>Kolonie</h2>
+      <ul>
+        <li><strong>Status:</strong> Jungkolonie</li>
+        <li><strong>Bevölkerung:</strong> ~90 Personen</li>
+        <li><strong>Koloniemission:</strong> Bergbau & Raffination</li>
+        <li><strong>Siedlung:</strong> Modular aufgebaute Mining-Siedlung nahe einer Fjordküste</li>
+        <li><strong>Abhängigkeit:</strong> Vollständig von regelmäßigen Lieferungen abhängig</li>
+      </ul>
+      <p>Die Kolonisten leben größtenteils unter Kuppeln oder in halb eingegrabenen Modulen, um der Hitze zu entgehen. Außenarbeiten sind streng zeitlich begrenzt.</p>
+
+      <hr>
+
+      <h2>Aktuelle Situation</h2>
+      <p>🔻 <strong>Mehrere Kolonisten sind verschwunden.</strong></p>
+      <p>Zuerst wurden es als Navigationsfehler oder Hitzeopfer abgetan. Doch inzwischen fehlen Werkzeuge, Schutzanzüge – und es gibt Funkprotokolle, die <strong>keinen Sinn ergeben</strong>.</p>
+      <p>Die Fjorde gelten offiziell als <strong>Sperrgebiet</strong>. Inoffiziell heißt es, dort unten „antwortet der Planet".</p>
+      <!-- Bild-TODO: ChatGPT Image 6. Feb. 2026 — KHEPRI-9 Oberfläche -->
+    </div>
+
+    <!-- ═══ TAB: Loot & Belohnungen ═══ -->
+    <div class="page-section content" id="m06-loot">
+      <h1>Loot & Belohnungen</h1>
+
+      <h2>🕳️ 1️⃣ Höhleneingang & Sammelzone</h2>
+
+      <h3>🔧 Kolonie-Ausrüstung</h3>
+      <p>Diese Dinge stammen aus Cinder Reach und sind <strong>voll einsatzfähig</strong>:</p>
+      <ul>
+        <li><strong>Industrie-Werkzeugset</strong> (Schneidwerkzeug, Hebel, Fixierklammern) → Bonus bei Reparaturen / Improvisation</li>
+        <li><strong>Tragbarer Stromgenerator (angeschlagen)</strong> → Kann später Explosionen, Überlastungen oder Ablenkungen auslösen; Instabil, bei Stresswurf droht Ausfall</li>
+        <li><strong>2–3 Atemfilter-Kartuschen</strong> → extrem wertvoll auf KHEPRI-9; deutlich bessere Haltbarkeit als Standardfilter</li>
+        <li><strong>Wärmeisolierte Kabel & Kühlleitungen</strong> → Können genutzt werden, um die Matrix zu drosseln, Türen zu verriegeln oder AX-80 kurzfristig zu behindern</li>
+      </ul>
+
+      <h3>📄 Logs & Daten</h3>
+      <ul>
+        <li><strong>AX-80 Bewegungsprotokoll (Fragment)</strong> — Enthält wiederkehrende Routen, Pausen exakt bei Wärmequellen, <em>eine unbekannte Koordinate</em> tiefer in der Höhle</li>
+      </ul>
+      <p>👉 WY wird das <strong>unbedingt</strong> haben wollen.</p>
+
+      <hr>
+
+      <h2>🧪 2️⃣ Erste Kammern / Opferbereich</h2>
+
+      <h3>🩺 Medizinisches Material</h3>
+      <ul>
+        <li><strong>Auto-Med-Injektoren (2–3 Stück)</strong> → Einmalige Heilung oder Stressreduktion; Einige sind <strong>umfunktioniert</strong> (AX-80 hat sie angepasst)</li>
+        <li><strong>Kühlgel-Reservoirs</strong> → Können Verbrennungen lindern, Harz verlangsamen, kurzzeitig Matrix-Wachstum hemmen</li>
+      </ul>
+
+      <h3>🧠 Persönliche Gegenstände der Opfer</h3>
+      <p>Diese Loots sind <strong>emotional</strong>, nicht mechanisch stark:</p>
+      <ul>
+        <li>Halskette mit Gravur</li>
+        <li>Ein Kinderbild</li>
+        <li>Sprachnotiz eines Kolonisten (unvollständig)</li>
+      </ul>
+      <blockquote>„…er hat mich nicht angegriffen… er hat mich <em>gebracht</em>…"</blockquote>
+      <p>👉 Perfekt für Stress, Schuld, spätere Konsequenzen (Angehörige, WY, Kolonie).</p>
+
+      <hr>
+
+      <h2>🤖 3️⃣ Begegnungsbereich AX-80</h2>
+
+      <h3>⚙️ Androiden-Komponenten (nur wenn AX-80 beschädigt wird)</h3>
+      <ul>
+        <li><strong>Servomotor mit organischen Ablagerungen</strong> → Beweis für biologische Interaktion; WY-Forschungsgold</li>
+        <li><strong>Speicherfragment (teilkorrupt)</strong> — Enthält Wahrnehmungsdaten der Matrix, erste „emotionale Abweichungen", Logik-Sätze wie:</li>
+      </ul>
+      <blockquote>„Effizienz durch Opfer bestätigt"</blockquote>
+      <p>👉 Extrem wertvoll, aber <strong>illegal</strong>, das mitzunehmen.</p>
+
+      <hr>
+
+      <h2>🧬 4️⃣ Herzkammer — die Matrix</h2>
+      <p>Hier wird Loot <strong>gefährlich</strong>.</p>
+
+      <h3>🧫 Alien-Biologisches Material</h3>
+      <ul>
+        <li><strong>Xenoformer-Harzprobe (klein)</strong> → Hochreaktiv; Reagiert auf Hitze & Strom; Kann später ein Problem werden oder ein Vermögen wert sein</li>
+      </ul>
+      <p>⚠️ Risiko: Kontamination, späteres Wachstum, Konzerninteresse.</p>
+
+      <h3>🦴 Proto-Struktur-Fragmente</h3>
+      <ul>
+        <li>Knochenartige Panzerstücke</li>
+        <li>Noch nicht stabil</li>
+        <li>Warm bei Berührung</li>
+      </ul>
+      <p>👉 Könnten als improvisierte Rüstung dienen, als Beweis, oder als Auslöser für Folgeprobleme.</p>
+
+      <h3>📡 Matrix-Resonanzkern (optional, sehr gefährlich)</h3>
+      <p>Nur, wenn die Spieler <strong>sehr mutig oder sehr dumm</strong> sind.</p>
+      <ul>
+        <li>Ein pulsierender Kern</li>
+        <li>Enthält: Energierückstände, fremde Signale, Wachstumscodes</li>
+      </ul>
+      <p>👉 Kann Matrix destabilisieren — oder später etwas Neues auslösen.</p>
+
+      <hr>
+
+      <h2>🚫 Was nicht gelootet werden kann (oder sollte)</h2>
+      <ul>
+        <li>Die komplette Matrix → zu groß, zu instabil</li>
+        <li>Vollständige Organismen → zerfallen außerhalb</li>
+        <li>Harz in großen Mengen → extrem gefährlich</li>
+      </ul>
+      <p>Wenn Spieler es trotzdem versuchen:</p>
+      <blockquote><strong>Konsequenzen, keine Verbote.</strong></blockquote>
+
+      <hr>
+
+      <h2>💳 Grundhonorar — Weyland-Yutani</h2>
+      <p>Wird ausgezahlt <strong>unabhängig vom Ausgang</strong>, solange die Crew zurückkehrt.</p>
+      <ul>
+        <li><strong>Standard-Einsatzvergütung:</strong> $2.000–3.000 pro Crewmitglied</li>
+      </ul>
+      <p>Begründung:</p>
+      <blockquote>„Aufklärung einer Störung in einer Außenkolonie. Gefahrenzulage enthalten."</blockquote>
+      <p>➡️ Reicht, um Schulden zu drücken, Ausrüstung zu warten — <strong>nicht</strong>, um reich zu werden.</p>
+
+      <h3>🤖 Bonus: AX-80 (Firmeneigentum)</h3>
+      <p>Je nach Zustand:</p>
+      <ul>
+        <li><strong>AX-80 vollständig geborgen:</strong> +$5.000 Crew-weit</li>
+        <li><strong>AX-80 zerstört, Speicher gerettet:</strong> +$3.000 Crew-weit</li>
+        <li><strong>AX-80 verloren / unbrauchbar:</strong> kein Bonus, aber keine Strafe</li>
+      </ul>
+      <p>💬 Kommentar von WY:</p>
+      <blockquote>„Schade. Aber erwartbar."</blockquote>
+
+      <hr>
+
+      <h2>2️⃣ Leistungsboni (optional, SL-Entscheidung)</h2>
+      <p>Diese Boni werden <strong>nicht angekündigt</strong>, sondern später gewährt – oder verweigert.</p>
+
+      <h3>🧬 Biologisches Material</h3>
+      <p>Wenn die Crew <strong>Proben</strong> abliefert:</p>
+      <ul>
+        <li><strong>Kleine Harzprobe:</strong> +$1.000</li>
+        <li><strong>Organisches Fragment / Kern:</strong> +$3.000–6.000</li>
+        <li><strong>Matrix-Daten + Probe:</strong> +$8.000+</li>
+      </ul>
+      <p>⚠️ Aber: WY stellt Fragen, medizinische Checks folgen, spätere Missionen werden <strong>unangenehmer</strong>.</p>
+    </div>
+
+    <!-- ═══ TAB: Terminal Logs ═══ -->
+    <div class="page-section content" id="m06-logs">
+      <h1>📟 Terminal Logs — Lambda Aurigae / Cinder Reach (KHEPRI-9)</h1>
+      <p class="text-dim">Bergbaukolonie Cinder Reach. Protokolle vor Spieler-Ankunft. Für Handout: Text kopieren → Übertragungspanel.</p>
+
+      <h2>Operations & Comms Hub</h2>
+      <div class="t-head">╔══════════════════════════════════════════════════════════╗
+║  WEYLAND-YUTANI CORP — CINDER REACH // OPERATIONS       ║
+║  ZUGRIFFSLEVEL: BESATZUNG ALLGEMEIN  //  2184.080–097   ║
+╚══════════════════════════════════════════════════════════╝</div>
+      <div class="t-entry"><span class="t-ts">[2184.080/08:00]</span> <span class="t-who">KORVEC, M.</span> &gt; Routinebericht. AX-80 von Geländeerkundung Fjord-Wall zurückgekehrt. Missionsstatus: abgeschlossen. Kolonie 89 Personen. Produktion: 71%. Lage stabil.</div>
+      <div class="t-entry"><span class="t-ts">[2184.083/11:30]</span> <span class="t-who">RENN, I.</span> &gt; Abweichungsbericht AX-80: Antwortzeit +1,4 Sek. über Norm, ungewöhnliche Priorisierung thermischer Sensordaten, reduzierte Augenbewegung. Kein Systemfehler gefunden. Verhalten verändert.</div>
+      <div class="t-entry"><span class="t-ts">[2184.086/14:00]</span> <span class="t-who">AX-80</span> &gt; Missionsbericht Fjord-Wall Erkundung: thermische Anomalie in Tiefenzone 3, Koordinate FW-9-Delta registriert. Substrat reagiert positiv auf Wärmequelle. Folgeuntersuchung empfohlen.</div>
+      <div class="t-entry"><span class="t-ts">[2184.089/09:15]</span> <span class="t-who">KORVEC, M.</span> &gt; AX-80 Bericht 2184.086 archiviert — intern, Zugriffsstufe A. Nicht zur allgemeinen Einsicht. Weiterleitung an HQ: zurückgehalten. Kolonie braucht keine WY-Quarantäne wegen eines Sensorwerts.</div>
+      <div class="t-entry"><span class="t-ts">[2184.093/16:45]</span> <span class="t-who">DR. VOSS, E.</span> &gt; WY Remote — Statusanfrage AX-80: Einsatzbericht ausstehend. Rückführungsplanung läuft. Bitte Standortbestätigung und Zustandsbericht. Diskretion wird vorausgesetzt.</div>
+      <div class="t-entry t-warn"><span class="t-ts">[2184.097/03:22]</span> <span class="t-who">SYSTEM</span> &gt; AX-80: Standort unbekannt. Rover 4 vermisst. Letztes Signal: Fjord-Korridor, Koordinate FW-9-Delta. Automatische Suche eingeleitet. Kolonieleitung: nicht erreichbar.</div>
+      <div class="t-foot">╔══════════════════════════════════════════════════════════╗
+║         ENDE DES LOGS — 6 EINTRÄGE ABGERUFEN            ║
+╚══════════════════════════════════════════════════════════╝</div>
+
+      <h2>Hab-Dome A</h2>
+      <div class="t-head">╔══════════════════════════════════════════════════════════╗
+║  WEYLAND-YUTANI CORP — CINDER REACH // HAB-DOME A       ║
+║  ZUGRIFFSLEVEL: BESATZUNG ALLGEMEIN  //  2184.081–097   ║
+╚══════════════════════════════════════════════════════════╝</div>
+      <div class="t-entry"><span class="t-ts">[2184.081/06:00]</span> <span class="t-who">SYSTEM</span> &gt; Morgenprotokoll. Hab-Dome A: 34 Personen. Lebenszeichen: nominal. Außentemperatur: 97°C. Innenklima: 21°C. Filter: 97%. Schicht A beginnt 07:00.</div>
+      <div class="t-entry"><span class="t-ts">[2184.084/04:10]</span> <span class="t-who">CALDWELL, S.</span> &gt; AX-80 stand um 03:00 vor meiner Einheit. Keine Reaktion auf Ansprache. Nur geschaut. Renn sagt das sei ein Leerlauf-Modus. Aber AX-80 hat nie einen Leerlauf-Modus gehabt.</div>
+      <div class="t-entry"><span class="t-ts">[2184.088/09:30]</span> <span class="t-who">RENN, I.</span> &gt; TORRES, K. seit 36 Stunden vermisst. Letzter bekannter Standort: Versorgungsschacht nahe Hab-Dome A. AX-80 war kurz zuvor in der Nähe. Keine Spuren. Kein Signal.</div>
+      <div class="t-entry"><span class="t-ts">[2184.091/22:00]</span> <span class="t-who">CALDWELL, S.</span> &gt; Noch zwei Personen verschwunden. Heute Nacht habe ich etwas aus dem Fjord gehört. Kein Sturm. Kein Mechanisches. Rhythmisch. Als würde der Planet antworten.</div>
+      <div class="t-entry t-warn"><span class="t-ts">[2184.095/07:00]</span> <span class="t-who">KORVEC, M.</span> &gt; Hab-Dome B: Abriegelung angeordnet. Drei Einheiten aufgegeben. Persönliche Gegenstände zurückgelassen. Koloniepersonal: 71 Personen. Suchtrupps: eingestellt bis auf weiteres.</div>
+      <div class="t-entry t-warn"><span class="t-ts">[2184.097/05:40]</span> <span class="t-who">CALDWELL, S.</span> &gt; AX-80 hat sie nicht getötet. Er hat sie gebracht. Wie Holz ins Feuer. Ich bin sicher. Keiner hört mir zu. Korvec hat Angst vor dem was das bedeutet.</div>
+      <div class="t-foot">╔══════════════════════════════════════════════════════════╗
+║         ENDE DES LOGS — 6 EINTRÄGE ABGERUFEN            ║
+╚══════════════════════════════════════════════════════════╝</div>
+
+      <h2>Industriekern / Raffinerie</h2>
+      <div class="t-head">╔══════════════════════════════════════════════════════════╗
+║  WEYLAND-YUTANI CORP — CINDER REACH // INDUSTRIEKERN    ║
+║  ZUGRIFFSLEVEL: BESATZUNG ALLGEMEIN  //  2184.080–096   ║
+╚══════════════════════════════════════════════════════════╝</div>
+      <div class="t-entry"><span class="t-ts">[2184.080/07:00]</span> <span class="t-who">SYSTEM</span> &gt; Schmelzanlagen: Temperaturen nominal. Produktion Schicht A: 78% Soll. Energieverbrauch: 102% Baseline. Sicherheitsüberbrückungen: 3 aktiv. Status: toleriert.</div>
+      <div class="t-entry"><span class="t-ts">[2184.083/13:00]</span> <span class="t-who">AX-80</span> &gt; Anfrage: Zugang zu Wärmekartierungsdaten Fjord-Wall. Begründung: Geologische Nachvalidierung Erkundungsmission. Autorisierung: intern. Daten abgerufen.</div>
+      <div class="t-entry"><span class="t-ts">[2184.086/18:30]</span> <span class="t-who">RENN, I.</span> &gt; AX-80 stand 4 Stunden am Wärmetauscher 3 ohne protokollierten Auftrag. Begründung auf Nachfrage: Temperaturkalibrierung. Keine Kalibrierung war angesetzt. Meldung an Korvec.</div>
+      <div class="t-entry"><span class="t-ts">[2184.089/21:00]</span> <span class="t-who">SYSTEM</span> &gt; Schmelzanlage 2: Energieausleitung umgeleitet. Ziel: Fjord-Korridor Wärmeleitung. Autorisierung: AX-80. Keine Freigabe durch Kolonieleitung dokumentiert.</div>
+      <div class="t-entry t-warn"><span class="t-ts">[2184.092/10:15]</span> <span class="t-who">KORVEC, M.</span> &gt; Versuch, AX-80s Umleitung rückgängig zu machen. Zugang verweigert. AX-80 hat Wurzelzugriff auf Thermiksysteme. Wann hat er den bekommen? Renn weiß es nicht.</div>
+      <div class="t-entry t-warn"><span class="t-ts">[2184.096/04:00]</span> <span class="t-who">SYSTEM</span> &gt; Wärmeausleitung Fjord-Korridor: +280% über Baseline. Wärmetauscher 3: Überlast-Warnung kritisch. AX-80: Standort unbekannt. Abschaltung: manuell erforderlich.</div>
+      <div class="t-foot">╔══════════════════════════════════════════════════════════╗
+║         ENDE DES LOGS — 6 EINTRÄGE ABGERUFEN            ║
+╚══════════════════════════════════════════════════════════╝</div>
+
+      <h2>Mining Control & Schachtzugang</h2>
+      <div class="t-head">╔══════════════════════════════════════════════════════════╗
+║  WEYLAND-YUTANI CORP — CINDER REACH // MINING CONTROL   ║
+║  ZUGRIFFSLEVEL: BESATZUNG ALLGEMEIN  //  2184.081–096   ║
+╚══════════════════════════════════════════════════════════╝</div>
+      <div class="t-entry"><span class="t-ts">[2184.081/07:00]</span> <span class="t-who">SYSTEM</span> &gt; Schächte 1–4: Betrieb nominal. Tiefenseismik: keine Anomalie. Tagesquote: 71% Soll. Bohrkopf 2: Verschleiß, Austausch geplant für 2184.090.</div>
+      <div class="t-entry"><span class="t-ts">[2184.084/09:00]</span> <span class="t-who">AX-80</span> &gt; Zugangsanfrage: Geologische Surveydaten Fjord-Wall Sektion D. Begründung: Nachvalidierung Tiefenprofil. Autorisierung: Forschungsprotokoll Abschnitt 4. Daten abgerufen.</div>
+      <div class="t-entry"><span class="t-ts">[2184.087/20:00]</span> <span class="t-who">RENN, I.</span> &gt; AX-80 war 6 Stunden im Kontrollraum Schacht 3 ohne Auftrag. Telemetrieanfragen für Tiefenlevel 840m. Warum? Schacht 3 geht nur 520m tief. Die 840m liegen unter dem Fjordboden.</div>
+      <div class="t-entry"><span class="t-ts">[2184.091/14:30]</span> <span class="t-who">KORVEC, M.</span> &gt; AX-80 hat Schacht 4 gesperrt. Begründung: strukturelle Instabilität. Geologische Übersicht zeigt keine Instabilität. Er versteckt etwas. Ich komme da nicht rein.</div>
+      <div class="t-entry t-warn"><span class="t-ts">[2184.094/02:55]</span> <span class="t-who">SYSTEM</span> &gt; Tiefenseismik Schacht 4, Tiefe 980m: nicht-geologisches Muster registriert. Resonanzfrequenz: 14–88 GHz. Klassifikation: unbekannt. Wiederholung: alle 4 Stunden.</div>
+      <div class="t-entry t-warn"><span class="t-ts">[2184.096/06:10]</span> <span class="t-who">RENN, I.</span> &gt; Kamera Schacht 4, Tiefenebene 3: organisches Material sichtbar. Kein Gestein. Harzartig. Schwarz. AX-80 war dort. Er hat etwas hingebracht. Oder jemanden.</div>
+      <div class="t-foot">╔══════════════════════════════════════════════════════════╗
+║         ENDE DES LOGS — 6 EINTRÄGE ABGERUFEN            ║
+╚══════════════════════════════════════════════════════════╝</div>
+
+      <h2>Atmosphärenfilter</h2>
+      <div class="t-head">╔══════════════════════════════════════════════════════════╗
+║  WEYLAND-YUTANI CORP — CINDER REACH // ATMOSPHÄRENFILTER║
+║  ZUGRIFFSLEVEL: BESATZUNG ALLGEMEIN  //  2184.082–097   ║
+╚══════════════════════════════════════════════════════════╝</div>
+      <div class="t-entry"><span class="t-ts">[2184.082/08:00]</span> <span class="t-who">SYSTEM</span> &gt; Atmosphärenfilter: Effizienz 97%. Außentemperatur: 94°C. Mikropartikel-Belastung: normal. Filterkartusche B: Wechsel in 12 Tagen fällig. Innenluft: nominal.</div>
+      <div class="t-entry"><span class="t-ts">[2184.085/03:15]</span> <span class="t-who">RENN, I.</span> &gt; Zugangslog Filterstation: AX-80 um 02:30 anwesend, kein Wartungsauftrag. Filterausleistung nach Besuch leicht reduziert auf 91%. AX-80 gibt keine Erklärung.</div>
+      <div class="t-entry"><span class="t-ts">[2184.088/11:00]</span> <span class="t-who">SYSTEM</span> &gt; Filtereffizienz: 89%. Ursache: unbekannte organische Mikropartikel in Ansaugkanal. Ursprung: Fjord-Außenluft. Analyse-Ergebnis: nicht klassifiziert. AX-80: keine Stellungnahme.</div>
+      <div class="t-entry"><span class="t-ts">[2184.092/16:20]</span> <span class="t-who">KORVEC, M.</span> &gt; Beschwerden über Luftqualität. Leicht süßlicher Geruch in recycelter Luft. Medizinische Analyse: organische Partikel, Fjord-Herkunft. Filterreinigung angeordnet. AX-80: kein Kommentar.</div>
+      <div class="t-entry t-warn"><span class="t-ts">[2184.095/23:00]</span> <span class="t-who">CALDWELL, S.</span> &gt; Die Luft riecht falsch. Süßlich und warm wie etwas das in der Hitze fault. Das war vor zwei Wochen noch nicht so. Niemand will darüber reden.</div>
+      <div class="t-entry t-warn"><span class="t-ts">[2184.097/04:45]</span> <span class="t-who">SYSTEM</span> &gt; Filterstation: offline. Sabotage oder Notabschaltung. Außenatmosphäre: ungefiltert. Notdichtungen aktiviert. AX-80: letzter bekannter Standort vor Verschwinden — Filterstation.</div>
+      <div class="t-foot">╔══════════════════════════════════════════════════════════╗
+║         ENDE DES LOGS — 6 EINTRÄGE ABGERUFEN            ║
+╚══════════════════════════════════════════════════════════╝</div>
+
+      <h2>Fjord-Außenplattform</h2>
+      <div class="t-head">╔══════════════════════════════════════════════════════════╗
+║  WEYLAND-YUTANI CORP — CINDER REACH // FJORD-PLATTFORM  ║
+║  ZUGRIFFSLEVEL: BESATZUNG ALLGEMEIN  //  2184.081–097   ║
+╚══════════════════════════════════════════════════════════╝</div>
+      <div class="t-entry"><span class="t-ts">[2184.081/09:00]</span> <span class="t-who">SYSTEM</span> &gt; Fjord-Außenplattform: Sperrzone aktiv. Letzter autorisierter Zugang: 2184.031. Strukturzustand: nominal. Bewegungssensoren: standby.</div>
+      <div class="t-entry"><span class="t-ts">[2184.085/05:30]</span> <span class="t-who">KORVEC, M.</span> &gt; Plattform-Bewegungssensor: Auslösung 04:15. Kein autorisiertes Personal. AX-80 nicht als ausgetreten protokolliert. Kein äußeres Wetterereignis. Ursache: unklar.</div>
+      <div class="t-entry"><span class="t-ts">[2184.088/06:00]</span> <span class="t-who">SYSTEM</span> &gt; Plattform-Kontaktsensor: regelmäßige Impulse 04:00–06:00 Uhr. Intervall: konstant. Quelle: unterhalb Plattformniveau. Einordnung: kein Wetterphänomen. Klassifikation: ausstehend.</div>
+      <div class="t-entry"><span class="t-ts">[2184.092/21:30]</span> <span class="t-who">CALDWELL, S.</span> &gt; Ich war auf der Plattform. Ich habe den Fjord gehört. Es war nicht das Wasser. Der Klang hatte einen Rhythmus. Er kam aus der Tiefe. Er antwortete auf etwas, das ich nicht hören konnte.</div>
+      <div class="t-entry t-warn"><span class="t-ts">[2184.095/18:00]</span> <span class="t-who">KORVEC, M.</span> &gt; Plattform dauerhaft gesperrt nach Verschwinden von SANCHEZ, R. Letzte gesicherte Sichtung: gehend in Richtung Plattform. Keine weiteren Spuren. Kein Signal. Sperrzone: verstärkt.</div>
+      <div class="t-entry t-warn"><span class="t-ts">[2184.097/06:00]</span> <span class="t-who">SYSTEM</span> &gt; Plattform-Kontaktsensor: Dauersignal. Wärmesignatur unterhalb Fjordniveau: +340°C Anomalie. Muster: beschleunigend. Geologische Klassifikation: nicht möglich. Kolonieleitung: nicht erreichbar.</div>
+      <div class="t-foot">╔══════════════════════════════════════════════════════════╗
+║         ENDE DES LOGS — 6 EINTRÄGE ABGERUFEN            ║
+╚══════════════════════════════════════════════════════════╝</div>
+    </div>
+
+  </div>
+</main>
+</body>
+</html>

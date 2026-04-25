@@ -17,12 +17,12 @@ Ergebnis: Statt 14.500 Zeilen pro Anfrage nur noch einige hundert bis tausend.
 ### Pattern A — Neue Szene in bestehender Mission schreiben
 
 ```
-Datei offen: missions/03-jeremiah-vi.html
+Datei offen: missions/schwerere-missionen/03-jeremiah-vi.html
 Referenz:    docs/design-system.md (wenn neuer Komponententyp)
 ```
 
 Prompt-Beispiel:
-> Füge in `missions/03-jeremiah-vi.html` unter `#m03-scene-ingress` eine neue
+> Füge in `missions/schwerere-missionen/03-jeremiah-vi.html` unter `#m03-scene-ingress` eine neue
 > Szene ein: Mae stolpert auf ein altes Logbuch mit Bezug zu HX-8821.
 > Nutze das übliche `<section>`-Muster.
 
@@ -47,7 +47,7 @@ Quelle:      die Sektion aus alten Campaign-Book
 Prompt-Beispiel:
 > Extrahiere die Mission "Atlas Station" aus
 > `C:\Users\Daniel\Desktop\Alien\Claude Code\_source\RecallAuthority_CampaignBook.html`
-> (ab Zeile 2503) und migriere sie nach `missions/04-atlas-station.html`.
+> (ab Zeile 2503) und migriere sie nach `missions/schwerere-missionen/04-atlas-station.html`.
 > Nutze `07-tiamat-iv.html` als Template für Struktur und Styles.
 
 ## Checkliste pro Mission (wenn sie "fertig" sein soll)

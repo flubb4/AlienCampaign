@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Würfel Dürfel — Spielregeln</title>
+<link rel="stylesheet" href="../assets/css/design-system.css">
+</head>
+<body>
+<script src="../assets/js/shell.js"></script>
+<script>renderShell({base: "../", active: "wuerfel-duerfel"});</script>
+
+<main id="main">
+  <div id="page">
+
+    <header class="page-header">
+      <div class="breadcrumb"><a href="../index.html">Hub</a> › Welt & Orte › <span>Würfel Dürfel</span></div>
+      <h1 class="page-title">🎲 <em>Würfel Dürfel</em> — Spielregeln</h1>
+      <div class="page-meta">
+        <span class="tag green">SPIELE</span>
+      </div>
+    </header>
+
+    <div class="content">
+      <h2>Würfel Dürfel — Das Spiel der Raumfahrer</h2>
+      <blockquote>In der stickigen Kantine flackert eine alte Neonröhre. Zwischen Kaffeebechern und Werkzeugteilen sitzt eine kleine Gruppe Arbeiter. In der Mitte: ein verkratzter Metalltisch. Jemand kippt eine Handvoll Würfel darauf. „Na los… Würfel Dürfel. Eins gegen eins."</blockquote>
+
+      <h2>Grundregeln</h2>
+      <p>Zwei Spieler treten gegeneinander an. Jeder erhält <strong>10 W6</strong>. Ziel: <strong>Alle Würfel des Gegners gewinnen</strong>.</p>
+
+      <h2>Standard-Version (Schnell & Simpel)</h2>
+      <ul>
+        <li>Beide Spieler würfeln <strong>alle ihre Würfel</strong></li>
+        <li>Jeder zählt seine <strong>6en</strong></li>
+        <li>Wer mehr 6en hat, gewinnt die Runde</li>
+        <li>Der Sieger erhält die <strong>Differenz</strong> an Würfeln vom Verlierer</li>
+      </ul>
+      <p><strong>Beispiel:</strong> Spieler A: 4 Sechsen / Spieler B: 2 Sechsen → A gewinnt 2 Würfel von B.</p>
+      <p>Weiter, bis jemand alle Würfel besitzt.</p>
+
+      <h2>Strategische Version — „Riskanter Einsatz"</h2>
+      <p>Vor jeder Runde legen beide Spieler <strong>heimlich</strong> fest, wie viele Würfel sie einsetzen (mindestens 1, maximal alle). Die restlichen bleiben zurück.</p>
+      <h3>Ablauf</h3>
+      <ul>
+        <li>Beide sagen verdeckt an, wie viele Würfel sie setzen</li>
+        <li>Beide würfeln <strong>nur diese Würfel</strong></li>
+        <li>Gezählt werden wieder die <strong>6en</strong></li>
+        <li>Der Sieger erhält: Differenz × eingesetzte Würfel</li>
+      </ul>
+      <p><strong>Beispiel:</strong> A setzt 8, B setzt 3. A würfelt 3 Sechsen, B würfelt 1 Sechs. Differenz = 2. → A gewinnt 2 Würfel von B.</p>
+
+      <h2>Sonderregel — „All-In"</h2>
+      <p>Wenn jemand <strong>alle verbleibenden Würfel</strong> setzt:</p>
+      <ul>
+        <li>Gewinnt er → erhält <strong>+1 Bonuswürfel</strong> (vom „Pott" der Runde)</li>
+        <li>Verliert er → verliert <strong>1 Extra-Würfel</strong></li>
+      </ul>
+
+      <h2>Optionale Alien-Flair-Regel — „Gezinkte Würfel"</h2>
+      <p>In zwielichtigen Bars darf ein Spieler <strong>einmal pro Spiel</strong> einen Würfel neu werfen. Wird er erwischt (SL entscheidet): Der Gegner bekommt sofort 2 Würfel.</p>
+
+      <h3>Skills & Attribute im Spiel</h3>
+      <table>
+        <thead><tr><th>Aktion</th><th>Würfelwurf</th><th>Effekt</th></tr></thead>
+        <tbody>
+          <tr><td>Spielen / Gewinnen</td><td>Wits</td><td>Bonus-Würfel bei bestimmten Würfen</td></tr>
+          <tr><td>Betrug verbergen</td><td>Manipulation</td><td>Niemand bemerkt gezinkte Würfel</td></tr>
+          <tr><td>Betrug aufdecken</td><td>Observation</td><td>Erkennt den Schwindel</td></tr>
+          <tr><td>Einschüchtern</td><td>Empathy</td><td>Gegner setzt weniger Würfel</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</main>
+</body>
+</html>
