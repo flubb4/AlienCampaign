@@ -59,12 +59,25 @@
 
       <h2>Missionsflow</h2>
       <ul>
-        <li>Docking (Stressaufbau)</li>
-        <li>Erkundung (Hinweise + Horror)</li>
-        <li>Wahrheit (AX-44 + Logs)</li>
-        <li>Eskalation (Bedrohung aktiv) — <button onclick="showSection('m04-eskalation')" style="background:transparent;border:1px solid var(--green-dim);color:var(--green);cursor:pointer;font-family:'Share Tech Mono',monospace;font-size:10px;padding:2px 8px;letter-spacing:1px;">⚡ Eskalations-Stufen</button></li>
-        <li>Finale: Reaktor-Entscheidung → <button onclick="showSection('m04-moduld')" style="background:transparent;border:1px solid var(--green-dim);color:var(--green);cursor:pointer;font-family:'Share Tech Mono',monospace;font-size:10px;padding:2px 8px;letter-spacing:1px;">Modul D</button></li>
-        <li>Flucht (Zeitdruck) — <button onclick="showSection('m04-flucht')" style="background:transparent;border:1px solid var(--danger);color:var(--danger);cursor:pointer;font-family:'Share Tech Mono',monospace;font-size:10px;padding:2px 8px;letter-spacing:1px;">🚨 Flucht-Sequenz</button></li>
+        <li><strong>AKT I — Ankunft</strong> <span class="text-dim">(Modul A · Eskalations-Stufe 0)</span>
+          <ul>
+            <li>Docking (Stressaufbau)</li>
+            <li>Erkundung Modul A — Schleuse, Frachtlager, erste Hinweise auf überstürzte Flucht</li>
+          </ul>
+        </li>
+        <li><strong>AKT II — Die Wahrheit sickert ein</strong> <span class="text-dim">(Modul B → Modul C · Stufe 1–2)</span>
+          <ul>
+            <li>Beginn: Spieler betreten <strong>Modul B</strong> (Crew-Habitat) — erste organische Spuren, erste AX-44-Erscheinung</li>
+            <li>Vertiefung: <strong>Modul C</strong> (Forschungsbereich) — Biolab-Video, AX-44 stellt Fragen, Wahrheit über den Organismus</li>
+          </ul>
+        </li>
+        <li><strong>AKT III — Jagd &amp; Finale</strong> <span class="text-dim">(Modul D · Stufe 3)</span>
+          <ul>
+            <li>Beginn: Spieler betreten <strong>Modul D</strong> oder ignorieren AX-44 endgültig — Eskalations-Stufe 3 aktiv → <button onclick="showSection('m04-eskalation')" style="background:transparent;border:1px solid var(--green-dim);color:var(--green);cursor:pointer;font-family:'Share Tech Mono',monospace;font-size:10px;padding:2px 8px;letter-spacing:1px;">⚡ Eskalations-Stufen</button></li>
+            <li>Finale: Reaktor-Entscheidung in D4 → <button onclick="showSection('m04-moduld')" style="background:transparent;border:1px solid var(--green-dim);color:var(--green);cursor:pointer;font-family:'Share Tech Mono',monospace;font-size:10px;padding:2px 8px;letter-spacing:1px;">Modul D</button></li>
+            <li>Flucht (echter Timer ab Reaktor-Eingriff) → <button onclick="showSection('m04-flucht')" style="background:transparent;border:1px solid var(--danger);color:var(--danger);cursor:pointer;font-family:'Share Tech Mono',monospace;font-size:10px;padding:2px 8px;letter-spacing:1px;">🚨 Flucht-Sequenz</button></li>
+          </ul>
+        </li>
       </ul>
 
       <h2>Stations-Layout</h2>
@@ -175,7 +188,8 @@
 
       <h2>Missionsverlauf</h2>
 
-      <h3>AKT I — Ankunft</h3>
+      <h3>AKT I — Ankunft <span style="font-weight:normal;color:var(--text-dim);font-size:14px;">(Modul A · Eskalations-Stufe 0)</span></h3>
+      <p class="text-dim"><strong>Beginn:</strong> Andocken an Atlas Station. Endet, sobald die Spieler Modul B betreten.</p>
       <blockquote>Das Schiff koppelt an. Atmosphärendruck stabil. Temperatur: 14°C. Lebenszeichen: Keine. Die Luft riecht metallisch. Feucht. Fast süßlich. Die Station wirkt nicht verlassen — sie wirkt verlassen worden.</blockquote>
       <ul>
         <li>Schleimreste an Wänden, hastig gepackte Taschen, abgerissene Kabel</li>
@@ -183,7 +197,8 @@
         <li>Die Außenhülle wirkt stellenweise nicht gebaut — sondern <strong>gewachsen</strong></li>
       </ul>
 
-      <h3>AKT II — Die Wahrheit sickert ein</h3>
+      <h3>AKT II — Die Wahrheit sickert ein <span style="font-weight:normal;color:var(--text-dim);font-size:14px;">(Modul B → Modul C · Stufe 1–2)</span></h3>
+      <p class="text-dim"><strong>Beginn:</strong> Spieler betreten Modul B (Crew-Habitat) — erste organische Spuren, AX-44 erscheint kurz. <strong>Vertiefung in Modul C</strong> (Biolab, Probenarchiv, AX-44 Serverraum).</p>
       <ul>
         <li>Es wächst in Metall und verbindet sich mit Technik</li>
         <li>Es zieht aktiv Energie vom Reaktor</li>
@@ -193,7 +208,8 @@
       <h3>Erste Begegnung mit AX-44</h3>
       <blockquote>Korridor. Halbdunkel. Teile von ihm sind überwachsen — organische Strukturen an Schultern und Rücken, wie Kabel. Seine Stimme: „Bitte… kehren Sie um." Dann verschwindet er.</blockquote>
 
-      <h3>AKT III — Jagd</h3>
+      <h3>AKT III — Jagd <span style="font-weight:normal;color:var(--text-dim);font-size:14px;">(Modul D · Eskalations-Stufe 3)</span></h3>
+      <p class="text-dim"><strong>Beginn:</strong> Spieler betreten Modul D <em>oder</em> ignorieren / passieren AX-44 endgültig — Eskalations-Stufe 3 wird aktiv. Endet mit Reaktor-Entscheidung in D4 und Flucht-Sequenz.</p>
       <p>Atlas wird feindlich. Systeme versagen. Türen verriegeln. Der Organismus reagiert auf Eingriffe.</p>
       <ul>
         <li>Blockiert Wege durch passives Wachstum</li>
