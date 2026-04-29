@@ -9,10 +9,15 @@
 <body>
 <script src="../../assets/js/shell.js"></script>
 <script>renderShell({base: "../../", active: "m03", subNav: [
-  {id: "m03-mission-pre", label: "Mission (Vor 07.11.2184)"},
-  {id: "m03-rapture",     label: "Systeminfo & Rapture Protocol"},
-  {id: "m03-nach",        label: "Nach 24.01.2185 — Rückkehr"},
-  {id: "m03-logs",        label: "📟 Terminal Logs"},
+  {id: "m03-mission",      label: "Übersicht & Mission"},
+  {id: "m03-einleitung",   label: "Einleitung"},
+  {id: "m03-mission-full", label: "Mission"},
+  {id: "m03-ablock",       label: "A Block — Administration"},
+  {id: "m03-bblock",       label: "B Block — Quarters"},
+  {id: "m03-cblock",       label: "C Block — Medbay"},
+  {id: "m03-dblock",       label: "D Block — Engineering"},
+  {id: "m03-eblock",       label: "E Block — Refinery"},
+  {id: "m03-logs",         label: "📟 Terminal Logs"},
 ]});</script>
 
 <main id="main">
@@ -28,54 +33,150 @@
       </div>
     </header>
 
-    <!-- ═══ TAB: Mission (Vor 07.11.2184) ═══ -->
-    <div class="page-section content" id="m03-mission-pre">
+    <!-- ═══ TAB: Übersicht & Mission ═══ -->
+    <div class="page-section content" id="m03-mission">
       <h1>Mission: Jeremiah VI</h1>
-      <p><strong>System:</strong> 289 G. Hydrae | <strong>Target-Android:</strong> AX-62 „Boyd"<br>
-      <strong>Black Veil Daten:</strong> Anpassung — <em>„Jede Begegnung steigert Effizienz."</em></p>
+      <p><strong>System:</strong> 289 G. Hydrae | <strong>Target-Android:</strong> AX-62 „Boyd" (Hyperdyne 120-A-2)<br>
+      <strong>Black Veil Daten:</strong> Nesttemperatur-Optimum — <em>„Jede Begegnung steigert Effizienz."</em><br>
+      <strong>In-Fiction Zeitpunkt:</strong> ca. 26.01.2185 — zwei Tage nach dem gescheiterten WY-Commando-Einsatz</p>
       <div style="margin-top:10px;"><a href="https://flubb4.github.io/AlienMap/BlackVeil_DataFragments.html#fragment-4" target="_blank" style="display:inline-block;background:rgba(77,255,145,0.08);border:1px solid #1a6635;color:#4dff91;font-family:ShareTechMono,monospace;font-size:10px;letter-spacing:2px;padding:6px 14px;text-decoration:none;">→ FRAGMENT 04 FREIGEBEN</a></div>
 
-      <h2>Ankunft (Vorlesetext)</h2>
-      <blockquote>Als euer Schiff aus dem Überlicht fällt, erscheint Jeremiah VI vor euch – eine graue, kantige Bergbaustation, die aussieht, als hätte sie bessere Tage gesehen. Die Navigationslichter funktionieren. Die Docks sind frei. Nichts ist beschädigt. Und doch wirkt alles… müde.</blockquote>
+      <div class="info-box secret">
+        <div class="info-box-header">🔒 GM Only — Kernprinzip</div>
+        <p>Keine reine Jagd-Mission. Es ist eine <em>Extraktion</em>. Boyd ist das Ziel, Boyd ist die Belohnung, Boyd ist die beste Infoquelle. Der Xeno ist eine Drohung — kein Showdown. Wer schlau ist, überlebt. Wer gierig wird, stirbt.</p>
+      </div>
 
-      <h2>Die Situation</h2>
-      <p>Jeremiah VI ist eine WY-Minenstation für Promethium-Förderung. Förderquote sinkt seit Jahren. Ersatzteile kommen verspätet. Die Führungsetage hat die Station längst abgeschrieben – sie läuft nur noch, weil es billiger ist als Abbauen. Die Crew weiß das. Man merkt es.</p>
-
-      <h2>Boyd — Der Barkeeper</h2>
-      <p>Boyd ist ruhig, höflich, effizient, immer zur Stelle. Er kennt jeden Namen, jedes Lieblingsgetränk, jede kleine Fehde auf der Station. Wenn Arbeiter zu viel trinken, schenkt er langsamer aus.</p>
+      <h2>Missionsflow</h2>
       <ul>
-        <li>Offiziell: Barkeeper</li>
-        <li>Inoffiziell: Stimmungsregulator, Seelsorger, stiller Beobachter</li>
-      </ul>
-      <p>Dass er ein Android ist, wissen die meisten. Aber niemand stört sich daran. Viele trauen ihm mehr als der Stationsleitung.</p>
-
-      <h2>Der Auftrag</h2>
-      <blockquote><em>„Android Boyd ist für eine routinemäßige Rückholung vorgesehen. Ersatz wird gestellt. Keine weiteren Maßnahmen notwendig."</em></blockquote>
-      <p>Aber auf Jeremiah VI ist nichts simpel: Teile der Crew sind abhängig von Boyd. Einige vermuten, WY wolle die Station schließen. Boyd selbst zeigt keinen Widerstand, stellt aber Fragen: <em>„Wird jemand meinen Platz übernehmen? Soll ich mich verabschieden? Ist das die Entscheidung der Stationsleitung… oder nicht?"</em></p>
-
-      <h2>Zwischenfälle</h2>
-      <ul>
-        <li>Eine Schlägerei in der Bar</li>
-        <li>Ein absichtlich verzögerter Frachttransfer</li>
-        <li>Ein Stationsmitarbeiter, der Boyd „nur kurz sprechen" will</li>
+        <li><strong>AKT I — Ankunft</strong> <span class="text-dim">(Außen · Dockingbucht)</span> — Kein Funkkontakt, Leichen im Vakuum, WY-Commandos aufgerieben</li>
+        <li><strong>AKT II — Das Dock</strong> <span class="text-dim">(Dockingbucht)</span> — Vier tote Commandos, Ausrüstung, Spieler-Hooks: Scott / Mae / Gustav</li>
+        <li><strong>AKT III — Die Station</strong> <span class="text-dim">(Erkundung aller Blöcke)</span> — Geräusche, Spuren, Atmosphäre. Kein Xeno-Kontakt, nur +Stress</li>
+        <li><strong>AKT IV — Die Bar</strong> <span class="text-dim">(B Block — Recreation &amp; Bar)</span> — Boyd erwartet sie. Hauptinfo-Szene</li>
+        <li><strong>AKT V — Die Medbay</strong> <span class="text-dim">(C Block — Surgery)</span> — Vega in Stasis. Entscheidung: Zurücklassen / Mitnehmen / Verbrennen</li>
+        <li><strong>AKT VI — Der Glimpse</strong> <span class="text-dim">(E Block — Reactor Control, Wartungsfenster)</span> — Erster Xeno-Kontakt. +2 Stress, kein Panic Roll</li>
+        <li><strong>AKT VII — Die Kammer</strong> <span class="text-dim">(unter E Block)</span> — Boyd warnt. Zugang gesperrt. Spieler-Entscheidung</li>
+        <li><strong>AKT VIII — Abflug</strong> — Boyd schaut zurück. Die Station sendet weiter ihren Code</li>
       </ul>
 
-      <h2>Abschluss</h2>
-      <blockquote>Egal wie die Spieler entscheiden: Boyd verlässt die Station ruhig. Als sich die Dockingklammern lösen, bleibt die Station unverändert zurück. Noch.</blockquote>
+      <h2>Stationslayout</h2>
+      <table>
+        <thead><tr><th>Block</th><th>Funktion</th><th>Key-Räume</th></tr></thead>
+        <tbody>
+          <tr><td><strong>A Block</strong></td><td>Administration</td><td>Lobby, Operations, 2× Office, Restrooms, Storage</td></tr>
+          <tr><td><strong>B Block</strong></td><td>Quarters</td><td>Recreation &amp; Bar (Boyd), Cantina, Kitchen, Freezer, 2× Crew Unit, Manager Quarters, Storage, Showers</td></tr>
+          <tr><td><strong>C Block</strong></td><td>Medbay</td><td>Surgery (Vega in Stasis), Laboratory (Isabella-Hook), Office</td></tr>
+          <tr><td><strong>D Block</strong></td><td>Engineering</td><td>Garage, 2× Workshop, Storage</td></tr>
+          <tr><td><strong>E Block</strong></td><td>Refinery</td><td>Ore Deposit, Office, Control Room, Refinery Core, Refinery Control, Reactor Control, Reactor Core (Xeno-Nest)</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Key NPCs</h2>
+      <table>
+        <thead><tr><th>Name</th><th>Rolle</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td>AX-62 „Boyd"</td><td>Android-Barkeeper (Hyperdyne 120-A-2)</td><td>Aktiv. In der Bar. Kooperativ.</td></tr>
+          <tr><td>Pvt. Marcus Vega</td><td>6. WY-Commando, Facehugger-Opfer</td><td>In Stasis (C Block — Surgery)</td></tr>
+          <tr><td>Amber Whittaker</td><td>Überlebenden-Anführerin (One-Shot)</td><td>Unbekannt / höchstwahrscheinlich tot</td></tr>
+          <tr><td>Malcolm Hurd</td><td>Kultisten-Anführer, Shift Leader</td><td>Tot — irgendwo in der Mine</td></tr>
+          <tr><td>Dr. Chidubem</td><td>Stationsarzt, erster Chestburster-Träger</td><td>Tot</td></tr>
+          <tr><td>Dr. Y. Nakamura</td><td>Nachfolge-Ärztin</td><td>Vermisst seit 2184.309</td></tr>
+          <tr><td>Sgt. Hale</td><td>WY-Commando, 5. Mann</td><td>Tot im Dock (Selbstmord)</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Der Xenomorph</h2>
+      <div class="info-box danger">
+        <div class="info-box-header">Statblock — Drone (verwundet, besonders aggressiv)</div>
+        <p style="font-family:'Share Tech Mono',monospace;font-size:12px;color:var(--green);line-height:2;">
+        Speed: 3 | Health: 3/16 (verwundet, heilt)<br>
+        Skills: Mobility 10, Observation 10<br>
+        Armor: 2 (1 vs Feuer)<br>
+        Acid Splash: 8<br>
+        <strong>Besonderheit:</strong> Silent Assassin — alle Observation-Würfe zum Entdecken: –2 Würfel<br>
+        <strong>Aktuell:</strong> Im Reaktorkern. Heilt. Jagt nicht aktiv. Beobachtet.
+        </p>
+      </div>
+      <p>Der Xenomorph jagt nicht sofort. Er beobachtet zunächst. Erst nach Lärm, Provokation oder Eindringen in sein Nest greift er aktiv an — dann trennt er die Gruppe, blockiert Fluchtwege, greift aus der Dunkelheit.</p>
+
+      <h2>Entscheidung — Vegas Schicksal</h2>
+      <div class="info-box danger">
+        <div class="info-box-header">⚠ Spieler-Entscheidung (C Block — Surgery)</div>
+        <p><strong>Option A — Zurücklassen:</strong> Kapsel bleibt in der Medbay. Kurz nach Abflug hören die Spieler über das offene Stations-Comm einen gedämpften Schrei, dann Stille. <strong>+1 Stress.</strong></p>
+        <p><strong>Option B — Mitnehmen für WY:</strong> Kapsel in den Laderaum. Vibration bringt Inkubation zum Abschluss während des Flugs. <strong>Chestburster-Szene. Panic Roll.</strong> Bonus-Bounty bei Lieferung des Specimens.</p>
+        <p><strong>Option C — Verbrennen:</strong> Incinerator. Kapsel öffnen, Stecker ziehen, verbrennen. Moralisch sauber. Kein Reward. <strong>+2 Stress</strong> (Bewusstloser).</p>
+      </div>
+
+      <h2>Belohnung</h2>
+      <table>
+        <thead><tr><th>Quelle</th><th>Credits</th><th>Bedingung</th></tr></thead>
+        <tbody>
+          <tr><td>Standard-Bergungshonorar (Boyd)</td><td>15.000 Cr</td><td>Android unversehrt abgeliefert</td></tr>
+          <tr><td>Fragment-04-Daten-Chip</td><td>5.000 Cr</td><td>Chip an Helios übergeben (Spieler dürfen vorher auslesen)</td></tr>
+          <tr><td>Vega-Specimen-Bounty</td><td>20.000 Cr</td><td>Option B — Chestburster-Kadaver oder lebender Träger</td></tr>
+          <tr><td>Commando-Ausrüstung (Loot)</td><td>Variabel</td><td>WY wird die Herkunft erkennen — Diskretionsproblem</td></tr>
+        </tbody>
+      </table>
     </div>
 
-    <!-- ═══ TAB: Systeminfo & Rapture Protocol ═══ -->
-    <div class="page-section content" id="m03-rapture">
-      <h1>289 G. Hydrae — Systeminfo & Rapture Protocol</h1>
+    <!-- ═══ TAB: Einleitung ═══ -->
+    <div class="page-section content" id="m03-einleitung">
+      <h1>Jeremiah VI — Einleitung</h1>
+
+      <blockquote>Der Raum um euch ist still, als euer Schiff aus dem Überlicht fällt.</blockquote>
+      <blockquote>Jeremiah VI liegt vor euch — eine graue Bergbaustation im −35 °C-Orbit eines Gasriesen.</blockquote>
+      <blockquote>Die Navigationslichter blinken.</blockquote>
+      <blockquote>Das Dock meldet sich automatisch.</blockquote>
+      <blockquote><strong>Kein Funkspruch. Keine Warnung. Keine Bitte um Hilfe.</strong></blockquote>
+
+      <blockquote>Am äußeren Ausleger hängen zwei Schiffe.</blockquote>
+      <blockquote>Ein WY-<strong>LK-41 „Curtis" Neptune</strong>-Dropship in Militärlackierung.</blockquote>
+      <blockquote>Und ein ziviles Frachtschiff — älter, eingestaubt, Heckschleuse offen.</blockquote>
+      <blockquote>Davor, im Schatten der Docksäule:</blockquote>
+      <blockquote><strong>Zwei Gestalten in Vakuum-Anzügen. Reglos. Frost auf den Visieren.</strong></blockquote>
+
+      <blockquote>Euer Auftrag ist einfach.</blockquote>
+      <blockquote>Andocken.</blockquote>
+      <blockquote>Den Androiden AX-62 „Boyd" bergen.</blockquote>
+      <blockquote>Keine weiteren Untersuchungen notwendig.</blockquote>
+
+      <blockquote>Langsam dreht sich euer Schiff in Position.</blockquote>
+      <blockquote>Die Greifklammern fahren aus.</blockquote>
+      <blockquote><em>Klonk.</em></blockquote>
+      <blockquote>Metall trifft Metall.</blockquote>
+      <blockquote>Das Docking-System der Station reagiert träge — aber es funktioniert.</blockquote>
+
+      <blockquote>Auf eurem Display erscheint grün:</blockquote>
+      <blockquote><strong>„Atmosphäre stabil. Druckausgleich läuft."</strong></blockquote>
+
+      <blockquote>Die Schleuse entriegelt.</blockquote>
+      <blockquote>Mit einem dumpfen Schlag öffnet sich das Tor.</blockquote>
+      <blockquote>Ein Geruch schlägt euch entgegen: kaltes Metall, verbranntes Plastik — und etwas Süßliches.</blockquote>
+
+      <blockquote>Vor euch liegt Jeremiah VI.</blockquote>
+      <blockquote>Still.</blockquote>
+      <blockquote>Dunkel.</blockquote>
+      <blockquote>Wartend.</blockquote>
+      <blockquote>Was tut ihr?</blockquote>
+
+      <div class="info-box warn">
+        <div class="info-box-header">🥚 Easter Egg — Die andere Crew</div>
+        <p>Das zivile Schiff gehörte der <strong>Rapture-Protocol-Crew</strong> (Daniels vorherige Gruppe). Beide Leichen wurden von den WY-Commandos erschossen, bevor die Commandos selbst fielen. Die Spieler dürfen Namen, Dogtags und persönliche Effekten einsehen — ein Gruß an die alte Runde.</p>
+        <p><strong>Loot:</strong> 1 Personal-PDP mit privaten Logs, 1 teilweise geladene Schrotflinte, 1 Medkit, 1 angebrochene Flasche Bourbon. <strong>+1 Stress</strong> beim Durchsuchen.</p>
+      </div>
+    </div>
+
+    <!-- ═══ TAB: Mission ═══ -->
+    <div class="page-section content" id="m03-mission-full">
+      <h1>Mission — Jeremiah VI (Aftermath)</h1>
 
       <div class="info-box secret">
-        <div class="info-box-header">🔒 GM Only — Easter Egg / Jeremiah Saga</div>
-        <p>Die Mission „Nach 24.01.2185" ist ein direkter Verweis auf den One-Shot „Rapture Protocol" (Free League). Die Gruppe hat diese Mission im Januar gespielt und ist gestorben. Was sie jetzt vorfindet, ist die Ruine davon.</p>
+        <div class="info-box-header">🔒 GM Only — Was passiert ist</div>
+        <p>Die Spieler haben das 07.11.2184-Fenster (saubere Routine-Rückholung) längst verpasst. Zwischen Beauftragung und Ankunft ist auf Jeremiah VI das gesamte Rapture-Protocol-Szenario abgelaufen: Kammer-Entdeckung, Facehugger, Kult unter Hurd, Xeno-Ausbruch, Gegenoffensive unter Amber Whittaker, WY-Commando-Einsatz. Die Commandos kamen vor zwei Tagen, verwundeten den Xeno schwer mit Incinerator und Sentry Gun — und wurden dann selbst aufgerieben. Boyd hat alles beobachtet, archiviert, und wartet ruhig auf seine Abholung.</p>
+        <p><strong>Die Station ist nicht tot. Sie ist leise.</strong></p>
       </div>
 
       <h2>289 G. Hydrae — Das System</h2>
       <p>Ein Weißer Zwerg mit drei orbitierenden Gasriesen (Hydrae I–III). Im Arcadian Asteroid Belt liegt ein Reichtum an Felsgestein. Nur Hydrae III hat Monde: Jeremiah I bis IX. Auf <strong>Jeremiah VI</strong> wurde 2173 eine Bergbaukolonie von Weyland-Yutani errichtet, nachdem 2147 bedeutende Promethium-Vorkommen entdeckt worden waren.</p>
-
       <table>
         <thead><tr><th>Systemdaten</th><th></th></tr></thead>
         <tbody>
@@ -90,109 +191,40 @@
         </tbody>
       </table>
 
-      <h2>Was in Januar 2185 passiert ist — Der One-Shot</h2>
-      <div class="info-box warn">
-        <div class="info-box-header">RAPTURE PROTOCOL — Für dich als SL</div>
-        <p>Beim Bohren tiefer als die Promethium-Lagerstätten entdeckten die Minenarbeiter eine uralte Kammer: Fremdartiges Biosuit-Material, leere Amphoren, zwei große Köpfe, und auf Sockeln: <strong>fünf ledrige Eier</strong>. Ein fanatischer Kultist der <em>Church of Immaculate Incubation</em> näherte sich einem Ei zu sehr — ein Facehugger attackierte ihn. Der entstandene Xenomorph dezimierte die Besatzung. Kultisten unter Shift Leader Hurd schützten das Wesen. Es gab zwei Fraktionen: Hurd's Kultisten vs. Überlebende unter Amber Whittaker.</p>
-        <p>Die Crew, die zur Rettung kam, ist gestorben. Die Station wurde vollständig vom Xenomorph eingenommen.</p>
-      </div>
-
-      <h2>Was die Spieler vorfinden — Nach 24.01.2185</h2>
-      <p>Wenn die Spieler nach dem Datum ankommen, ist Jeremiah VI eine Ruine:</p>
-      <ul>
-        <li>Keine Funkantwort — nur automatische Navigationsbake</li>
-        <li>Magnetische Schleusen sichern das Schiff beim Landen</li>
-        <li>Toxische Außenatmosphäre — Kompressions-Suits notwendig</li>
-        <li>Im Inneren: Spuren eines letzten Gefechts, Barrikaden, Blutflecken die <em>nach oben</em> verlaufen</li>
-        <li>Kein Alarm, keine Musik — nur das leise Brummen der Station</li>
-      </ul>
-
-      <h2>Key NPCs aus dem One-Shot (als Referenz)</h2>
-      <table>
-        <thead><tr><th>Name</th><th>Rolle</th><th>Status nach 24.01.2185</th></tr></thead>
-        <tbody>
-          <tr><td>Boyd</td><td>Android-Barkeeper (Hyperdyne 120-A-2)</td><td>Letztes Terminal aktiv. Sein Notfall-Log enthüllt alles.</td></tr>
-          <tr><td>Amber Whittaker</td><td>Überlebenden-Anführerin</td><td>Unbekannt / höchstwahrscheinlich tot</td></tr>
-          <tr><td>Malcolm Hurd</td><td>Kultisten-Anführer</td><td>Tot — irgendwo in der Mine</td></tr>
-          <tr><td>Dr. Chidubem</td><td>Stationsarzt (Chestburster-Träger)</td><td>Tot</td></tr>
-        </tbody>
-      </table>
-
-      <h2>Der Xenomorph auf Jeremiah VI</h2>
-      <div class="info-box danger">
-        <div class="info-box-header">Statblock — Drone (besonders aggressiv)</div>
-        <p style="font-family:'Share Tech Mono',monospace;font-size:12px;color:var(--green);line-height:2;">
-        Speed: 3 | Health: 16<br>
-        Skills: Mobility 10, Observation 10<br>
-        Armor: 2 (1 vs Feuer)<br>
-        Acid Splash: 8<br>
-        <strong>Besonderheit:</strong> Silent Assassin — alle Observation-Würfe zum Entdecken: –2 Würfel
-        </p>
-      </div>
-      <p>Der Xenomorph jagt nicht sofort. Er <strong>beobachtet</strong> zunächst. Erst nach mehreren Szenen greift er aktiv an — und dann trennt er die Gruppe, blockiert Fluchtwege, greift aus der Dunkelheit.</p>
-      <p>Sein Nest befindet sich im <strong>Reaktorkern</strong> — dem wärmsten Punkt der Station.</p>
-    </div>
-
-    <!-- ═══ TAB: Nach 24.01.2185 — Rückkehr ═══ -->
-    <div class="page-section content" id="m03-nach">
-      <h1>Mission: Jeremiah VI — Aftermath</h1>
-      <p><strong>System:</strong> 289 G. Hydrae | <strong>Target-Android:</strong> AX-62 „Boyd" (Hyperdyne 120-A-2)<br>
-      <strong>Black Veil Daten:</strong> Nesttemperatur-Optimum — <em>„Jede Begegnung steigert Effizienz."</em><br>
-      <strong>In-Fiction Zeitpunkt:</strong> ca. 26.01.2185 — zwei Tage nach dem gescheiterten WY-Commando-Einsatz</p>
-      <div style="margin-top:10px;"><a href="https://flubb4.github.io/AlienMap/BlackVeil_DataFragments.html#fragment-4" target="_blank" style="display:inline-block;background:rgba(77,255,145,0.08);border:1px solid #1a6635;color:#4dff91;font-family:ShareTechMono,monospace;font-size:10px;letter-spacing:2px;padding:6px 14px;text-decoration:none;">→ FRAGMENT 04 FREIGEBEN</a></div>
-
       <div class="info-box secret">
-        <div class="info-box-header">🔒 GM Only — Was passiert ist</div>
-        <p>Die Spieler haben das 07.11.2184-Fenster (saubere Routine-Rückholung) längst verpasst. Zwischen Beauftragung und Ankunft ist auf Jeremiah VI das gesamte Rapture-Protocol-Szenario abgelaufen: Kammer-Entdeckung, Facehugger, Kult um Hurd, Xeno-Ausbruch, Gegenoffensive um Amber Whittaker, WY-Commando-Einsatz. Die Commandos kamen vor zwei Tagen, griffen den Xeno mit Incinerator und Sentry Gun an, <strong>verwundeten ihn schwer</strong>, und wurden dann selbst aufgerieben. Boyd hat alles beobachtet, archiviert, und wartet ruhig auf seine Abholung. <strong>Die Station ist nicht tot. Sie ist leise.</strong></p>
-        <p><strong>Kern-Prinzip dieser Mission:</strong> Es ist keine reine Jagd-Mission. Es ist eine <em>Extraktion</em>. Boyd ist das Ziel, Boyd ist die Belohnung, und Boyd ist die beste Infoquelle. Der Xeno ist eine Drohung, kein Showdown. Wenn die Spieler schlau sind, überleben sie alle. Wenn sie gierig werden, sterben sie.</p>
-        <p>Siehe <button onclick="showSection('m03-rapture')" style="background:transparent;border:1px solid var(--green-dim);color:var(--green);cursor:pointer;font-family:'Share Tech Mono',monospace;font-size:10px;padding:2px 8px;letter-spacing:1px;">Systeminfo & Rapture Protocol</button> für den vollen Hintergrund.</p>
+        <div class="info-box-header">🔒 GM Only — Rapture Protocol (One-Shot-Nachlass)</div>
+        <p>Beim Bohren tiefer als die Promethium-Lagerstätten entdeckten die Minenarbeiter eine uralte Kammer: fremdartiges Biosuit-Material, leere Amphoren, zwei große Köpfe, und auf Sockeln: <strong>fünf ledrige Eier</strong>. Ein Kultist der <em>Church of Immaculate Incubation</em> näherte sich einem Ei zu sehr — ein Facehugger attackierte ihn. Der entstandene Xenomorph dezimierte die Besatzung. Kultisten unter Shift Leader Hurd schützten das Wesen. Zwei Fraktionen: Hurds Kultisten vs. Überlebende unter Amber Whittaker.</p>
+        <p>Die Crew, die zur Rettung kam (Daniels alte Gruppe), ist gestorben. Die Station wurde vollständig vom Xenomorph eingenommen.</p>
       </div>
 
       <hr>
 
       <h2>AKT I — ANKUNFT</h2>
       <h3><em>„Niemand antwortet"</em></h3>
-
-      <blockquote>Der Raum um euch ist still, als euer Schiff aus dem Überlicht fällt.</blockquote>
-      <blockquote>Jeremiah VI liegt vor euch — eine graue Bergbaustation im −35 °C-Orbit eines Gasriesen.</blockquote>
-      <blockquote>Die Navigationslichter blinken. Das Dock meldet sich automatisch.</blockquote>
-      <blockquote><strong>Kein Funkspruch. Keine Warnung. Keine Bitte um Hilfe.</strong></blockquote>
-
-      <p>Vor dem Andocken, auf den Außen-Scans:</p>
-
-      <blockquote>Am äußeren Ausleger hängen zwei Schiffe. Ein WY-<strong>LK-41 „Curtis" Neptune</strong>-Dropship in Militärlackierung. Und ein ziviles Frachtschiff, älter, eingestaubt, Heckschleuse offen. Davor, im Schatten der Docksäule: <strong>zwei Gestalten in Vakuum-Anzügen. Reglos. Frost auf den Visieren.</strong></blockquote>
-
-      <div class="info-box warn">
-        <div class="info-box-header">🥚 Easter Egg — Die andere Crew</div>
-        <p>Das zivile Schiff gehörte der <strong>Rapture-Protocol-Crew</strong> (Daniels vorherige Gruppe). Beide Leichen wurden von den WY-Commandos vor ihrem eigenen Schiff erschossen, bevor die Commandos selbst fielen. Die Spieler dürfen Namen, Dogtags, persönliche Effekten einsehen — ein Gruß an die alte Runde. Loot: 1 Personal-PDP mit privaten Logs, 1 teilweise geladene Schrotflinte, 1 Medkit, 1 angebrochene Flasche Bourbon. <strong>+1 Stress</strong> beim Durchsuchen.</p>
-      </div>
+      <p>→ Einleitung-Tab. Spieler docken an, sehen die zwei toten Vakuum-Anzüge. Nichts reagiert auf Funk. Automatische Schleuse öffnet sich nach 20 Sekunden.</p>
 
       <hr>
 
       <h2>AKT II — DAS DOCK</h2>
       <h3><em>„Das letzte Gefecht"</em></h3>
-
-      <p>Als sich die Schleuse öffnet, schlägt euch ein Geruch entgegen: kaltes Metall, verbranntes Plastik – und etwas Süßliches.</p>
       <p>Hinter der Primär-Schleuse: das Ergebnis eines kurzen, schnellen Kampfes.</p>
-
       <ul>
         <li><strong>Vier tote WY-Commandos</strong> — organische Verletzungen: Schwanzstich durch den Hals, Kopfbiss, zwei Brustpanzer komplett durchgefressen (Säure).</li>
-        <li><strong>Ein fünfter Commando</strong> sitzt an die Wand gelehnt, Helm auf dem Schoß. Einschusswunde im eigenen Kinn. Der <strong>Sechste fehlt</strong>.</li>
-        <li>Waffen intakt: 2× Pulse Rifle, 1× Shotgun, 1× <strong>M240 Incinerator</strong> (halb voll), 1× transportable Sentry Gun, 3× Grenade, Notfallmunition.</li>
+        <li><strong>Ein fünfter Commando (Sgt. Hale)</strong> sitzt an die Wand gelehnt, Helm auf dem Schoß. Einschusswunde im eigenen Kinn.</li>
+        <li><strong>Der Sechste fehlt.</strong> (→ Pvt. Vega, C Block — Surgery)</li>
+        <li><strong>Waffen:</strong> 2× Pulse Rifle, 1× Shotgun, 1× M240 Incinerator (halb voll), 1× transportable Sentry Gun, 3× Grenade, Notfallmunition.</li>
       </ul>
-
-      <blockquote><strong>SL-Hinweis:</strong> Lass die Spieler <strong>aufrüsten</strong>. Sie werden die Waffen nicht unbedingt brauchen — aber sie sollen sich kurz stark fühlen, bevor die Station ihnen zeigt, wie falsch das ist.</blockquote>
+      <blockquote><strong>SL-Hinweis:</strong> Lass die Spieler aufrüsten. Sie werden die Waffen nicht unbedingt brauchen — aber sie sollen sich kurz stark fühlen, bevor die Station ihnen zeigt, wie falsch das ist.</blockquote>
 
       <h3>Helmkamera-Log — Sgt. Hale</h3>
-      <p>Aus dem Helm des fünften Commandos extrahierbar. Die letzten 14 Minuten seines Lebens:</p>
-
+      <p>Aus dem Helm des fünften Commandos extrahierbar. Die letzten 14 Minuten:</p>
       <blockquote>Gefecht in den Korridoren. Säurespritzer auf die Kamera. Ein Angriff aus den Deckenschächten. Hale trifft zweimal mit dem Incinerator — die Kreatur <em>schreit</em>, verschwindet in einen Schacht, lässt eine Säurespur.<br><br>
       <strong>Hale:</strong> <em>„Es ist verwundet. Rückzug. Rückzug… wir verlieren Boyd."</em><br><br>
       Letztes Bild: Hale allein im Dock, erkennt er ist der Letzte, hebt die Waffe an sein Kinn.</blockquote>
 
       <div class="info-box warn">
         <div class="info-box-header">🎯 Spieler-Hook: Scott Reynolds</div>
-        <p><strong>Sgt. Hale</strong> war Ex-USCM und diente im <em>3rd Battalion, Colonial Rangers</em> — Scotts alte Einheit. Scott erkennt das Squad-Patch. Hales Name taucht zudem in einem BV-Fragment auf, das Scott bereits gesehen hat. Auf Hales Daten-Pad: Befehlsblock <em>„Operation Rapture Cleanup / Auftraggeber: Helios Asset Recovery / Vergütung: Schweigeprämie."</em> — derselbe Vertragstyp, den Scott unter NDA abgewickelt hat.</p>
+        <p><strong>Sgt. Hale</strong> war Ex-USCM, diente im <em>3rd Battalion, Colonial Rangers</em> — Scotts alte Einheit. Scott erkennt das Squad-Patch. Auf Hales Daten-Pad: Befehlsblock <em>„Operation Rapture Cleanup / Auftraggeber: Helios Asset Recovery / Vergütung: Schweigeprämie."</em> — derselbe Vertragstyp, den Scott unter NDA abgewickelt hat.</p>
       </div>
 
       <div class="info-box warn">
@@ -201,8 +233,8 @@
       </div>
 
       <div class="info-box warn">
-        <div class="info-box-header">🎯 Spieler-Hook: Gustav — <em>nach 24.01.2185 (Rückkehr)</em></div>
-        <p>In der Innentasche eines der gefallenen WY-Soldaten: ein verschlüsseltes Datapad. Öffnen erfordert eine <strong>Comtech-Probe</strong> (oder direkten Zugriff durch einen WY-kompatiblen Syn). Inhalt: ein internes Missions-Briefing, Classification RED — EYES ONLY:</p>
+        <div class="info-box-header">🎯 Spieler-Hook: Gustav — SOLAR SILENCE</div>
+        <p>In der Innentasche eines gefallenen WY-Soldaten: ein verschlüsseltes Datapad. Öffnen erfordert eine <strong>Comtech-Probe</strong> (oder direkten Zugriff durch einen WY-kompatiblen Syn). Inhalt: internes Missions-Briefing, Classification RED — EYES ONLY:</p>
         <blockquote style="font-family:'Share Tech Mono',monospace;font-size:0.85em;line-height:1.7;border-left:2px solid var(--orange,#ff9900);padding-left:12px;color:var(--orange,#ff9900);">
           <strong>WEYLAND-YUTANI CORP — SPECIAL OPERATIONS DIVISION</strong><br>
           <strong>MISSION DIRECTIVE: JEREMIAH 6 / ASSET RECOVERY</strong><br>
@@ -212,180 +244,530 @@
           <em>Priority 3:</em> <strong>Zeugensicherung.</strong> Wie Protokoll SOLAR SILENCE (Ref. Incident Sol-3, 2183) — keine unkontrollierten Abgänge. Zivile Überlebende sind als Komplikation einzustufen.<br><br>
           <em>Erinnerung: Das Unternehmen dankt Ihnen für Ihren Dienst.</em>
         </blockquote>
-        <p><strong>Gustav erkennt „Sol-3" sofort.</strong> Das ist sein System. „Incident Sol-3, 2183" — WY hat dieses Protokoll schon einmal angewendet. Und Priority 3 gilt jetzt für die aktuelle Crew. <em>Kein Panic Roll — aber der SL kann +1 Stress geben, wenn Gustav den Text laut vorliest oder die Konsequenz ausspricht.</em></p>
-        <p><strong>Zweite Spur (optional):</strong> Ein gelöschtes Terminal in Anlage 7-C zeigt bei erfolgreicher Comtech-Probe (schwieriger, −2) denselben Auftragscode <em>„JVI-AR / SOLAR SILENCE"</em> in den Lösch-Metadaten.</p>
+        <p><strong>Gustav erkennt „Sol-3" sofort.</strong> Das ist sein System. „Incident Sol-3, 2183" — WY hat dieses Protokoll schon einmal angewendet. Und Priority 3 gilt jetzt für die aktuelle Crew. <em>Kein Panic Roll — aber +1 Stress, wenn Gustav den Text laut vorliest oder die Konsequenz ausspricht.</em></p>
+        <p><strong>Zweite Spur (optional):</strong> Ein gelöschtes Terminal in E Block (Refinery Control) zeigt bei erfolgreicher Comtech-Probe (–2) denselben Auftragscode <em>„JVI-AR / SOLAR SILENCE"</em> in den Lösch-Metadaten.</p>
       </div>
 
       <hr>
 
       <h2>AKT III — DIE STATION</h2>
       <h3><em>„Es lebt noch"</em></h3>
-
-      <p>Jeremiah VI hat Strom. Nicht überall – aber genug.</p>
-
-      <p>Die Gänge zeigen Spuren eines letzten Gefechts:</p>
-      <ul>
-        <li>Barrikaden aus Werkbank-Material</li>
-        <li>Einschusslöcher in den Wandpaneelen</li>
-        <li>Blutflecken, die <em>nach oben</em> verlaufen</li>
-        <li>Ein Spotlight, das in eine leere Ecke starrt</li>
-      </ul>
-
-      <p>Kein Alarm. Keine Musik. Nur das leise Brummen der Station.</p>
-
-      <p>Und dann: <strong>Geräusche.</strong></p>
-      <ul>
-        <li>Schritte in entfernten Korridoren</li>
-        <li>Ein metallisches Klacken in den Lüftungsschächten</li>
-        <li>Etwas fällt um — <em>weit weg</em></li>
-      </ul>
-
-      <p>Wenn die Spieler nachsehen:</p>
-      <blockquote>Nichts.</blockquote>
-      <blockquote>Aber es ist näher als vorher.</blockquote>
-
+      <p>Jeremiah VI hat Strom. Nicht überall — aber genug. Die Gänge zeigen Spuren eines letzten Gefechts: Barrikaden aus Werkbank-Material, Einschusslöcher in den Wandpaneelen, Blutflecken, die <em>nach oben</em> verlaufen, ein Spotlight, das in eine leere Ecke starrt.</p>
+      <p>Kein Alarm. Keine Musik. Nur das leise Brummen der Station. Und dann: <strong>Geräusche.</strong> Schritte in entfernten Korridoren. Ein metallisches Klacken in den Lüftungsschächten. Etwas fällt um — <em>weit weg</em>.</p>
+      <blockquote>Wenn die Spieler nachsehen: Nichts. Aber es ist näher als vorher.</blockquote>
       <div class="info-box">
         <div class="info-box-header">Panic vs. Stress — Wichtig</div>
-        <p>In Akt III zeigt sich der Xenomorph <strong>nicht</strong>. Er jagt nicht. Er liegt verwundet im Reaktorschacht und heilt. Geräusche geben <strong>+1 Stress</strong>. <strong>Keine Panic Rolls.</strong> Das hier ist die Atmosphäre vor dem ersten Kontakt — nicht der Kontakt selbst.</p>
+        <p>In Akt III zeigt sich der Xenomorph <strong>nicht</strong>. Er liegt verwundet im Reaktorschacht und heilt. Geräusche geben <strong>+1 Stress</strong>. <strong>Keine Panic Rolls.</strong> Das ist die Atmosphäre vor dem ersten Kontakt — nicht der Kontakt selbst.</p>
       </div>
 
       <hr>
 
       <h2>AKT IV — DIE BAR (BOYD)</h2>
       <h3><em>„Ich habe euch erwartet"</em></h3>
-
       <blockquote>Die Bar ist fast unversehrt. Stühle stehen ordentlich. Ein Glas liegt zerbrochen am Boden — <strong>gezielt</strong>, nicht chaotisch. Hinter dem Tresen steht <strong>Boyd</strong> und poliert ein Glas.<br><br>
       Er sieht auf, als ihr eintretet. Er lächelt.<br><br>
       <em>„Willkommen auf Jeremiah VI. Ich habe euch erwartet. Darf ich euch etwas anbieten, bevor wir gehen?"</em></blockquote>
 
-      <p>Boyd ist <strong>intakt</strong>. Kein Kampfschaden. Keine Angst. Er ist ruhig, höflich, freiwillig. Sein Koffer steht fertig gepackt neben dem Tresen.</p>
+      <p>Boyd ist <strong>intakt</strong>. Kein Kampfschaden. Keine Angst. Sein Koffer steht fertig gepackt neben dem Tresen.</p>
 
       <h3>Wer Boyd jetzt ist</h3>
       <ul>
         <li>Er kennt den Auftrag. Er weiß, wer sie schickt.</li>
-        <li>Er bietet ihnen einen Drink an. Ernst gemeint.</li>
+        <li>Er bietet ihnen einen Drink an — ernst gemeint.</li>
         <li>Er wird <strong>nicht</strong> fliehen, sabotieren, drohen.</li>
-        <li>Er ist ihre beste Infoquelle über alles, was geschehen ist — und erzählt freiwillig, wenn sie fragen.</li>
+        <li>Beste Infoquelle über alles, was geschehen ist — erzählt freiwillig, wenn sie fragen.</li>
         <li>Er hat zwei Monate lang einen Xenomorph beobachtet. Er weiß mehr über das Wesen als jeder WY-Forscher.</li>
       </ul>
 
       <h3>Was Boyd unaufgefordert gibt</h3>
       <ul>
-        <li>Einen <strong>Daten-Chip</strong> — sein Notfall-Archiv. Fragment 04 (Nesttemperatur-Optimum). Er sagt nicht, was drauf ist. Nur: <em>„Für jeden, der nachkommen muss."</em></li>
+        <li>Einen <strong>Daten-Chip</strong> — sein Notfall-Archiv. Fragment 04 (Nesttemperatur-Optimum). <em>„Für jeden, der nachkommen muss."</em></li>
         <li>Eine Warnung: <em>„Das Wesen ist verwundet. Es jagt nicht. Es heilt. Ihr solltet nicht hier sein, wenn es geheilt hat."</em></li>
         <li>Eine Empfehlung: <em>„Geht nicht in die Kammer. Dort gibt es keine Antworten, die das Leben einer Crew wert sind."</em></li>
       </ul>
 
       <h3>Dialog-Anker — Boyds Bericht (auf Nachfrage)</h3>
       <blockquote><strong>Boyd:</strong> <em>„Die Menschen suchten nach Mustern. Das Wesen nicht. Es testete Reaktionen. Flucht. Verteidigung. Stillstand. Ich habe beobachtet. Ich habe archiviert. Ich bin bereit zu gehen, wenn ihr bereit seid, mich zu tragen."</em></blockquote>
-
-      <p>Auf weitere Fragen — nüchtern, ohne Urteil — erzählt er vom Kult um Shift Leader Hurd, Dr. Chidubem als ersten Wirt, Amber Whittakers Widerstand, der Verteilung der Eier, und schließlich den Commandos. <strong>Sein Fazit:</strong></p>
+      <p>Auf weitere Fragen erzählt er vom Kult um Hurd, Dr. Chidubem als ersten Wirt, Amber Whittakers Widerstand, der Verteilung der Eier, und den Commandos. <strong>Sein Fazit:</strong></p>
       <blockquote><em>„Es jagt nicht aus Hunger. Es jagt aus Kontrolle. Jede Begegnung — es verändert sich. Es wird effizienter."</em></blockquote>
 
       <hr>
 
       <h2>AKT V — DIE MEDBAY (OPTIONAL)</h2>
       <h3><em>„Der sechste Commando"</em></h3>
-
-      <p>Wenn die Spieler die Station erkunden oder Boyd nach „dem Sechsten" fragen, führt er sie persönlich:</p>
-
+      <p>→ C Block, Surgery. Boyd führt sie persönlich, wenn sie fragen.</p>
       <blockquote>In der Medbay steht eine <strong>Stasis-Kapsel</strong>. Aktiv. Ein schwaches, kaltblaues Leuchten. Im Inneren: ein Mann in Commando-Unterbekleidung. Bewusstlos. Auf seinem Gesicht: <strong>Nichts mehr</strong>.<br><br>
       Aber auf dem Boden neben der Kapsel liegt eine zusammengerollte, krabbenartige Hülle — ausgetrocknet, tot, leer.</blockquote>
-
-      <p>Das ist <strong>Pvt. Marcus Vega</strong>, der sechste Commando. Der Facehugger hat ihn bekommen. Boyd hat ihn in Stasis gelegt, um die Inkubation zu verlangsamen.</p>
-
       <blockquote><strong>Boyd:</strong> <em>„Ich habe ihn stabilisiert. Die Stasis verzögert die Gestation um den Faktor acht. Er hat vielleicht 36 Stunden — weniger, wenn die Kapsel bewegt wird. Weyland-Yutani würde ihn wollen. Das solltet ihr wissen."</em></blockquote>
-
-      <div class="info-box danger">
-        <div class="info-box-header">⚠ Spieler-Entscheidung — Vegas Schicksal</div>
-        <p><strong>Option A — Zurücklassen:</strong> Kapsel bleibt in der Medbay. Kurz nach Abflug hören die Spieler über das offene Stations-Comm einen gedämpften Schrei, dann Stille. Kein Kampf. <strong>+1 Stress.</strong></p>
-        <p><strong>Option B — Mitnehmen für WY:</strong> Kapsel in den Laderaum. Vibration durch Andocken oder Beschleunigung bringt die Inkubation zum Abschluss. Während des Flugs oder beim Andocken am Mutterschiff: <strong>Chestburster-Szene.</strong> 1 HP, schnell, tödlich. <strong>Panic Roll</strong> — erster echter Xeno-Kontakt. Nach dem Kampf: Bonus-Bounty von WY (Specimen-Beleg).</p>
-        <p><strong>Option C — Brennen:</strong> Incinerator von den Commandos. Kapsel öffnen, Stecker ziehen, verbrennen. Moralisch sauber. Keine Belohnung. <strong>+2 Stress</strong> (ein Bewusstloser).</p>
-      </div>
 
       <hr>
 
       <h2>AKT VI — DER GLIMPSE</h2>
       <h3><em>„Er lässt euch gehen. Heute."</em></h3>
-
-      <p>Einmal während des Aufenthalts — SL-Timing, am besten auf dem Weg zurück zum Dock — passieren die Spieler ein großes Wartungs-Fenster, das in den Reaktorschacht blickt. Acht Meter tief, im Zwielicht zwischen den Rohren, sehen sie <strong>IHN</strong>.</p>
-
+      <p>Einmal während des Aufenthalts — SL-Timing, am besten auf dem Weg zurück zum Dock — passieren die Spieler das Wartungs-Fenster in E Block (Reactor Control), das acht Meter tief in den Reaktorschacht blickt.</p>
       <blockquote>Er kauert an eine Wand. Ein Bein zieht er nach. Auf der Panzerung: angebrannte Stellen, wo der Incinerator getroffen hat. Er atmet. Langsam. Flach.<br><br>
       Sein Kopf dreht sich — und er <em>sieht euch</em>. Nicht mit Augen. Er hat keine. Aber er weiß, dass ihr da seid.<br><br>
       Dann, langsam, dreht er den Kopf weg. Und bleibt reglos.<br><br>
       <strong>Er lässt euch gehen. Heute.</strong></blockquote>
-
       <div class="info-box">
         <div class="info-box-header">Regeltechnisch — Erster Xeno-Kontakt</div>
-        <p>Jeder Spieler <strong>+2 Stress</strong>. <strong>Kein Panic Roll</strong> — der Xeno engagiert nicht. Das ist bewusst: Der erste Kontakt soll Angst sein, kein Trauma. Spieler, die schießen wollen, dürfen — Boyd (falls dabei) warnt ruhig: <em>„Das wäre ein Fehler. Nicht weil er euch jetzt töten würde. Sondern weil er sich erinnern wird."</em> (Black-Veil-Thema: <em>Jede Begegnung steigert Effizienz.</em>)</p>
+        <p>Jeder Spieler <strong>+2 Stress</strong>. <strong>Kein Panic Roll</strong> — der Xeno engagiert nicht. Spieler, die schießen wollen: Boyd (falls dabei) warnt ruhig: <em>„Das wäre ein Fehler. Nicht weil er euch jetzt töten würde. Sondern weil er sich erinnern wird."</em></p>
       </div>
-
       <div class="info-box danger">
         <div class="info-box-header">⚔ Falls die Spieler ihn angreifen</div>
-        <p>Xeno verwundet: Health 3/8, Speed reduziert. Er verliert wahrscheinlich — aber er hinterlässt Säure auf der tragenden Deckenstruktur: nach 3 Runden Hull-Breach-Risiko im Reaktorschacht, Dekompressions-Gefahr. Zwei <strong>Panic Rolls</strong>. <strong>SL-Warnung:</strong> Das ist <em>nicht</em> die empfohlene Route. Mission-Ziel ist der Android — nicht der Xeno. Wer hier kämpft, riskiert TPK für eine Belohnung, die Boyd ohnehin freiwillig gibt.</p>
+        <p>Xeno verwundet: Health 3/8, Speed reduziert. Er verliert wahrscheinlich — aber Säure auf die tragende Deckenstruktur: nach 3 Runden Hull-Breach-Risiko, Dekompressions-Gefahr. Zwei <strong>Panic Rolls</strong>. Das ist nicht die empfohlene Route — Mission-Ziel ist der Android.</p>
       </div>
 
       <hr>
 
       <h2>AKT VII — DIE KAMMER</h2>
       <h3><em>„Geht nicht hinunter"</em></h3>
-
-      <p>Die uralte Kammer mit den Eiern liegt zwei Ebenen unter dem Reaktor. <strong>Sie ist nicht das Ziel.</strong> Wenn die Spieler Boyd haben, ist die Mission erfüllt. Deshalb blockiert die Fiktion den Abstieg auf drei Ebenen:</p>
-
+      <p>Die uralte Kammer mit den Eiern liegt zwei Ebenen unter dem Reaktor. <strong>Sie ist nicht das Ziel.</strong> Drei Blocker:</p>
       <ul>
-        <li><strong>Boyd rät explizit ab</strong> und gibt den Weg nicht frei.</li>
-        <li><strong>Die Aufzüge zur Tiefe sind gesperrt</strong> — Zugriff nur mit Hurd-Privilegien. Hurds Körper liegt irgendwo in der Mine. Ohne Biometrie kein Zugang.</li>
-        <li><strong>Alternative Wege erfordern Sprengladungen.</strong> Detonationen wecken den verwundeten Xeno aus dem Torpor — und ab da ist es keine Extraktion mehr, sondern eine Jagd.</li>
+        <li><strong>Boyd rät explizit ab</strong> — gibt den Weg nicht frei.</li>
+        <li><strong>Aufzüge zur Tiefe gesperrt</strong> — nur mit Hurd-Biometrie. Hurds Körper liegt irgendwo in der Mine.</li>
+        <li><strong>Alternative Wege erfordern Sprengladungen</strong> — wecken den Xeno aus dem Torpor.</li>
       </ul>
-
-      <p><strong>Wenn Spieler hartnäckig sind — Boyd:</strong></p>
-      <blockquote><em>„Vier Eier sind noch dort. Eines ist leer. Wenn ihr hinuntergeht, werdet ihr sie öffnen. Wenn ihr sie öffnet, wird dieses System für euch nicht mehr existieren. Ich empfehle: geht nach Hause."</em></blockquote>
-
+      <blockquote><em>Boyd: „Vier Eier sind noch dort. Eines ist leer. Wenn ihr hinuntergeht, werdet ihr sie öffnen. Wenn ihr sie öffnet, wird dieses System für euch nicht mehr existieren. Ich empfehle: geht nach Hause."</em></blockquote>
       <div class="info-box danger">
         <div class="info-box-header">⚔ SL-Eskalation: Wenn sie sprengen</div>
-        <p>Detonationen wecken den Xeno. Ab diesem Moment ändert sich alles: Der Xeno trennt die Gruppe, blockiert Wege, greift aus der Dunkelheit an. Keine fairen Kämpfe. Kein Showdown. Er nutzt die Höhe, die Enge, den Lärm der Waffen. <strong>Selbst schwere Waffen wirken nur verzögernd.</strong> Die Station arbeitet gegen sie. Wenn sie fliehen, lässt Jeremiah VI sie gehen — <em>nicht aus Gnade, sondern weil Jäger ihre Beute manchmal ziehen lassen</em>. Wenn sie bleiben, wird die Station ihr Grab.</p>
+        <p>Detonationen wecken den Xeno. Ab diesem Moment: Er trennt die Gruppe, blockiert Wege, greift aus der Dunkelheit an. Keine fairen Kämpfe. Wenn sie fliehen, lässt er sie gehen — nicht aus Gnade. Wenn sie bleiben, wird die Station ihr Grab.</p>
       </div>
 
       <hr>
 
       <h2>AKT VIII — ABFLUG</h2>
       <h3><em>„Hinter euch, ein flackerndes Licht"</em></h3>
-
       <blockquote>Als die Dockingklammern sich lösen, steht Boyd an einem Fenster und sieht Jeremiah VI in der Dunkelheit verschwinden. Er sagt nichts. Er wird nichts sagen, bis jemand ihn etwas fragt.<br><br>
       Hinter euch, in den leeren Korridoren der Station, flackert ein Licht. Etwas bewegt sich. Heilt weiter. Wartet.</blockquote>
-
-      <p>Die Station sendet weiterhin nur ihre automatische Bake. Der Xenomorph lebt. Ein Facehugger-Ei fehlt (Vega). Vier sind unberührt. Das System bleibt als Pulver-Faß zurück — für eine spätere Mission, wenn die Kampagne es verlangt.</p>
+      <p>Die Station sendet weiterhin nur ihre automatische Bake. Der Xenomorph lebt. Ein Facehugger-Ei fehlt (Vega). Vier sind unberührt. Jeremiah VI bleibt als Pulverfass zurück.</p>
 
       <hr>
 
       <h2>EPILOG — Boyds Log (später)</h2>
-
-      <p>Später — irgendwo sicher, wenn sie Boyds Daten-Chip auslesen — erscheint eine letzte, versteckte Zeile:</p>
-
+      <p>Wenn sie Boyds Daten-Chip irgendwann auslesen, erscheint eine letzte, versteckte Zeile:</p>
       <blockquote><strong>BOYD — NOTFALLSPEICHER / LETZTER EINTRAG:</strong></blockquote>
       <blockquote><em>„Wenn jemand dies hört:</em></blockquote>
       <blockquote><em>Die Station ist nicht verloren.</em></blockquote>
       <blockquote><em>Sie wurde <strong>übernommen</strong>."</em></blockquote>
+    </div>
 
-      <hr>
+    <!-- ═══ TAB: A Block — Administration ═══ -->
+    <div class="page-section content" id="m03-ablock">
+      <h1>A Block — Administration</h1>
+      <p class="text-dim">Verwaltungsbereich der Station. Strom aktiv, Terminals teilweise noch online. Überall Spuren des aufgegebenen Alltags — Papierausdrucke, umgekippte Becher, verlassene Schichten. Keine Kampfspuren. Dieser Block wurde ruhig aufgegeben.</p>
 
-      <h2>Belohnung</h2>
-      <table>
-        <thead><tr><th>Quelle</th><th>Credits</th><th>Bedingung</th></tr></thead>
-        <tbody>
-          <tr><td>Standard-Bergungshonorar (Boyd)</td><td>15.000 Cr</td><td>Android unversehrt abgeliefert</td></tr>
-          <tr><td>Fragment-04-Daten-Chip</td><td>5.000 Cr</td><td>Chip an Helios übergeben (Spieler dürfen ihn vorher auslesen)</td></tr>
-          <tr><td>Vega-Specimen-Bounty</td><td>20.000 Cr</td><td>Option B — Chestburster-Kadaver oder lebender Organismus geliefert</td></tr>
-          <tr><td>Commando-Ausrüstung (Loot)</td><td>Variabel</td><td>WY wird erkennen, woher es stammt — Diskretions-Problem</td></tr>
-        </tbody>
-      </table>
-
-      <h2>Verweise</h2>
+      <h2>Lobby</h2>
+      <p>Die Eingangshalle der Administration. Eine große Weyland-Yutani-Korporationsplakette an der Wand — jemand hat ein handgeschriebenes Banner darüber gehängt: <em>„WYR UNS NICHT?"</em> Die Rezeptionstheke aus gelbem Kunststoff steht verlassen. Schieberegale mit Besucherausweisen stehen ordentlich, als würde jeden Moment eine Schicht anfangen. Ein schwarzes Brett mit Schichtplänen — der Wochenplan für 2184.310 hängt noch da. Niemand hat ihn abgenommen.</p>
+      <h3>Bei genauerem Hinsehen</h3>
       <ul>
-        <li><button onclick="showSection('m03-rapture')" style="background:transparent;border:1px solid var(--green-dim);color:var(--green);cursor:pointer;font-family:'Share Tech Mono',monospace;font-size:10px;padding:2px 8px;letter-spacing:1px;">Systeminfo & Rapture Protocol</button> — voller Hintergrund zum One-Shot-Nachlass</li>
-        <li><button onclick="showSection('m03-mission-pre')" style="background:transparent;border:1px solid var(--green-dim);color:var(--green);cursor:pointer;font-family:'Share Tech Mono',monospace;font-size:10px;padding:2px 8px;letter-spacing:1px;">Mission (Vor 07.11.2184)</button> — obsolete Routine-Variante, nur als Referenz</li>
-        <li><button onclick="showSection('m03-logs')" style="background:transparent;border:1px solid var(--green-dim);color:var(--green);cursor:pointer;font-family:'Share Tech Mono',monospace;font-size:10px;padding:2px 8px;letter-spacing:1px;">📟 Terminal Logs</button> — Handouts für Boyds Archiv</li>
+        <li>Hinter der Theke: eine kleine verschlossene Schublade. Darin: ein persönliches Tagebuch (Kowalczyk, T.), letzter Eintrag 2184.308 — <em>„Boyd hat heute Nacht kein Wort gesagt. Hat einfach nur dagestanden. Ich glaube, er weiß, was wir nicht aussprechen wollen."</em></li>
       </ul>
+      <h3>Was sich dort befindet</h3>
+      <ul>
+        <li>Geburtstagskarte für „Petrov — 40 Jahre!" (von 15 Personen unterschrieben, 2184.295)</li>
+        <li>Besucherausweise (ohne Funktion)</li>
+        <li>Kleines Erste-Hilfe-Set unter der Theke (2 Verbandspäckchen)</li>
+      </ul>
+
+      <h2>Office (Stationsleitung)</h2>
+      <p>McCreadys Büro. Auffällig ordentlich für jemanden, der die Station kurz vor einer Katastrophe aufgegeben hat. Ein Schreibtisch, ein Terminal, gerahmte Auszeichnungen. Das Familienfoto auf dem Schreibtisch: Frau und zwei Kinder, irgendwo auf einer Frontier-Kolonie. Das andere Foto: McCready und seine ganze Crew, 2181, breites Lächeln.</p>
+      <h3>Bei genauerem Hinsehen</h3>
+      <ul>
+        <li>Im Papierkorb: ein Dokument in Fetzen. Mit Geduld zusammenzusetzen (oder Comtech-Probe): <em>„…Schließung geplant 2185.060… Crew-Relocation-Paket Stufe C… kein Kommentar gegenüber Personal…"</em></li>
+        <li>Terminal (gesperrt, Comtech): Letzter privater Eintrag 2184.309 03:47 — <em>„Evakuierungsantrag gestellt. Keine Antwort. Ich glaube nicht, dass sie kommen."</em> Darunter: sein Kündigungsschreiben an W-Y, präzise getippt, nie gesendet.</li>
+      </ul>
+      <h3>Was sich dort befindet</h3>
+      <ul>
+        <li>Gerahmte W-Y-Auszeichnung „Employee of the Year 2181"</li>
+        <li>Ungeöffnete Flasche Scotch — für einen bestimmten Moment aufgehoben</li>
+        <li>Seitenwaffe im Schubfach (leer — Magazin fehlt, wohin?)</li>
+      </ul>
+
+      <h2>Office (allgemein)</h2>
+      <p>Vier Workstations, drei verlassen, eine mit aktivem Bildschirm — zeigt eine endlose Fehlerseite: <em>„Verbindung zu W-Y Division 6 unterbrochen."</em> Aktenschränke, Formulare, Stempel. Das Büro eines Ortes, der wusste, dass er übersehen wird.</p>
+      <h3>Bei genauerem Hinsehen</h3>
+      <ul>
+        <li>Im hintersten Aktenschrank: eingeklemmte Schublade. Darin: eine persönliche Feldflasche (noch mit Whiskey) und ein zerknitterter Brief — nie abgeschickt, adressiert auf LV-426.</li>
+        <li>Gestapelte abgelehnte Wartungsanträge — alle mit rotem <em>ABGELEHNT</em>-Stempel, manche dreifach eingereicht.</li>
+      </ul>
+      <h3>Was sich dort befindet</h3>
+      <ul>
+        <li>W-Y Notfallhandbuch — Seite „Evakuierungsverfahren" annotiert: <em>„NUTZLOS"</em></li>
+        <li>Feldflasche (2 Schlucke Whiskey)</li>
+      </ul>
+
+      <h2>Operations</h2>
+      <p>Das Herzstück der Administration — ein großer Raum mit einem kreisförmig angeordneten Workstation-Ring. Alle Bildschirme eingefroren auf demselben Zeitstempel: 2184.309. Notbeleuchtung wirft kalte blaue Schatten auf verlassene Konsolen. Drei Stühle weggeschoben — hastig verlassen, nie zurückgekehrt. Ein eingetrockneter Kaffeebecher auf dem Hauptplatz.</p>
+      <h3>Bei genauerem Hinsehen</h3>
+      <ul>
+        <li>Hauptterminal: Quoten-Reports, alle unter Zielkorridor. Letzter automatischer W-Y-Bericht: <em>„Statusklassifikation: KRITISCH."</em> Keine Antwort der Zentrale.</li>
+        <li>Laufendes Stationsprotokoll: Reaktor 340% Auslastung (anomal). Lebenszeichen: 0 (aktiv). Bewegungsmelder Reaktorbereich: 1 Signal, intermittierend.</li>
+      </ul>
+      <h3>Was sich dort befindet</h3>
+      <ul>
+        <li>Kommunikationsterminal (system-intern funktionsfähig, nicht systemübergreifend)</li>
+        <li>Quoten-Listen und Wartungsanfragen (Lore, kein Loot)</li>
+      </ul>
+
+      <h2>Restrooms</h2>
+      <p>Funktionsfähige Sanitäranlagen. Zu sauber — jemand hat sie methodisch gereinigt, kurz bevor alles aufgehört hat. Die Neonröhren flackern in einem langsamen Rhythmus. Das einzige Geräusch: ein tropfender Wasserhahn.</p>
+      <h3>Bei genauerem Hinsehen</h3>
+      <ul>
+        <li>Auf dem Spiegel, in Seife geschrieben: <em>„SCHACHT 7 NICHT BETRETEN."</em> Darunter, andere Handschrift: <em>„Zu spät."</em></li>
+      </ul>
+      <h3>Was sich dort befindet</h3>
+      <ul>
+        <li>Vergessenes Medkit: 2 Bandagen, 1 Stim-Pack</li>
+      </ul>
+
+      <h2>Storage (A Block)</h2>
+      <p>Vorratskammer. Büromaterial, Reinigungsmittel, Reservelampen. Der Raum riecht nach altem Papier und Staub. Nichts Besonderes — auf den ersten Blick.</p>
+      <h3>Bei genauerem Hinsehen</h3>
+      <ul>
+        <li>Hinter einem Karton mit Druckerpapier: eine Wartungsluke in den Kriechgang zwischen A- und B-Block. Jemand war kürzlich dort — gestörter Staub, ein Schuhprofil im Schmutz.</li>
+      </ul>
+      <h3>Was sich dort befindet</h3>
+      <ul>
+        <li>4 Reservelampen (funktionsfähig)</li>
+        <li>Kriechgang-Zugang → B Block</li>
+      </ul>
+    </div>
+
+    <!-- ═══ TAB: B Block — Quarters ═══ -->
+    <div class="page-section content" id="m03-bblock">
+      <h1>B Block — Quarters</h1>
+      <p class="text-dim">Wohnbereich der Crew. Zeigt die stärksten Spuren gelebten Alltags — und des abrupten Endes. Hier schiefen die Menschen, aßen, stritten, lachten. Jetzt ist alles eingefroren, mitten in einer Geste. Boyd ist hier. Die Bar ist fast unberührt.</p>
+
+      <h2>Recreation &amp; Bar</h2>
+      <p>Boyds Domäne. Fast unberührt im Vergleich zum Rest der Station. Stühle ordentlich gerückt. Ein einzelnes Glas liegt zerbrochen am Boden — gezielt, nicht chaotisch. Hinter dem Tresen steht <strong>AX-62 „Boyd"</strong> und poliert ein Glas. <strong>→ Mission Tab, AKT IV für die vollständige Szene.</strong></p>
+      <h3>Bei genauerem Hinsehen</h3>
+      <ul>
+        <li>An der Wand hinter dem Tresen: eine Sammlung handgeschriebener Notizen der Crew über Jahre — Dankes-Nachrichten, Witze, Beschwerden, Geständnisse. Eine kleine Gemeinschaft, konserviert.</li>
+        <li>Boyds Daten-Chip auf dem Tresen — er reicht ihn freiwillig (Fragment 04).</li>
+        <li>Ein Schachspiel, mitten im Spiel abgebrochen. Die Figuren stehen noch.</li>
+        <li>Crewfoto 2183 an der Wand — alle 25 Personen, ein Jahr vor dem Ende.</li>
+      </ul>
+      <h3>Was sich dort befindet</h3>
+      <ul>
+        <li>Vollständige Bar (Scotch, Synthetik-Bier, echter Rum — alle intakt)</li>
+        <li>Dart-Scheibe mit handgefertigten Pfeilen</li>
+        <li>Boyd (Ziel der Mission)</li>
+      </ul>
+
+      <h2>Cantina</h2>
+      <p>Chaos. Tische quergestellt, Tabletts auf dem Boden, eingetrocknetes Essen. Der Kaffeeautomat läuft noch — zyklisch, leer. Er macht seit zwei Monaten dieselbe Bewegung: Aufheizen, zischen, nichts ausgeben, abkühlen. Wieder und wieder.</p>
+      <h3>Bei genauerem Hinsehen</h3>
+      <ul>
+        <li>Unter einem Tisch: ein zerknitterter Zettel — handgezeichnete Stationskarte. Grün markierte Sicherheitszonen, rot durchgestrichene Bereiche. Die Karte stammt vom ersten Ausbruch, vor den WY-Commandos. Schacht 7 ist dreifach rot umkreist.</li>
+      </ul>
+      <h3>Was sich dort befindet</h3>
+      <ul>
+        <li>3 MRE-Rationen (versiegelt, genießbar)</li>
+        <li>Defektes Notfunkgerät</li>
+        <li>Eine Kinderzeichnung an der Pinnwand — Krabben, Sterne, ein Smiley. Kein Name.</li>
+      </ul>
+
+      <h2>Kitchen</h2>
+      <p>Funktionsfähige Küche. Kühlaggregat läuft. Auf dem Herd: ein halb vorbereitetes Gericht — Proteinpaste mit echtem Gemüse, ein Luxus hier draußen. Der Herd wurde nie ausgeschaltet. Alles ist seit Wochen eingebrannt und ausgetrocknet.</p>
+      <h3>Bei genauerem Hinsehen</h3>
+      <ul>
+        <li>In einem Schrank, hinter Konservendosen: ein kleiner Beutel mit persönlichen Gegenständen — Fotos, ein Brief, ein Ring. Jemands Notfallpaket, nie abgeholt.</li>
+      </ul>
+      <h3>Was sich dort befindet</h3>
+      <ul>
+        <li>Lebensmittelvorräte: 30 Tage für eine Person (bei Rationierung mehr)</li>
+        <li>Professionelles Messerset</li>
+        <li>Industrielle Reinigungschemikalien</li>
+        <li>Funktionierende Kühleinheit (nützlich für Proben oder Medikamente)</li>
+      </ul>
+
+      <h2>Freezer</h2>
+      <p>Begehbarer Industriegefrierschrank. –25°C. Der Griff ist vereist. Die Tür schließt von selbst, wenn man loslässt. Regale mit vakuumverpackten Nahrungsmitteln, ordentlich sortiert. Die Stille hier ist dicker als anderswo.</p>
+      <h3>Bei genauerem Hinsehen</h3>
+      <ul>
+        <li>In der hinteren Ecke, hinter einem Regal: ein Körper. Männlich, Stationsarbeiter, Arbeitsanzug. Gestorben durch stumpfe Gewalt — kein Xeno-Kontakt. Wurde von einem Menschen getötet. Perfekt konserviert. Wann genau: unklar.</li>
+      </ul>
+      <h3>Was sich dort befindet</h3>
+      <ul>
+        <li>Tiefkühlvorräte (verwendbar)</li>
+        <li>Brecheisen an der Wand (Notfallwerkzeug, Standard)</li>
+      </ul>
+
+      <h2>Station Manager's Quarters</h2>
+      <p>McCreadys Privatquartier. Zu ordentlich. Das Bett ist gemacht. Die Schuhe stehen ausgerichtet. Irgendwann hat jemand entschieden, dass das die letzte geordnete Handlung sein soll.</p>
+      <h3>Bei genauerem Hinsehen</h3>
+      <ul>
+        <li>Persönliches Terminal (gesperrt, Comtech): Letzter Eintrag 2184.309 03:47 — <em>„Ich glaube nicht, dass sie kommen. Ich glaube nicht, dass sie je gekommen wären."</em> Darunter: Kündigungsschreiben an W-Y, nie gesendet.</li>
+        <li>Unterm Bett: McCreadys private Chronologie der letzten Wochen — sein persönlicher Niedergangs-Bericht.</li>
+      </ul>
+      <h3>Was sich dort befindet</h3>
+      <ul>
+        <li>Seitenwaffe (leer — Magazin in B Block Storage versteckt)</li>
+        <li>Gerahmte W-Y-Auszeichnung 2181</li>
+        <li>Ungeöffneter Scotch</li>
+      </ul>
+
+      <h2>Crew Unit (×2)</h2>
+      <p>Zwei Mannschaftsschlafräume, je 6 Kojen. Persönliche Gegenstände auf Regalen und in Schließfächern — Bücher, Fotos, Musik-Player, kleine Glücksbringer. Manche Kojen frisch bezogen, manche hastig leergeräumt, manche unberührt.</p>
+      <h3>Bei genauerem Hinsehen</h3>
+      <ul>
+        <li>Unter einer Matratze (Crew Unit 1): ein versiegelter Beweisbeutel. Handschrift akkurat, methodisch — <em>„Schacht 7, Probe 3, 2184.297 — Gewebeprobe, anomal."</em> Dr. Nakamuras Proben. Sie hat Dinge hier versteckt, die sie nicht melden wollte.</li>
+        <li>An der Wand eines Schließfachs (Crew Unit 2): Bleistiftzeichnung — grob, erkennbar: Querschnitt von Schacht 7 mit Tiefenannotationen. Hoffmanns Handschrift.</li>
+      </ul>
+      <h3>Was sich dort befindet</h3>
+      <ul>
+        <li>Ca. 400 Cr in verstreuten Währungskarten</li>
+        <li>1 funktionierendes PDP (private Nachrichten)</li>
+        <li>2 Stim-Packs (in verschiedenen Verstecken)</li>
+        <li>Kleines selbstgebautes Destilliergerät — jemand hat Schnaps gebrannt</li>
+      </ul>
+
+      <h2>Showers</h2>
+      <p>Das Wasser läuft noch — kaum, kalt. Der Abfluss der letzten Kabine ist halb verstopft mit etwas Dunklem. Der Raum riecht nach Schimmel und altem Chlor.</p>
+      <h3>Bei genauerem Hinsehen</h3>
+      <ul>
+        <li>An der Wand der letzten Duschkabine: in die Kacheln geritzte Namen. 19 Stück. Unter dem letzten: ein Datum. 2184.309. Darunter: <em>„WIR WAREN HIER."</em></li>
+      </ul>
+      <h3>Was sich dort befindet</h3>
+      <ul>
+        <li>Persönliche Hygieneartikel (mundane)</li>
+        <li>Ein vergessener Ehering auf dem Seifenhalter</li>
+      </ul>
+
+      <h2>Storage (B Block)</h2>
+      <p>Kleinerer Lagerraum für Crew-Verbrauchsgüter. Reinigungsmittel, Bettwäsche, Standard-Supplies. Nichts Besonderes — auf den ersten Blick.</p>
+      <h3>Bei genauerem Hinsehen</h3>
+      <ul>
+        <li>Eine Wandverkleidung, die sich löst. Dahinter: McCreadys persönlicher Notfall-Cache — 2.000 Cr in Karten, 1 volle Seitenwaffe (erklärt das leere Magazin aus seinem Zimmer), 1 verschlüsseltes PDP (Comtech: private Transaktionen, Zahlungen von W-Y für Schweigen zu einem Vorfall aus 2181).</li>
+      </ul>
+      <h3>Was sich dort befindet</h3>
+      <ul>
+        <li>Standard-Supplies</li>
+        <li>McCreadys Cache (versteckt)</li>
+      </ul>
+    </div>
+
+    <!-- ═══ TAB: C Block — Medbay ═══ -->
+    <div class="page-section content" id="m03-cblock">
+      <h1>C Block — Medbay</h1>
+      <p class="text-dim">Der Medizinbereich. Erstaunlich gut erhalten — Dr. Nakamura hat bis sehr spät gearbeitet. Hier liegt Pvt. Vega in Stasis. Hier sind auch Spuren einer anderen Geschichte: einer Ärztin, die etwas bemerkt hat und angefangen hat aufzuschreiben — auf dieselbe stille Art wie andere es anderswo getan haben.</p>
+
+      <h2>Surgery</h2>
+      <p>Zwei Operationstische, AutoDoc-Einheit, Versorgungsschränke. Die Stasis-Kapsel steht in der Ecke — aktiv, schwaches kaltblaues Leuchten. Im Inneren: Pvt. Marcus Vega, Commando-Unterwäsche, bewusstlos. Auf dem Boden neben der Kapsel: eine zusammengerollte, krabbenartige Hülle — ausgetrocknet, tot, leer. Chirurgische Werkzeuge auf einem Tablett, ordentlich bereitgelegt und nie weggeräumt. <strong>→ Mission Tab, AKT V für die vollständige Szene und Vegas Entscheidung.</strong></p>
+      <h3>Bei genauerem Hinsehen</h3>
+      <ul>
+        <li>AutoDoc-Terminal: aktives Patientenprotokoll für Vega. Letzter Eintrag vor Vega: <em>„Schnittverletzungen, inkonsistent mit bekannten Stationshazards."</em> Nakamuras Notiz: <em>„Dieses Muster passt zu nichts aus dem Lehrbuch."</em></li>
+        <li>Medikamentenschrank: Anxiolytika bei 12%, Nachbestellungsantrag 2184.270 — Status: <em>nicht bestätigt.</em></li>
+      </ul>
+      <h3>Was sich dort befindet</h3>
+      <ul>
+        <li>2 Standard-Medikits</li>
+        <li>1 IV-Tropf-Set</li>
+        <li>Chirurgisches Werkzeugset</li>
+        <li>Sedativa (2 Dosen)</li>
+        <li>Pvt. Marcus Vega in Stasis</li>
+        <li>Nakamuras persönliche Gegenstände: Stethoskop, Familienfoto, Lesebrille</li>
+      </ul>
+
+      <h2>Laboratory</h2>
+      <p>Ein Forschungslabor — besser ausgestattet als man für eine reine Bergbaustation erwarten würde. Mikroskope, Probencontainer, Zentrifuge, Gewebescanner. Alles akkurat organisiert, außer einer Workstation rechts hinten: offensichtlich Nakamuras letzter aktiver Platz. Hier liegen Papiere und Proben verstreut, als wäre sie mitten in der Analyse aufgestanden und nie zurückgekehrt.</p>
+      <h3>Bei genauerem Hinsehen</h3>
+      <ul>
+        <li><strong>Nakamuras Forschungstagebuch</strong> (physisch, handgeschrieben) auf der aktiven Workstation. Die Handschrift wird durch die Seiten zunehmend eiliger. Die Einträge beschreiben Patienten mit inneren Schäden ohne erkennbare äußere Ursache, Infektionsgeschwindigkeit inkonsistent mit bekannten Erregern, Gewebeproben die <em>„sich nicht mit vorhandenen Lehrbüchern erklären lassen."</em> Letzter Eintrag: <em>„Proben separat aufbewahrt. Keine offizielle Meldung, bis ich verstehe, womit ich es zu tun habe."</em></li>
+        <li><strong>[HOOK — ISABELLA, Spur 1]</strong> Die Methodik — das vorsichtige Beobachten, das separate Verwahren, das Zurückhalten von Berichten — ist für Isabella sofort erkennbar. Ihre Mutter hat auf Nueva Esperanza identisch gehandelt. <em>Kein Wurf nötig. Isabella erkennt es beim Lesen des Tagebuchs.</em></li>
+        <li>Verschlossene Probenschublade (Schlüssel an Nakamuras Körper oder Observe-Probe): vier versiegelte biologische Proben, beschriftet <em>„Schacht 7 — PRIORITY ALPHA."</em> Frühe Gewebeproben von Xeno-exponierten Crewmitgliedern — noch bevor jemand wusste, was er sah.</li>
+      </ul>
+      <h3>Was sich dort befindet</h3>
+      <ul>
+        <li>1 Probenentnahme-Kit (für biologisches Material)</li>
+        <li>Persönlicher Daten-Chip (Nakamuras Forschungsarchiv, verschlüsselt — Comtech-Probe: frühes Dokumentationsmaterial über Organismus-Effekte)</li>
+        <li>Zentrifuge und Mikroskop (funktionsfähig)</li>
+        <li>Nakamuras Tagebuch (Handout-Material)</li>
+      </ul>
+
+      <h2>Office (C Block)</h2>
+      <p>Kleines Verwaltungsbüro der Medbay. Aktenschränke, Schreibtisch, Terminal. Patientenakten für alle 25 Crewmitglieder, ordentlich abgeheftet über elf Jahre. Der Bildschirm zeigt einen halb fertigen Bericht — abgebrochen mitten in einem Satz, 2184.309.</p>
+      <h3>Bei genauerem Hinsehen</h3>
+      <ul>
+        <li>Das Terminal zeigt Nakamuras letzten, nie abgeschickten Bericht. Sieben Seiten hinein: ein Verweis auf eine externe Konsultationsanfrage — <em>„Kontakt aufgenommen mit E. Cruz, medizinische Versorgerin, Kolonie Nueva Esperanza, Sanabria-System — ähnliche Symptomatik dokumentiert."</em> <strong>[HOOK — ISABELLA, Spur 2]</strong> Nakamura hatte Kontakt zu Isabellas Mutter. Elena Cruz hatte offenbar dasselbe gesehen — anderswo. Nakamura wollte triangulieren: isoliert, oder ein Muster über Jeremiah VI hinaus?</li>
+        <li>Comtech-Probe (–1): In den E-Mail-Metadaten findet sich eine Antwort von Elena Cruz — sie wurde nie zugestellt. Übermittlung auf Netzwerkebene blockiert. Datum: 2184.301. Von wem: unbekannt.</li>
+      </ul>
+      <h3>Was sich dort befindet</h3>
+      <ul>
+        <li>Patientenakten (2173–2184 — Lore, kein Loot)</li>
+        <li>Pharmazeutische Bestellformulare (alle: ABGELEHNT)</li>
+        <li>Kaffeebecher mit Aufdruck <em>„World's Okayest Doctor"</em></li>
+      </ul>
+    </div>
+
+    <!-- ═══ TAB: D Block — Engineering ═══ -->
+    <div class="page-section content" id="m03-dblock">
+      <h1>D Block — Engineering</h1>
+      <p class="text-dim">Technischer Bereich. Petrovs Reich. Es riecht nach Öl, Metall und altem Schweiß. Schwere Maschinen, Werkzeuge, der Stolz handwerklicher Arbeit — und die Verzweiflung, wenn Ersatzteile nie ankommen. Keine Kampfspuren hier. Petrov hat gearbeitet bis zuletzt.</p>
+
+      <h2>Garage</h2>
+      <p>Große Fahrzeughalle. Zwei Bergbau-Rover — einer vollständig, einer halb demontiert auf einem Wartungsstand. Werkzeuge liegen verstreut. Ein Kettenaufzug hängt von der Decke. Die Außentore sind geschlossen und mehrfach verriegelt.</p>
+      <h3>Bei genauerem Hinsehen</h3>
+      <ul>
+        <li>In der Fahrerkabine des demontierten Rovers: eine geladene Seitenwaffe unter dem Sitz, dazu ein Notfallpaket — Rationen, Wasser, Kompass. Jemand hat einen Fluchtweg geplant und ihn nie benutzt.</li>
+        <li>Auf dem Werkzeugbrett: letzte Wartungscheckliste, Handschrift wird hastig. Letzter Eintrag McCreadys: <em>„Reaktorkühlung hält nicht. Petrov soll improvisieren."</em> Darunter, Petrovs Handschrift: <em>„Ich improvisiere seit drei Monaten."</em></li>
+      </ul>
+      <h3>Was sich dort befindet</h3>
+      <ul>
+        <li>Mining-Ausrüstung: Helme, Anzüge (getragen aber funktionsfähig)</li>
+        <li>1 Schweißbrenner</li>
+        <li>2 volle Treibstoffkanister</li>
+        <li>Bergbau-Rover (funktionsfähig, für Stationsgänge zu groß)</li>
+      </ul>
+
+      <h2>Workshop (Petrovs Werkstatt)</h2>
+      <p>Schwere Industriewerkstatt. Petrovs Arbeitsplatz ist der ordentlichste Punkt: Werkzeuge nach System aufgehängt, Schrauben nach Größe sortiert. Die Wand über der Werkbank ist mit Ausdrucken gepflastert — seismische Readouts aus Schacht 7, über Wochen gesammelt.</p>
+      <h3>Bei genauerem Hinsehen</h3>
+      <ul>
+        <li>Die Ausdrucke: in rotem Stift annotiert — <em>„NICHT NATÜRLICH,"</em> <em>„MUSTER WIEDERHOLT SICH,"</em> <em>„12-STUNDEN-ZYKLUS."</em> Petrov hat das als Erster bemerkt — und es als mechanisches Problem behandelt, bis er es nicht mehr konnte.</li>
+        <li>Abgesperrter Werkzeugkasten (Werkzeug zum Öffnen): Petrovs private Notizen, gefaltet. Beschreiben, was er in Schacht 7 gesehen hat — aber unvollständig, als würde er nicht zu Ende schreiben wollen, was er glaubt gesehen zu haben.</li>
+      </ul>
+      <h3>Was sich dort befindet</h3>
+      <ul>
+        <li>Vollständiges Werkzeugset (für Reparaturen)</li>
+        <li>1 Ersatzteil-Kit</li>
+        <li>Seismische Ausdrucke (Lore — direkte Vorgeschichte des Ausbruchs)</li>
+      </ul>
+
+      <h2>Workshop (Verteidigungsposition)</h2>
+      <p>Der zweite Workshop zeigt Spuren einer anderen Nutzung. Regale weggeschoben, eine provisorische Barrikade aus Stahlplatten und Werkbänken — und dann aufgegeben. Hülsen auf dem Boden: Stations-Kaliber, nicht Commando-Waffen. Dieser Kampf war vor den Commandos.</p>
+      <h3>Bei genauerem Hinsehen</h3>
+      <ul>
+        <li>Blutspritzer hinter der Barrikade — auf der Seite der Verteidiger. Jemand wurde getroffen und weitergemacht, oder wurde weggetragen.</li>
+        <li>Auf der Rückseite der Barrikade: eingekratzte Namen. Vier Stück. Eine letzte Anwesenheitsliste.</li>
+      </ul>
+      <h3>Was sich dort befindet</h3>
+      <ul>
+        <li>Leere Hülsen (.45 Auto — Stations-Seitenwaffen)</li>
+        <li>Improvised Shield (Stahlplatte: –1 Mobilität, +1 Armor vs. Frontalangriffe)</li>
+      </ul>
+
+      <h2>Storage (D Block)</h2>
+      <p>Großes Lager für Bergbau-Verbrauchsmaterial: Bohrköpfe, Kabel, Rohre, Dichtungsmasse. Eine W-Y-Versandmitteilung hängt noch am Eingang: <em>„Lieferung verzögert. Neue ETA: 2185.040."</em> Es ist 2185.026.</p>
+      <h3>Bei genauerem Hinsehen</h3>
+      <ul>
+        <li>Hinter dem Hauptregal: eine Wandverkleidung, die sich löst. Dahinter: McCreadys Notfall-Cache — 2.000 Cr in Karten, 1 volle Seitenwaffe, 1 verschlüsseltes PDP (Comtech: private Transaktionen, Zahlungen von W-Y für Schweigen zu einem Vorfall aus 2181).</li>
+      </ul>
+      <h3>Was sich dort befindet</h3>
+      <ul>
+        <li>Seil (50 m)</li>
+        <li>6 Notfallleuchtstäbe</li>
+        <li>1 dekommissionierter Motion-Tracker (defekt — Electronics-Probe zum Reparieren)</li>
+        <li>2 Bergbau-Sprengladungen (öffnen blockierte Zugänge — aber Lärm weckt möglicherweise den Xeno)</li>
+      </ul>
+    </div>
+
+    <!-- ═══ TAB: E Block — Refinery ═══ -->
+    <div class="page-section content" id="m03-eblock">
+      <h1>E Block — Refinery</h1>
+      <p class="text-dim">Das industrielle Herz der Station — und das Zentrum der Bedrohung. Die Temperatur steigt hier spürbar. Der Reaktor läuft auf 340% Auslastung, nicht durch Fehler, sondern weil etwas die Wärme braucht. Aus den Wänden kommen Geräusche. Metallisches Klacken. Ein rhythmisches Atmen, das man sich vielleicht einbildet.</p>
+
+      <h2>Ore Deposit</h2>
+      <p>Großes Lagermagazin für abgebautes Erz. Größtenteils leer — die Quoten lagen weit unten. Riesige Förderbänder stehen still. Das schwache Licht macht lange Schatten zwischen den Erzhaufen.</p>
+      <h3>Bei genauerem Hinsehen</h3>
+      <ul>
+        <li>In der hinteren Ecke, unter losem Erz halb begraben: ein Körper im Mining-Suit. Visier nach innen gedrückt. Kein Xeno-Kontakt — dieser Tod ist sechs Wochen älter als der Ausbruch.</li>
+        <li>Am Körper: ein persönliches Aufnahmegerät. Letzte Nachricht: <em>„Etwas im Gestein. Kein Geologisches. Ich gehe nochmal runter."</em></li>
+      </ul>
+      <h3>Was sich dort befindet</h3>
+      <ul>
+        <li>Promethium-Proben (ca. 800 Cr — W-Y wird fragen, woher)</li>
+        <li>Industrielles Ladegerät (zu groß zum Mitnehmen)</li>
+      </ul>
+
+      <h2>Office (E Block)</h2>
+      <p>Kleines Schichtleiterbüro. Hurds Name steht noch auf dem Namensschildhalter. Formulare, Schichtpläne, abgelegte Protokolle.</p>
+      <h3>Bei genauerem Hinsehen</h3>
+      <ul>
+        <li>Hurds Schichtpläne zeigen ein Muster: bestimmte Arbeiter systematisch für Nachtschichten in Schacht 7 eingeteilt — ausschließlich Kultmitglieder. Hurds Autorisation auf jedem Dokument.</li>
+        <li>In einer Schublade: Pamphlet der <em>Church of Immaculate Incubation</em> — religiös schwülstig, schlecht gedruckt. In den Rand geschrieben: <em>„Er ist verrückt."</em></li>
+      </ul>
+      <h3>Was sich dort befindet</h3>
+      <ul>
+        <li>Schichtprotokolle (zeigen Kultvorbereitung im Rückblick)</li>
+        <li>Pamphlet der CII (Handout, wenn gewünscht)</li>
+      </ul>
+
+      <h2>Control Room</h2>
+      <p>Blick durch gehärtetes Glas auf den Refinery Core. Mehrere Monitorstationen, teils aktiv. Das Glas ist angesprungen — nicht gebrochen, aber es hat etwas abbekommen. Blut auf dem Bedienfeld — Handabdrücke, jemand hat sich abgestützt. Leere Pulsgewehr-Magazine auf dem Boden: Commando-Kaliber. Hier haben sie gestanden, bevor sie den Rückzug angetreten haben.</p>
+      <h3>Bei genauerem Hinsehen</h3>
+      <ul>
+        <li>Aktiver Bewegungsmelder-Monitor: intermittierendes Signal aus dem Reaktorkern. Nicht konstant — pulsierend, rhythmisch.</li>
+      </ul>
+      <h3>Was sich dort befindet</h3>
+      <ul>
+        <li>1 leeres Pulsgewehr-Magazin (für kompatible Waffe verwendbar)</li>
+        <li>1 Rauchgranate (Commando-Equipment, liegengelassen)</li>
+      </ul>
+
+      <h2>Refinery Core</h2>
+      <p>Das Herz der Erzverarbeitung. Große Kreiskammer um die Raffineriemaschinen — laut, warm, orange. Automatikbetrieb läuft weiter. Säurespuren auf dem Boden: gelöste Strukturen, angeätzte Beschichtungen. Ein Rohrabschnitt tröpfelt Kühlflüssigkeit aus einer angeätzten Öffnung.</p>
+      <h3>Bei genauerem Hinsehen</h3>
+      <ul>
+        <li>Wartungsschacht, Abdeckung aufgebrochen — Kanten nach außen gebogen. Nicht mit Werkzeug. Aus dem Tunnel: ein schwaches, rhythmisches Geräusch.</li>
+        <li>Säurespuren verlaufen vom Tunnel zur Mitte des Raums und zurück — ein Weg, der mehrfach gegangen wurde.</li>
+      </ul>
+      <h3>Was sich dort befindet</h3>
+      <ul>
+        <li>Hitze-Schutzanzüge (2 Stück, an Haken — nötig für Reaktorkernzugang)</li>
+        <li>Wartungskanal → Reaktorkern</li>
+      </ul>
+
+      <h2>Refinery Control</h2>
+      <p>Kontrollraum für die Raffineriemaschinen. Monitorbänke, teils aktiv. Temperaturgraphen: eine rote Linie, die seit zwei Tagen konstant bei 340% bleibt.</p>
+      <h3>Bei genauerem Hinsehen</h3>
+      <ul>
+        <li>Kontroll-Terminal: Reaktorauslastung 340% — kein technischer Fehler. Das System wurde von außen angepasst. Was auch immer im Reaktorkern ist, braucht die Wärme.</li>
+        <li>Gesperrtes Sub-Terminal (W-Y Security Level B, Comtech-Probe): Lösch-Metadaten. W-Y hat remote alle Überwachungsprotokolle gelöscht — aber die Metadaten blieben. Im Code: <em>„JVI-AR / SOLAR SILENCE."</em> <strong>[HOOK — GUSTAV, optionale zweite Spur]</strong></li>
+      </ul>
+      <h3>Was sich dort befindet</h3>
+      <ul>
+        <li>Industrielles Werkzeugset</li>
+        <li>Notabschaltung für die Raffinerie (betrifft nicht den Hauptreaktor)</li>
+      </ul>
+
+      <h2>Reactor Control</h2>
+      <p>Die Bedienoberfläche für den Primärreaktor. Funktionsfähig. Warme LED-Anzeigen. Von hier aus ist der Reaktorkern über ein Wartungsfenster acht Meter tief einsehbar. Hier können die Spieler den Reaktor steuern. <strong>→ Mission Tab, AKT VI für den Glimpse-Moment.</strong></p>
+      <h3>Bei genauerem Hinsehen</h3>
+      <ul>
+        <li>Drei Optionen am Hauptterminal:
+          <ul>
+            <li><strong>NORMALES HERUNTERFAHREN:</strong> 4-Minuten-Cooldown, sicher. Xeno verliert Wärmequelle — Reaktion unberechenbar.</li>
+            <li><strong>NOTFALL-ÜBERLASTUNG:</strong> Sofort, instabil — Reaktorkernbruch in 15 Minuten. Flucht-Timer aktiv.</li>
+            <li><strong>ISOLIERUNGSPROTOKOLL:</strong> Zwei Personen, 8 Minuten — versiegelt den Reaktorkern. Xeno eingeschlossen, kein Ausbruchsrisiko mehr.</li>
+          </ul>
+        </li>
+        <li>Wartungsfenster: Blick in den Reaktorschacht — der Glimpse-Moment, wenn SL-Timing es hergibt.</li>
+      </ul>
+      <h3>Was sich dort befindet</h3>
+      <ul>
+        <li>Hitze-Schutzanzug (1 Stück — ohne ihn im Reaktorkern: 1 HP/Runde)</li>
+        <li>Funktionierendes Datenterminal (letzte automatische Stationsprotokolle)</li>
+      </ul>
+
+      <h2>Reactor Core</h2>
+      <p>Das Nest. Extrem heiß, oranges Zwielicht, enge Rohrgänge. Der Xenomorph ist hier. <strong>→ Mission Tab, AKT VI für Encounter-Details.</strong> Kein sinnvoller Zugang ohne Hitze-Schutz. Boyd folgt nicht hierhin.</p>
+      <h3>Bei genauerem Hinsehen</h3>
+      <ul>
+        <li>Nest-Material: teils Stationskomponenten, teils biologisches Harz. In der Mitte: ein Riss im Boden — der Durchbruch aus dem Minenschaft. Der Xeno hat ihn instinktiv versiegelt. Er schützt den Zugang nach unten.</li>
+        <li>Spuren der Incinerator-Treffer: angebrannte Stellen an den Wänden. Er hat sie abbekommen und überlebt.</li>
+      </ul>
+      <h3>Was sich dort befindet</h3>
+      <ul>
+        <li><strong>Der Xenomorph</strong> (verwundet, heilend — Health 3/16)</li>
+        <li>Biologisches Harz-Material (Probe möglich — extrem gefährlich)</li>
+        <li>Zugang nach unten versiegelt (Xeno-Harz — Kammer mit 4 Eiern darunter)</li>
+      </ul>
+      <div class="info-box danger">
+        <div class="info-box-header">⚠ Reactor Core betreten</div>
+        <p>Ohne Hitze-Schutz: 1 HP/Runde. Mit Schutz: bis zu 10 Minuten. Der Xeno greift sofort an wenn jemand einbricht — er toleriert Beobachter vom Fenster aus, aber keinen Einbruch ins Nest. <strong>Panic Roll</strong> beim ersten Kontakt im Kern.</p>
+      </div>
     </div>
 
     <!-- ═══ TAB: Terminal Logs ═══ -->
