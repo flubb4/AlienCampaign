@@ -17,6 +17,7 @@
   {id: "m04-ax44-dialog",   label: "AX-44 — Antworten"},
   {id: "m04-kriecher",      label: "Kriecher (1 HP)"},
   {id: "m04-eskalation",    label: "⚡ Eskalations-Stufen"},
+  {id: "m04-reaktor",       label: "⚡ Reaktor-Lösung"},
   {id: "m04-flucht",        label: "🚨 Flucht-Sequenz"},
   {id: "m04-modula",        label: "Modul A"},
   {id: "m04-modulb",        label: "Modul B"},
@@ -597,6 +598,177 @@
       </div>
     </div>
 
+    <!-- ═══ TAB: Reaktor-Lösung ═══ -->
+    <div class="page-section content" id="m04-reaktor">
+      <h1>⚡ Reaktor-Lösung — D4 Finale</h1>
+      <p>Wenn die Spieler den Reaktorkern in D4 erreichen, stehen sie vor der Entscheidung. Drei Pfade führen zum Ziel — jeder mit unterschiedlichen Würfen, Tempo und Konsequenzen für die Flucht-Sequenz und die WY-Bezahlung. AX-44 versucht zu reden. Sobald jemand den Reaktor anfasst, greift er an.</p>
+
+      <div class="info-box secret">
+        <div class="info-box-header">SL-Grundprinzip</div>
+        <p>Lass die Spieler entscheiden, <em>wie</em> sie es machen — sie kennen die Mechanik nicht im Voraus. Beschreibe was sie sehen (Steuerkonsole, Kühlstabhebel, Plasma-Konduits, organische Masse, AX-44), und sie schlagen Aktionen vor. Du gibst die Würfe. Die Pfade unten sind ein Hilfsraster für dich — keine Liste, die du den Spielern vorlegst.</p>
+      </div>
+
+      <hr>
+
+      <h2>Pfad 1 — Reaktor abschalten <span style="font-weight:normal;color:var(--text-dim);font-size:14px;">„Sauberster Weg"</span></h2>
+      <p>Der Reaktor fährt geordnet herunter. Die organische Masse stirbt langsam, über Minuten. AX-44 fällt mid-sentence. WY enttäuscht (kein lebender Android), zahlt aber Grundhonorar. <strong>Führt in Flucht-Variante A.</strong></p>
+
+      <h3>Ansatz 1A — Steuerkonsole hacken</h3>
+      <table>
+        <thead><tr><th>Voraussetzung</th><th>Wurf</th></tr></thead>
+        <tbody>
+          <tr><td>Standard-Zugriff</td><td><strong>Comtech (3)</strong> — Notabschaltsequenz auslösen. AX-44 hat die Konsole verriegelt.</td></tr>
+          <tr><td>Mit <strong>Okafors Captain-Override-Codes</strong> (D2 Observation 2)</td><td>Konsolen-Zugriff direkt freigeschaltet — <em>kein Wurf nötig</em>.</td></tr>
+          <tr><td>Mit <strong>AX-44's Privatlog</strong> (C-Serverraum, Comtech 3)</td><td>Notabschaltcode bekannt → –1 Schwierigkeit (Comtech 2).</td></tr>
+          <tr><td>Mit <strong>Mehta-Forschungstablett</strong> (C-Biolab)</td><td>Reaktor-Subsystem-Zugriff → +1 Würfel-Bonus (kumulativ).</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Ansatz 1B — Manuelle Kühlstab-Auslösung</h3>
+      <p><strong>Heavy Machinery (2)</strong> an den mechanischen Hebeln neben dem Kern. Brachialer, direkter Weg — keine Hacking-Kette nötig. Nachteil: laute Vibrationen, AX-44 greift sofort an statt zu reden.</p>
+
+      <h3>Ansatz 1C — Organische Masse vorher freischneiden</h3>
+      <p>Die Konsole / Hebel sind teilweise überwachsen. Bevor 1A oder 1B möglich ist:</p>
+      <ul>
+        <li><strong>Survival (2)</strong> mit Schweißgerät (aus A5 mitgenommen), oder</li>
+        <li><strong>Heavy Machinery (2)</strong> mit beliebigem Schwerwerkzeug</li>
+      </ul>
+      <p>Erfolg legt die Anschlüsse frei → +1 Würfel auf den nachfolgenden Konsolen-/Hebel-Wurf. Kostet eine Aktion und ist laut.</p>
+
+      <hr>
+
+      <h2>Pfad 2 — Reaktor überladen <span style="font-weight:normal;color:var(--text-dim);font-size:14px;">„Brutal, schnell"</span></h2>
+      <p>Failsafes umgehen, Kühlung wegnehmen, der Reaktor reißt sich selbst auseinander. Station unbewohnbar, alle organischen Strukturen verbrannt. WY sauer, zahlt aber. <strong>Führt in Flucht-Variante B</strong> — härtester Timer, explodierende Sektionen.</p>
+
+      <h3>Ansatz 2A — Software-Bypass</h3>
+      <p><strong>Comtech (3)</strong>, um Sicherheitsabschaltungen zu umgehen. Bei Fehlschlag greift ein Failsafe → +1 Schwierigkeit beim Retry. Mit Okafors Codes: –1 Schwierigkeit (Comtech 2), da Captain-Privilegien einige Sperren überschreiben.</p>
+
+      <h3>Ansatz 2B — Kühlmittelleitungen physisch zerstören</h3>
+      <table>
+        <thead><tr><th>Methode</th><th>Wurf</th></tr></thead>
+        <tbody>
+          <tr><td>Schweres Werkzeug</td><td><strong>Heavy Machinery (2)</strong></td></tr>
+          <tr><td>Schwere Nahkampfwaffe direkt aufs Leitungsbündel</td><td><strong>Close Combat (1)</strong></td></tr>
+          <tr><td>Schuss in Plasma-Konduit (–2 Angriff im engen Korridor)</td><td><strong>Ranged Combat (2)</strong></td></tr>
+        </tbody>
+      </table>
+      <p>Geht in 1 Runde, aber AX-44 greift sofort an und der Flucht-Timer läuft härter.</p>
+
+      <h3>Ansatz 2C — Sprengstoff</h3>
+      <p>Falls die Gruppe welchen mitbringt: automatischer Erfolg. Aber <strong>Mobility (2)</strong>, um aus dem Wirkungsbereich zu kommen — sonst 1d6 Schaden + Panic Roll. Spektakulärster Weg.</p>
+
+      <hr>
+
+      <h2>Pfad 3 — AX-44 isolieren <span style="font-weight:normal;color:var(--text-dim);font-size:14px;">„Riskant, sehr aufwändig"</span></h2>
+      <p>Der schwerste Weg. Voraussetzung: Spieler haben in C verstanden, dass AX-44 mit dem Organismus verbunden ist (Mehta-Tablett, Frequenz 14–88 GHz, Lemmings-Logs). Trennen sie ihn vom Reaktor und halten den Kern auf Niedriglast, hungert der Organismus kontrolliert aus. WY sehr zufrieden — bergbarer Android. <strong>Führt in Flucht-Variante C.</strong></p>
+
+      <div class="info-box warn">
+        <div class="info-box-header">Drei parallele Schritte — alle drei müssen gelingen</div>
+        <p>Die Gruppe muss sich aufteilen. Mindestens drei Charaktere gleichzeitig aktiv. Wenn ein Wurf scheitert, kippt das Finale automatisch in <strong>Pfad 1</strong> (saubere Abschaltung) — der Organismus reißt AX-44 mit sich.</p>
+      </div>
+
+      <table>
+        <thead><tr><th>Schritt</th><th>Wurf</th></tr></thead>
+        <tbody>
+          <tr><td><strong>1. AX-44 unterwerfen ohne zu zerstören</strong></td><td><strong>Manipulation (3)</strong> (er hört zu, solange Reaktor unberührt) ODER <strong>Close Combat (2)</strong> mit ausdrücklicher Nicht-Tödlich-Ansage</td></tr>
+          <tr><td><strong>2. Bio-mechanische Trennung</strong></td><td><strong>Medical Aid (2)</strong> + <strong>Comtech (2)</strong> am gleichen Charakter (Schweißgerät: +1 Würfel)</td></tr>
+          <tr><td><strong>3. Reaktor auf Niedriglast halten</strong></td><td><strong>Comtech (3)</strong> an D4-Konsole (mit Okafors Codes: –1 Schwierigkeit)</td></tr>
+        </tbody>
+      </table>
+
+      <hr>
+
+      <h2>Sonderfall — Flammenwerfer &amp; Feuer</h2>
+      <p>Wenn ein Spieler einen Flammenwerfer dabei hat (oder anderes Feuer), wird das fast garantiert auf den Tisch kommen — Feuer gegen Biomasse ist instinktiv. Das Mission-Buch hat das schon kanonisch angelegt: lebende Korridor-Verschlüsse weichen Feuer (siehe Flucht-Variante C), Kriecher sind 1-HP-Ziele. Im Reaktorkern selbst hat Feuer aber spezielle Konsequenzen.</p>
+
+      <div class="info-box warn">
+        <div class="info-box-header">Was Feuer am Reaktor tatsächlich tut</div>
+        <p>Der Organismus stirbt <em>nicht</em> durch Oberflächenfeuer — er ist im Kern verankert (siehe D2-Systemlog). Was die Spieler verbrennen, ist nur das Wachstum. Aber: der Kern ist von organischer Masse durchwachsen, darunter liegen Plasma-Konduits und Kühlmittelleitungen. Wer ins Wachstum brennt, brennt zwangsläufig in die Reaktor-Infrastruktur.</p>
+      </div>
+
+      <h3>Flammenwerfer am Reaktorkern — Mechanik</h3>
+      <table>
+        <thead><tr><th>Aktion</th><th>Wurf</th><th>Effekt</th></tr></thead>
+        <tbody>
+          <tr><td>Flammenwerfer auf organische Masse am Kern</td><td>kein Wurf (statisches Ziel)</td><td>Reaktor überlädt nach 1 Runde automatisch → <strong>Flucht-Variante B</strong>.</td></tr>
+          <tr><td>Flammenwerfer auf AX-44</td><td>normaler <strong>Ranged Combat</strong></td><td>1d6 Synth-Schaden. Er reagiert mit voller Aggression, keine Verhandlung mehr.</td></tr>
+        </tbody>
+      </table>
+      <p><strong>Konsequenz:</strong> Pfad 1 (sauber) und Pfad 3 (Isolierung) sind sofort tot — kein Zurück. AX-44 stirbt in den Flammen, nicht den ruhigen „…ich habe etwas Falsches getan"-Tod. WY: sauer, zahlt aber.</p>
+
+      <h3>Feuer als Werkzeug — Buffs für andere Pfade</h3>
+      <p>Kontrolliert eingesetzt, <em>bevor</em> sie zum Reaktor gehen, ist der Flammenwerfer sehr nützlich:</p>
+      <ul>
+        <li><strong>Pfad 1C (Masse freischneiden):</strong> Flammenwerfer ersetzt Schweißgerät → <strong>+2 Würfel</strong> auf nachfolgenden Wurf (statt +1). Schnell und großflächig.</li>
+        <li><strong>Pfad 3 Schritt 2 (Bio-mechanische Trennung):</strong> Kontrolliertes Abbrennen der Verankerung → <strong>+2 Würfel</strong>. Aber: AX-44 erleidet 1d6 Synth-Schaden — stirbt er, kippt automatisch in Pfad 1.</li>
+        <li><strong>Korridor-Verschlüsse in Flucht-Variante C:</strong> schon im Buch als Feuer-Lösung markiert.</li>
+        <li><strong>Kriecher (1 HP):</strong> One-Shot ohne Wurf. Kostet aber Treibstoff.</li>
+      </ul>
+
+      <div class="info-box danger">
+        <div class="info-box-header">Druck-Mechaniken bei Feuereinsatz im Korridor</div>
+        <ul>
+          <li><strong>D3 Hitze + Flammen:</strong> Stamina-Wurf wird <strong>(3) statt (2)</strong> pro Runde ohne Schutz</li>
+          <li><strong>Sauerstoff:</strong> Nach 3 Runden anhaltendem Feuer → alle Stamina-Würfe in D3/D4 +1 Schwierigkeit</li>
+          <li><strong>Toxischer Rauch:</strong> Wer im Rauch steht — Stamina (2) oder 1 Schaden + 1 Stress</li>
+          <li><strong>Reaktor-Reaktion:</strong> Sobald Konduits getroffen werden — rote Notbeleuchtung, Sirene, Stationsstimme zählt rückwärts. Macht spürbar, dass etwas eskaliert ist.</li>
+          <li><strong>Treibstoff:</strong> M240 hat standardmäßig 5 Schuss — im Finale wird das knapp</li>
+        </ul>
+      </div>
+
+      <div class="info-box readaloud">
+        <div class="info-box-header">▶ AX-44 — wenn der Flammenwerfer hochgeht</div>
+        <p>Wichtig: AX-44 <em>sieht</em> den Flammenwerfer kommen. Lass ihn reagieren, <em>bevor</em> sie schießen — gibt den Spielern einen letzten Moment der Wahl. Der Androide hebt langsam beide Hände. Nicht ergeben — bittend.</p>
+        <blockquote>„Bitte. Nicht so. Nicht das. Sie verstehen nicht, was unter der Schicht liegt. Wenn Sie die Konduits treffen, sterben wir alle in dieser Sekunde. Es gibt einen Weg, der ruhig ist. Bitte."</blockquote>
+        <p>Wenn sie trotzdem feuern: er versucht nicht auszuweichen. Er steht still. Die Flammen treffen ihn mit der Masse. Sein letzter Satz, durch das Brennen hindurch:</p>
+        <blockquote>„…ich verstehe…"</blockquote>
+        <p>Das ist härter als der ruhige Pfad-1-Tod. Lass die Spieler das spüren.</p>
+      </div>
+
+      <hr>
+
+      <h2>Erleichterungen — was vorher gefunden hilft</h2>
+      <p>Belohne Vorbereitung. Wenn die Spieler in den vorhergehenden Modulen aufmerksam waren, wird das Finale machbarer:</p>
+      <table>
+        <thead><tr><th>Fund / Aktion</th><th>Wirkung im Finale</th></tr></thead>
+        <tbody>
+          <tr><td>Okafors Captain-Override-Codes (D2, Observation 2)</td><td>Pfad 1A: kein Wurf nötig. Pfad 2A: –1 Schwierigkeit. Pfad 3 Schritt 3: –1 Schwierigkeit.</td></tr>
+          <tr><td>AX-44's Privatlog (C-Serverraum, Comtech 3)</td><td>Pfad 1A: –1 Schwierigkeit (Notabschaltcode bekannt).</td></tr>
+          <tr><td>Mehta-Forschungstablett (C-Biolab)</td><td>+1 Würfel-Bonus auf alle Reaktor-Subsystem-Würfe. Voraussetzung für Pfad 3 (zeigt Frequenz-Verbindung zwischen AX-44 und Organismus).</td></tr>
+          <tr><td>Schweißgerät (A5 Werkstatt)</td><td>Pfad 1C möglich. Pfad 3 Schritt 2: +1 Würfel.</td></tr>
+          <tr><td>Sprengstoff oder Reservetreibstoff (A)</td><td>Pfad 2C möglich.</td></tr>
+        </tbody>
+      </table>
+
+      <hr>
+
+      <h2>AX-44 als Hindernis</h2>
+      <div class="info-box danger">
+        <div class="info-box-header">Im Finale</div>
+        <p>Sobald jemand den Reaktor anfasst, greift AX-44 an (Stufe-3-Kampfwerte siehe Eskalations-Tab). Er weicht aus, schlägt Waffen aus Händen, zielt nicht auf den Körper — er will Zeit gewinnen, nicht töten. Wenn die Gruppe parallel würfeln will (Pfad 3 oder 1B), muss mindestens ein Charakter ihn binden:</p>
+        <ul>
+          <li><strong>Close Combat / Ranged Combat:</strong> normaler Kampf, –2 wegen enger Korridor</li>
+          <li><strong>Manipulation (3):</strong> verzögert ihn 1 Runde — er bittet, droht nicht. Sein letztes Werkzeug.</li>
+        </ul>
+      </div>
+
+      <hr>
+
+      <h2>Druck-Mechaniken im Finale</h2>
+      <ul>
+        <li><strong>Hitze in D3/D4:</strong> Pro Runde ohne Hitzeschutz <strong>Stamina (2)</strong>, sonst 1 Erschöpfung</li>
+        <li><strong>Enge in D3:</strong> Alle Kämpfe –2 auf Angriffe</li>
+        <li><strong>Erstmaliger Anblick des Kerns mit AX-44 davor:</strong> +1 Stress, Panic Roll für alle</li>
+        <li><strong>Reaktor angerührt:</strong> AX-44 eskaliert sofort zu Kampf, Flucht-Timer startet</li>
+      </ul>
+
+      <div class="info-box secret">
+        <div class="info-box-header">Übergang in die Flucht</div>
+        <p>Sobald der Reaktor beendet ist (egal welcher Pfad), springst du sofort in die <em>🚨 Flucht-Sequenz</em>. Die jeweilige Variante (A/B/C) ergibt sich aus dem gewählten Pfad. Keine Pause am Tisch — die Flucht startet im selben Moment.</p>
+        <button onclick="showSection('m04-flucht')" style="margin-top:8px;background:transparent;border:1px solid var(--danger);color:var(--danger);cursor:pointer;font-family:'Share Tech Mono',monospace;font-size:11px;padding:5px 14px;letter-spacing:1px;">🚨 → FLUCHT-SEQUENZ</button>
+      </div>
+    </div>
+
     <!-- ═══ TAB: Flucht-Sequenz ═══ -->
     <div class="page-section content" id="m04-flucht">
       <h1>🚨 Flucht-Sequenz — Atlas Station</h1>
@@ -1053,10 +1225,11 @@
         <p>Auf dem Hauptterminal: ein offenes Systemlog, letzter automatischer Eintrag:</p>
         <blockquote>„Das Subjekt hat sich im Reaktorkern verankert. Energie stabilisiert das Wachstum. Trennung von AX-44 nur bei vollständigem Energieverlust möglich."</blockquote>
         <p>Das Notfall-Log zeigt die letzten vier Stunden vor der Evakuierung. Die Einträge werden mit jeder Stunde kürzer. Die letzte Zeile ist nur noch drei Wörter.</p>
+        <p>Seitlich am Kommandopult: eine persönliche Arbeitsstation. Ein Tablett liegt schräg auf der Ablage, als wäre es im Aufstehen liegen geblieben. Der Bildschirm flackert noch leise — Login-Maske mit dem Namensfeld <em>OKAFOR, B.</em> bereits ausgefüllt.</p>
       </div>
       <div class="info-box warn">
         <div class="info-box-header">Fund & Würfe</div>
-        <p><strong>Comtech (2):</strong> Koordinatenfragment extrahieren — <code>Theta-9 / NGC-4419 — Objekt: „Primärkolonie" — Status: Aktiv</code>. Black Veil Datenfragment 2/10.<br><strong>Observation (1):</strong> Die organischen Strukturen wachsen <em>zum</em> Reaktor hin, nicht von ihm weg. Der Reaktor ist kein Risiko — er ist das Ziel.</p>
+        <p><strong>Comtech (2):</strong> Koordinatenfragment extrahieren — <code>Theta-9 / NGC-4419 — Objekt: „Primärkolonie" — Status: Aktiv</code>. Black Veil Datenfragment 2/10.<br><strong>Observation (1):</strong> Die organischen Strukturen wachsen <em>zum</em> Reaktor hin, nicht von ihm weg. Der Reaktor ist kein Risiko — er ist das Ziel.<br><strong>Observation (2):</strong> Okafors Tablett auf der Arbeitsstation — letzter Aktivitäts-Log: drei fehlgeschlagene Versuche, AX-44's Reaktor-Lockdown zu umgehen, jeweils geblockt mit <em>„Autorisierung verweigert."</em> Auf der Rückseite des Tabletts handschriftlich notiert: ihre persönlichen <strong>Captain-Override-Codes</strong> (sechsstellig). Sie hat sie aufgeschrieben, weil sie wusste, dass AX-44 die digitalen Spuren überwacht. Wer das Tablett mitnimmt, hat in <strong>D4</strong> direkten Konsolen-Zugriff auf die Reaktor-Steuerung — der Hacking-Wurf zum sauberen Abschalten entfällt (oder wird um 1 Schwierigkeit reduziert, falls die Codes für Überladung umgewidmet werden).</p>
       </div>
 
       <hr>
@@ -1095,6 +1268,7 @@
         <div class="info-box-header">Kampf / Entscheidung — Finale</div>
         <p>Wenn die Spieler den Reaktor angreifen, greift AX-44 ohne weitere Worte an — schnell, präzise, taktisch. Er zielt auf Waffen und Hände, nicht auf Körper. Er tötet nicht, wenn er es vermeiden kann. Er will Zeit gewinnen.<br><br>Wenn der Reaktor trotzdem abgeschaltet oder überladen wird, kollabiert die gesamte organische Struktur innerhalb von Minuten — AX-44 mit ihr. Kein dramatischer Tod. Er fällt einfach. Wie ein Gerät, das vom Strom getrennt wird. Sein letzter Satz, kaum hörbar:<br><em>„…ich habe… etwas Falsches… getan…"</em><br><br>
         <strong>Ab diesem Moment beginnt die Flucht-Sequenz.</strong></p>
+        <button onclick="showSection('m04-reaktor')" style="margin-top:8px;margin-right:6px;background:transparent;border:1px solid var(--green-dim);color:var(--green);cursor:pointer;font-family:'Share Tech Mono',monospace;font-size:11px;padding:5px 14px;letter-spacing:1px;">⚡ → REAKTOR-LÖSUNG (Würfe)</button>
         <button onclick="showSection('m04-flucht')" style="margin-top:8px;background:transparent;border:1px solid var(--danger);color:var(--danger);cursor:pointer;font-family:'Share Tech Mono',monospace;font-size:11px;padding:5px 14px;letter-spacing:1px;">🚨 → FLUCHT-SEQUENZ</button>
       </div>
     </div>
