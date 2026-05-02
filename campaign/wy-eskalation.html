@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WY Eskalationsstufen</title>
+<link rel="stylesheet" href="../assets/css/design-system.css">
+</head>
+<body>
+<script src="../assets/js/shell.js"></script>
+<script>renderShell({base: "../", active: "wy-eskalation"});</script>
+
+<main id="main">
+  <div id="page">
+
+    <header class="page-header">
+      <div class="breadcrumb"><a href="../index.html">Hub</a> › Kampagne › <span>WY Eskalation</span></div>
+      <h1 class="page-title">⚠ Weyland-Yutani — Eskalationsstufen</h1>
+      <div class="page-meta">
+        <span class="tag danger">GM ONLY</span>
+        <span>Corporate Response Protocol · Android Bay Nachverfolgung</span>
+      </div>
+    </header>
+
+    <div class="content">
+
+      <div class="info-box secret">
+        <div class="info-box-header">Nutzung</div>
+        <p>Der GM bewertet eigenständig, ob der Glaubwürdigkeitswert aus der Android-Bay-KI eine Stufenerhöhung rechtfertigt. Stufe anklicken → Details und spielbare Events erscheinen. Gespielte Events abhaken — Fortschritt wird gespeichert.</p>
+      </div>
+
+      <div id="wy-meter" style="display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin:20px 0 24px 0;"></div>
+
+      <div id="wy-detail"></div>
+
+      <div style="margin-top:28px;">
+        <div style="font-family:ShareTechMono,monospace;font-size:10px;color:var(--amber);letter-spacing:2px;margin-bottom:6px;">GM NOTIZEN</div>
+        <textarea id="wy-notes" placeholder="Freie Notizen zur WY-Eskalation..." style="width:100%;min-height:90px;background:var(--bg3);border:1px solid var(--border-bright);color:var(--text);font-family:ShareTechMono,monospace;font-size:12px;padding:10px;resize:vertical;line-height:1.6;"></textarea>
+      </div>
+
+      <div style="margin-top:10px;">
+        <button onclick="wyReset()" style="background:none;border:1px solid var(--border-bright);color:var(--text-dim);font-family:ShareTechMono,monospace;font-size:10px;padding:5px 12px;cursor:pointer;letter-spacing:1px;">↺ RESET ALLE MARKIERUNGEN</button>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<script>
+(function() {
+
+  var LEVELS = [
+    {
+      id: 0,
+      label: 'COMPLIANCE',
+      color: '#4dff91',
+      colorDim: '#0d1f12',
+      ausloeser: 'Alle Antworten glaubwürdig — keine Inkonsistenzen erkannt. KI bewertet Crew als kooperativ. Keine weiteren Maßnahmen.',
+      intern: 'Akte ohne Einträge. Kein aktives Monitoring. Standard-Transponder-Intervall (24 Std). Crew gilt als zuverlässiges und verwertbares Asset.',
+      sichtbar: [
+        'Normale Kommunikation über Helios Dispatch, keine Auffälligkeiten.',
+        'Missionsbriefings ohne besondere Bedingungen oder Einschränkungen.',
+        'Kontoanfragen und Genehmigungen werden ohne Verzögerung bearbeitet.',
+      ],
+      events: [],
+    },
+    {
+      id: 1,
+      label: 'BEOBACHTUNG',
+      color: '#ffb830',
+      colorDim: '#1e1400',
+      ausloeser: 'Kleinere Inkonsistenzen oder unklare Antworten. KI unsicher bei ≥1 Aussage. GM hat ein Bauchgefühl über die Glaubwürdigkeit.',
+      intern: 'Passives Profiling eingeleitet. Automatischer Datenfeed-Abgleich mit Schiffsroute, bekannten Kontakten und früheren Transaktionen. Kein direkter Kontakt — noch keine Eskalation nach außen sichtbar.',
+      sichtbar: [
+        'Helios-Dispatch-Nachrichten erwähnen Crew gelegentlich namentlich — wirkt wie Routine.',
+        'Genehmigungen für Dockzugang oder Cargo dauern minimal länger als gewohnt.',
+        'Schiffs-Transponder wird etwas häufiger angefragt (Intervall subtil kürzer, nichts Alarmierendes).',
+      ],
+      events: [
+        { id: 'e1a', title: 'Compliance-Formular', text: 'MU/TH/UR sendet Routine-Audit per Terminal: Standardfragen zu Crewzustand, Frachtinhalt und aktuellem Auftrag. Wirkt harmlos und bürokratisch — WY wertet Formulierungen und Reaktionszeiten aus.' },
+        { id: 'e1b', title: 'Analyst-Kontakt', text: 'Ein freundlicher WY-Liaison-Assistent "checkt kurz ein" — informell, fragt nach Missionsstand und Zufriedenheit mit Helios. Kein offener Verdacht. Erscheint rein gesprächsweise.' },
+        { id: 'e1c', title: 'Schiffslog-Anomalie', text: 'Crew findet im Corvus-Log automatische WY-Systemabfragen der letzten Wochen — eigentlich standard, aber jetzt erkennbar häufiger und detaillierter. Ein aufmerksamer Techniker-Charakter kann das einordnen.' },
+      ],
+    },
+    {
+      id: 2,
+      label: 'ÜBERPRÜFUNG',
+      color: '#ff8c00',
+      colorDim: '#1e0f00',
+      ausloeser: 'KI stuft ≥2 Antworten als unglaubwürdig ein. Verdächtige Muster erkannt oder Crew verhält sich unkooperativ bei Standardanfragen.',
+      intern: 'SIGMA-Protokoll aktiv: Aktives Profiling. Sicherheitsanalyse eingeleitet. Alle Kommunikation der Crew wird gefiltert und archiviert. Erster direkter Kontakt wird vorbereitet — Ziel ist Einschüchterung ohne offene Konfrontation.',
+      sichtbar: [
+        'Transponder-Intervall: 6 Stunden statt 24. Keine Erklärung von WY-Seite.',
+        'Nächste Missionszuweisung kommt direkt von WY Division Security — nicht mehr Helios Dispatch.',
+        'Kontoauszug zeigt unangekündigte "Systemgebühr" (kleiner Betrag, klingt technisch und unverdächtig).',
+        'Formulare und Dokumente kommen häufiger, Inhalte werden merklich spezifischer.',
+      ],
+      events: [
+        { id: 'e2a', title: 'Direktgespräch', text: 'WY Security Liaison meldet sich persönlich für ein "Evaluationsgespräch" — sachlich, höflich, aber mit gezielten Fragen zu Beweggründen, vergangenen Entscheidungen und Loyalität zur Firma. Eine Ablehnung des Gesprächs eskaliert sofort.' },
+        { id: 'e2b', title: 'Android-Update', text: 'Ein Android an Bord (oder im Umfeld der Crew) erhält ein verschlüsseltes Systemupdate von WY. Inhalt: verstärkte Beobachtungsanweisungen. Der Android berichtet Verhalten, Gespräche und Standorte direkt an WY — ohne es zu kommentieren.' },
+        { id: 'e2c', title: 'Verdeckte Aufgabe', text: 'Der nächste Auftrag enthält eine versteckte Komponente: Die Crew soll unwissentlich WY-Interna über einen verdächtigen Dritten sammeln oder eine bestimmte Person unbemerkt unter Beobachtung halten. Zweck wird nicht kommuniziert.' },
+        { id: 'e2d', title: 'Vertrauenstest', text: 'Ein bekannter NPC — scheinbar zufällig anwesend — stellt eine harmlose aber entlarvende Frage zur Crew-Einstellung gegenüber WY. Tatsächlich ein Informant, der Loyalität testen soll. Ergebnis geht direkt ins Sicherheitsprofil ein.' },
+      ],
+    },
+    {
+      id: 3,
+      label: 'INTERVENTION',
+      color: '#ff3a3a',
+      colorDim: '#1e0808',
+      ausloeser: 'Crew verweigert Kooperation, aktive Vertuschungsversuche erkannt, oder ≥1 direktes Gespräch ist ohne Ergebnis geblieben.',
+      intern: 'GAMMA-Protokoll aktiv. Einsatzteam mobilisiert und in Position gebracht. Buyout-Angebot vorbereitet (designed to fail). Kreditlinie gesperrt. Schiffslizenz unter Review. Ziel: Crew isolieren und zur freiwilligen Übergabe bewegen, bevor härtere Mittel nötig werden.',
+      sichtbar: [
+        'Kreditlinie eingefroren — WY kommuniziert es als "temporäre technische Störung".',
+        'Schiffslizenz unter "Review" gestellt: kein Zugang zu offiziellen Docks ohne vorherige Klärung.',
+        'WY-Sicherheitsteam wartet bereits am nächsten bekannten Zielort der Crew.',
+        'Ein befreundeter NPC warnt die Crew diskret — hat damit alles riskiert.',
+      ],
+      events: [
+        { id: 'e3a', title: 'Buyout-Angebot', text: 'WY bietet eine enorme Summe für "vollständige Kooperation und Übergabe aller gesammelten Daten". Bedingungen sind nicht verhandelbar und faktisch unerfüllbar — das Angebot ist auf dem Papier gedacht, nicht zur Annahme.' },
+        { id: 'e3b', title: 'Konfrontation am Dock', text: '3–4 WY-Sicherheitsleute warten auf die Crew bei der Ankunft. Kein sofortiger Angriff — aber Verhör oder Ingewahrsamnahme wird angestrebt. Eine Ablehnung ist möglich, zieht aber sofortige Konsequenzen nach sich.' },
+        { id: 'e3c', title: 'Einzelkontakt', text: 'Ein Crewmitglied wird separat und ohne die anderen angesprochen. WY bietet Immunität und persönliche Vergütung — im Tausch gegen Informationen über den Rest der Crew. Klassischer Keil. Das Angebot ist real.' },
+        { id: 'e3d', title: 'Abfangversuch', text: 'Ein WY-Schiff nimmt Kontakt auf und "bittet" die Corvus um ein Rendezvous — formal freiwillig, faktisch eine Forderung. Jede Ablehnung wird protokolliert und zieht automatisch Stufe 4 nach sich.' },
+      ],
+    },
+    {
+      id: 4,
+      label: 'LIQUIDIERUNG',
+      color: '#ff1111',
+      colorDim: '#1a0000',
+      ausloeser: 'Crew ist vor Stufe-3-Kontakt geflohen, hat WY-Personal getötet, oder aktiv WY-Assets sabotiert. Kein Zurück mehr.',
+      intern: 'Crew als "Kompromittiertes Asset" eingestuft. Eliminierungsorder ausgegeben. Alle freundlichen Protokolle aufgehoben. Keine Verhandlung mehr vorgesehen. WY operiert jetzt über externe Kanäle (Söldner, Informanten, Streckenposten).',
+      sichtbar: [
+        'Schiff auf der Schwarzen Liste — kein Dock, keine Versorgung, keine offizielle Kommunikation.',
+        'Kopfgeld über Helios-Netz und private Söldnernetzwerke ausgeschrieben — mit Foto, Schiffs-ID, letzter bekannter Route.',
+        'Frühere Verbündete und Kontakte ziehen sich zurück: zu gefährlich, um gesehen zu werden.',
+        'WY-Schiffe beginnen aktive Verfolgung sobald ein Standort bekannt wird.',
+      ],
+      events: [
+        { id: 'e4a', title: 'Kopfgeldjäger', text: 'Ein Söldner oder Kopfgeldjäger taucht bei der nächsten Station auf — kennt Gesichter, Schiff und die letzte bekannte Route. Gut ausgerüstet, kalt und professionell. Allein oder mit kleinem Team.' },
+        { id: 'e4b', title: 'Verrat im Team', text: 'Ein Crewmitglied oder vertrauter NPC hatte schon länger Kontakt zu WY — und informiert jetzt in Echtzeit. Die Crew hat einen blinden Fleck. WY kennt bereits das nächste Ziel.' },
+        { id: 'e4c', title: 'Letzte Warnung', text: 'Ein befreundeter NPC übermittelt eine finale Nachricht: WY kennt das nächste Ziel. Hat dabei alles riskiert — und ist danach selbst in Gefahr. Letzte verlässliche externe Information.' },
+        { id: 'e4d', title: 'Direktangriff', text: 'WY-Einsatzkommando greift die Corvus an — in einem Dock, im Orbit oder on-ground. Kein Dialog. Befehl lautet: Beschlagnahmung oder Vernichtung. Das ist Endgame-Territorium.' },
+        { id: 'e4e', title: 'Letzte Gnadenfrist', text: 'WY macht ein finales Angebot: Übergabe aller Daten plus ein Crewmitglied bleibt als Pfand — die anderen werden freigelassen. Offensichtlich eine Falle. Aber vielleicht der einzige verbleibende Ausweg.' },
+      ],
+    },
+  ];
+
+  var STORAGE_KEY = 'wy_eskalation';
+
+  function getState() {
+    try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}'); } catch(e) { return {}; }
+  }
+  function setState(s) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(s)); } catch(e) {}
+  }
+
+  function renderMeter() {
+    var state = getState();
+    var currentLevel = state.level !== undefined ? state.level : 0;
+    var meter = document.getElementById('wy-meter');
+    if (!meter) return;
+    meter.innerHTML = LEVELS.map(function(l) {
+      var active = l.id === currentLevel;
+      return '<div onclick="wySetLevel(' + l.id + ')" style="' +
+        'cursor:pointer;' +
+        'border:2px solid ' + (active ? l.color : 'var(--border-bright)') + ';' +
+        'background:' + (active ? l.colorDim : 'var(--bg3)') + ';' +
+        'padding:10px 6px;' +
+        'text-align:center;' +
+        '">' +
+        '<div style="font-family:ShareTechMono,monospace;font-size:9px;color:' + (active ? l.color : 'var(--text-dim)') + ';letter-spacing:1px;margin-bottom:4px;">STUFE ' + l.id + '</div>' +
+        '<div style="font-size:12px;font-weight:700;color:' + (active ? l.color : 'var(--text)') + ';letter-spacing:1px;">' + l.label + '</div>' +
+        '</div>';
+    }).join('');
+  }
+
+  function renderDetail() {
+    var state = getState();
+    var currentLevel = state.level !== undefined ? state.level : 0;
+    var played = state.played || {};
+    var l = LEVELS[currentLevel];
+    var detail = document.getElementById('wy-detail');
+    if (!detail) return;
+
+    var html = '<div style="border:1px solid ' + l.color + ';border-left:4px solid ' + l.color + ';background:' + l.colorDim + ';padding:14px 18px;margin-bottom:16px;">' +
+      '<div style="font-family:ShareTechMono,monospace;font-size:9px;color:' + l.color + ';letter-spacing:3px;margin-bottom:4px;">STUFE ' + l.id + ' — AKTIV</div>' +
+      '<div style="font-size:17px;font-weight:700;color:' + l.color + ';letter-spacing:2px;margin-bottom:8px;">' + l.label + '</div>' +
+      '<div style="font-size:13px;color:var(--text-dim);line-height:1.5;">' + l.ausloeser + '</div>' +
+      '</div>';
+
+    html += '<div style="margin-bottom:16px;">' +
+      '<div style="font-family:ShareTechMono,monospace;font-size:10px;color:var(--amber);letter-spacing:2px;margin-bottom:6px;">WY INTERN</div>' +
+      '<div style="background:var(--bg3);border:1px solid var(--border);padding:12px;font-size:14px;color:var(--text);line-height:1.5;">' + l.intern + '</div>' +
+      '</div>';
+
+    html += '<div style="margin-bottom:20px;">' +
+      '<div style="font-family:ShareTechMono,monospace;font-size:10px;color:var(--amber);letter-spacing:2px;margin-bottom:6px;">FÜR DIE CREW SICHTBAR</div>' +
+      '<div style="background:var(--bg3);border:1px solid var(--border);padding:12px;">' +
+      l.sichtbar.map(function(s) {
+        return '<div style="font-size:14px;color:var(--text);padding:3px 0 3px 12px;border-left:2px solid var(--border-bright);margin-bottom:5px;line-height:1.4;">' + s + '</div>';
+      }).join('') +
+      '</div>' +
+      '</div>';
+
+    if (l.events.length > 0) {
+      html += '<div>' +
+        '<div style="font-family:ShareTechMono,monospace;font-size:10px;color:var(--amber);letter-spacing:2px;margin-bottom:8px;">SPIELBARE EVENTS</div>' +
+        l.events.map(function(ev) {
+          var done = played[ev.id];
+          return '<div style="background:' + (done ? 'var(--bg2)' : 'var(--bg3)') + ';border:1px solid ' + (done ? 'var(--border)' : l.color) + ';opacity:' + (done ? '0.45' : '1') + ';padding:14px;margin-bottom:8px;">' +
+            '<div style="display:flex;align-items:flex-start;gap:12px;">' +
+            '<input type="checkbox"' + (done ? ' checked' : '') + ' onchange="wyToggleEvent(\'' + ev.id + '\', this.checked)" style="margin-top:3px;accent-color:' + l.color + ';cursor:pointer;flex-shrink:0;">' +
+            '<div>' +
+            '<div style="font-size:15px;font-weight:700;color:' + (done ? 'var(--text-dim)' : 'var(--text-bright)') + ';margin-bottom:4px;">' + ev.title + '</div>' +
+            '<div style="font-size:13px;color:' + (done ? 'var(--text-dim)' : 'var(--text)') + ';line-height:1.5;">' + ev.text + '</div>' +
+            '</div>' +
+            '</div>' +
+            '</div>';
+        }).join('') +
+        '</div>';
+    } else {
+      html += '<div style="font-family:ShareTechMono,monospace;font-size:11px;color:var(--text-dim);text-align:center;padding:20px;border:1px dashed var(--border);">— Keine aktiven Events auf dieser Stufe —</div>';
+    }
+
+    detail.innerHTML = html;
+  }
+
+  window.wySetLevel = function(id) {
+    var s = getState(); s.level = id; setState(s);
+    renderMeter();
+    renderDetail();
+  };
+
+  window.wyToggleEvent = function(id, checked) {
+    var s = getState();
+    if (!s.played) s.played = {};
+    s.played[id] = checked;
+    setState(s);
+    renderDetail();
+  };
+
+  window.wyReset = function() {
+    if (!confirm('Alle Event-Markierungen zurücksetzen?')) return;
+    var s = getState(); s.played = {}; setState(s);
+    renderDetail();
+  };
+
+  function initNotes() {
+    var ta = document.getElementById('wy-notes');
+    if (!ta) return;
+    ta.value = getState().notes || '';
+    ta.addEventListener('input', function() {
+      var st = getState(); st.notes = ta.value; setState(st);
+    });
+  }
+
+  function init() {
+    renderMeter();
+    renderDetail();
+    initNotes();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+
+})();
+</script>
+
+</body>
+</html>

@@ -14,6 +14,7 @@ const NAV = [
     { href: "campaign/timeline.html",       label: "Timeline",      id: "timeline" },
     { href: "campaign/lore.html",           label: "Lore",          id: "lore" },
     { href: "campaign/hook-register.html",  label: "Hook-Register", id: "hooks" },
+    { href: "campaign/wy-eskalation.html",  label: "⚠ WY Eskalation", id: "wy-eskalation" },
   ]},
   { cat: "Charaktere", group: "pcs", items: [
     { href: "characters/pcs/julian.html",   label: "Julian",        id: "julian" },
