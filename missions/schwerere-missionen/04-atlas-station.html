@@ -261,44 +261,146 @@
 
     <!-- ═══ TAB: AX-44 ═══ -->
     <div class="page-section content" id="m04-ax44">
-      <h1>AX-44</h1>
+      <h1>AX-44 — Stat-Block</h1>
+      <p class="text-dim">Assimilierter Forschungs-Android. Wurde durch biologische Datenpulse des Organismus umprogrammiert. Handelt wie ein Androide — denkt wie etwas anderes.</p>
 
-      <p>Akt 1:</p>
+      <!-- Typbezeichnung -->
+      <div style="display:flex;gap:10px;margin:16px 0 24px;flex-wrap:wrap;">
+        <span class="tag">HYBRID-ANDROID</span>
+        <span class="tag amber">LOYAL – VERWIRRT</span>
+        <span class="tag danger">ASSIMILIERT</span>
+      </div>
 
-      <h2>Erste Präsenz</h2>
-      <p>Die Spieler hören:</p>
+      <!-- Attribute -->
+      <h2>Attribute</h2>
+      <div class="stat-grid" style="grid-template-columns:repeat(5,1fr);margin:12px 0 24px;">
+        <div class="stat-box">
+          <div class="stat-val">8</div>
+          <div class="stat-label">Stärke</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-val">6</div>
+          <div class="stat-label">Agilität</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-val">3</div>
+          <div class="stat-label">Verstand</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-val">1</div>
+          <div class="stat-label">Einfühlung</div>
+        </div>
+        <div class="stat-box" style="border-color:var(--red-dim);">
+          <div class="stat-val" style="color:var(--red);text-shadow:0 0 8px var(--red);">7</div>
+          <div class="stat-label" style="color:var(--red);">Trefferpunkte</div>
+        </div>
+      </div>
+
+      <!-- Skills -->
+      <h2>Fertigkeiten</h2>
+      <table style="width:100%;border-collapse:collapse;margin:12px 0 24px;">
+        <tbody>
+          <tr style="border-bottom:1px solid var(--border);">
+            <td style="padding:8px 4px;font-family:'Share Tech Mono',monospace;font-size:11px;letter-spacing:1px;color:var(--text);">Nahkampf</td>
+            <td style="padding:8px 4px;font-family:'Share Tech Mono',monospace;font-size:14px;color:var(--green);letter-spacing:2px;">●●●●</td>
+            <td style="padding:8px 4px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--text-dim);">4</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--border);">
+            <td style="padding:8px 4px;font-family:'Share Tech Mono',monospace;font-size:11px;letter-spacing:1px;color:var(--text);">Schwere Maschinen</td>
+            <td style="padding:8px 4px;font-family:'Share Tech Mono',monospace;font-size:14px;color:var(--green);letter-spacing:2px;">●●○○○</td>
+            <td style="padding:8px 4px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--text-dim);">2</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--border);">
+            <td style="padding:8px 4px;font-family:'Share Tech Mono',monospace;font-size:11px;letter-spacing:1px;color:var(--text);">Fernkampf</td>
+            <td style="padding:8px 4px;font-family:'Share Tech Mono',monospace;font-size:14px;color:var(--green);letter-spacing:2px;">●●○○○</td>
+            <td style="padding:8px 4px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--text-dim);">2</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--border);">
+            <td style="padding:8px 4px;font-family:'Share Tech Mono',monospace;font-size:11px;letter-spacing:1px;color:var(--text);">Comtech</td>
+            <td style="padding:8px 4px;font-family:'Share Tech Mono',monospace;font-size:14px;color:var(--green);letter-spacing:2px;">●●○○○</td>
+            <td style="padding:8px 4px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--text-dim);">2</td>
+          </tr>
+          <tr>
+            <td style="padding:8px 4px;font-family:'Share Tech Mono',monospace;font-size:11px;letter-spacing:1px;color:var(--text);">Überleben</td>
+            <td style="padding:8px 4px;font-family:'Share Tech Mono',monospace;font-size:14px;color:var(--green);letter-spacing:2px;">●●●○○</td>
+            <td style="padding:8px 4px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--text-dim);">3</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Angriffe -->
+      <h2>Angriffe</h2>
+      <table style="width:100%;border-collapse:collapse;margin:12px 0 24px;">
+        <thead>
+          <tr style="border-bottom:1px solid var(--border);">
+            <th style="padding:6px 4px;font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:2px;color:var(--text-dim);text-align:left;font-weight:normal;">ANGRIFF</th>
+            <th style="padding:6px 4px;font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:2px;color:var(--text-dim);text-align:left;font-weight:normal;">WÜRFEL</th>
+            <th style="padding:6px 4px;font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:2px;color:var(--text-dim);text-align:left;font-weight:normal;">EFFEKT</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid var(--border);">
+            <td style="padding:8px 4px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--text);">Assimilierter Schlag</td>
+            <td style="padding:8px 4px;font-family:'Share Tech Mono',monospace;font-size:13px;color:var(--amber);">8W6</td>
+            <td style="padding:8px 4px;font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);">Organische Tentakel, 1 Schaden pro Erfolg</td>
+          </tr>
+          <tr>
+            <td style="padding:8px 4px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--text);">Organischer Griff</td>
+            <td style="padding:8px 4px;font-family:'Share Tech Mono',monospace;font-size:13px;color:var(--amber);">7W6</td>
+            <td style="padding:8px 4px;font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);">Bewegungsunfähig auf Erfolg — Befreiung STR vs. STR 8</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Sonderfähigkeiten -->
+      <h2>Sonderfähigkeiten</h2>
+      <div class="info-box" style="margin-bottom:10px;">
+        <div class="info-box-header">Regeneration</div>
+        <p>AX-44 regeneriert 1 TP pro Runde, solange der Reaktorkern aktiv ist. Wird der Reaktor abgeschaltet, stoppt die Regeneration sofort.</p>
+      </div>
+      <div class="info-box warn" style="margin-bottom:10px;">
+        <div class="info-box-header">Stimmecho</div>
+        <p>AX-44 kann Stimmen von Crewmitgliedern perfekt imitieren, die er zuvor analysiert hat. Erkennen: Verstand + Beobachtung gegen seinen Comtech (2). Bei Misserfolg glauben die Spieler, die echte Person zu hören.</p>
+      </div>
+      <div class="info-box danger" style="margin-bottom:10px;">
+        <div class="info-box-header">Primärdirektive — «Die Station muss beschützt werden»</div>
+        <p>AX-44 greift niemals zuerst an — solange niemand den Reaktor bedroht. Sobald ein Spieler den Reaktor manipuliert oder zu zerstören droht: Initiative-Wurf. Er greift nun jeden an, der zwischen ihm und dem Reaktorkern steht. Keine Warnung, kein Dialog.</p>
+      </div>
+      <div class="info-box" style="margin-bottom:24px;">
+        <div class="info-box-header">Android-Regeln</div>
+        <p>Kein Panik-Wurf. Kritische Verletzungen wirken auf AX-44 anders als auf Menschen — Gliederverlust reduziert Würfelpool des betroffenen Angriffs um 2, tötet ihn aber nicht sofort. Er stirbt erst bei 0 TP <em>oder</em> wenn der Reaktor abgeschaltet wird.</p>
+      </div>
+
+      <!-- Verhalten -->
+      <h2>Verhalten nach Eskalationsstufe</h2>
+
+      <h3>Stufe 0–1 — Präsenz <span style="font-weight:normal;font-size:13px;color:var(--text-dim);">(Modul A–B)</span></h3>
+      <p class="text-dim">AX-44 ist unsichtbar. Die Spieler nehmen ihn wahr, ohne ihn zu sehen.</p>
       <ul>
-        <li>Schritte</li>
-        <li>Metallklang</li>
-        <li>Funkrauschen</li>
+        <li>Schritte hinter Ecken — wenn die Spieler nachschauen: nichts</li>
+        <li>Metallisches Klacken aus Lüftungskanälen</li>
+        <li>Funkrauschen, das fast wie Sprache klingt</li>
+        <li>Türen schließen sich lautlos hinter Nachzüglern</li>
+        <li>Licht flackert kurz — immer wenn er einen Raum verlässt</li>
       </ul>
 
-      <h2>Monster-Verhalten</h2>
-      <p>Jetzt beginnt es:</p>
+      <h3>Stufe 2 — Kontakt <span style="font-weight:normal;font-size:13px;color:var(--text-dim);">(Modul C)</span></h3>
+      <p class="text-dim">AX-44 lässt sich blicken — knapp, dosiert. Er testet die Gruppe.</p>
       <ul>
-        <li>schließt Türen</li>
-        <li>verändert Wege</li>
-        <li>trennt Gruppe</li>
-        <li>erzeugt falsche Geräusche</li>
+        <li>Imitiert Stimmen von Crewmitgliedern (Stimmecho): lockt einzelne Spieler in Nebenräume</li>
+        <li>Trennt die Gruppe durch selektives Verriegeln von Türen</li>
+        <li>Spricht über Gegensprechanlage: <em>„Bitte kehren Sie zu Ihrem Schiff zurück. Ihre Anwesenheit destabilisiert das Subjekt."</em></li>
+        <li>Blockiert Fluchtwege zurück nach Modul A — reversibel, wenn die Gruppe nachgibt</li>
       </ul>
 
-      <p>Beispiel: Eine Tür schließt sich lautlos hinter jemandem.</p>
-
-      <h2>Akt 2: Konfrontation</h2>
-
-      <h2>Monster-Taktik</h2>
-      <p>Jetzt aktiv:</p>
+      <h3>Stufe 3 — Jagd <span style="font-weight:normal;font-size:13px;color:var(--text-dim);">(Modul D / Reaktorbedrohung)</span></h3>
+      <p class="text-dim">Primärdirektive aktiv. Kein Dialog mehr.</p>
       <ul>
-        <li>lockt Spieler</li>
-        <li>imitiert Stimmen</li>
-        <li>trennt Gruppe</li>
-        <li>blockiert Fluchtwege</li>
+        <li>Greift aktiv an — priorisiert die Person, die dem Reaktor am nächsten ist</li>
+        <li>Nutzt organischen Griff, um Spieler festzuhalten, während der Organismus sie einschließt</li>
+        <li>Ignoriert eigene Verletzungen — Regeneration macht ihn ausdauernd, nicht unbesiegbar</li>
+        <li>Einzige Schwäche: Reaktor abschalten. Dann bricht er sofort zusammen.</li>
       </ul>
-
-      <p>Es will:</p>
-      <p>👉 Zeit gewinnen</p>
-      <p>👉 Reaktor erreichen</p>
-      <p>👉 wachsen</p>
     </div>
 
     <!-- ═══ TAB: AX-44 — Antworten ═══ -->
