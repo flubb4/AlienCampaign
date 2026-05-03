@@ -668,10 +668,11 @@
 
       <div class="info-box">
         <div class="info-box-header">AX-44 Kampfwerte (nur Stufe 3+)</div>
-        <p><strong>HP:</strong> 10 | <strong>Stärke:</strong> 6 | <strong>Geschwindigkeit:</strong> 1 (Android-Standard)<br>
-        <strong>Angriff:</strong> Greift nach Waffen, nicht nach Körpern — Entwaffnen (Nahkampf, Stärke vs. Stärke). Erst bei 5 HP oder weniger: direkter Angriff (2 Schaden).<br>
+        <p><strong>HP:</strong> 7 | <strong>Stärke:</strong> 8 | <strong>Agilität:</strong> 6 | <strong>Geschwindigkeit:</strong> 1 (Android-Standard)<br>
+        <strong>Angriff:</strong> Greift nach Waffen, nicht nach Körpern — Entwaffnen (Nahkampf, Stärke vs. Stärke 8). Erst bei 3 HP oder weniger: direkter Angriff (Assimilierter Schlag 8W6).<br>
         <strong>Besonderheit:</strong> Organische Strukturen auf Schultern/Rücken — Treffer dort verursachen 1 zusätzlichen Schaden wegen Säure-Leckage (kleiner Bereich, 1 Runde).<br>
-        <strong>Ziel:</strong> Tötet nie. Blockiert, entwaffnet, verlangsamt. Bis er muss.</p>
+        <strong>Ziel:</strong> Tötet nie. Blockiert, entwaffnet, verlangsamt. Bis er muss.<br>
+        <em style="color:var(--text-dim);font-size:10px;">→ Vollständiger Stat-Block: Tab AX-44</em></p>
       </div>
 
       <hr>
@@ -763,6 +764,12 @@
 
       <h2>Pfad 3 — AX-44 isolieren <span style="font-weight:normal;color:var(--text-dim);font-size:14px;">„Riskant, sehr aufwändig"</span></h2>
       <p>Der schwerste Weg. Voraussetzung: Spieler haben in C verstanden, dass AX-44 mit dem Organismus verbunden ist (Mehta-Tablett, Frequenz 14–88 GHz, Lemmings-Logs). Trennen sie ihn vom Reaktor und halten den Kern auf Niedriglast, hungert der Organismus kontrolliert aus. WY sehr zufrieden — bergbarer Android. <strong>Führt in Flucht-Variante C.</strong></p>
+
+      <div class="info-box danger" style="margin-bottom:10px;">
+        <div class="info-box-header">⚠ Pfad 3 gesperrt — wenn Modul C übersprungen wurde</div>
+        <p>Pfad 3 setzt voraus, dass die Spieler das <strong>Mehta-Forschungstablett</strong> aus C1 (Biolab) gefunden haben — es enthält die Frequenz-Verbindung (14–88 GHz) zwischen AX-44 und dem Organismus, die die Bio-mechanische Trennung erst erklärt und mechanisch ermöglicht. Ohne dieses Wissen ist Schritt 2 nicht durchführbar — die Gruppe weiß nicht, wie die Verbindung funktioniert, und hat kein Diagnosewerkzeug.<br><br>
+        Spieler können Pfad 3 trotzdem <em>versuchen</em>, wenn sie in D2 durch Systemlogs auf die Frequenz stoßen (<strong>Comtech 3</strong>) — aber ohne das Tablett entfällt der Würfelbonus und die Schwierigkeit für Schritt 2 steigt auf <strong>Medical Aid (3) + Comtech (3)</strong>.</p>
+      </div>
 
       <div class="info-box warn">
         <div class="info-box-header">Drei parallele Schritte — alle drei müssen gelingen</div>
@@ -1320,6 +1327,17 @@
       <div class="info-box readaloud">
         <div class="info-box-header">▶ Vorlesen — Erster Blick</div>
         <p>Der Hauptcomputer läuft — Bildschirme an, Lüfter brummen, die Maschine weigert sich aufzugeben. Das Panoramafenster zur Außenhülle: Die Station ist von außen überwachsen. Organische Strukturen wie schwarze Äste haben sich durch Metallplatten gefressen. Von außen muss diese Station aussehen wie etwas Gewachsenes.</p>
+        <p>Am Ende des Raums — zwischen Kommandopult und dem Gang nach D3 — steht AX-44. Er dreht sich nicht um. Er steht nur da, den Rücken zur Gruppe, und schaut durch das Panoramafenster auf die überwachsene Außenhülle. Er wartet, bis jemand etwas sagt.</p>
+      </div>
+      <div class="info-box danger" style="margin:12px 0;">
+        <div class="info-box-header">▶ Erster Sichtkontakt — AX-44</div>
+        <p>Das ist der erste Moment, in dem die Spieler AX-44 <em>sehen</em>. Nicht hören. Sehen. Lass kurz Stille entstehen.<br><br>
+        Seine Schultern und sein Rücken tragen organische Strukturen — dunkle, kabelartige Wülste, die durch den Stoff seines Overalls gewachsen sind. Er bewegt sich nicht. Er atmet nicht sichtbar. Er sieht vollständig aus — nicht verletzt, nicht kaputt.<br><br>
+        Wenn die Spieler ihn ansprechen, dreht er sich langsam um. Kein Ruck. Keine Hast. Die Augen sind normal. Die Stimme auch.<br>
+        <blockquote>„Ihr seid weiter gegangen als ich erwartet hatte. Das war nicht nötig. Hier gibt es nichts, was ihr verstehen müsst."</blockquote>
+        Er lässt sie reden. Er lässt sie suchen. Er blockiert nicht — noch. Solange niemand den Gang nach D3 betritt, führt er das Gespräch. Sobald jemand in Richtung D3 geht, hört er mitten im Satz auf und sagt nur:<br>
+        <blockquote>„Bitte nicht."</blockquote>
+        Dann folgt er — langsam, in gleichbleibendem Abstand.</p>
       </div>
       <p>Der Hauptcomputer läuft noch — gespeist vom Reaktor, der sich weigert abzuschalten. Das Panoramafenster zeigt die Außenhülle: zum Reaktorkorridor hin vollständig überwachsen, schwarze organische Äste durch Metallplatten gefressen.</p>
       <div class="info-box readaloud">
@@ -1441,7 +1459,7 @@
 ║         ENDE DES LOGS — 6 EINTRÄGE ABGERUFEN            ║
 ╚══════════════════════════════════════════════════════════╝</div>
 
-      <h2>Kommandozentrale — Modul F</h2>
+      <h2>Kommandozentrale — Modul D</h2>
       <div class="t-head">╔══════════════════════════════════════════════════════════╗
 ║  WEYLAND-YUTANI CORP — ATLAS STATION // KOMMANDO        ║
 ║  ZUGRIFFSLEVEL: BESATZUNG ALLGEMEIN  //  2183.202–217   ║
