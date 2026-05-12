@@ -38,13 +38,15 @@ const NAV = [
   { cat: "Missionen", group: "missions", items: [
     { href: "missions/easy-missionen/01-routine-exchange.html",  label: "01 — 40 Eridani",        id: "m01" },
     { href: "missions/easy-missionen/02-theta-persei.html",      label: "02 — Theta Persei",      id: "m02" },
-    { href: "missions/schwerere-missionen/03-jeremiah-vi.html",       label: "03 — Jeremiah VI",       id: "m03" },
-    { href: "missions/schwerere-missionen/04-atlas-station.html",     label: "04 — Atlas Station",     id: "m04" },
-    { href: "missions/schwerere-missionen/05-arceon-station.html",    label: "05 — Arceon Station",    id: "m05" },
-    { href: "missions/schwerere-missionen/06-lambda-aurigae.html",    label: "06 — Lambda Aurigae",    id: "m06" },
-    { href: "missions/schwerere-missionen/07-tiamat-iv.html", label: "07 — Tiamat IV", id: "m07" },
-    { href: "missions/schwerere-missionen/08-van-maanens-star.html",  label: "08 — Van Maanen's Star", id: "m08" },
-    { href: "missions/99-act-2-3.html",           label: "99 — Akt 2 & 3",         id: "m99" },
+    { href: "missions/schwerere-missionen/03-jeremiah-vi.html",  label: "03 — Jeremiah VI",       id: "m03" },
+    { subgroup: "Abgeschlossene Missionen", id: "sg-completed", items: [
+      { href: "missions/schwerere-missionen/04-atlas-station.html",  label: "04 — Atlas Station",  id: "m04" },
+      { href: "missions/schwerere-missionen/05-arceon-station.html", label: "05 — Arceon Station", id: "m05" },
+    ]},
+    { href: "missions/schwerere-missionen/06-lambda-aurigae.html",   label: "06 — Lambda Aurigae",    id: "m06" },
+    { href: "missions/schwerere-missionen/07-tiamat-iv.html",        label: "07 — Tiamat IV",         id: "m07" },
+    { href: "missions/schwerere-missionen/08-van-maanens-star.html", label: "08 — Van Maanen's Star", id: "m08" },
+    { href: "missions/99-act-2-3.html",          label: "99 — Akt 2 & 3",         id: "m99" },
   ]},
   { cat: "Material", items: [
     { href: "handouts/index.html",                label: "Handouts",             id: "handouts" },
@@ -79,10 +81,31 @@ function renderShell(opts) {
       sidebarHtml += '<div class="nav-cat">' + section.cat + '</div>';
     }
     section.items.forEach(function(item) {
+      if (item.subgroup) {
+        const hasActive = item.items.some(function(ci) { return ci.id === activeId; });
+        const openClass = hasActive ? ' open' : '';
+        sidebarHtml += '<div class="nav-group' + openClass + '" id="' + item.id + '">';
+        sidebarHtml += '<div class="nav-group-header" onclick="toggleNavGroup(\'' + item.id + '\')">';
+        sidebarHtml += '<span>' + item.subgroup + '</span>';
+        sidebarHtml += '<span class="chevron">›</span>';
+        sidebarHtml += '</div>';
+        sidebarHtml += '<div class="nav-children">';
+        item.items.forEach(function(child) {
+          const isActive = child.id === activeId;
+          const cls = isActive ? 'nav-item active' : 'nav-item';
+          sidebarHtml += '<a class="' + cls + '" href="' + base + child.href + '">' + child.label + '</a>';
+          if (isActive && subNav.length > 0) {
+            subNav.forEach(function(sub) {
+              sidebarHtml += '<a class="sub-nav-item" data-section="' + sub.id + '" href="#" onclick="showSection(\'' + sub.id + '\'); return false;">' + sub.label + '</a>';
+            });
+          }
+        });
+        sidebarHtml += '</div></div>';
+        return;
+      }
       const isActive = item.id === activeId;
       const cls = isActive ? 'nav-item active' : 'nav-item';
       sidebarHtml += '<a class="' + cls + '" href="' + base + item.href + '">' + item.label + '</a>';
-      // Inject sub-section switcher under the active item
       if (isActive && subNav.length > 0) {
         subNav.forEach(function(sub) {
           sidebarHtml += '<a class="sub-nav-item" data-section="' + sub.id + '" href="#" onclick="showSection(\'' + sub.id + '\'); return false;">' + sub.label + '</a>';
@@ -127,6 +150,11 @@ function toggleLogSection(el) {
 
 function logSection(label, content) {
   return '<div class="log-section open"><div class="log-section-header" onclick="toggleLogSection(this)"><span>\u{1F4DF} ' + label + '</span><span class="log-chevron">›</span></div><div class="log-section-body"><div class="t-block">' + content + '</div></div></div>';
+}
+
+function toggleNavGroup(id) {
+  const el = document.getElementById(id);
+  if (el) el.classList.toggle('open');
 }
 
 function toggleSidebar() {
