@@ -39,14 +39,14 @@ const NAV = [
     { href: "missions/easy-missionen/01-routine-exchange.html",  label: "01 — 40 Eridani",        id: "m01" },
     { href: "missions/easy-missionen/02-theta-persei.html",      label: "02 — Theta Persei",      id: "m02" },
     { href: "missions/schwerere-missionen/03-jeremiah-vi.html",  label: "03 — Jeremiah VI",       id: "m03" },
-    { subgroup: "Abgeschlossene Missionen", id: "sg-completed", items: [
-      { href: "missions/schwerere-missionen/04-atlas-station.html",  label: "04 — Atlas Station",  id: "m04" },
-      { href: "missions/schwerere-missionen/05-arceon-station.html", label: "05 — Arceon Station", id: "m05" },
-    ]},
     { href: "missions/schwerere-missionen/06-lambda-aurigae.html",   label: "06 — Lambda Aurigae",    id: "m06" },
     { href: "missions/schwerere-missionen/07-tiamat-iv.html",        label: "07 — Tiamat IV",         id: "m07" },
     { href: "missions/schwerere-missionen/08-van-maanens-star.html", label: "08 — Van Maanen's Star", id: "m08" },
     { href: "missions/99-act-2-3.html",          label: "99 — Akt 2 & 3",         id: "m99" },
+    { subgroup: "Abgeschlossene Missionen", id: "sg-completed", items: [
+      { href: "missions/schwerere-missionen/04-atlas-station.html",  label: "04 — Atlas Station",  id: "m04" },
+      { href: "missions/schwerere-missionen/05-arceon-station.html", label: "05 — Arceon Station", id: "m05" },
+    ]},
   ]},
   { cat: "Material", items: [
     { href: "handouts/index.html",                label: "Handouts",             id: "handouts" },
